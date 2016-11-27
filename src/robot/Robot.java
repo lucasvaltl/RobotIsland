@@ -1,15 +1,22 @@
 package robot;
 
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+
 import javafx.event.EventHandler;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.transform.Rotate;
+import readers.FileReader;
+import readers.InvalidFormatException;
+import readers.XMLReader;
 import tests.Driver;
 
 public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 	/** Class that represents the robot - its movement and perspective. 
 	 * Overrides some JavaFX rectangle methods **/
 	
+	private String name;
 	private double xCoordinate;
 	private double yCoordinate;
 	private double speed;
@@ -20,14 +27,16 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 	private double angularVelocity;
 	private double odometer;
 	private double batteryLeft;
+	private double batteryCapacity;
 	private double axleLength;
 	private double wheelRadius;
 
-	public Robot(double xCoordinate, double yCoordinate, double speed, double xVelocity, 
+	public Robot(String name, double xCoordinate, double yCoordinate, double speed, double xVelocity, 
 			double yVelocity, double xAcceleration, double yAcceleration, 
-			double angularVelocity, double odometer, double batteryLeft, 
+			double angularVelocity, double odometer, double batteryLeft, double batteryCapacity, 
 			double axleLength, double wheelRadius) {
 		/** Robot class constructor **/
+		this.name = name;
 		this.xCoordinate = xCoordinate;
 		super.setX(this.xCoordinate);
 		this.yCoordinate = yCoordinate;
@@ -40,9 +49,33 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		this.angularVelocity = angularVelocity;
 		this.odometer = odometer;
 		this.batteryLeft = batteryLeft;
+		this.batteryCapacity = batteryCapacity;
 		this.axleLength = axleLength;
 		super.setWidth(this.axleLength);
 		this.wheelRadius = wheelRadius;
+		super.setHeight(this.wheelRadius);
+	}
+	public Robot(String s) {
+		/** Robot class constructor using an xml file **/
+		XMLReader xmlr = new XMLReader();
+		ArrayList<String> input = xmlr.read(s, "src/robots.xml");
+		this.name = input.get(0);
+		this.xCoordinate = Double.valueOf(input.get(1));
+		super.setX(this.xCoordinate);
+		this.yCoordinate = Double.valueOf(input.get(2));
+		super.setY(this.yCoordinate);
+		this.speed = Double.valueOf(input.get(3));
+		this.xVelocity = Double.valueOf(input.get(4));
+		this.yVelocity = Double.valueOf(input.get(5));
+		this.xAcceleration = Double.valueOf(input.get(6));
+		this.yAcceleration = Double.valueOf(input.get(7));
+		this.angularVelocity = Double.valueOf(input.get(8));
+		this.odometer = Double.valueOf(input.get(9));
+		this.batteryLeft = Double.valueOf(input.get(10));
+		this.batteryCapacity = Double.valueOf(input.get(11));
+		this.axleLength = Double.valueOf(input.get(12));
+		super.setWidth(this.axleLength);
+		this.wheelRadius = Double.valueOf(input.get(13));
 		super.setHeight(this.wheelRadius);
 	}
 	
@@ -254,5 +287,59 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 			}
 			event.consume();
 		}		
-	}		
-}
+	}	
+	public void moveViaFile(String path){
+		// Get the orientation using the getRotate() method.
+		double orientation = this.getRotate();
+		orientation = (orientation < 0) ? orientation + 360.0 : orientation;
+		orientation = (orientation > 360) ? orientation % 360.0 : orientation;
+//		System.out.println("Angle: " + orientation);
+		double orientationRadians = orientation / 180.0 * Math.PI;
+//		System.out.println("Radians: " + orientationRadians);
+		double yOrientation = Math.cos(orientationRadians);
+		double xOrientation = Math.sin(orientationRadians);
+//		System.out.println("x: " + xOrientation  + ", y: " + yOrientation);
+		FileReader fr = new FileReader();
+		ArrayList<String> input;
+		try {
+			input = fr.scanFile(path);
+			
+			for (int i = 0; i< input.size(); i++){
+				switch (input.get(i)){
+			case "UP": // increase forward velocity;
+				// TODO
+				System.out.println("UP");
+				this.setxCoordinate(this.xCoordinate + this.speed * xOrientation);
+				this.setyCoordinate(this.yCoordinate - this.speed  * yOrientation);
+				break;
+			case "DOWN": // increase backward velocity;
+				System.out.println("DOWN");				
+				this.setxCoordinate(this.xCoordinate - this.speed * xOrientation);
+				this.setyCoordinate(this.yCoordinate + this.speed  * yOrientation);
+				break;
+			case "LEFT": // rotate left
+				System.out.println("LEFT");
+				
+				this.setRotate(this.getRotate() - Math.abs(this.angularVelocity));
+				System.out.println(this.getRotate());
+				
+				break;
+			case "RIGHT": // rotate right
+				System.out.println("RIGHT");
+				this.setRotate(this.getRotate() + Math.abs(this.angularVelocity));
+				break;
+			default:
+				System.out.println("INVALID");
+				break;
+		}
+			
+		}
+		
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+}}

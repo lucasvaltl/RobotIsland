@@ -59,8 +59,7 @@ public class Driver extends Application {
 		root.getChildren().add(canvas);
 	
 		/* Draw robot and add to canvas */
-		
-		wallE = new Robot(250, 250, 3, 1, 1, 0, 0, 3, 0, 100, 40, 25);
+		wallE = new Robot("fast");
 		wallE.setFill(Color.BLUE); 
 		wallE.setFocusTraversable(true);
 		// Robot(xCoordinate, yCoordinate, speed, xVel, yVel, xAcc, yAcc, 
@@ -73,6 +72,7 @@ public class Driver extends Application {
 				
 		primaryStage.setScene(new Scene(root));
 		primaryStage.show();
+		wallE.moveViaFile("src/movements.txt");
 		
 	}
 	
