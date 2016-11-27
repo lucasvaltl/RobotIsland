@@ -7,22 +7,6 @@ import java.util.Scanner;
 
 public class FileReader {
 
-	// public ArrayList<String> scanFile(String uri) {
-	// ArrayList<String> tokens = new ArrayList<String>();
-	// Scanner scanner;
-	// try {
-	// scanner = new Scanner(new File(uri));
-	// while (scanner.hasNext()){
-	// tokens.add(scanner.next());
-	// }
-	//
-	// scanner.close();
-	// } catch (FileNotFoundException e) {
-	// // TODO Auto-generated catch block
-	// e.printStackTrace();
-	// }
-	// return tokens;
-	// }
 
 	public ArrayList<String> scanFile(String uri) throws InvalidFormatException, FileNotFoundException {
 
