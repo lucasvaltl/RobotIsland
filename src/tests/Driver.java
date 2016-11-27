@@ -19,24 +19,39 @@ public class Driver extends Application {
 	 *  various action events.
 	 */
 
-	public static final int SCREENWIDTH = 500;
-	public static final int SCREENHEIGHT = 500;
+	public static final int SCREENWIDTH = 512;
+	public static final int SCREENHEIGHT = 512;
+		// raycasting variables
+	public static final int THREEDEEPLANEWIDTH = 320;
+	public static final int THREEDEEPLANEHEIGHT = 200;
+	public static final int[] THREEDEEPLANECENTRE = {THREEDEEPLANEWIDTH / 2, 
+			THREEDEEPLANEHEIGHT / 2};
+	public static final double fieldOfViewAngle = Math.PI / 3; // in radians
+	public static final double DISTANCETOTHREEDEEPLANE = (THREEDEEPLANEWIDTH / 2) * Math.tan(fieldOfViewAngle / 2); // 160 / tan(30degrees)
+	public static final double angleBetweenRays = Driver.fieldOfViewAngle / (THREEDEEPLANEWIDTH * 1.0);
+	
 	public static Map map;
 	public static Robot wallE;
 	public static Group root;
 	
 	public static void main(String[] args) {
 
-		int[][] grid = {{1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
-				{1, 0, 1, 0, 0, 0, 0, 0, 0, 1},
-				{1, 0, 1, 1, 1, 1, 1, 1, 0, 1},
-				{1, 0, 1, 1, 1, 1, 1, 1, 0, 1},
-				{1, 0, 1, 1, 1, 1, 1, 1, 0, 1},
-				{1, 0, 1, 0, 0, 0, 0, 1, 0, 1},
-				{1, 0, 1, 0, 1, 1, 0, 1, 0, 1},
-				{1, 0, 1, 0, 1, 1, 0, 0, 0, 1},
-				{1, 0, 0, 0, 1, 1, 1, 1, 1, 1},
-				{1, 1, 1, 1, 1, 1, 1, 1, 1, 1}};
+		int[][] grid = {{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+				{1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1},
+				{1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1},
+				{1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1},
+				{1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1},
+				{1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1},
+				{1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1},
+				{1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1},
+				{1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1},
+				{1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1},
+				{1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1},
+				{1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1},
+				{1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1},
+				{1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1},
+				{1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
+				{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}};
 		
 		map = new Map(grid); // create map
 		
@@ -60,7 +75,7 @@ public class Driver extends Application {
 	
 		/* Draw robot and add to canvas */
 		
-		wallE = new Robot(250, 250, 3, 1, 1, 0, 0, 3, 0, 100, 40, 25);
+		wallE = new Robot(40, 40, 3, 1, 1, 0, 0, 3, 0, 100, 16, 8);
 		wallE.setFill(Color.BLUE); 
 		wallE.setFocusTraversable(true);
 		// Robot(xCoordinate, yCoordinate, speed, xVel, yVel, xAcc, yAcc, 

@@ -69,8 +69,8 @@ public class Map {
 			YBLOCKSIZE = Driver.SCREENHEIGHT / this.rowSize;
 			XBLOCKSIZE = Driver.SCREENWIDTH / this.colSize;
 		} else {
-			YBLOCKSIZE = 10;
-			XBLOCKSIZE = 10;
+			YBLOCKSIZE = 32; // powers of 2 are quicker because of shift operations
+			XBLOCKSIZE = 32; 
 		}
 		
 		gc.setFill(Color.BLACK);
