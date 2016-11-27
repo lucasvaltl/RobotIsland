@@ -1,5 +1,8 @@
+/.project
+/movements.txt
+/readers/
+/robots.xml
 /learningJavaFX/
 /map/
-/resources
 /robot/
 /tests/

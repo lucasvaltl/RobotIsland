@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<robots>
+  <robot id="slow">
+    <name>slowrobot</name>
+    <xCoordinate>40</xCoordinate>
+    <yCoordinate>40</yCoordinate>
+    <speed>3</speed>
+    <xVelocity>1</xVelocity>
+    <yVelocity>1</yVelocity>
+    <xAcceleration> 0 </xAcceleration>
+    <yAcceleration> 0 </yAcceleration>
+    <angularVelocity> 3 </angularVelocity>
+    <odometer> 0</odometer>
+    <batteryLeft> 100 </batteryLeft>
+    <batteryCapacity>100 </batteryCapacity>
+    <axleLength>16</axleLength>
+    <wheelRadius>8</wheelRadius>
+  </robot>
+  <robot id="fast">
+    <name>fastrobot</name>
+    <xCoordinate>40</xCoordinate>
+    <yCoordinate>40</yCoordinate>
+    <speed>6</speed>
+    <xVelocity> 1 </xVelocity>
+    <yVelocity> 1 </yVelocity>
+    <xAcceleration> 0 </xAcceleration>
+    <yAcceleration> 0 </yAcceleration>
+    <angularVelocity> 3 </angularVelocity>
+    <odometer> 0</odometer>
+    <batteryLeft> 70 </batteryLeft>
+    <batteryCapacity>70 </batteryCapacity>
+    <axleLength>16</axleLength>
+    <wheelRadius>8</wheelRadius>
+  </robot>
+</robots>
