@@ -76,14 +76,15 @@ public class Driver extends Application {
 	
 		/* Draw robot and add to canvas */
 		
+		
 		wallE = new Robot("fast");
 		// wallE = new Robot("test", 40, 40, 3, 1, 1, 0, 0, 3, 0, 100, 16, 8);
-
 		wallE.setFill(Color.BLUE); 
 		wallE.setFocusTraversable(true);
 		// Robot(xCoordinate, yCoordinate, speed, xVel, yVel, xAcc, yAcc, 
 		// angularVelocity, odometer, 
 		// battery left, axle length, wheel radius.
+		
 		wallE.setOnKeyPressed(wallE); // adds Event handler
 		wallE.setOnKeyReleased(wallE); // adds Event handler
 		root.getChildren().add(wallE);
