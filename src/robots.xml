@@ -5,10 +5,8 @@
     <xCoordinate>40</xCoordinate>
     <yCoordinate>40</yCoordinate>
     <speed>3</speed>
-    <xVelocity>1</xVelocity>
-    <yVelocity>1</yVelocity>
-    <xAcceleration> 0 </xAcceleration>
-    <yAcceleration> 0 </yAcceleration>
+    <maxSpeed>1</maxSpeed>
+    <acceleration> 0 </acceleration>
     <angularVelocity> 3 </angularVelocity>
     <odometer> 0</odometer>
     <batteryLeft> 100 </batteryLeft>
@@ -21,10 +19,8 @@
     <xCoordinate>40</xCoordinate>
     <yCoordinate>40</yCoordinate>
     <speed>6</speed>
-    <xVelocity> 1 </xVelocity>
-    <yVelocity> 1 </yVelocity>
-    <xAcceleration> 0 </xAcceleration>
-    <yAcceleration> 0 </yAcceleration>
+    <maxSpeed>4</maxSpeed>
+    <acceleration> 0 </acceleration>
     <angularVelocity> 3 </angularVelocity>
     <odometer> 0</odometer>
     <batteryLeft> 70 </batteryLeft>

@@ -52,8 +52,12 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		this.wheelRadius = wheelRadius;
 		super.setHeight(this.wheelRadius);
 	}
+	/**
+	 * Description: creates robot's parameters out of a xml file
+	 * @param s: The ID of the robot you want to load
+	 */
 	public Robot(String s) {
-		/** Robot class constructor using an xml file **/
+		
 		XMLReader xmlr = new XMLReader();
 		ArrayList<String> input = xmlr.read(s, "src/robots.xml");
 		this.name = input.get(0);
