@@ -79,8 +79,7 @@ public class Driver extends Application {
 		primaryStage.setScene(new Scene(root));
 		primaryStage.show();
 		
-		/* Draw robot and add to canvas */
-		
+		//creates a "fast" robot from an xml file
 		wallE = new Robot("fast");
 		// wallE = new Robot("test", 40, 40, 3, 1, 1, 0, 0, 3, 0, 100, 16, 8);
 		wallE.setFill(Color.BLUE); 

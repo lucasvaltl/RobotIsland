@@ -1,3 +1,11 @@
+/**
+ * Description: This class reads and validates a file. Th file needs to include valid instructions on how the a robot should move
+ * 
+ * @author Geraint Ballinger and Lucas Valtl
+ * 
+ */
+
+
 package readers;
 
 import java.io.File;
@@ -7,7 +15,17 @@ import java.util.Scanner;
 
 public class FileReader {
 
-
+/**
+ * Description: This method scans and validates a file containing movement instructions for a robot. 
+ * Upon validation it returns an ArrayList of strings with the instructions. Should the instructions in the file 
+ * not match the instructions expected, an InvalidFormatException is thrown.
+ * 
+ * 
+ * @param uri: define the location of the file
+ * @return: returns an ArrayList of Strings with validated movement instructions
+ * @throws InvalidFormatException
+ * @throws FileNotFoundException
+ */
 	public ArrayList<String> scanFile(String uri) throws InvalidFormatException, FileNotFoundException {
 
 	
