@@ -1,3 +1,11 @@
+/**
+ * Description: This XML reader is able to read through an XML file and return the attributes related to a specific id.
+ * ArrayList of strings. 
+ * 
+ * @author Geraint Ballinger and Lucas Valtl
+ * @version 1.0
+ */
+
 package readers;
 
 import java.io.File;
@@ -13,6 +21,14 @@ import org.w3c.dom.NodeList;
 
 public final class XMLReader {
 
+	/**
+	 * Reads through an XML file and returns the attributes related to a specific ID. 
+	 * 
+	 * @param s: String containing the type of robot you want to load from the xml file. This needs to correspond with an ID from the xml file.
+	 * @param f: location of the xml file used
+	 * @return: returns an ArrayList of attributes corresponding with the id specified in String s.
+	 */
+	
 	public ArrayList<String> read(String s, String f){
 	    try {
 //get file and create file
