@@ -1,6 +1,8 @@
 package gametimer;
 
 import javafx.animation.AnimationTimer;
+import map.Map;
+import robot.CollisionDetection;
 import tests.Driver;
 
 public class GameTimer extends AnimationTimer {
@@ -37,6 +39,7 @@ public class GameTimer extends AnimationTimer {
 					Driver.wallE.getSpeed() * wallEcomponents[0]);
 			Driver.wallE.setyCoordinate(Driver.wallE.getyCoordinate() - 
 					Driver.wallE.getSpeed() * wallEcomponents[1]);
+			CollisionDetection.collisionDetection(Driver.wallE, Map.blocks);
 			
 		} else if (Driver.currentKeyPresses[0] == "DOWN") {
 			// 
@@ -44,6 +47,7 @@ public class GameTimer extends AnimationTimer {
 					Driver.wallE.getSpeed() * wallEcomponents[0]);
 			Driver.wallE.setyCoordinate(Driver.wallE.getyCoordinate() + 
 					Driver.wallE.getSpeed() * wallEcomponents[1]);
+			CollisionDetection.collisionDetection(Driver.wallE, Map.blocks);
 			
 		} else if (Driver.currentKeyPresses[1] == "LEFT") {
 			// 
