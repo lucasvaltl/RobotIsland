@@ -33,6 +33,7 @@ public class Driver extends Application {
 	public static Map map;
 	public static Robot wallE;
 	public static Group root;
+	public static String[] currentKeyPresses = new String[2];
 	
 	public static void main(String[] args) {
 
@@ -85,9 +86,10 @@ public class Driver extends Application {
 		// battery left, axle length, wheel radius.
 		wallE.setOnKeyPressed(wallE); // adds Event handler
 		wallE.setOnKeyReleased(wallE); // adds Event handler
-
 		root.getChildren().add(wallE);
-				
+		
+		final long startnanotime = System.nanoTime();
+		
 		primaryStage.setScene(new Scene(root));
 		primaryStage.show();
 		wallE.moveViaFile("src/movements.txt");

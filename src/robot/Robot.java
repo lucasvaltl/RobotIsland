@@ -2,6 +2,7 @@ package robot;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import javafx.event.EventHandler;
 import javafx.scene.input.KeyEvent;
@@ -244,45 +245,44 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 			switch (event.getCode()) {
 				case UP: // increase forward velocity;
 					// TODO
-					System.out.println("UP");
+					Driver.currentKeyPresses[0] = event.getCode().toString();
 					this.setxCoordinate(this.xCoordinate + this.speed * xOrientation);
 					this.setyCoordinate(this.yCoordinate - this.speed  * yOrientation);
 					break;
 				case DOWN: // increase backward velocity;
-					System.out.println("DOWN");				
+					Driver.currentKeyPresses[0] = event.getCode().toString();
 					this.setxCoordinate(this.xCoordinate - this.speed * xOrientation);
 					this.setyCoordinate(this.yCoordinate + this.speed  * yOrientation);
 					break;
 				case LEFT: // rotate left
-					System.out.println("LEFT");
-					
+					Driver.currentKeyPresses[1] = event.getCode().toString();
 					this.setRotate(this.getRotate() - Math.abs(this.angularVelocity));
 					System.out.println(this.getRotate());
 					
 					break;
 				case RIGHT: // rotate right
-					System.out.println("RIGHT");
+					Driver.currentKeyPresses[1] = event.getCode().toString();
 					this.setRotate(this.getRotate() + Math.abs(this.angularVelocity));
 					break;
 				default:
-					System.out.println("INVALID");
 					break;
 			}
+			System.out.println(Arrays.toString(Driver.currentKeyPresses));
 			event.consume();
 		} else if (event.getEventType().equals(KeyEvent.KEY_RELEASED)) {
 			/** TODO **/
 			switch (event.getCode()) {
 				case UP: // 
-					System.out.println("UP RELEASED");
+					Driver.currentKeyPresses[0] = null;
 					break;
 				case DOWN: //
-					System.out.println("DOWN RELEASED");
+					Driver.currentKeyPresses[0] = null;
 					break;
 				case LEFT: //
-					System.out.println("LEFT RELEASED");
+					Driver.currentKeyPresses[1] = null;
 					break;
 				case RIGHT: //
-					System.out.println("RIGHT RELEASED");
+					Driver.currentKeyPresses[1] = null;
 					break;
 			}
 			event.consume();
