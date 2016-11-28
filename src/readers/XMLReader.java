@@ -53,10 +53,8 @@ public final class XMLReader {
 						output.add(eElement.getElementsByTagName("xCoordinate").item(0).getTextContent());
 						output.add(eElement.getElementsByTagName("yCoordinate").item(0).getTextContent());
 						output.add(eElement.getElementsByTagName("speed").item(0).getTextContent());
-						output.add(eElement.getElementsByTagName("xVelocity").item(0).getTextContent());
-						output.add(eElement.getElementsByTagName("yVelocity").item(0).getTextContent());
-						output.add(eElement.getElementsByTagName("xAcceleration").item(0).getTextContent());
-						output.add(eElement.getElementsByTagName("yAcceleration").item(0).getTextContent());
+						output.add(eElement.getElementsByTagName("maxSpeed").item(0).getTextContent());
+						output.add(eElement.getElementsByTagName("acceleration").item(0).getTextContent());
 						output.add(eElement.getElementsByTagName("angularVelocity").item(0).getTextContent());
 						output.add(eElement.getElementsByTagName("odometer").item(0).getTextContent());
 						output.add(eElement.getElementsByTagName("batteryLeft").item(0).getTextContent());
