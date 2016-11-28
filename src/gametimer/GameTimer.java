@@ -31,29 +31,52 @@ public class GameTimer extends AnimationTimer {
 			//
 			
 		} else if (Driver.currentKeyPresses[0] == "UP") {
-			// accelerate 
-			
+			// TODO accelerate 
+			Driver.wallE.setSpeed(Driver.wallE.getSpeed() + 
+				Driver.wallE.getAcceleration());
 			Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() + 
 					Driver.wallE.getSpeed() * wallEcomponents[0]);
 			Driver.wallE.setyCoordinate(Driver.wallE.getyCoordinate() - 
 					Driver.wallE.getSpeed() * wallEcomponents[1]);
 			
 		} else if (Driver.currentKeyPresses[0] == "DOWN") {
-			// 
+			Driver.wallE.setSpeed(Driver.wallE.getSpeed() + 
+					Driver.wallE.getAcceleration());
 			Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() - 
 					Driver.wallE.getSpeed() * wallEcomponents[0]);
 			Driver.wallE.setyCoordinate(Driver.wallE.getyCoordinate() + 
 					Driver.wallE.getSpeed() * wallEcomponents[1]);
 			
 		} else if (Driver.currentKeyPresses[1] == "LEFT") {
-			// 
-//			wallE.setRotate(this.getRotate() - Math.abs(this.angularVelocity));
-//			System.out.println(this.getRotate());
-//			
+			//
+			Driver.wallE.setRotate(Driver.wallE.getRotate() - 
+					Math.abs(Driver.wallE.getAngularVelocity()));
+			
 		} else if (Driver.currentKeyPresses[1] == "RIGHT") {
 			//
-//			wallE.setRotate(this.getRotate() + Math.abs(this.angularVelocity));
+			Driver.wallE.setRotate(Driver.wallE.getRotate() + 
+					Math.abs(Driver.wallE.getAngularVelocity()));
+			
+		} else if (Driver.currentKeyPresses[0] == null) {
+			// TODO Decelerate
+			System.out.println(Driver.wallE.getSpeed());
+			System.out.println(Driver.wallE.getAcceleration());
+			double speed = Driver.wallE.getSpeed() - Driver.wallE.getAcceleration();
+			speed = (speed <  0) ? 0 : speed;
+			Driver.wallE.setSpeed(speed);
+//			System.out.println(speed);
+			
+			if (Driver.lastUporDown.equals("DOWN")) {
+				Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() - 
+						Driver.wallE.getSpeed() * wallEcomponents[0]);
+				Driver.wallE.setyCoordinate(Driver.wallE.getyCoordinate() +
+						Driver.wallE.getSpeed() * wallEcomponents[1]);
+			} else if (Driver.lastUporDown.equals("UP")) {
+				Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() + 
+						Driver.wallE.getSpeed() * wallEcomponents[0]);
+				Driver.wallE.setyCoordinate(Driver.wallE.getyCoordinate() -
+						Driver.wallE.getSpeed() * wallEcomponents[1]);
+			}	
 		}
-	
 	}
 }

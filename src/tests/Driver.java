@@ -37,6 +37,7 @@ public class Driver extends Application {
 	public static Robot wallE;
 	public static Group root;
 	public static String[] currentKeyPresses = new String[2];
+	public static String lastUporDown = ""; // used to keep track of robot direction.
 	
 	public static void main(String[] args) {
 

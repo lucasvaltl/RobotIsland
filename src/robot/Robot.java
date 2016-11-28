@@ -143,8 +143,9 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 	}
 	
 	public void setSpeed(double speed) {
-		/** Set's the robot's speed **/
-		this.speed = speed;
+		/** Set's the robot's speed and limits it to be less than or equal the 
+		 * robot's max speed **/
+		this.speed = (speed > this.maxSpeed) ? this.maxSpeed : speed;
 	}
 	
 	public void setMaxSpeed(double maxSpeed) {
@@ -236,9 +237,11 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 				case UP: // increase forward velocity;
 					// TODO
 					Driver.currentKeyPresses[0] = event.getCode().toString();
+					Driver.lastUporDown = event.getCode().toString();
 					break;
 				case DOWN: // increase backward velocity;
 					Driver.currentKeyPresses[0] = event.getCode().toString();
+					Driver.lastUporDown = event.getCode().toString();
 					break;
 				case LEFT: // rotate left
 					Driver.currentKeyPresses[1] = event.getCode().toString();
