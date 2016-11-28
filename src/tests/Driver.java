@@ -4,6 +4,8 @@ import map.Map;
 import robot.Robot;
 
 import java.io.File;
+
+import gametimer.GameTimer;
 import javafx.application.*;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -30,6 +32,7 @@ public class Driver extends Application {
 	public static final double DISTANCETOTHREEDEEPLANE = (THREEDEEPLANEWIDTH / 2) * Math.tan(fieldOfViewAngle / 2); // 160 / tan(30degrees)
 	public static final double angleBetweenRays = Driver.fieldOfViewAngle / (THREEDEEPLANEWIDTH * 1.0);
 	
+	public static long startnanotime;
 	public static Map map;
 	public static Robot wallE;
 	public static Group root;
@@ -73,8 +76,8 @@ public class Driver extends Application {
 		gc.setLineWidth(5);
 		map.render2DMap(gc, true);
 		root.getChildren().add(canvas);
-	
-		/* Draw robot and add to canvas */
+		primaryStage.setScene(new Scene(root));
+		primaryStage.show();
 		
 		//creates a "fast" robot from an xml file
 		wallE = new Robot("fast");
@@ -84,15 +87,16 @@ public class Driver extends Application {
 		// Robot(xCoordinate, yCoordinate, speed, xVel, yVel, xAcc, yAcc, 
 		// angularVelocity, odometer, 
 		// battery left, axle length, wheel radius.
-		
 		wallE.setOnKeyPressed(wallE); // adds Event handler
 		wallE.setOnKeyReleased(wallE); // adds Event handler
 		root.getChildren().add(wallE);
 		
-		final long startnanotime = System.nanoTime();
+		// start animation loop
+		startnanotime = System.nanoTime();
+		GameTimer timer = new GameTimer();
+		timer.start();
 		
-		primaryStage.setScene(new Scene(root));
-		primaryStage.show();
+		
 		wallE.moveViaFile("src/movements.txt");
 		
 	}
