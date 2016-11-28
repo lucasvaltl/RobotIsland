@@ -21,10 +21,8 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 	private double xCoordinate;
 	private double yCoordinate;
 	private double speed;
-	private double xVelocity;
-	private double yVelocity;
-	private double xAcceleration;
-	private double yAcceleration;
+	private double maxSpeed;
+	private double acceleration;
 	private double angularVelocity;
 	private double odometer;
 	private double batteryLeft;
@@ -32,9 +30,9 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 	private double axleLength;
 	private double wheelRadius;
 
-	public Robot(String name, double xCoordinate, double yCoordinate, double speed, double xVelocity, 
-			double yVelocity, double xAcceleration, double yAcceleration, 
-			double angularVelocity, double odometer, double batteryLeft, double batteryCapacity, 
+	public Robot(String name, double xCoordinate, double yCoordinate, double speed, 
+			double maxSpeed, double acceleration, double angularVelocity, double odometer, 
+			double batteryLeft, double batteryCapacity, 
 			double axleLength, double wheelRadius) {
 		/** Robot class constructor **/
 		this.name = name;
@@ -43,10 +41,8 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		this.yCoordinate = yCoordinate;
 		super.setY(this.yCoordinate);
 		this.speed = speed;
-		this.xVelocity = xVelocity;
-		this.yVelocity = yVelocity;
-		this.xAcceleration = xAcceleration;
-		this.yAcceleration = yAcceleration;
+		this.maxSpeed = maxSpeed;
+		this.acceleration = acceleration;
 		this.angularVelocity = angularVelocity;
 		this.odometer = odometer;
 		this.batteryLeft = batteryLeft;
@@ -66,17 +62,15 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		this.yCoordinate = Double.valueOf(input.get(2));
 		super.setY(this.yCoordinate);
 		this.speed = Double.valueOf(input.get(3));
-		this.xVelocity = Double.valueOf(input.get(4));
-		this.yVelocity = Double.valueOf(input.get(5));
-		this.xAcceleration = Double.valueOf(input.get(6));
-		this.yAcceleration = Double.valueOf(input.get(7));
-		this.angularVelocity = Double.valueOf(input.get(8));
-		this.odometer = Double.valueOf(input.get(9));
-		this.batteryLeft = Double.valueOf(input.get(10));
-		this.batteryCapacity = Double.valueOf(input.get(11));
-		this.axleLength = Double.valueOf(input.get(12));
+		this.maxSpeed = Double.valueOf(input.get(4));
+		this.acceleration = Double.valueOf(input.get(5));
+		this.angularVelocity = Double.valueOf(input.get(6));
+		this.odometer = Double.valueOf(input.get(7));
+		this.batteryLeft = Double.valueOf(input.get(8));
+		this.batteryCapacity = Double.valueOf(input.get(9));
+		this.axleLength = Double.valueOf(input.get(10));
 		super.setWidth(this.axleLength);
-		this.wheelRadius = Double.valueOf(input.get(13));
+		this.wheelRadius = Double.valueOf(input.get(11));
 		super.setHeight(this.wheelRadius);
 	}
 	
@@ -95,24 +89,16 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		return this.speed;
 	}
 	
-	public double getxVelocity() {
-		/** Returns the robot's x Velocity **/
-		return this.xVelocity;
+	public double getMaxSpeed() {
+		return this.maxSpeed;
 	}
 	
-	public double getyVelocity() {
-		/** Returns the robot's y velocity **/
-		return this.yVelocity;
-	}
-	
-	public double getxAcceleration() {
-		/** Returns the robot's x acceleration **/
-		return this.xAcceleration;
-	}
-	
-	public double getyAcceleration() {
-		/** Returns the robot's y acceleration **/
-		return this.yAcceleration;
+	/**
+	 * 
+	 * @return
+	 */
+	public double getAcceleration() {
+		return this.acceleration;
 	}
 	
 	public double getAngularVelocity() {
@@ -157,24 +143,13 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		this.speed = speed;
 	}
 	
-	public void setxVelocity(double xVelocity) {
-		/** Sets the robot's x velocity **/
-		this.xVelocity = xVelocity;
+	public void setMaxSpeed(double maxSpeed) {
+		this.maxSpeed = maxSpeed;
 	}
 	
-	public void setyVelocity(double yVelocity) {
-		/** Sets the robot's y velocity **/
-		this.yVelocity = yVelocity;
-	}
-	
-	public void setxAcceleration(double xAcceleration) {
-		/** Sets the robot's x acceleration **/
-		this.xAcceleration = xAcceleration;
-	}
-	
-	public void setyAcceleration(double yAcceleration) {
-		/** Sets the robot's y acceleration **/
-		this.yAcceleration = yAcceleration;
+	public void setAcceleration(double acceleration) {
+		/** Sets the robot's acceleration **/
+		this.acceleration = acceleration;
 	}
 	
 	public void setAngularVelocity(double angularVelocity) {
@@ -225,20 +200,31 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		 * end of every move by a default value of 1, when no charge is given. **/
 		this.batteryLeft -= 1;
 	}
-
-	public void handle(KeyEvent event) {
-		/** TODO Event handler for robot key events. **/
+	
+	public double getOrientation() {
+		/** Method that returns the orientation of the robot in radians 
+		 * using the getRotate() method. **/
 		
 		// Get the orientation using the getRotate() method.
 		double orientation = this.getRotate();
 		orientation = (orientation < 0) ? orientation + 360.0 : orientation;
 		orientation = (orientation > 360) ? orientation % 360.0 : orientation;
-//		System.out.println("Angle: " + orientation);
+		// System.out.println("Angle: " + orientation);
 		double orientationRadians = orientation / 180.0 * Math.PI;
-//		System.out.println("Radians: " + orientationRadians);
-		double yOrientation = Math.cos(orientationRadians);
-		double xOrientation = Math.sin(orientationRadians);
-//		System.out.println("x: " + xOrientation  + ", y: " + yOrientation);
+		return orientationRadians;
+	}
+	public double[] getOrientationComponents(double orientationInRadians) {
+		/** Method that resolves the robot's orientation to the x and y axis.
+		 *  Returns a double array of the form {xOrientation, yOrientation} **/
+		
+		double xOrientation = Math.sin(orientationInRadians);
+		double yOrientation = Math.cos(orientationInRadians);
+		double[] orientationComponents = {xOrientation, yOrientation};
+		return orientationComponents;
+	}
+
+	public void handle(KeyEvent event) {
+		/** TODO Event handler for robot key events. **/
 		
 		/* Keydown */
 		if (event.getEventType().equals(KeyEvent.KEY_PRESSED)) {
@@ -246,29 +232,22 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 				case UP: // increase forward velocity;
 					// TODO
 					Driver.currentKeyPresses[0] = event.getCode().toString();
-					this.setxCoordinate(this.xCoordinate + this.speed * xOrientation);
-					this.setyCoordinate(this.yCoordinate - this.speed  * yOrientation);
 					break;
 				case DOWN: // increase backward velocity;
 					Driver.currentKeyPresses[0] = event.getCode().toString();
-					this.setxCoordinate(this.xCoordinate - this.speed * xOrientation);
-					this.setyCoordinate(this.yCoordinate + this.speed  * yOrientation);
 					break;
 				case LEFT: // rotate left
 					Driver.currentKeyPresses[1] = event.getCode().toString();
-					this.setRotate(this.getRotate() - Math.abs(this.angularVelocity));
-					System.out.println(this.getRotate());
-					
 					break;
 				case RIGHT: // rotate right
 					Driver.currentKeyPresses[1] = event.getCode().toString();
-					this.setRotate(this.getRotate() + Math.abs(this.angularVelocity));
 					break;
 				default:
 					break;
 			}
 			System.out.println(Arrays.toString(Driver.currentKeyPresses));
 			event.consume();
+			// Keyreleased
 		} else if (event.getEventType().equals(KeyEvent.KEY_RELEASED)) {
 			/** TODO **/
 			switch (event.getCode()) {
