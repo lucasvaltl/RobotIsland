@@ -22,11 +22,7 @@ public class GameTimer extends AnimationTimer {
 	 * of the left and right wheels.
 	 */
 	public void handle(long now) {
-		
-		
-		System.out.println(Arrays.toString(Driver.currentKeyPresses));
-		System.out.println(Driver.lastUporDown);
-		
+				
 		double t = (now - Driver.startnanotime) / 1000000000.0;
 
 		final double wallEorientation = Driver.wallE.getOrientation();

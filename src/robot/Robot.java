@@ -236,7 +236,6 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		
 		/* Keydown */
 		if (event.getEventType().equals(KeyEvent.KEY_PRESSED)) {
-			System.out.println("KEYPRESSED");
 			switch (event.getCode()) {
 				case UP: // increase forward velocity;
 					/*Driver.decelerate = (Objects.equals(Driver.currentKeyPresses[0], 
@@ -246,12 +245,12 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 							(Driver.currentKeyPresses[0] == null &&
 							Driver.lastUporDown.equals(event.getCode().toString()) ||
 							Driver.lastUporDown.isEmpty())) ? false : true;
-					// decelerate is false when currentKeyPresses[0] is "UP" or when last 
-					// key press is null and lastUpOrDown is "UP"
+					// decelerate is false when last currentKeyPresses[0] is "UP" or 
+					// when last currentKeyPress is null and lastUpOrDown is "UP"
 					
 					Driver.currentKeyPresses[0] = event.getCode().toString();
-					System.out.println(Driver.decelerate);
-					if (Driver.decelerate == false) {
+					if (Driver.decelerate == false || (Driver.decelerate == true &&
+							Driver.wallE.getSpeed() < 0.4)) { // TODO dirty hack
 						// Only change last up or down if the robot is not in 
 						// decelerate mode (stops weird behaviour when switching 
 						// suddenly from up to down.
@@ -267,8 +266,8 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 					// decelerate is false when currentKeyPresses[0] is "DOWN"
 					
 					Driver.currentKeyPresses[0] = event.getCode().toString();
-					System.out.println(Driver.decelerate);
-					if (Driver.decelerate == false) {
+					if (Driver.decelerate == false || (Driver.decelerate == true && 
+							Driver.wallE.getSpeed() < 0.4)) { // TODO dirty hack
 						// Only change last up or down if the robot is not in 
 						// decelerate mode (stops weird behaviour when switching 
 						// suddenly from up to down.
