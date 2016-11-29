@@ -37,18 +37,20 @@ public class GameTimer extends AnimationTimer {
 
 		if (Driver.currentKeyPresses[0] == "UP" && Driver.currentKeyPresses[1] == "LEFT") {
 			//
+			Movement.moveUpLeft(wallEcomponents);
 
 		} else if (Driver.currentKeyPresses[0] == "UP" && Driver.currentKeyPresses[1] == "RIGHT") {
 			//
+			Movement.moveUpRight(wallEcomponents);
 
 		} else if (Driver.currentKeyPresses[0] == "DOWN" && Driver.currentKeyPresses[1] == "LEFT") {
 			//
-
+			Movement.moveDownLeft(wallEcomponents);
 		} else if (Driver.currentKeyPresses[0] == "DOWN" && Driver.currentKeyPresses[1] == "RIGHT") {
 			//
-
+			Movement.moveDownRight(wallEcomponents);
 		} else if (Driver.currentKeyPresses[0] == "UP") {
-			// TODO accelerate
+			// accelerate
 
 			Movement.moveUp(wallEcomponents);
 
@@ -85,7 +87,7 @@ public class GameTimer extends AnimationTimer {
 			}
 
 		} else if (Driver.currentKeyPresses[0] == null) {
-			Movement.deccelerate(wallEcomponents);
+			Movement.decelerate(wallEcomponents);
 
 			if (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
 				if (Driver.lastUporDown.equals("DOWN")) {

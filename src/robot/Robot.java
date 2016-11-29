@@ -106,7 +106,7 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 	}
 	
 	public double getAngularVelocity() {
-		/** Returns the robot's angular velocity **/
+		/** Returns the robot's angular velocity in angle per second **/
 		return this.angularVelocity;
 	}
 	
