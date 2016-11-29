@@ -33,6 +33,7 @@ public class Driver extends Application {
 	public static final double angleBetweenRays = Driver.fieldOfViewAngle / (THREEDEEPLANEWIDTH * 1.0);
 	
 	public static long startnanotime;
+	public static boolean decelerate = false;
 	public static Map map;
 	public static Robot wallE;
 	public static Group root;

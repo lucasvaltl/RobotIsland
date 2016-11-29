@@ -29,7 +29,6 @@ public class Movement {
 		double speedRightWheel = Driver.wallE.getSpeed();
 		double speedLeftWheel = Driver.wallE.getSpeed();
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
-		System.out.println(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	}
 
@@ -50,7 +49,6 @@ public class Movement {
 		double speedRightWheel = Driver.wallE.getSpeed();
 		double speedLeftWheel = Driver.wallE.getSpeed();
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
-		System.out.println(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	}
 	
@@ -72,10 +70,7 @@ public class Movement {
 		// get angular velocity and convert to radians
 		double angularVelocity = (Driver.wallE.getAngularVelocity() * 2 * Math.PI) / 360.0;
 		// get currentSpeed
-		double currentSpeed = Driver.wallE.getSpeed();
-		
-		System.out.println(angularVelocity  + " "  + currentSpeed);
-		
+		double currentSpeed = Driver.wallE.getSpeed();		
 		
 		// calculate wheelspeeds
 		double speedRightWheel = (2 * currentSpeed + 
@@ -86,7 +81,6 @@ public class Movement {
 				/ (2 * Driver.wallE.getWheelRadius());
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
 		
-		System.out.println(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	}
 	
@@ -103,6 +97,7 @@ public class Movement {
 		Driver.wallE.setRotate(Driver.wallE.getRotate() + Math.abs(Driver.wallE.getAngularVelocity()));
 		Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() + Driver.wallE.getSpeed() * wallEcomponents[0]);
 		Driver.wallE.setyCoordinate(Driver.wallE.getyCoordinate() - Driver.wallE.getSpeed() * wallEcomponents[1]);
+				
 		
 		// get angular velocity and convert to radians
 		double angularVelocity = (Driver.wallE.getAngularVelocity() * 2 * Math.PI) / 360.0;
@@ -117,7 +112,6 @@ public class Movement {
 				angularVelocity * Driver.wallE.getAxleLength())
 				/ (2 * Driver.wallE.getWheelRadius());
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
-		System.out.println(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	}
 	
@@ -148,7 +142,6 @@ public class Movement {
 				angularVelocity * Driver.wallE.getAxleLength())
 				/ (2 * Driver.wallE.getWheelRadius());
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
-		System.out.println(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	}
 	
@@ -179,7 +172,6 @@ public class Movement {
 				angularVelocity * Driver.wallE.getAxleLength())
 				/ (2 * Driver.wallE.getWheelRadius());
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
-		System.out.println(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	}
 	
@@ -202,7 +194,6 @@ public class Movement {
 				angularVelocity * Driver.wallE.getAxleLength())
 				/ (2 * Driver.wallE.getWheelRadius());
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
-		System.out.println(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	
 	}
@@ -226,7 +217,6 @@ public class Movement {
 				angularVelocity * Driver.wallE.getAxleLength())
 				/ (2 * Driver.wallE.getWheelRadius());
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
-		System.out.println(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	
 	}
@@ -243,7 +233,7 @@ public class Movement {
 		double speed = Driver.wallE.getSpeed() - Driver.wallE.getAcceleration();
 		speed = (speed < 0) ? 0 : speed;
 		Driver.wallE.setSpeed(speed);
-
+		
 		// Check whether up or down
 		if (Driver.lastUporDown.equals("DOWN")) {
 			Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() - Driver.wallE.getSpeed() * wallEcomponents[0]);
