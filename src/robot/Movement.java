@@ -78,10 +78,10 @@ public class Movement {
 		
 		
 		// calculate wheelspeeds
-		double speedRightWheel = 2 * (currentSpeed + 
+		double speedRightWheel = (2 * currentSpeed + 
 				angularVelocity * Driver.wallE.getAxleLength()) 
 				/ (2 * Driver.wallE.getWheelRadius());
-		double speedLeftWheel = 2 * (currentSpeed -
+		double speedLeftWheel = (2 * currentSpeed -
 				angularVelocity * Driver.wallE.getAxleLength())
 				/ (2 * Driver.wallE.getWheelRadius());
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
@@ -110,13 +110,13 @@ public class Movement {
 		double currentSpeed = Driver.wallE.getSpeed();
 		
 		// calculate wheelspeeds
-		double speedLeftWheel = 2 * (currentSpeed + 
+		double speedLeftWheel = (2 * currentSpeed + 
 				angularVelocity * Driver.wallE.getAxleLength())
 				/ (2 * Driver.wallE.getWheelRadius());
-		double speedRightWheel = 2 * (currentSpeed - 
+		double speedRightWheel = (2 * currentSpeed - 
 				angularVelocity * Driver.wallE.getAxleLength())
 				/ (2 * Driver.wallE.getWheelRadius());
-		double[] wheelspeeds = {speedLeftWheel * currentSpeed, speedRightWheel * currentSpeed};
+		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
 		System.out.println(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	}
@@ -141,13 +141,13 @@ public class Movement {
 		double currentSpeed = Driver.wallE.getSpeed();
 		
 		// calculate wheelspeeds
-		double speedLeftWheel = 2 * (currentSpeed +
+		double speedLeftWheel = (2 * currentSpeed +
 				angularVelocity * Driver.wallE.getAxleLength())
 				/ (2 * Driver.wallE.getWheelRadius());
-		double speedRightWheel = 2 * (currentSpeed - 
+		double speedRightWheel = (2 * currentSpeed - 
 				angularVelocity * Driver.wallE.getAxleLength())
 				/ (2 * Driver.wallE.getWheelRadius());
-		double[] wheelspeeds = {speedLeftWheel * currentSpeed, speedRightWheel * currentSpeed};
+		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
 		System.out.println(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	}
@@ -172,13 +172,13 @@ public class Movement {
 		double currentSpeed = Driver.wallE.getSpeed();
 		
 		// calculate wheelspeeds
-		double speedRightWheel = 2 * (currentSpeed + 
+		double speedRightWheel = (2 * currentSpeed + 
 				angularVelocity * Driver.wallE.getAxleLength())
 				/ (2 * Driver.wallE.getWheelRadius());
-		double speedLeftWheel = 2 * (currentSpeed - 
+		double speedLeftWheel = (2 * currentSpeed - 
 				angularVelocity * Driver.wallE.getAxleLength())
 				/ (2 * Driver.wallE.getWheelRadius());
-		double[] wheelspeeds = {speedLeftWheel * currentSpeed, speedRightWheel * currentSpeed};
+		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
 		System.out.println(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	}
@@ -187,16 +187,48 @@ public class Movement {
 	 * Description: Turns the robot to the left
 	 * 
 	 */
-	public static void moveLeft() {
+	public static double[] moveLeft() {
 		Driver.wallE.setRotate(Driver.wallE.getRotate() - Math.abs(Driver.wallE.getAngularVelocity()));
+		
+		// get angularVelocity and convert to radians
+		double angularVelocity = (Driver.wallE.getAngularVelocity() * 2 * Math.PI) / 360.0;
+		// get current speed 
+		double currentSpeed = Driver.wallE.getSpeed();
+	
+		double speedRightWheel = (2 * currentSpeed +
+				angularVelocity * Driver.wallE.getAxleLength())
+				/ (2 * Driver.wallE.getWheelRadius());
+		double speedLeftWheel = (2 * currentSpeed -
+				angularVelocity * Driver.wallE.getAxleLength())
+				/ (2 * Driver.wallE.getWheelRadius());
+		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
+		System.out.println(Arrays.toString(wheelspeeds));
+		return wheelspeeds;
+	
 	}
 
 	/**
 	 * Description: Turns the robot to the right
 	 * 
 	 */
-	public static void moveRight() {
+	public static double[] moveRight() {
 		Driver.wallE.setRotate(Driver.wallE.getRotate() + Math.abs(Driver.wallE.getAngularVelocity()));
+		
+		// get angularVelocity and convert to radians
+		double angularVelocity = (Driver.wallE.getAngularVelocity() * 2 * Math.PI) / 360.0;
+		// get current speed 
+		double currentSpeed = Driver.wallE.getSpeed();
+			
+		double speedLeftWheel = (2 * currentSpeed +
+				angularVelocity * Driver.wallE.getAxleLength())
+				/ (2 * Driver.wallE.getWheelRadius());
+		double speedRightWheel = (2 * currentSpeed -
+				angularVelocity * Driver.wallE.getAxleLength())
+				/ (2 * Driver.wallE.getWheelRadius());
+		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
+		System.out.println(Arrays.toString(wheelspeeds));
+		return wheelspeeds;
+	
 	}
 
 	/**
