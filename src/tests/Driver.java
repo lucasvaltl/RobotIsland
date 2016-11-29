@@ -2,6 +2,7 @@ package tests;
 
 import map.Map;
 import robot.Robot;
+import robot.Wheel;
 
 import java.io.File;
 
@@ -11,7 +12,11 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.Region;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 public class Driver extends Application {
@@ -35,9 +40,14 @@ public class Driver extends Application {
 	public static long startnanotime;
 	public static Map map;
 	public static Robot wallE;
+	public static Wheel leftWheel;
+	public static Wheel rightWheel;
+	public static Rectangle[] wheelE;
 	public static Group root;
+	public static Group robot;
 	public static String[] currentKeyPresses = new String[2];
 	public static String lastUporDown = ""; // used to keep track of robot direction.
+	
 	
 	public static void main(String[] args) {
 
@@ -67,6 +77,7 @@ public class Driver extends Application {
 		/** Start method for JavaFX.  Draws the robot and maps.  **/
 		primaryStage.setTitle("Robot test");
 		root = new Group();
+		robot = new Group();
 		Canvas canvas = new Canvas(SCREENWIDTH, SCREENHEIGHT);
 		GraphicsContext gc = canvas.getGraphicsContext2D();
 		
@@ -76,21 +87,38 @@ public class Driver extends Application {
 		gc.setStroke(Color.GREY);
 		gc.setLineWidth(5);
 		map.render2DMap(gc, true);
+		
 		root.getChildren().add(canvas);
+		root.getChildren().add(robot);
 		primaryStage.setScene(new Scene(root));
 		primaryStage.show();
+		
 		
 		//creates a "fast" robot from an xml file
 		wallE = new Robot("fast");
 		// wallE = new Robot("test", 40, 40, 3, 1, 1, 0, 0, 3, 0, 100, 16, 8);
 		wallE.setFill(Color.BLUE); 
 		wallE.setFocusTraversable(true);
+		
 		// Robot(xCoordinate, yCoordinate, speed, xVel, yVel, xAcc, yAcc, 
 		// angularVelocity, odometer, 
 		// battery left, axle length, wheel radius.
 		wallE.setOnKeyPressed(wallE); // adds Event handler
 		wallE.setOnKeyReleased(wallE); // adds Event handler
-		root.getChildren().add(wallE);
+		robot.getChildren().add(wallE);
+		
+		Wheel wheelLeft = new Wheel(wallE,true);
+		wheelLeft.setFill(Color.GREY);
+		Wheel wheelRight = new Wheel(wallE,false);
+		wheelRight.setFill(Color.GREY);
+		robot.getChildren().add(wheelLeft);
+		robot.getChildren().add(wheelRight);
+		
+		
+//		root.getChildren().add(wheelLeft);
+//		root.getChildren().add(wheelRight);
+	
+		
 		
 		// start animation loop
 		startnanotime = System.nanoTime();

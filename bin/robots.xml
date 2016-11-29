@@ -5,8 +5,8 @@
     <xCoordinate>40</xCoordinate>
     <yCoordinate>40</yCoordinate>
     <speed>3</speed>
-    <maxSpeed>1</maxSpeed>
-    <acceleration> 0 </acceleration>
+    <maxSpeed>2</maxSpeed>
+    <acceleration> 0.05 </acceleration>
     <angularVelocity> 3 </angularVelocity>
     <odometer> 0</odometer>
     <batteryLeft> 100 </batteryLeft>
@@ -20,7 +20,7 @@
     <yCoordinate>40</yCoordinate>
     <speed>0</speed>
     <maxSpeed>4</maxSpeed>
-    <acceleration> 0.5  </acceleration>
+    <acceleration> 0.1 </acceleration>
     <angularVelocity> 3 </angularVelocity>
     <odometer> 0</odometer>
     <batteryLeft> 70 </batteryLeft>
