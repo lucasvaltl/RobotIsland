@@ -7,35 +7,36 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import tests.Driver;
 
+/**
+ * Description: Class that stores all of the collision methods for the robot.
+ * 
+ * @author Geraint and Lucas
+ *
+ */
+
 public class CollisionDetection {
 
-	 public static boolean collisionDetection(Rectangle robot,
-	 ArrayList<Rectangle> blocks) {
-	 for (Rectangle staticblocs : blocks) {
-	 if
-	 (robot.getBoundsInParent().intersects(staticblocs.getBoundsInParent())) {
-	 System.out.println("collision detected");
-	 robot.setFill(Color.RED);
-	 return true; // collision
-	 }
-	 }
-	 return false;
-	 }
+	
+	/**
+	 * Description: this function detects if a rectangle (here a robot) is colliding
+	 * with another rectangle stored in an ArrayList of rectangles
+	 * 
+	 * 
+	 * @param robot: input the robot you want to test collisions against
+	 * @param blocks: enter an ArrayList containing the rectangles that the robot
+	 * could collide with
+	 * @return: returns true if a collision was detected
+	 */
 
-//	public static boolean collisionDetection(Rectangle robot, ArrayList<Rectangle> blocks) {
-//
-//		for (Rectangle block : blocks) {
-//			Bounds objA = robot.localToScene(robot.getBoundsInLocal());
-//			Bounds objB = block.localToScene(block.getBoundsInLocal());
-//			System.out.println("detected");
-//			if (objA.intersects(objB)) {
-//				robot.setFill(Color.RED);
-//				System.out.println("collision detected");
-//				return true;
-//			} else {
-//				return false;
-//			}
-//		}
-//		return false;
-//	}
+	public static boolean collisionDetection(Rectangle robot, ArrayList<Rectangle> blocks) {
+		for (Rectangle staticblocs : blocks) {
+			if (robot.getBoundsInParent().intersects(staticblocs.getBoundsInParent())) {
+				robot.setFill(Color.RED);
+				return true; // collision
+			}
+		}
+		return false;
+	}
+
+	
 }
