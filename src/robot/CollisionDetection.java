@@ -28,13 +28,13 @@ public class CollisionDetection {
 	 * @return: returns true if a collision was detected
 	 */
 
-	public static boolean collisionDetection(Rectangle robot, ArrayList<Rectangle> blocks) {
-		/*for (Rectangle staticblocs : blocks) {
+	public static boolean collisionDetection(Robot robot, ArrayList<Rectangle> blocks) {
+		for (Rectangle staticblocs : blocks) {
 			if (robot.getBoundsInParent().intersects(staticblocs.getBoundsInParent())) {
-				robot.setFill(Color.RED);
+				
 				return true; // collision
 			}
-		} */
+		} 
 		return false; 
 	}
 

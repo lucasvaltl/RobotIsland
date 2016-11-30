@@ -4,7 +4,10 @@ import map.Map;
 import robot.Robot;
 import robot.Wheel;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
+
+import javax.imageio.ImageIO;
 
 import gametimer.GameTimer;
 import javafx.application.*;
@@ -12,6 +15,7 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
@@ -47,7 +51,7 @@ public class Driver extends Application {
 	public static Group robot;
 	public static String[] currentKeyPresses = new String[2];
 	public static String lastUporDown = ""; // used to keep track of robot direction.
-	
+	public static GraphicsContext gc;
 	
 	public static void main(String[] args) {
 
@@ -79,7 +83,7 @@ public class Driver extends Application {
 		root = new Group();
 		robot = new Group();
 		Canvas canvas = new Canvas(SCREENWIDTH, SCREENHEIGHT);
-		GraphicsContext gc = canvas.getGraphicsContext2D();
+		gc = canvas.getGraphicsContext2D();
 		
 		// Draw map and add to canvas
 		
@@ -97,22 +101,16 @@ public class Driver extends Application {
 		//creates a "fast" robot from an xml file
 		wallE = new Robot("fast");
 		// wallE = new Robot("test", 40, 40, 3, 1, 1, 0, 0, 3, 0, 100, 16, 8);
-		wallE.setFill(Color.BLUE); 
-		wallE.setFocusTraversable(true);
 		
+		wallE.setFocusTraversable(true);
+
 		// Robot(xCoordinate, yCoordinate, speed, xVel, yVel, xAcc, yAcc, 
 		// angularVelocity, odometer, 
 		// battery left, axle length, wheel radius.
 		wallE.setOnKeyPressed(wallE); // adds Event handler
-		wallE.setOnKeyReleased(wallE); // adds Event handler
+		wallE.setOnKeyReleased(wallE);
+//		wallE.setFill(Color.TRANSPARENT);// adds Event handler
 		robot.getChildren().add(wallE);
-		
-		Wheel wheelLeft = new Wheel(wallE,true);
-		wheelLeft.setFill(Color.GREY);
-		Wheel wheelRight = new Wheel(wallE,false);
-		wheelRight.setFill(Color.GREY);
-		robot.getChildren().add(wheelLeft);
-		robot.getChildren().add(wheelRight);
 		
 		
 //		root.getChildren().add(wheelLeft);

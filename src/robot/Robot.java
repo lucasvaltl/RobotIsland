@@ -1,12 +1,18 @@
 package robot;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 import javafx.event.EventHandler;
 import javafx.scene.Group;
+import javafx.scene.SnapshotParameters;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.transform.Rotate;
 import readers.FileReader;
@@ -14,7 +20,7 @@ import readers.InvalidFormatException;
 import readers.XMLReader;
 import tests.Driver;
 
-public class Robot extends Rectangle implements EventHandler<KeyEvent> {
+public class Robot extends ImageView implements EventHandler<KeyEvent> {
 	/** Class that represents the robot - its movement and perspective. 
 	 * Overrides some JavaFX rectangle methods **/
 	
@@ -30,7 +36,10 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 	private double batteryCapacity;
 	private double axleLength;
 	private double wheelRadius;
-
+	private Image looks;
+	
+	
+	
 	public Robot(String name, double xCoordinate, double yCoordinate, double speed, 
 			double maxSpeed, double acceleration, double angularVelocity, double odometer, 
 			double batteryLeft, double batteryCapacity, 
@@ -49,9 +58,9 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		this.batteryLeft = batteryLeft;
 		this.batteryCapacity = batteryCapacity;
 		this.axleLength = axleLength;
-		super.setWidth(this.axleLength);
+		super.prefWidth(this.axleLength);
 		this.wheelRadius = wheelRadius;
-		super.setHeight(this.wheelRadius);
+		super.prefHeight(this.wheelRadius);
 	}
 	/**
 	 * Description: creates robot's parameters out of a xml file
@@ -74,9 +83,11 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		this.batteryLeft = Double.valueOf(input.get(8));
 		this.batteryCapacity = Double.valueOf(input.get(9));
 		this.axleLength = Double.valueOf(input.get(10));
-		super.setWidth(this.axleLength);
+		super.prefWidth(this.axleLength);
 		this.wheelRadius = Double.valueOf(input.get(11));
-		super.setHeight(this.wheelRadius);
+		super.prefHeight(this.wheelRadius);
+		looks = new Image(new File("src/eve.png").toURI().toString(), this.axleLength, this.wheelRadius, false, true);
+		super.setImage(looks);
 	}
 	
 	public double getxCoordinate() {
@@ -178,14 +189,14 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		 * and calls the Rectangle.setWidth() method 
 		 * (Currently assumes wheels as having no width) **/
 		this.axleLength = axleLength;
-		super.setWidth(this.axleLength);
+		super.prefWidth(this.axleLength);
 	}
 	
 	public void setWheelRadius(double radius) {
 		/** Sets the radius of the robot's wheels to a given value 
 		 * and calls the Rectangle.setHeight() method **/
 		this.wheelRadius = radius;
-		super.setHeight(this.wheelRadius);
+		super.prefHeight(this.wheelRadius);
 	}
 
 	public void batteryLowAlert() {
@@ -206,6 +217,17 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		 * end of every move by a default value of 1, when no charge is given. **/
 		this.batteryLeft -= 1;
 	}
+	
+	public void render(GraphicsContext gc)
+    {
+//		ImageView view = new ImageView(looks);
+//		view.setRotate(this.getRotate());
+//		SnapshotParameters params = new SnapshotParameters();
+//		params.setFill(Color.TRANSPARENT);
+//		Image rotatedImage = view.snapshot(params, null);
+//		gc.drawImage(looks, this.getxCoordinate(), this.getyCoordinate());
+
+    }
 	
 	public double getOrientation() {
 		/** Method that returns the orientation of the robot in radians 
