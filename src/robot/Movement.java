@@ -20,7 +20,7 @@ public class Movement {
 	 *            a double array containing the orientation of a
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
 	 */
-	public static double[] moveUp(double[] wallEcomponents) {
+	public static double[] moveUP(double[] wallEcomponents) {
 		Driver.wallE.setSpeed(Driver.wallE.getSpeed() + Driver.wallE.getAcceleration());
 		Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() + Driver.wallE.getSpeed() * wallEcomponents[0]);
 		Driver.wallE.setyCoordinate(Driver.wallE.getyCoordinate() - Driver.wallE.getSpeed() * wallEcomponents[1]);
@@ -41,7 +41,7 @@ public class Movement {
 	 *            a double array containing the orientation of a
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
 	 */
-	public static double[] moveDown(double[] wallEcomponents) {
+	public static double[] moveDOWN(double[] wallEcomponents) {
 		Driver.wallE.setSpeed(Driver.wallE.getSpeed() + Driver.wallE.getAcceleration());
 		Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() - Driver.wallE.getSpeed() * wallEcomponents[0]);
 		Driver.wallE.setyCoordinate(Driver.wallE.getyCoordinate() + Driver.wallE.getSpeed() * wallEcomponents[1]);

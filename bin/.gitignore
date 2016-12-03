@@ -1,4 +1,13 @@
-/robot/
-/tests/
-/gametimer/
+/.project
 /eve.png
+/eveleft.png
+/everight.png
+/gametimer/
+/learningJavaFX/
+/map/
+/movements.txt
+/readers/
+/resources
+/robot/
+/robots.xml
+/tests/

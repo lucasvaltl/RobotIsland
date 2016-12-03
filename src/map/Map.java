@@ -90,7 +90,7 @@ public class Map {
 				if (this.grid[row][col] != 0) {
 					// if map value is non zero, create square of correct size
 					// and add to the Pane.
-					Rectangle block = new Rectangle((col*32),(row*32), 32, 32);
+					Rectangle block = new Rectangle((col*XBLOCKSIZE),(row*YBLOCKSIZE), XBLOCKSIZE, YBLOCKSIZE);
 					block.setFill(Color.YELLOW);
 					blocks.add(block);
 				}

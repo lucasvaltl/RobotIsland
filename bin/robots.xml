@@ -16,8 +16,8 @@
   </robot>
   <robot id="fast">
     <name>fastrobot</name>
-    <xCoordinate>40</xCoordinate>
-    <yCoordinate>40</yCoordinate>
+    <xCoordinate>80</xCoordinate>
+    <yCoordinate>80</yCoordinate>
     <speed>0</speed>
     <maxSpeed>4</maxSpeed>
     <acceleration> 0.1 </acceleration>
@@ -25,7 +25,7 @@
     <odometer> 0</odometer>
     <batteryLeft> 70 </batteryLeft>
     <batteryCapacity>70 </batteryCapacity>
-    <axleLength>16</axleLength>
-    <wheelRadius>8</wheelRadius>
+    <axleLength>32</axleLength>
+    <wheelRadius>48</wheelRadius>
   </robot>
 </robots>

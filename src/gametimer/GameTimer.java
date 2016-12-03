@@ -26,8 +26,6 @@ public class GameTimer extends AnimationTimer {
 
 		
 		Driver.wallE.render(Driver.gc);
-		System.out.println(Driver.wallE.getAxleLength());
-		System.out.println(Driver.wallE.getWheelRadius());
 		
 		//changes the robots color back to blue after a set amount of time
 //		if (Driver.wallE.getFill().equals(Color.RED)) {
@@ -44,56 +42,131 @@ public class GameTimer extends AnimationTimer {
 			Driver.wallE.setSpeed(0);
 		}
 
-		if (Driver.currentKeyPresses[0] == "UP" && Driver.currentKeyPresses[1] == "LEFT") {
+		if (Driver.currentKeyPresses[0] == "DOWN" && Driver.currentKeyPresses[1] == "LEFT") {
 			//
-			Movement.moveUpLeft(wallEcomponents);
-			if (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
-				Movement.moveUpRight(wallEcomponents);
-				Driver.wallE.setSpeed(0);
+			double[] wheelspeeds=Movement.moveDownLeft(wallEcomponents);
+			if(wheelspeeds[1]==wheelspeeds[0]){
+				Image looks = new Image(new File("src/eve.png").toURI().toString(), Driver.wallE.getAxleLength(), Driver.wallE.getWheelRadius(), false, true);
+				Driver.wallE.setImage(looks);
+				
+			}else if(wheelspeeds[1]<wheelspeeds[0]){
+				Image looks = new Image(new File("src/eveleft.png").toURI().toString(), Driver.wallE.getAxleLength(), Driver.wallE.getWheelRadius(), false, true);
+				Driver.wallE.setImage(looks);
+			}else{
+				Image looks = new Image(new File("src/everight.png").toURI().toString(), Driver.wallE.getAxleLength(), Driver.wallE.getWheelRadius(), false, true);
+				Driver.wallE.setImage(looks);
 			}
-
-		} else if (Driver.currentKeyPresses[0] == "UP" && Driver.currentKeyPresses[1] == "RIGHT") {
-			//
-			Movement.moveUpRight(wallEcomponents);
-			if (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
-				Movement.moveUpLeft(wallEcomponents);
-				Driver.wallE.setSpeed(0);
-
-			}
-
-		} else if (Driver.currentKeyPresses[0] == "DOWN" && Driver.currentKeyPresses[1] == "LEFT") {
-			//
-			Movement.moveDownLeft(wallEcomponents);
 			if (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
 				Movement.moveDownRight(wallEcomponents);
 				Driver.wallE.setSpeed(0);
-
 			}
+
 		} else if (Driver.currentKeyPresses[0] == "DOWN" && Driver.currentKeyPresses[1] == "RIGHT") {
 			//
-			Movement.moveDownRight(wallEcomponents);
+			double[] wheelspeeds=Movement.moveDownRight(wallEcomponents);
+			
+			if(wheelspeeds[1]==wheelspeeds[0]){
+				Image looks = new Image(new File("src/eve.png").toURI().toString(), Driver.wallE.getAxleLength(), Driver.wallE.getWheelRadius(), false, true);
+				Driver.wallE.setImage(looks);
+				
+			}else if(wheelspeeds[1]<wheelspeeds[0]){
+				Image looks = new Image(new File("src/eveleft.png").toURI().toString(), Driver.wallE.getAxleLength(), Driver.wallE.getWheelRadius(), false, true);
+				Driver.wallE.setImage(looks);
+			}else{
+				Image looks = new Image(new File("src/everight.png").toURI().toString(), Driver.wallE.getAxleLength(), Driver.wallE.getWheelRadius(), false, true);
+				Driver.wallE.setImage(looks);
+			}
+			
 			if (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
 				Movement.moveDownLeft(wallEcomponents);
 				Driver.wallE.setSpeed(0);
 
 			}
+
+		} else if (Driver.currentKeyPresses[0] == "UP" && Driver.currentKeyPresses[1] == "LEFT") {
+			//
+			double[] wheelspeeds=Movement.moveUpLeft(wallEcomponents);
 			
-		} else if (Driver.currentKeyPresses[0] == "UP") {
+			if(wheelspeeds[1]==wheelspeeds[0]){
+				Image looks = new Image(new File("src/eve.png").toURI().toString(), Driver.wallE.getAxleLength(), Driver.wallE.getWheelRadius(), false, true);
+				Driver.wallE.setImage(looks);
+				
+			}else if(wheelspeeds[1]<wheelspeeds[0]){
+				Image looks = new Image(new File("src/eveleft.png").toURI().toString(), Driver.wallE.getAxleLength(), Driver.wallE.getWheelRadius(), false, true);
+				Driver.wallE.setImage(looks);
+			}else{
+				Image looks = new Image(new File("src/everight.png").toURI().toString(), Driver.wallE.getAxleLength(), Driver.wallE.getWheelRadius(), false, true);
+				Driver.wallE.setImage(looks);
+			}
+			
+			if (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
+				Movement.moveUpRight(wallEcomponents);
+				Driver.wallE.setSpeed(0);
+
+			}
+		} else if (Driver.currentKeyPresses[0] == "UP" && Driver.currentKeyPresses[1] == "RIGHT") {
+			//
+			double[] wheelspeeds=Movement.moveUpRight(wallEcomponents);
+			
+			if(wheelspeeds[0]==wheelspeeds[1]){
+				Image looks = new Image(new File("src/eve.png").toURI().toString(), Driver.wallE.getAxleLength(), Driver.wallE.getWheelRadius(), false, true);
+				Driver.wallE.setImage(looks);
+				
+			}else if(wheelspeeds[1]<wheelspeeds[0]){
+				Image looks = new Image(new File("src/eveleft.png").toURI().toString(), Driver.wallE.getAxleLength(), Driver.wallE.getWheelRadius(), false, true);
+				Driver.wallE.setImage(looks);
+			}else{
+				Image looks = new Image(new File("src/everight.png").toURI().toString(), Driver.wallE.getAxleLength(), Driver.wallE.getWheelRadius(), false, true);
+				Driver.wallE.setImage(looks);
+			}
+			
+			if (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
+				Movement.moveUpLeft(wallEcomponents);
+				Driver.wallE.setSpeed(0);
+
+			}
+			
+		} else if (Driver.currentKeyPresses[0] == "DOWN") {
 			// accelerate
 
-			Movement.moveUp(wallEcomponents);
+			double[] wheelspeeds=Movement.moveDOWN(wallEcomponents);
+			
+			if(wheelspeeds[0]==wheelspeeds[1]){
+				Image looks = new Image(new File("src/eve.png").toURI().toString(), Driver.wallE.getAxleLength(), Driver.wallE.getWheelRadius(), false, true);
+				Driver.wallE.setImage(looks);
+				
+			}else if(wheelspeeds[0]<wheelspeeds[1]){
+				Image looks = new Image(new File("src/eveleft.png").toURI().toString(), Driver.wallE.getAxleLength(), Driver.wallE.getWheelRadius(), false, true);
+				Driver.wallE.setImage(looks);
+			}else{
+				Image looks = new Image(new File("src/everight.png").toURI().toString(), Driver.wallE.getAxleLength(), Driver.wallE.getWheelRadius(), false, true);
+				Driver.wallE.setImage(looks);
+			}
 
 			if (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
-				Movement.moveDown(wallEcomponents);
+				Movement.moveUP(wallEcomponents);
 				Driver.wallE.setSpeed(0);
 
 			}
 
-		} else if (Driver.currentKeyPresses[0] == "DOWN") {
+		} else if (Driver.currentKeyPresses[0] == "UP") {
 
-			Movement.moveDown(wallEcomponents);
+			double[] wheelspeeds=Movement.moveUP(wallEcomponents);
+			
+			if(wheelspeeds[0]==wheelspeeds[1]){
+				Image looks = new Image(new File("src/eve.png").toURI().toString(), Driver.wallE.getAxleLength(), Driver.wallE.getWheelRadius(), false, true);
+				Driver.wallE.setImage(looks);
+				
+			}else if(wheelspeeds[0]<wheelspeeds[1]){
+				Image looks = new Image(new File("src/eveleft.png").toURI().toString(), Driver.wallE.getAxleLength(), Driver.wallE.getWheelRadius(), false, true);
+				Driver.wallE.setImage(looks);
+			}else{
+				Image looks = new Image(new File("src/everight.png").toURI().toString(), Driver.wallE.getAxleLength(), Driver.wallE.getWheelRadius(), false, true);
+				Driver.wallE.setImage(looks);
+			}
+			
 			if (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
-				Movement.moveUp(wallEcomponents);
+				Movement.moveDOWN(wallEcomponents);
 				Driver.wallE.setSpeed(0);
 
 			}
@@ -102,8 +175,16 @@ public class GameTimer extends AnimationTimer {
 			//
 			
 			double[] wheelspeeds= Movement.moveLeft();
-			if(wheelspeeds[0]<wheelspeeds[1]){
+			
+			if(wheelspeeds[0]==wheelspeeds[1]){
+				Image looks = new Image(new File("src/eve.png").toURI().toString(), Driver.wallE.getAxleLength(), Driver.wallE.getWheelRadius(), false, true);
+				Driver.wallE.setImage(looks);
+				
+			}else if(wheelspeeds[0]<wheelspeeds[1]){
 				Image looks = new Image(new File("src/eveleft.png").toURI().toString(), Driver.wallE.getAxleLength(), Driver.wallE.getWheelRadius(), false, true);
+				Driver.wallE.setImage(looks);
+			}else{
+				Image looks = new Image(new File("src/everight.png").toURI().toString(), Driver.wallE.getAxleLength(), Driver.wallE.getWheelRadius(), false, true);
 				Driver.wallE.setImage(looks);
 			}
 			
@@ -118,8 +199,15 @@ public class GameTimer extends AnimationTimer {
 			//
 			double[] wheelspeeds= Movement.moveRight();
 			
-			if(wheelspeeds[1]<wheelspeeds[0]){
+			if(wheelspeeds[0]==wheelspeeds[1]){
 				Image looks = new Image(new File("src/eve.png").toURI().toString(), Driver.wallE.getAxleLength(), Driver.wallE.getWheelRadius(), false, true);
+				Driver.wallE.setImage(looks);
+				
+			}else if(wheelspeeds[0]<wheelspeeds[1]){
+				Image looks = new Image(new File("src/eveleft.png").toURI().toString(), Driver.wallE.getAxleLength(), Driver.wallE.getWheelRadius(), false, true);
+				Driver.wallE.setImage(looks);
+			}else{
+				Image looks = new Image(new File("src/everight.png").toURI().toString(), Driver.wallE.getAxleLength(), Driver.wallE.getWheelRadius(), false, true);
 				Driver.wallE.setImage(looks);
 			}
 			if (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
@@ -131,11 +219,11 @@ public class GameTimer extends AnimationTimer {
 			Movement.decelerate(wallEcomponents);
 
 			if (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
-				if (Driver.lastUporDown.equals("DOWN")) {
-					Movement.moveUp(wallEcomponents);
+				if (Driver.lastUporDown.equals("UP")) {
+					Movement.moveDOWN(wallEcomponents);
 					Driver.wallE.setSpeed(0);
-				} else if (Driver.lastUporDown.equals("UP")) {
-					Movement.moveDown(wallEcomponents);
+				} else if (Driver.lastUporDown.equals("DOWN")) {
+					Movement.moveUP(wallEcomponents);
 					Driver.wallE.setSpeed(0);
 
 				}
