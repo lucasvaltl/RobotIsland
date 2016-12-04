@@ -43,22 +43,39 @@ public class GameTimer extends AnimationTimer {
 		if (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
 			Driver.wallE.setSpeed(0);
 		}
-
+		
 		// Otherwise move appropriately
 		if (Driver.currentKeyPresses[0] == "UP" && Driver.currentKeyPresses[1] == "LEFT") {
-			Movement.moveUpLeft(wallEcomponents);
-
+			if (Driver.decelerate == true) {
+				Movement.decelerate(wallEcomponents);
+			} else {
+				Movement.moveUpLeft(wallEcomponents);
+			}
+			
+			
 		} else if (Driver.currentKeyPresses[0] == "UP" && Driver.currentKeyPresses[1] == "RIGHT") {
-			Movement.moveUpRight(wallEcomponents);
-
+			if (Driver.decelerate == true) {
+				Movement.decelerate(wallEcomponents);
+			} else {
+				Movement.moveUpRight(wallEcomponents);
+			}
+			
+			
 		} else if (Driver.currentKeyPresses[0] == "DOWN" && Driver.currentKeyPresses[1] == "LEFT") {
-			Movement.moveDownLeft(wallEcomponents);
+			if (Driver.decelerate == true) {
+				Movement.decelerate(wallEcomponents);
+			} else {
+				Movement.moveDownLeft(wallEcomponents);
+			}
 			
 		} else if (Driver.currentKeyPresses[0] == "DOWN" && Driver.currentKeyPresses[1] == "RIGHT") {
-			Movement.moveDownRight(wallEcomponents);
-		
-		} else if (Driver.currentKeyPresses[0] == "UP") {
+			if (Driver.decelerate == true) {
+				Movement.decelerate(wallEcomponents);
+			} else {
+				Movement.moveDownRight(wallEcomponents);
+			}
 			
+		} else if (Driver.currentKeyPresses[0] == "UP") {
 			if (Driver.decelerate == true) {
 				// Robot must decelerate after previous motion in the opposite direction
 				Movement.decelerate(wallEcomponents);
@@ -91,8 +108,10 @@ public class GameTimer extends AnimationTimer {
 			// allows robot to turn left during deceleration
 			if (Driver.decelerate == true) {
 				Movement.decelerate(wallEcomponents);
+				System.out.println("TRUE");
 			}
 			if (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
+				System.out.println("FALSE");
 				Movement.moveRight();
 				Driver.wallE.setSpeed(0);
 			}

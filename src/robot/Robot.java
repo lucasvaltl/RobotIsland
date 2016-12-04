@@ -263,7 +263,8 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 							(Driver.currentKeyPresses[0] == null &&
 							(Driver.lastUporDown.equals(event.getCode().toString()) ||
 									Driver.lastUporDown.isEmpty()))) ? false : true;
-					// decelerate is false when currentKeyPresses[0] is "DOWN"
+					// decelerate is false when currentKeyPresses[0] is "DOWN" or 
+					// when last currentKeyPress is null and lastUpOrDown is "UP"
 					
 					Driver.currentKeyPresses[0] = event.getCode().toString();
 					if (Driver.decelerate == false || (Driver.decelerate == true && 

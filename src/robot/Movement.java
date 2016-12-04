@@ -61,8 +61,7 @@ public class Movement {
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
 	 */
 	public static double[] moveUpLeft(double[] wallEcomponents) {
-		// Assume average speed is constant throughout the turn
-		
+		// Assume average speed is constant throughout the turn		
 		Driver.wallE.setRotate(Driver.wallE.getRotate() - Math.abs(Driver.wallE.getAngularVelocity()));
 		Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() + Driver.wallE.getSpeed() * wallEcomponents[0]);
 		Driver.wallE.setyCoordinate(Driver.wallE.getyCoordinate() - Driver.wallE.getSpeed() * wallEcomponents[1]);
