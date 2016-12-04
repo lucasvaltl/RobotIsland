@@ -9,8 +9,12 @@ import robot.CollisionDetection;
 import robot.Movement;
 import tests.Driver;
 
+/** Description: Class that implements a JavaFX animation timer 
+ * 
+ * @author Geraint and Lucas
+ *
+ */
 public class GameTimer extends AnimationTimer {
-	/** Class that implements a JavaFX animation timer **/
 
 	private int timecounter = 0;
 
@@ -51,7 +55,6 @@ public class GameTimer extends AnimationTimer {
 			} else {
 				Movement.moveUpLeft(wallEcomponents);
 			}
-			
 			
 		} else if (Driver.currentKeyPresses[0] == "UP" && Driver.currentKeyPresses[1] == "RIGHT") {
 			if (Driver.decelerate == true) {

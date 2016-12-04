@@ -14,9 +14,13 @@ import readers.InvalidFormatException;
 import readers.XMLReader;
 import tests.Driver;
 
+/** Description: Class that represents the robot - its movement and perspective. 
+ *  Overrides some JavaFX rectangle methods 
+ * 
+ * @author Geraint and Lucas
+ *
+ */
 public class Robot extends Rectangle implements EventHandler<KeyEvent> {
-	/** Class that represents the robot - its movement and perspective. 
-	 * Overrides some JavaFX rectangle methods **/
 	
 	private String name;
 	private double xCoordinate;
@@ -31,6 +35,21 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 	private double axleLength;
 	private double wheelRadius;
 
+	/** Description: Verbose robot class constructor
+	 * 
+	 * @param name: TODO The robot's ID.
+	 * @param xCoordinate: The robot's initial x position.
+	 * @param yCoordinate: The robot's initial y position.
+	 * @param speed: The robot's initial speed.
+	 * @param maxSpeed: The robot's max speed.
+	 * @param acceleration: The robot's acceleration.
+	 * @param angularVelocity: The robot's angular velocity.
+	 * @param odometer: The robot's initial distance travelled.
+	 * @param batteryLeft: The robot's initial battery level.
+	 * @param batteryCapacity: The robot's battery capacity.
+	 * @param axleLength: The robot's axle length.
+	 * @param wheelRadius: The robot's wheel radius.
+	 */
 	public Robot(String name, double xCoordinate, double yCoordinate, double speed, 
 			double maxSpeed, double acceleration, double angularVelocity, double odometer, 
 			double batteryLeft, double batteryCapacity, 
@@ -54,7 +73,7 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		super.setHeight(this.wheelRadius);
 	}
 	/**
-	 * Description: creates robot's parameters out of a xml file
+	 * Description: Creates the robot's parameters from an XML file.
 	 * @param s: The ID of the robot you want to load
 	 */
 	public Robot(String s) {
@@ -78,116 +97,182 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		this.wheelRadius = Double.valueOf(input.get(11));
 		super.setHeight(this.wheelRadius);
 	}
-	
+
+	/** Description: Returns the robot's x coordinate.
+	 * 
+	 * @return: The robot's current x position.
+	 */
 	public double getxCoordinate() {
-		/** Returns the robot's x coordinate **/
 		return this.xCoordinate;
 	}
 	
+	/** Description: Returns the robot's y coordinate
+	 * 
+	 * @return: The robot's current y position
+	 */
 	public double getyCoordinate() {
-		/** Returns the robot's y coordinate. **/
 		return this.yCoordinate;
 	}
 	
+	/** Description: Returns the robot's speed.
+	 * 
+	 * @return: The robot's current speed.
+	 */
 	public double getSpeed() {
-		/** Returns the robot's speed. **/
 		return this.speed;
 	}
 	
+	/** Description: Returns the robot's max speed. 
+	 * 
+	 * @return: The robot's max speed.
+	 */
 	public double getMaxSpeed() {
 		return this.maxSpeed;
 	}
 	
-	/**
+	/** Description: Return's the robot's acceleration
 	 * 
-	 * @return
+	 * @return: The robot's acceleration.
 	 */
 	public double getAcceleration() {
 		return this.acceleration;
 	}
 	
+	/** Description: Returns the robot's angular velocity in degrees per second.
+	 * 
+	 * @return: The robot's angular velocity in degrees per second.
+	 */
 	public double getAngularVelocity() {
-		/** Returns the robot's angular velocity in angle per second **/
 		return this.angularVelocity;
 	}
 	
+	/** Description: Returns the robot's distance travelled.
+	 * 
+	 * @return: The robot's distance travelled.
+	 */
 	public double getOdometer() {
-		/** Returns the distance travelled by the robot so far **/
 		return this.odometer;
 	}
 	
+	/** Description: Returns a double representing the amount of battery left.
+	 *  
+	 * @return: A double representing the amount of battery left.
+	 */
 	public double getBatteryLeft() {
-		/** Returns a double representing the amount of battery left **/
 		return this.batteryLeft;
 	}
 
+	/** Description: Returns the robot's axle length.
+	 * 
+	 * @return: A double representing the robot's axle length.
+	 */
 	public double getAxleLength() {
-		/** Returns the robot's axle length  **/
 		return this.axleLength;
 	}
 	
+	/** Description: Returns the robot's wheel radius.
+	 * 
+	 * @return: A double representing the robot's wheel radius.
+	 */
 	public double getWheelRadius() {
-		/** Returns the radius of the robot's wheels  **/
 		return this.wheelRadius;
 	}
 	
+	/** Description: Sets the robot's x position to a given value and calls the 
+	 *  parent .setX() method.
+	 * 
+	 * @param xCoordinate: The x position to be moved to.
+	 */
 	public void setxCoordinate(double xCoordinate) {
-		/** Sets the robot's x coordinate and calls the parent setX() method. **/
 		this.xCoordinate = xCoordinate;
 		super.setX(this.xCoordinate);
 	}
 	
+	/** Description: Sets the robot's y position to a given value and calls the 
+	 *  parent .setY() method.
+	 * 
+	 * @param yCoordinate: The y position to be moved to.
+	 */
 	public void setyCoordinate(double yCoordinate) {
-		/** Sets the robot's y coordinate and calls the parent setY() method.  **/
 		this.yCoordinate = yCoordinate;
 		super.setY(this.yCoordinate);
 	}
 	
+	/** Description: Sets the robot's speed and limits it to be less than or equal the 
+	 *  robot's maximum speed.
+	 * 
+	 * @param speed: The speed the robot will set to, providing that it is less than or 
+	 *  equal to the maximum speed.
+	 */
 	public void setSpeed(double speed) {
-		/** Set's the robot's speed and limits it to be less than or equal the 
-		 * robot's max speed **/
 		this.speed = (speed > this.maxSpeed) ? this.maxSpeed : speed;
 	}
 	
+	/** Description: Sets the robot's maximum speed.
+	 * 
+	 * @param maxSpeed: The speed to set as the robot's maximum speed.
+	 */
 	public void setMaxSpeed(double maxSpeed) {
 		this.maxSpeed = maxSpeed;
 	}
 	
+	/** Description: Set's the robot's acceleration. 
+	 * 
+	 * @param acceleration: The acceleration to set as the robot's acceleration.
+	 */
 	public void setAcceleration(double acceleration) {
-		/** Sets the robot's acceleration **/
 		this.acceleration = acceleration;
 	}
 	
+	/** Description: Set's the robot's angular velocity (in degrees per second).
+	 * 
+	 * @param angularVelocity: The value in degrees per second to set the robot's
+	 *  angular velocity.
+	 */
 	public void setAngularVelocity(double angularVelocity) {
-		/** Sets the robot's angular velocity **/
 		this.angularVelocity = angularVelocity;
 	}
 	
+	/** Description: Sets the robot's odometer to a given distance.
+	 * 
+	 * @param distance: The distance the robot has travelled so far.
+	 */
 	public void setOdometer(double distance) {
-		/** Sets the odometer to a given distance **/
 		this.odometer = distance;
 	}
 	
+	/** Description: Sets the robot's battery level to a given value.
+	 * 
+	 * @param batteryLeft: The amount of battery left.
+	 */
 	public void setBatteryLeft(double batteryLeft) {
-		/** Sets the battery left to a given value **/
 		this.batteryLeft = batteryLeft;
 	}
 	
+	/** Description: Sets the axle length to a given value 
+	 * and calls the Rectangle.setWidth() method 
+	 * (Currently assumes wheels as having no width)
+	 * 
+	 * @param axleLength: The robot's axle length.
+	 */
 	public void setAxleLength(double axleLength) {
-		/** Sets the axle length to a given value 
-		 * and calls the Rectangle.setWidth() method 
-		 * (Currently assumes wheels as having no width) **/
 		this.axleLength = axleLength;
 		super.setWidth(this.axleLength);
 	}
 	
+	/** Description: Sets the radius of the robot's wheels to a given value 
+	 * and calls the Rectangle.setHeight() method 
+	 * 
+	 * @param radius: The radius of the robot's wheels.
+	 */
 	public void setWheelRadius(double radius) {
-		/** Sets the radius of the robot's wheels to a given value 
-		 * and calls the Rectangle.setHeight() method **/
 		this.wheelRadius = radius;
 		super.setHeight(this.wheelRadius);
 	}
 
+	/** 
+	 *  Description: Alerts the user of the robot's low battery status.
+	 */
 	public void batteryLowAlert() {
 		// TODO implement audio alert
 		if (this.batteryLeft < 10) {
@@ -195,21 +280,30 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		}
 	}
 
+	/** Description: Method used to decrease robot charge by a given value at 
+	 *  the end of every move.
+	 * 
+	 * @param decrementValue: The value to decrement the robot's battery by.
+	 */
 	public void decreaseCharge(double decrementValue) {
-		/** Method used to decrease robot charge by a given value at 
-		 * the end of every move. **/
 		this.batteryLeft -= decrementValue;
 	}
 	
+	/**
+	 *  Description: Method used to decrease robot charge at the 
+	 *  end of every move by a default value of 1, when no charge is given.  
+	 */
 	public void decreaseCharge() {
-		/** Method used to decrease robot charge at the 
-		 * end of every move by a default value of 1, when no charge is given. **/
 		this.batteryLeft -= 1;
 	}
 	
+	/** Description: Method that returns the orientation of the robot in radians 
+     * using the getRotate() method.
+	 * 
+	 * @return: The current orientation of the robot in radians relative to y axis, clockwise.
+	 */
 	public double getOrientation() {
-		/** Method that returns the orientation of the robot in radians 
-		 * using the getRotate() method. **/
+		/**  **/
 		
 		// Get the orientation using the getRotate() method.
 		double orientation = this.getRotate();
@@ -219,20 +313,25 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		double orientationRadians = orientation / 180.0 * Math.PI;
 		return orientationRadians;
 	}
-	public double[] getOrientationComponents(double orientationInRadians) {
-		/** Method that resolves the robot's orientation to the x and y axis.
-		 *  Returns a double array of the form {xOrientation, yOrientation} **/
-		
+	
+	/** Description: Method that resolves the robot's orientation to the x and y axis.
+	 * 
+	 * @param orientationInRadians: An orientation in radians to resolve.
+	 * @return: a double array of the form {xOrientation, yOrientation}
+	 */
+	public double[] getOrientationComponents(double orientationInRadians) {		
 		double xOrientation = Math.sin(orientationInRadians);
 		double yOrientation = Math.cos(orientationInRadians);
 		double[] orientationComponents = {xOrientation, yOrientation};
 		return orientationComponents;
 	}
 
+	/** Description: Event handler for robot key events. 
+	 *  Adds strings to currentKeyPresses array to keep track of 
+	 *  which buttons are being held down. 
+	 * 
+	 */
 	public void handle(KeyEvent event) {
-		/** Event handler for robot key events. 
-		 *  Adds strings to currentKeyPresses array to keep track of 
-		 *  which buttons are being held down. **/
 		
 		/* Keydown */
 		if (event.getEventType().equals(KeyEvent.KEY_PRESSED)) {
@@ -307,7 +406,12 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 			}
 			event.consume();
 		}		
-	}	
+	}
+	
+	/** Description: Method that reads moves from an input file and executes them in order.
+	 * 
+	 * @param path: The path of the file to read.
+	 */
 	public void moveViaFile(String path){
 		// Get the orientation using the getRotate() method.
 		double orientation = this.getRotate();
@@ -326,37 +430,33 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 			
 			for (int i = 0; i< input.size(); i++){
 				switch (input.get(i)){
-			case "UP": // increase forward velocity;
-				// TODO
-				System.out.println("UP");
-				this.setxCoordinate(this.xCoordinate + this.speed * xOrientation);
-				this.setyCoordinate(this.yCoordinate - this.speed  * yOrientation);
-				break;
-			case "DOWN": // increase backward velocity;
-				System.out.println("DOWN");				
-				this.setxCoordinate(this.xCoordinate - this.speed * xOrientation);
-				this.setyCoordinate(this.yCoordinate + this.speed  * yOrientation);
-				break;
-			case "LEFT": // rotate left
-				System.out.println("LEFT");
-				
-				this.setRotate(this.getRotate() - Math.abs(this.angularVelocity));
-				System.out.println(this.getRotate());
-				
-				break;
-			case "RIGHT": // rotate right
-				System.out.println("RIGHT");
-				this.setRotate(this.getRotate() + Math.abs(this.angularVelocity));
-				break;
-			default:
-				System.out.println("INVALID");
-				break;
-		}
-			
-		}
-		
+				case "UP": // increase forward velocity;
+					System.out.println("UP");
+					this.setxCoordinate(this.xCoordinate + this.speed * xOrientation);
+					this.setyCoordinate(this.yCoordinate - this.speed  * yOrientation);
+					break;
+				case "DOWN": // increase backward velocity;
+					System.out.println("DOWN");				
+					this.setxCoordinate(this.xCoordinate - this.speed * xOrientation);
+					this.setyCoordinate(this.yCoordinate + this.speed  * yOrientation);
+					break;
+				case "LEFT": // rotate left
+					System.out.println("LEFT");
+					
+					this.setRotate(this.getRotate() - Math.abs(this.angularVelocity));
+					System.out.println(this.getRotate());
+					
+					break;
+				case "RIGHT": // rotate right
+					System.out.println("RIGHT");
+					this.setRotate(this.getRotate() + Math.abs(this.angularVelocity));
+					break;
+				default:
+					System.out.println("INVALID");
+					break;
+				}
+			}
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
