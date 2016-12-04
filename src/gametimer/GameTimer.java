@@ -74,7 +74,7 @@ public class GameTimer extends AnimationTimer {
 			} else {
 				Movement.moveDownRight(wallEcomponents);
 			}
-			
+				
 		} else if (Driver.currentKeyPresses[0] == "UP") {
 			if (Driver.decelerate == true) {
 				// Robot must decelerate after previous motion in the opposite direction
@@ -108,10 +108,9 @@ public class GameTimer extends AnimationTimer {
 			// allows robot to turn left during deceleration
 			if (Driver.decelerate == true) {
 				Movement.decelerate(wallEcomponents);
-				System.out.println("TRUE");
 			}
+			
 			if (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
-				System.out.println("FALSE");
 				Movement.moveRight();
 				Driver.wallE.setSpeed(0);
 			}
@@ -141,7 +140,7 @@ public class GameTimer extends AnimationTimer {
 					Driver.wallE.setSpeed(0);
 				}
 			}
-		}
+		} 
 		
 		// change decelerate flag to false if speed is 0
 		if (Driver.wallE.getSpeed() <= 0) {

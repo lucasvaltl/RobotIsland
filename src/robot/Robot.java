@@ -236,6 +236,7 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		
 		/* Keydown */
 		if (event.getEventType().equals(KeyEvent.KEY_PRESSED)) {
+			System.out.println(Arrays.toString(Driver.currentKeyPresses));
 			switch (event.getCode()) {
 				case UP: // increase forward velocity;
 					/*Driver.decelerate = (Objects.equals(Driver.currentKeyPresses[0], 
@@ -287,7 +288,7 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 			event.consume();
 			// Keyreleased
 		} else if (event.getEventType().equals(KeyEvent.KEY_RELEASED)) {
-			/** TODO **/
+			/**  **/
 			switch (event.getCode()) {
 				case UP: // 
 					Driver.currentKeyPresses[0] = null;
