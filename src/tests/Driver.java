@@ -98,7 +98,6 @@ public class Driver extends Application {
 		GameTimer timer = new GameTimer();
 		timer.start();
 		
-		
 		wallE.singleMoveViaFile("src/movements2.txt");
 		
 	}
