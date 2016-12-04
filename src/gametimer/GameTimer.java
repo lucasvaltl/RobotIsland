@@ -33,6 +33,12 @@ public class GameTimer extends AnimationTimer {
 
 		final double[] wallEcomponents = Driver.wallE.getOrientationComponents(wallEorientation);
 
+		// read commands from file
+		if (Driver.wallE.getInputCommandsReadingInProgress() == true) {
+			// Request a new move
+			Driver.wallE.singleMoveViaFile("src/movements2.txt");
+		}
+		
 		//changes the robots color back to blue after a set amount of time
 		if (Driver.wallE.getFill().equals(Color.RED)) {
 			timecounter += 1;

@@ -9,6 +9,7 @@ import javafx.event.EventHandler;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.transform.Rotate;
+import readers.NewFileReader;
 import readers.FileReader;
 import readers.InvalidFormatException;
 import readers.XMLReader;
@@ -37,6 +38,9 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 	private String[] currentKeyPresses = new String[2];
 	private String lastUporDown = "";
 	private boolean decelerate = false;
+	private ArrayList<String> inputCommands = null;
+	private int inputCommandsIndex = 0;
+	private boolean inputCommandsReadingInProgress = false;
 
 	/** Description: Verbose robot class constructor
 	 * 
@@ -204,6 +208,15 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 	 */
 	public boolean getDecelerate() {
 		return this.decelerate;
+	}
+	
+	/** Description: Method that returns a boolean which will be true when robot commands 
+	 *  are being read from a file.
+	 * 
+	 * @return: A boolean that will be true when robot commands are being read from a file.
+	 */
+	public boolean getInputCommandsReadingInProgress() {
+		return this.inputCommandsReadingInProgress;
 	}
 	
 	/** Description: Sets the robot's x position to a given value and calls the 
@@ -529,52 +542,78 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 	 *  executes them in order.
 	 * 
 	 * @param path: The path of the file to read.
-	 *
+	 * @param index: The current index to add to currentKeyPresses (must be 
+	 * between 0 (inclusive) and the length of the ArrayList (exclusive).
 	 */
-	public void newMoveViaFile (String path) {
+	public void singleMoveViaFile (String path) {
 	// TODO
-		FileReader fr = new FileReader();
-		ArrayList<String> input;
-		
-		try {
-			input = fr.scanFile(path);
-			
-			for (int i=0; i < input.size(); i++) {
-				switch (input.get(i)) {
-					case "[UP, null]": 
-						this.currentKeyPresses[0] = "UP";
-						this.currentKeyPresses[1] = null;
-						break;
-					case "[UP, LEFT]" :
-						this.currentKeyPresses[0] = "UP";
-						this.currentKeyPresses[1] = "LEFT";
-						break;
-					case "[UP, RIGHT]" :
-						this.currentKeyPresses[0] = "UP";
-						this.currentKeyPresses[1] = "RIGHT";
-						break;
-					case "[DOWN, null]":
-						this.currentKeyPresses[0] = "DOWN";
-						this.currentKeyPresses[1] = null;
-						break;
-					case "[DOWN, LEFT]":
-						this.currentKeyPresses[0] = "DOWN";
-						this.currentKeyPresses[1] = "LEFT";
-						break;
-					case "[DOWN, RIGHT]":
-						this.currentKeyPresses[0] = "DOWN";
-						this.currentKeyPresses[1] = "RIGHT";
-						break;
-					case "[null, null]":
-						this.currentKeyPresses[0] = null;
-						this.currentKeyPresses[1] = null;
-						break;
-					default: //
-				}
+		if (this.inputCommands == null) {
+			// No commands in file, load them up.
+			this.inputCommands = new ArrayList<String>();
+			this.inputCommandsReadingInProgress = true;
+			NewFileReader nfr = null;
+			try {
+				nfr = new NewFileReader();
+				this.inputCommands = nfr.scanFile(path);
+				System.out.println(this.inputCommands);
+				System.out.println(this.inputCommandsReadingInProgress);
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
-			
-		} catch (Exception e) {
-		e.printStackTrace();
+			return;
+		}
+		
+		if (this.inputCommandsReadingInProgress == true ) {
+			switch (this.inputCommands.get(this.inputCommandsIndex)) {
+				case "[UP, null]": 
+					this.currentKeyPresses[0] = "UP";
+					this.currentKeyPresses[1] = null;
+					break;
+				case "[UP, LEFT]" :
+					this.currentKeyPresses[0] = "UP";
+					this.currentKeyPresses[1] = "LEFT";
+					break;
+				case "[UP, RIGHT]" :
+					this.currentKeyPresses[0] = "UP";
+					this.currentKeyPresses[1] = "RIGHT";
+					break;
+				case "[DOWN, null]":
+					this.currentKeyPresses[0] = "DOWN";
+					this.currentKeyPresses[1] = null;
+					break;
+				case "[DOWN, LEFT]":
+					this.currentKeyPresses[0] = "DOWN";
+					this.currentKeyPresses[1] = "LEFT";
+					break;
+				case "[DOWN, RIGHT]":
+					this.currentKeyPresses[0] = "DOWN";
+					this.currentKeyPresses[1] = "RIGHT";
+					break;
+				case "[null, LEFT]":
+					this.currentKeyPresses[0] = null;
+					this.currentKeyPresses[1] = "LEFT";
+					break;
+				case "[null, RIGHT]":
+					this.currentKeyPresses[0] = null;
+					this.currentKeyPresses[1] = "RIGHT";
+					break;
+				case "[null, null]":
+					this.currentKeyPresses[0] = null;
+					this.currentKeyPresses[1] = null;
+					break;
+				default: 
+					System.out.println("INVALID");
+			}
+		}
+		
+		// get the inputCommands arrayList size
+		if (this.inputCommandsIndex >= this.inputCommands.size() - 1) {
+			// Cause deceleration
+			this.inputCommandsReadingInProgress = false;
+			this.currentKeyPresses[0] = null;
+			this.currentKeyPresses[1] = null;
+		} else {
+			this.inputCommandsIndex++;
 		}
 	}
 }

@@ -99,7 +99,7 @@ public class Driver extends Application {
 		timer.start();
 		
 		
-//		wallE.moveViaFile("src/movements.txt");
+		wallE.singleMoveViaFile("src/movements2.txt");
 		
 	}
 	
