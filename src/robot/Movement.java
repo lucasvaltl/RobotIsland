@@ -234,10 +234,10 @@ public class Movement {
 		Driver.wallE.setSpeed(speed);
 		
 		// Check whether up or down
-		if (Driver.lastUporDown.equals("DOWN")) {
+		if (Driver.wallE.getLastUporDown().equals("DOWN")) {
 			Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() - Driver.wallE.getSpeed() * wallEcomponents[0]);
 			Driver.wallE.setyCoordinate(Driver.wallE.getyCoordinate() + Driver.wallE.getSpeed() * wallEcomponents[1]);
-		} else if (Driver.lastUporDown.equals("UP")) {
+		} else if (Driver.wallE.getLastUporDown().equals("UP")) {
 			Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() + Driver.wallE.getSpeed() * wallEcomponents[0]);
 			Driver.wallE.setyCoordinate(Driver.wallE.getyCoordinate() - Driver.wallE.getSpeed() * wallEcomponents[1]);
 		}

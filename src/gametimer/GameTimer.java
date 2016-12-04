@@ -49,37 +49,40 @@ public class GameTimer extends AnimationTimer {
 		}
 		
 		// Otherwise move appropriately
-		if (Driver.currentKeyPresses[0] == "UP" && Driver.currentKeyPresses[1] == "LEFT") {
-			if (Driver.decelerate == true) {
+		if (Driver.wallE.getCurrentKeyPresses()[0] == "UP" && Driver.wallE.getCurrentKeyPresses()[1] == "LEFT") {
+			if (Driver.wallE.getDecelerate() == true) {
 				Movement.decelerate(wallEcomponents);
 			} else {
 				Movement.moveUpLeft(wallEcomponents);
 			}
 			
-		} else if (Driver.currentKeyPresses[0] == "UP" && Driver.currentKeyPresses[1] == "RIGHT") {
-			if (Driver.decelerate == true) {
+		} else if (Driver.wallE.getCurrentKeyPresses()[0] == "UP" && 
+				Driver.wallE.getCurrentKeyPresses()[1] == "RIGHT") {
+			if (Driver.wallE.getDecelerate() == true) {
 				Movement.decelerate(wallEcomponents);
 			} else {
 				Movement.moveUpRight(wallEcomponents);
 			}
 			
 			
-		} else if (Driver.currentKeyPresses[0] == "DOWN" && Driver.currentKeyPresses[1] == "LEFT") {
-			if (Driver.decelerate == true) {
+		} else if (Driver.wallE.getCurrentKeyPresses()[0] == "DOWN" && 
+				Driver.wallE.getCurrentKeyPresses()[1] == "LEFT") {
+			if (Driver.wallE.getDecelerate() == true) {
 				Movement.decelerate(wallEcomponents);
 			} else {
 				Movement.moveDownLeft(wallEcomponents);
 			}
 			
-		} else if (Driver.currentKeyPresses[0] == "DOWN" && Driver.currentKeyPresses[1] == "RIGHT") {
-			if (Driver.decelerate == true) {
+		} else if (Driver.wallE.getCurrentKeyPresses()[0] == "DOWN" && 
+				Driver.wallE.getCurrentKeyPresses()[1] == "RIGHT") {
+			if (Driver.wallE.getDecelerate() == true) {
 				Movement.decelerate(wallEcomponents);
 			} else {
 				Movement.moveDownRight(wallEcomponents);
 			}
 				
-		} else if (Driver.currentKeyPresses[0] == "UP") {
-			if (Driver.decelerate == true) {
+		} else if (Driver.wallE.getCurrentKeyPresses()[0] == "UP") {
+			if (Driver.wallE.getDecelerate() == true) {
 				// Robot must decelerate after previous motion in the opposite direction
 				Movement.decelerate(wallEcomponents);
 			} else {
@@ -91,9 +94,9 @@ public class GameTimer extends AnimationTimer {
 				}
 			}
 
-		} else if (Driver.currentKeyPresses[0] == "DOWN") {
+		} else if (Driver.wallE.getCurrentKeyPresses()[0] == "DOWN") {
 			
-			if (Driver.decelerate == true) {
+			if (Driver.wallE.getDecelerate() == true) {
 				// Robot must decelerate after previous motion in the opposite direction
 				Movement.decelerate(wallEcomponents);
 			} else {
@@ -105,11 +108,11 @@ public class GameTimer extends AnimationTimer {
 				}
 			}			
 
-		} else if (Driver.currentKeyPresses[1] == "LEFT") {
+		} else if (Driver.wallE.getCurrentKeyPresses()[1] == "LEFT") {
 			Movement.moveLeft();
 			
 			// allows robot to turn left during deceleration
-			if (Driver.decelerate == true) {
+			if (Driver.wallE.getDecelerate() == true) {
 				Movement.decelerate(wallEcomponents);
 			}
 			
@@ -118,11 +121,11 @@ public class GameTimer extends AnimationTimer {
 				Driver.wallE.setSpeed(0);
 			}
 
-		} else if (Driver.currentKeyPresses[1] == "RIGHT") {
+		} else if (Driver.wallE.getCurrentKeyPresses()[1] == "RIGHT") {
 			Movement.moveRight();
 			
 			// allows robot to turn right during deceleration
-			if (Driver.decelerate == true) {
+			if (Driver.wallE.getDecelerate() == true) {
 				Movement.decelerate(wallEcomponents);
 			}
 			
@@ -131,14 +134,14 @@ public class GameTimer extends AnimationTimer {
 				Driver.wallE.setSpeed(0);
 			}
 
-		} else if (Driver.currentKeyPresses[0] == null) {
+		} else if (Driver.wallE.getCurrentKeyPresses()[0] == null) {
 			Movement.decelerate(wallEcomponents);
 			if (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
 				// Decelerate in the correct direction
-				if (Driver.lastUporDown.equals("DOWN")) {
+				if (Driver.wallE.getLastUporDown().equals("DOWN")) {
 					Movement.moveUp(wallEcomponents);
 					Driver.wallE.setSpeed(0);
-				} else if (Driver.lastUporDown.equals("UP")) {
+				} else if (Driver.wallE.getLastUporDown().equals("UP")) {
 					Movement.moveDown(wallEcomponents);
 					Driver.wallE.setSpeed(0);
 				}
@@ -147,7 +150,7 @@ public class GameTimer extends AnimationTimer {
 		
 		// change decelerate flag to false if speed is 0
 		if (Driver.wallE.getSpeed() <= 0) {
-			Driver.decelerate = false;
+			Driver.wallE.setDecelerate(false);
 			//Driver.lastUporDown = "";
 		}
 	}

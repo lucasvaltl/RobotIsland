@@ -34,6 +34,9 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 	private double batteryCapacity;
 	private double axleLength;
 	private double wheelRadius;
+	private String[] currentKeyPresses = new String[2];
+	private String lastUporDown = "";
+	private boolean decelerate = false;
 
 	/** Description: Verbose robot class constructor
 	 * 
@@ -178,6 +181,31 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		return this.wheelRadius;
 	}
 	
+	/** Description: Method that returns the robot's current key presses.
+	 * 
+	 * @return A string array of length 2, representing the current key presses.
+	 */
+	public String[] getCurrentKeyPresses() {
+		return this.currentKeyPresses;
+	}
+	
+	/** Description: Method that returns the robot's last up or down command property.
+	 * 
+	 * @return: The last up or down command assigned to the lastUporDown field.
+	 */
+	public String getLastUporDown() {
+		return this.lastUporDown;
+	}
+	
+	/** Description: Method that returns a boolean to represent the robot's 
+	 *  deceleration status
+	 * 
+	 * @return: A boolean that represents the robot's deceleration status.
+	 */
+	public boolean getDecelerate() {
+		return this.decelerate;
+	}
+	
 	/** Description: Sets the robot's x position to a given value and calls the 
 	 *  parent .setX() method.
 	 * 
@@ -270,6 +298,42 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		super.setHeight(this.wheelRadius);
 	}
 
+	/** Description: Method that sets a particular index in the CurrentKeyPresses
+	 *  string array to a given value. 
+	 * 
+	 * @param index: The index of the value to change (must be either 0 or 1.
+	 * @param value: The value to change to.
+	 */
+	public void setCurrentKeyPresses(int index, String value) {
+		if ((index == 0 || index == 1) && (
+				Objects.equals(value, "UP") || 
+				Objects.equals(value, "DOWN"))) {
+			this.currentKeyPresses[index] = value;
+		} else if ((index == 0 || index == 1) && Objects.equals(value, null)) {
+			this.currentKeyPresses[index] = null;
+		}
+	}
+	
+	/** Description: Method used to set the robot's last up or down property.
+	 * 
+	 * @param value: The string to be set (must be "UP", "DOWN", or "null")
+	 */
+	public void setLastUporDown (String value) {
+		if (Objects.equals(value, "UP") || Objects.equals(value, "DOWN")) {
+			this.lastUporDown = value;
+		} else if (Objects.equals(value, "null")) {
+			this.lastUporDown = null;
+		}
+	}
+	
+	/** Description: Method used to flag the robot's deceleration status.
+	 * 
+	 * @param value: The boolean value to be set.
+	 */
+	public void setDecelerate(boolean value) {
+		this.decelerate = value;
+	}
+
 	/** 
 	 *  Description: Alerts the user of the robot's low battery status.
 	 */
@@ -335,51 +399,51 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		
 		/* Keydown */
 		if (event.getEventType().equals(KeyEvent.KEY_PRESSED)) {
-			System.out.println(Arrays.toString(Driver.currentKeyPresses));
+			System.out.println(Arrays.toString(this.currentKeyPresses));
 			switch (event.getCode()) {
 				case UP: // increase forward velocity;
-					/*Driver.decelerate = (Objects.equals(Driver.currentKeyPresses[0], 
+					/*this.decelerate = (Objects.equals(this.currentKeyPresses[0], 
 							event.getCode().toString())) ? false : true; */
-					Driver.decelerate = (Objects.equals(Driver.currentKeyPresses[0], 
+					this.decelerate = (Objects.equals(this.currentKeyPresses[0], 
 							event.getCode().toString()) || 
-							(Driver.currentKeyPresses[0] == null &&
-							Driver.lastUporDown.equals(event.getCode().toString()) ||
-							Driver.lastUporDown.isEmpty())) ? false : true;
+							(this.currentKeyPresses[0] == null &&
+							this.lastUporDown.equals(event.getCode().toString()) ||
+							this.lastUporDown.isEmpty())) ? false : true;
 					// decelerate is false when last currentKeyPresses[0] is "UP" or 
 					// when last currentKeyPress is null and lastUpOrDown is "UP"
 					
-					Driver.currentKeyPresses[0] = event.getCode().toString();
-					if (Driver.decelerate == false || (Driver.decelerate == true &&
-							Driver.wallE.getSpeed() < 0.4)) { // hack
+					this.currentKeyPresses[0] = event.getCode().toString();
+					if (this.decelerate == false || (this.decelerate == true &&
+							Driver.wallE.getSpeed() < 0.6)) { // hack
 						// Only change last up or down if the robot is not in 
 						// decelerate mode (stops weird behaviour when switching 
 						// suddenly from up to down.
-						Driver.lastUporDown = event.getCode().toString();	
+						this.lastUporDown = event.getCode().toString();	
 					}
 					break;
 				case DOWN: // increase backward velocity;
-					Driver.decelerate = (Objects.equals(Driver.currentKeyPresses[0], 
+					this.decelerate = (Objects.equals(this.currentKeyPresses[0], 
 							event.getCode().toString()) || 
-							(Driver.currentKeyPresses[0] == null &&
-							(Driver.lastUporDown.equals(event.getCode().toString()) ||
-									Driver.lastUporDown.isEmpty()))) ? false : true;
+							(this.currentKeyPresses[0] == null &&
+							(this.lastUporDown.equals(event.getCode().toString()) ||
+									this.lastUporDown.isEmpty()))) ? false : true;
 					// decelerate is false when currentKeyPresses[0] is "DOWN" or 
 					// when last currentKeyPress is null and lastUpOrDown is "UP"
 					
-					Driver.currentKeyPresses[0] = event.getCode().toString();
-					if (Driver.decelerate == false || (Driver.decelerate == true && 
-							Driver.wallE.getSpeed() < 0.4)) { // hack
+					this.currentKeyPresses[0] = event.getCode().toString();
+					if (this.decelerate == false || (this.decelerate == true && 
+							Driver.wallE.getSpeed() < 0.6)) { // hack
 						// Only change last up or down if the robot is not in 
 						// decelerate mode (stops weird behaviour when switching 
 						// suddenly from up to down.
-						Driver.lastUporDown = event.getCode().toString();	
+						this.lastUporDown = event.getCode().toString();	
 					}
 					break;
 				case LEFT: // rotate left
-					Driver.currentKeyPresses[1] = event.getCode().toString();
+					this.currentKeyPresses[1] = event.getCode().toString();
 					break;
 				case RIGHT: // rotate right
-					Driver.currentKeyPresses[1] = event.getCode().toString();
+					this.currentKeyPresses[1] = event.getCode().toString();
 					break;
 				default:
 					break;
@@ -390,18 +454,18 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 			/**  **/
 			switch (event.getCode()) {
 				case UP: // 
-					Driver.currentKeyPresses[0] = null;
-					Driver.decelerate = true;
+					this.currentKeyPresses[0] = null;
+					this.decelerate = true;
 					break;
 				case DOWN: //
-					Driver.currentKeyPresses[0] = null;
-					Driver.decelerate = true;
+					this.currentKeyPresses[0] = null;
+					this.decelerate = true;
 					break;
 				case LEFT: //
-					Driver.currentKeyPresses[1] = null;
+					this.currentKeyPresses[1] = null;
 					break;
 				case RIGHT: //
-					Driver.currentKeyPresses[1] = null;
+					this.currentKeyPresses[1] = null;
 					break;
 			}
 			event.consume();
@@ -478,32 +542,32 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 			for (int i=0; i < input.size(); i++) {
 				switch (input.get(i)) {
 					case "[UP, null]": 
-						Driver.currentKeyPresses[0] = "UP";
-						Driver.currentKeyPresses[1] = null;
+						this.currentKeyPresses[0] = "UP";
+						this.currentKeyPresses[1] = null;
 						break;
 					case "[UP, LEFT]" :
-						Driver.currentKeyPresses[0] = "UP";
-						Driver.currentKeyPresses[1] = "LEFT";
+						this.currentKeyPresses[0] = "UP";
+						this.currentKeyPresses[1] = "LEFT";
 						break;
 					case "[UP, RIGHT]" :
-						Driver.currentKeyPresses[0] = "UP";
-						Driver.currentKeyPresses[1] = "RIGHT";
+						this.currentKeyPresses[0] = "UP";
+						this.currentKeyPresses[1] = "RIGHT";
 						break;
 					case "[DOWN, null]":
-						Driver.currentKeyPresses[0] = "DOWN";
-						Driver.currentKeyPresses[1] = null;
+						this.currentKeyPresses[0] = "DOWN";
+						this.currentKeyPresses[1] = null;
 						break;
 					case "[DOWN, LEFT]":
-						Driver.currentKeyPresses[0] = "DOWN";
-						Driver.currentKeyPresses[1] = "LEFT";
+						this.currentKeyPresses[0] = "DOWN";
+						this.currentKeyPresses[1] = "LEFT";
 						break;
 					case "[DOWN, RIGHT]":
-						Driver.currentKeyPresses[0] = "DOWN";
-						Driver.currentKeyPresses[1] = "RIGHT";
+						this.currentKeyPresses[0] = "DOWN";
+						this.currentKeyPresses[1] = "RIGHT";
 						break;
 					case "[null, null]":
-						Driver.currentKeyPresses[0] = null;
-						Driver.currentKeyPresses[1] = null;
+						this.currentKeyPresses[0] = null;
+						this.currentKeyPresses[1] = null;
 						break;
 					default: //
 				}
