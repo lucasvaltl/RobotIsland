@@ -2,7 +2,7 @@ package tests;
 
 import map.Map;
 import robot.Robot;
-import robot.Wheel;
+//import robot.Wheel;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -44,8 +44,8 @@ public class Driver extends Application {
 	public static long startnanotime;
 	public static Map map;
 	public static Robot wallE;
-	public static Wheel leftWheel;
-	public static Wheel rightWheel;
+	//public static Wheel leftWheel;
+	//public static Wheel rightWheel;
 	public static Rectangle[] wheelE;
 	public static Group root;
 	public static Group robot;
