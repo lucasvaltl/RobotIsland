@@ -350,7 +350,7 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 					
 					Driver.currentKeyPresses[0] = event.getCode().toString();
 					if (Driver.decelerate == false || (Driver.decelerate == true &&
-							Driver.wallE.getSpeed() < 0.4)) { // TODO dirty hack
+							Driver.wallE.getSpeed() < 0.4)) { // hack
 						// Only change last up or down if the robot is not in 
 						// decelerate mode (stops weird behaviour when switching 
 						// suddenly from up to down.
@@ -368,7 +368,7 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 					
 					Driver.currentKeyPresses[0] = event.getCode().toString();
 					if (Driver.decelerate == false || (Driver.decelerate == true && 
-							Driver.wallE.getSpeed() < 0.4)) { // TODO dirty hack
+							Driver.wallE.getSpeed() < 0.4)) { // hack
 						// Only change last up or down if the robot is not in 
 						// decelerate mode (stops weird behaviour when switching 
 						// suddenly from up to down.
@@ -413,7 +413,7 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 	 * @param path: The path of the file to read.
 	 */
 	public void moveViaFile(String path){
-		// Get the orientation using the getRotate() method.
+		// TODO Get the orientation using the getRotate() method.
 		double orientation = this.getRotate();
 		orientation = (orientation < 0) ? orientation + 360.0 : orientation;
 		orientation = (orientation > 360) ? orientation % 360.0 : orientation;
@@ -459,7 +459,58 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}	
+	
+	/** Description: Method that reads moves from an input file and 
+	 *  executes them in order.
+	 * 
+	 * @param path: The path of the file to read.
+	 *
+	 */
+	public void newMoveViaFile (String path) {
+	// TODO
+		FileReader fr = new FileReader();
+		ArrayList<String> input;
 		
-		
-		
-}}
+		try {
+			input = fr.scanFile(path);
+			
+			for (int i=0; i < input.size(); i++) {
+				switch (input.get(i)) {
+					case "[UP, null]": 
+						Driver.currentKeyPresses[0] = "UP";
+						Driver.currentKeyPresses[1] = null;
+						break;
+					case "[UP, LEFT]" :
+						Driver.currentKeyPresses[0] = "UP";
+						Driver.currentKeyPresses[1] = "LEFT";
+						break;
+					case "[UP, RIGHT]" :
+						Driver.currentKeyPresses[0] = "UP";
+						Driver.currentKeyPresses[1] = "RIGHT";
+						break;
+					case "[DOWN, null]":
+						Driver.currentKeyPresses[0] = "DOWN";
+						Driver.currentKeyPresses[1] = null;
+						break;
+					case "[DOWN, LEFT]":
+						Driver.currentKeyPresses[0] = "DOWN";
+						Driver.currentKeyPresses[1] = "LEFT";
+						break;
+					case "[DOWN, RIGHT]":
+						Driver.currentKeyPresses[0] = "DOWN";
+						Driver.currentKeyPresses[1] = "RIGHT";
+						break;
+					case "[null, null]":
+						Driver.currentKeyPresses[0] = null;
+						Driver.currentKeyPresses[1] = null;
+						break;
+					default: //
+				}
+			}
+			
+		} catch (Exception e) {
+		e.printStackTrace();
+		}
+	}
+}
