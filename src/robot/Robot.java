@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.Objects;
 
 import javafx.event.EventHandler;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.transform.Rotate;
@@ -566,8 +567,13 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		if (this.inputCommandsReadingInProgress == true ) {
 			switch (this.inputCommands.get(this.inputCommandsIndex)) {
 				case "[UP, null]": 
-					this.currentKeyPresses[0] = "UP";
-					this.currentKeyPresses[1] = null;
+					// robot.fireEvent(keyevent);
+					KeyEvent keUP = new KeyEvent(KeyEvent.KEY_PRESSED, 
+							KeyCode.UP.toString(), KeyCode.UP.toString(),
+							KeyCode.UP, false, false, false, false);
+					this.fireEvent(keUP);
+					//this.currentKeyPresses[0] = "UP";
+					//this.currentKeyPresses[1] = null;
 					break;
 				case "[UP, LEFT]" :
 					this.currentKeyPresses[0] = "UP";
@@ -578,8 +584,12 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 					this.currentKeyPresses[1] = "RIGHT";
 					break;
 				case "[DOWN, null]":
-					this.currentKeyPresses[0] = "DOWN";
-					this.currentKeyPresses[1] = null;
+					KeyEvent keDOWN = new KeyEvent(KeyEvent.KEY_PRESSED,
+							KeyCode.DOWN.toString(), KeyCode.DOWN.toString(),
+							KeyCode.DOWN, false, false, false, false);
+					this.fireEvent(keDOWN);
+//					this.currentKeyPresses[0] = "DOWN";
+//					this.currentKeyPresses[1] = null;
 					break;
 				case "[DOWN, LEFT]":
 					this.currentKeyPresses[0] = "DOWN";
@@ -590,12 +600,20 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 					this.currentKeyPresses[1] = "RIGHT";
 					break;
 				case "[null, LEFT]":
-					this.currentKeyPresses[0] = null;
-					this.currentKeyPresses[1] = "LEFT";
+					KeyEvent keLEFT = new KeyEvent(KeyEvent.KEY_PRESSED,
+							KeyCode.LEFT.toString(), KeyCode.DOWN.toString(),
+							KeyCode.LEFT, false, false, false, false);
+					this.fireEvent(keLEFT);
+//					this.currentKeyPresses[0] = null;
+//					this.currentKeyPresses[1] = "LEFT";
 					break;
 				case "[null, RIGHT]":
-					this.currentKeyPresses[0] = null;
-					this.currentKeyPresses[1] = "RIGHT";
+					KeyEvent keRIGHT = new KeyEvent(KeyEvent.KEY_PRESSED,
+							KeyCode.RIGHT.toString(), KeyCode.RIGHT.toString(),
+							KeyCode.RIGHT, false, false, false, false);
+					this.fireEvent(keRIGHT);
+//					this.currentKeyPresses[0] = null;
+//					this.currentKeyPresses[1] = "RIGHT";
 					break;
 				case "[null, null]":
 					this.currentKeyPresses[0] = null;
