@@ -34,16 +34,16 @@ public class CollisionDetection {
 	 */
 
 	public static boolean collisionDetection(Robot robot, ArrayList<Entity> blocks) {
-		Bounds objA = robot.localToScene(robot.getBoundsInLocal());
+//		Bounds objA = robot.localToScene(robot.getBoundsInLocal());
        
 		
 		
 		for (Entity staticblock : blocks) {
 			
 			if (SAT.isColliding(robot, staticblock)) {
-				System.out.println("robot box: "+ (robot.getBoundsInParent()));
-				System.out.println("Robot get width: ");
-				System.out.println("Block box: "+ (staticblock.getBoundsInParent()));
+//				System.out.println("robot box: "+ (robot.getBoundsInParent()));
+//				System.out.println("Robot get width: ");
+//				System.out.println("Block box: "+ (staticblock.getBoundsInParent()));
 				
 				Image pattern = new Image(new File("src/eveCollision.png").toURI().toString(), 32, 48, false, true);
 				ImagePattern skin = new ImagePattern(pattern);

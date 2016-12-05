@@ -12,6 +12,12 @@ public class SAT {
 
 	
 	public static boolean isColliding(Robot rob, Entity rec){
+		
+		double robMin = 0;
+		double robMax= 0;
+		double recMin = 0;
+		double recMax = 0;
+		
 		List<Point2D> axes = new ArrayList<>();
 		axes.addAll(getAxes(rob.getRotate()));
 		axes.addAll(getAxes(rec.getRotate()));
@@ -23,21 +29,17 @@ public class SAT {
 		List<Point2D> recCorners = rec.corners();
 		
 		for (Point2D axis : axes) {
-			double robMin = robCorners.stream().mapToDouble(p -> p.dotProduct(axis)).min().getAsDouble();
-			double robMax = robCorners.stream().mapToDouble(p -> p.dotProduct(axis)).max().getAsDouble();
+			robMin = robCorners.stream().mapToDouble(p -> p.dotProduct(axis)).min().getAsDouble();
+			robMax = robCorners.stream().mapToDouble(p -> p.dotProduct(axis)).max().getAsDouble();
 			
-			double recMin = recCorners.stream().mapToDouble(p -> p.dotProduct(axis)).min().getAsDouble();
-			double recMax = recCorners.stream().mapToDouble(p -> p.dotProduct(axis)).max().getAsDouble();
-			if (robMax < recMax || robMin < recMin ){
-				return true;
+			recMin = recCorners.stream().mapToDouble(p -> p.dotProduct(axis)).min().getAsDouble();
+			recMax = recCorners.stream().mapToDouble(p -> p.dotProduct(axis)).max().getAsDouble();
+			
+			if (robMax < recMin || recMax < robMin ){
+				return false;
 			}
 		}
-		
-		
-		
-		
-		
-		
+		System.out.println(" robmin: " + robMin + " robMax: " +robMax + " recmin: " + recMin + " recMax: " + recMax);
 		return true;
 	}
 	
