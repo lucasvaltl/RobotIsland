@@ -91,10 +91,10 @@ public class Driver extends Application {
 //		stack.getChildren().add(background);
 		root = new Group();
 		
-		BackgroundImage myBI= new BackgroundImage(new Image(new File("src/background.png").toURI().toString(),SCREENWIDTH,SCREENHEIGHT,false,true),
-		        BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
-		          BackgroundSize.DEFAULT);
-		stack.setBackground(new Background(myBI));
+//		BackgroundImage myBI= new BackgroundImage(new Image(new File("src/background.png").toURI().toString(),SCREENWIDTH,SCREENHEIGHT,false,true),
+//		        BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
+//		          BackgroundSize.DEFAULT);
+//		stack.setBackground(new Background(myBI));
 		// Draw map and add to canvas
 		
 		gc.setFill(Color.BLACK);

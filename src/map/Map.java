@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import robot.Entity;
 import tests.Driver;
 
 public class Map {
@@ -14,7 +15,7 @@ public class Map {
 	private int colSize;
 	private int rowSize;
 	private int[][] grid;
-	public static ArrayList<Rectangle> blocks = new ArrayList<Rectangle>(256);
+	public static ArrayList<Entity> blocks = new ArrayList<Entity>(256);
 	
 	public Map (int[][] grid) {
 		/** Class constructor **/
@@ -97,19 +98,23 @@ public class Map {
 		gc.setStroke(Color.GREY);
 		gc.setLineWidth(5);
 		
+		Entity block = new Entity(300, 300, 100, 100);
+		block.setFill(Color.BLACK);
+		blocks.add(block);
+		Driver.root.getChildren().addAll(blocks);
 		
-		// iterate over map array
-		for (int row = 0; row < this.grid.length; row++) {
-			for (int col = 0; col < this.grid[row].length; col++) {
-				if (this.grid[row][col] != 0) {
-					// if map value is non zero, create square of correct size
-					// and add to the Pane.
-					Rectangle block = new Rectangle((col*XBLOCKSIZE),(row*YBLOCKSIZE), XBLOCKSIZE, YBLOCKSIZE);
-					block.setFill(Color.BLACK);
-					blocks.add(block);
-				}
-			}
-		} Driver.root.getChildren().addAll(blocks);
+//		// iterate over map array
+//		for (int row = 0; row < this.grid.length; row++) {
+//			for (int col = 0; col < this.grid[row].length; col++) {
+//				if (this.grid[row][col] != 0) {
+//					// if map value is non zero, create square of correct size
+//					// and add to the Pane.
+//					Entity block = new Entity((col*XBLOCKSIZE),(row*YBLOCKSIZE), XBLOCKSIZE, YBLOCKSIZE);
+//					block.setFill(Color.BLACK);
+//					blocks.add(block);
+//				}
+//			}
+//		} Driver.root.getChildren().addAll(blocks);
 	}
 }
 

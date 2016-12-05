@@ -67,7 +67,7 @@ public class GameTimer extends AnimationTimer {
 		}
 		Driver.wallE.batteryLowAlert();
 		
-
+//CollisionDetection.collisionDetection(Driver.wallE, Map.blocks) --> old
 		// set speed to zero if collision is found and reverse movements to escape being blocked in walls
 		if (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
 //			Driver.wallE.setSpeed(0);

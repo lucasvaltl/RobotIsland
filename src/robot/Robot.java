@@ -4,9 +4,12 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 import javafx.event.EventHandler;
+import javafx.geometry.Point2D;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
@@ -26,7 +29,7 @@ import tests.Driver;
  * @author Geraint and Lucas
  *
  */
-public class Robot extends Rectangle implements EventHandler<KeyEvent> {
+public class Robot extends Entity implements EventHandler<KeyEvent> {
 	
 	private String name;
 	private double xCoordinate;
@@ -97,9 +100,9 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		ArrayList<String> input = xmlr.read(s, "src/robots.xml");
 		this.name = input.get(0);
 		this.xCoordinate = Double.valueOf(input.get(1));
-		super.setX(this.xCoordinate);
+		this.setX(this.xCoordinate);
 		this.yCoordinate = Double.valueOf(input.get(2));
-		super.setY(this.yCoordinate);
+		this.setY(this.yCoordinate);
 		this.speed = Double.valueOf(input.get(3));
 		this.maxSpeed = Double.valueOf(input.get(4));
 		this.acceleration = Double.valueOf(input.get(5));
@@ -108,12 +111,13 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		this.batteryLeft = Double.valueOf(input.get(8));
 		this.batteryCapacity = Double.valueOf(input.get(9));
 		this.axleLength = Double.valueOf(input.get(10));
-		super.setWidth(this.axleLength);
+		this.setWidth(this.axleLength);
 		this.wheelRadius = Double.valueOf(input.get(11));
-		super.setHeight(this.wheelRadius);
+		this.setHeight(this.wheelRadius);
 //		skin = new Image(new File("src/eve.png").toURI().toString(), this.axleLength, this.wheelRadius, false, true);
 //		super.setImage(skin);
 	}
+	
 
 	/** Description: Returns the robot's x coordinate.
 	 * 
@@ -411,34 +415,7 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		this.batteryLeft -= 1;
 	}
 	
-	/** Description: Method that returns the orientation of the robot in radians 
-     * using the getRotate() method.
-	 * 
-	 * @return: The current orientation of the robot in radians relative to y axis, clockwise.
-	 */
-	public double getOrientation() {
-		/**  **/
-		
-		// Get the orientation using the getRotate() method.
-		double orientation = this.getRotate();
-		orientation = (orientation < 0) ? orientation + 360.0 : orientation;
-		orientation = (orientation > 360) ? orientation % 360.0 : orientation;
-		// System.out.println("Angle: " + orientation);
-		double orientationRadians = orientation / 180.0 * Math.PI;
-		return orientationRadians;
-	}
-	
-	/** Description: Method that resolves the robot's orientation to the x and y axis.
-	 * 
-	 * @param orientationInRadians: An orientation in radians to resolve.
-	 * @return: a double array of the form {xOrientation, yOrientation}
-	 */
-	public double[] getOrientationComponents(double orientationInRadians) {		
-		double xOrientation = Math.sin(orientationInRadians);
-		double yOrientation = Math.cos(orientationInRadians);
-		double[] orientationComponents = {xOrientation, yOrientation};
-		return orientationComponents;
-	}
+
 
 	/** Description: Event handler for robot key events. 
 	 *  Adds strings to currentKeyPresses array to keep track of 
