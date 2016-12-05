@@ -1,11 +1,14 @@
 package robot;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
 
 import javafx.event.EventHandler;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.shape.Rectangle;
@@ -22,7 +25,7 @@ import tests.Driver;
  * @author Geraint and Lucas
  *
  */
-public class Robot extends Rectangle implements EventHandler<KeyEvent> {
+public class Robot extends ImageView implements EventHandler<KeyEvent> {
 	
 	private String name;
 	private double xCoordinate;
@@ -38,14 +41,17 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 	private double wheelRadius;
 	private String[] currentKeyPresses = new String[2];
 	private String lastUporDown = "";
+	private String lastMovement = "";
 	private boolean decelerate = false;
 	private ArrayList<String> inputCommands = null;
 	private int inputCommandsIndex = 0;
 	private boolean inputCommandsReadingInProgress = false;
+	private double[] wheelspeeds = {0, 0};
+	private Image skin;
 
 	/** Description: Verbose robot class constructor
 	 * 
-	 * @param name: TODO The robot's ID.
+	 * @param name: The robot's ID.
 	 * @param xCoordinate: The robot's initial x position.
 	 * @param yCoordinate: The robot's initial y position.
 	 * @param speed: The robot's initial speed.
@@ -76,9 +82,9 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		this.batteryLeft = batteryLeft;
 		this.batteryCapacity = batteryCapacity;
 		this.axleLength = axleLength;
-		super.setWidth(this.axleLength);
+		super.prefWidth(this.axleLength);
 		this.wheelRadius = wheelRadius;
-		super.setHeight(this.wheelRadius);
+		super.prefHeight(this.wheelRadius);
 	}
 	/**
 	 * Description: Creates the robot's parameters from an XML file.
@@ -101,9 +107,11 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		this.batteryLeft = Double.valueOf(input.get(8));
 		this.batteryCapacity = Double.valueOf(input.get(9));
 		this.axleLength = Double.valueOf(input.get(10));
-		super.setWidth(this.axleLength);
+		super.prefWidth(this.axleLength);
 		this.wheelRadius = Double.valueOf(input.get(11));
-		super.setHeight(this.wheelRadius);
+		super.prefHeight(this.wheelRadius);
+		skin = new Image(new File("src/eve.png").toURI().toString(), this.axleLength, this.wheelRadius, false, true);
+		super.setImage(skin);
 	}
 
 	/** Description: Returns the robot's x coordinate.
@@ -202,6 +210,14 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		return this.lastUporDown;
 	}
 	
+	/** Description: Method that returns the robot's last left or right command property.
+	 * 
+	 * @return: The last up or down command assigned to the lastUporDown field.
+	 */
+	public String getLastMovement() {
+		return this.lastMovement;
+	}
+	
 	/** Description: Method that returns a boolean to represent the robot's 
 	 *  deceleration status
 	 * 
@@ -218,6 +234,10 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 	 */
 	public boolean getInputCommandsReadingInProgress() {
 		return this.inputCommandsReadingInProgress;
+	}
+	
+	public double[] getWheelspeeds(){
+		return this.wheelspeeds;
 	}
 	
 	/** Description: Sets the robot's x position to a given value and calls the 
@@ -299,7 +319,7 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 	 */
 	public void setAxleLength(double axleLength) {
 		this.axleLength = axleLength;
-		super.setWidth(this.axleLength);
+		super.prefWidth(this.axleLength);
 	}
 	
 	/** Description: Sets the radius of the robot's wheels to a given value 
@@ -309,7 +329,7 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 	 */
 	public void setWheelRadius(double radius) {
 		this.wheelRadius = radius;
-		super.setHeight(this.wheelRadius);
+		super.prefHeight(this.wheelRadius);
 	}
 
 	/** Description: Method that sets a particular index in the CurrentKeyPresses
@@ -340,12 +360,25 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 		}
 	}
 	
+	/** Description: Method used to set the robot's last up or down property.
+	 * 
+	 * @param value: The string to be set (must be "LEFT", "RIGHT", or "null")
+	 */
+	public void setLastMovement (String move) {
+		this.lastMovement = move;
+	}
+	
 	/** Description: Method used to flag the robot's deceleration status.
 	 * 
 	 * @param value: The boolean value to be set.
 	 */
 	public void setDecelerate(boolean value) {
 		this.decelerate = value;
+	}
+	
+	public void setWheelspeeds(double left, double right){
+		this.wheelspeeds[0] = left;
+		this.wheelspeeds[1] = right;
 	}
 
 	/** 
@@ -455,9 +488,11 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 					break;
 				case LEFT: // rotate left
 					this.currentKeyPresses[1] = event.getCode().toString();
+				
 					break;
 				case RIGHT: // rotate right
 					this.currentKeyPresses[1] = event.getCode().toString();
+					
 					break;
 				default:
 					break;

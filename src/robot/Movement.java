@@ -29,6 +29,7 @@ public class Movement {
 		double speedRightWheel = Driver.wallE.getSpeed();
 		double speedLeftWheel = Driver.wallE.getSpeed();
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
+		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
 		return wheelspeeds;
 	}
 
@@ -49,6 +50,7 @@ public class Movement {
 		double speedRightWheel = Driver.wallE.getSpeed();
 		double speedLeftWheel = Driver.wallE.getSpeed();
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
+		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
 		return wheelspeeds;
 	}
 	
@@ -79,7 +81,7 @@ public class Movement {
 				angularVelocity * Driver.wallE.getAxleLength())
 				/ (2 * Driver.wallE.getWheelRadius());
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
-		
+		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
 		return wheelspeeds;
 	}
 	
@@ -111,6 +113,7 @@ public class Movement {
 				angularVelocity * Driver.wallE.getAxleLength())
 				/ (2 * Driver.wallE.getWheelRadius());
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
+		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
 		return wheelspeeds;
 	}
 	
@@ -141,6 +144,7 @@ public class Movement {
 				angularVelocity * Driver.wallE.getAxleLength())
 				/ (2 * Driver.wallE.getWheelRadius());
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
+		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
 		return wheelspeeds;
 	}
 	
@@ -171,6 +175,7 @@ public class Movement {
 				angularVelocity * Driver.wallE.getAxleLength())
 				/ (2 * Driver.wallE.getWheelRadius());
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
+		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
 		return wheelspeeds;
 	}
 	
@@ -193,6 +198,7 @@ public class Movement {
 				angularVelocity * Driver.wallE.getAxleLength())
 				/ (2 * Driver.wallE.getWheelRadius());
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
+		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
 		return wheelspeeds;
 	
 	}
@@ -216,6 +222,7 @@ public class Movement {
 				angularVelocity * Driver.wallE.getAxleLength())
 				/ (2 * Driver.wallE.getWheelRadius());
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
+		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
 		return wheelspeeds;
 	
 	}

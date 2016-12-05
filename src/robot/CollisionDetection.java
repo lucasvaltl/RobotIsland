@@ -3,6 +3,7 @@ package robot;
 import java.util.ArrayList;
 
 import javafx.geometry.Bounds;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import tests.Driver;
@@ -28,13 +29,15 @@ public class CollisionDetection {
 	 * @return: returns true if a collision was detected
 	 */
 
-	public static boolean collisionDetection(Rectangle robot, ArrayList<Rectangle> blocks) {
-		/*for (Rectangle staticblocs : blocks) {
+	public static boolean collisionDetection(Robot robot, ArrayList<Rectangle> blocks) {
+		for (Rectangle staticblocs : blocks) {
 			if (robot.getBoundsInParent().intersects(staticblocs.getBoundsInParent())) {
-				robot.setFill(Color.RED);
+				System.out.println("robot box: "+ (robot.getBoundsInParent()));
+				System.out.println("Robot get width: "+ (robot.getFitWidth()));
+				System.out.println("Block box: "+ (staticblocs.getBoundsInParent()));
 				return true; // collision
 			}
-		} */
+		} 
 		return false; 
 	}
 

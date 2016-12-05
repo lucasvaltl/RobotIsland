@@ -62,11 +62,25 @@ public class Map {
 		return colArray;
 		
 	}
-
+	
+	/** 
+	 * Renders a 2D version of the map and adds it to an ArrayList of blocks
+	 * that is used for collision detection
+	 * 
+	 * @para: graphics context, boolean to indicate 
+	 * 
+	 */
+	
+	
+	/**
+	 * Renders a 2D version of the map and adds it to an ArrayList of blocks
+	 * that is used for collision detection
+	 * 
+	 * 
+	 * @param gc: insert graphics context
+	 * @param screenEqualsMap: indicates whether the screen (window size) is equal to the map size
+	 */
 	public void render2DMap(GraphicsContext gc, boolean screenEqualsMap) {
-		/** Renders a 2D version of the map and adds it to an ArrayList of blocks
-		 * that is used for collision detection
-		 * **/
 		
 		int YBLOCKSIZE;
 		int XBLOCKSIZE;
@@ -90,7 +104,7 @@ public class Map {
 				if (this.grid[row][col] != 0) {
 					// if map value is non zero, create square of correct size
 					// and add to the Pane.
-					Rectangle block = new Rectangle((col*32),(row*32), 32, 32);
+					Rectangle block = new Rectangle((col*XBLOCKSIZE),(row*YBLOCKSIZE), XBLOCKSIZE, YBLOCKSIZE);
 					block.setFill(Color.YELLOW);
 					blocks.add(block);
 				}
@@ -98,3 +112,4 @@ public class Map {
 		} Driver.root.getChildren().addAll(blocks);
 	}
 }
+
