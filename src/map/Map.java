@@ -105,7 +105,7 @@ public class Map {
 					// if map value is non zero, create square of correct size
 					// and add to the Pane.
 					Rectangle block = new Rectangle((col*XBLOCKSIZE),(row*YBLOCKSIZE), XBLOCKSIZE, YBLOCKSIZE);
-					block.setFill(Color.YELLOW);
+					block.setFill(Color.BLACK);
 					blocks.add(block);
 				}
 			}

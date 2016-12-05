@@ -11,6 +11,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.transform.Rotate;
 import readers.NewFileReader;
@@ -25,7 +26,7 @@ import tests.Driver;
  * @author Geraint and Lucas
  *
  */
-public class Robot extends ImageView implements EventHandler<KeyEvent> {
+public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 	
 	private String name;
 	private double xCoordinate;
@@ -82,9 +83,9 @@ public class Robot extends ImageView implements EventHandler<KeyEvent> {
 		this.batteryLeft = batteryLeft;
 		this.batteryCapacity = batteryCapacity;
 		this.axleLength = axleLength;
-		super.prefWidth(this.axleLength);
+		super.setWidth(this.axleLength);
 		this.wheelRadius = wheelRadius;
-		super.prefHeight(this.wheelRadius);
+		super.setHeight(this.wheelRadius);
 	}
 	/**
 	 * Description: Creates the robot's parameters from an XML file.
@@ -107,11 +108,11 @@ public class Robot extends ImageView implements EventHandler<KeyEvent> {
 		this.batteryLeft = Double.valueOf(input.get(8));
 		this.batteryCapacity = Double.valueOf(input.get(9));
 		this.axleLength = Double.valueOf(input.get(10));
-		super.prefWidth(this.axleLength);
+		super.setWidth(this.axleLength);
 		this.wheelRadius = Double.valueOf(input.get(11));
-		super.prefHeight(this.wheelRadius);
-		skin = new Image(new File("src/eve.png").toURI().toString(), this.axleLength, this.wheelRadius, false, true);
-		super.setImage(skin);
+		super.setHeight(this.wheelRadius);
+//		skin = new Image(new File("src/eve.png").toURI().toString(), this.axleLength, this.wheelRadius, false, true);
+//		super.setImage(skin);
 	}
 
 	/** Description: Returns the robot's x coordinate.
@@ -387,7 +388,9 @@ public class Robot extends ImageView implements EventHandler<KeyEvent> {
 	public void batteryLowAlert() {
 		// TODO implement audio alert
 		if (this.batteryLeft < 10) {
-			System.out.print("Battery low");
+			Image pattern = new Image(new File("src/eveLowBattery.png").toURI().toString(), 32, 48, false, true);
+			ImagePattern skin = new ImagePattern(pattern);
+			Driver.wallE.setFill(skin);
 		}
 	}
 

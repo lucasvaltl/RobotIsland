@@ -1,10 +1,14 @@
 package robot;
 
+import java.io.File;
 import java.util.ArrayList;
 
+import gametimer.GameTimer;
 import javafx.geometry.Bounds;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
 import tests.Driver;
 
@@ -23,18 +27,28 @@ public class CollisionDetection {
 	 * with another rectangle stored in an ArrayList of rectangles
 	 * 
 	 * 
-	 * @param robot: input the robot you want to test collisions against
+	 * @param robot: inpuat the robot you want to test collisions against
 	 * @param blocks: enter an ArrayList containing the rectangles that the robot
 	 * could collide with
 	 * @return: returns true if a collision was detected
 	 */
 
 	public static boolean collisionDetection(Robot robot, ArrayList<Rectangle> blocks) {
+		Bounds objA = robot.localToScene(robot.getBoundsInLocal());
+       
+		
+		
 		for (Rectangle staticblocs : blocks) {
-			if (robot.getBoundsInParent().intersects(staticblocs.getBoundsInParent())) {
+			 Bounds objB = staticblocs.localToScene(staticblocs.getBoundsInLocal());
+			if (objB.intersects(objA)) {
 				System.out.println("robot box: "+ (robot.getBoundsInParent()));
-				System.out.println("Robot get width: "+ (robot.getFitWidth()));
+				System.out.println("Robot get width: ");
 				System.out.println("Block box: "+ (staticblocs.getBoundsInParent()));
+				
+				Image pattern = new Image(new File("src/eveCollision.png").toURI().toString(), 32, 48, false, true);
+				ImagePattern skin = new ImagePattern(pattern);
+				Driver.wallE.setFill(skin);
+				GameTimer.setCollisionDetected(true);
 				return true; // collision
 			}
 		} 

@@ -11,7 +11,16 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundImage;
+import javafx.scene.layout.BackgroundPosition;
+import javafx.scene.layout.BackgroundRepeat;
+import javafx.scene.layout.BackgroundSize;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.ImagePattern;
 import javafx.stage.Stage;
 
 public class Driver extends Application {
@@ -21,8 +30,8 @@ public class Driver extends Application {
 	 *  various action events.
 	 */
 
-	public static final int SCREENWIDTH = 1024;
-	public static final int SCREENHEIGHT = 1024;
+	public static final int SCREENWIDTH = 800;
+	public static final int SCREENHEIGHT = 800;
 		// raycasting variables
 	public static final int THREEDEEPLANEWIDTH = 320;
 	public static final int THREEDEEPLANEHEIGHT = 200;
@@ -31,7 +40,7 @@ public class Driver extends Application {
 	public static final double fieldOfViewAngle = Math.PI / 3; // in radians
 	public static final double DISTANCETOTHREEDEEPLANE = (THREEDEEPLANEWIDTH / 2) * Math.tan(fieldOfViewAngle / 2); // 160 / tan(30degrees)
 	public static final double angleBetweenRays = Driver.fieldOfViewAngle / (THREEDEEPLANEWIDTH * 1.0);
-	
+	public StackPane stack;
 	public static long startnanotime;
 	public static boolean decelerate = false;
 	public static Map map;
@@ -67,24 +76,42 @@ public class Driver extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		/** Start method for JavaFX.  Draws the robot and maps.  **/
 		primaryStage.setTitle("Robot test");
-		root = new Group();
+		
 		Canvas canvas = new Canvas(SCREENWIDTH, SCREENHEIGHT);
 		GraphicsContext gc = canvas.getGraphicsContext2D();
 		
+		stack = new StackPane();
+//		
+//		Group background = new Group();
+//		Image looks = new Image (new File("src/background.png").toURI().toString(), 1024, 1204, false, true);
+//		ImageView pattern = new ImageView(looks);
+//	
+//		
+//		background.getChildren().addAll(pattern);
+//		stack.getChildren().add(background);
+		root = new Group();
+		
+		BackgroundImage myBI= new BackgroundImage(new Image(new File("src/background.png").toURI().toString(),SCREENWIDTH,SCREENHEIGHT,false,true),
+		        BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT,
+		          BackgroundSize.DEFAULT);
+		stack.setBackground(new Background(myBI));
 		// Draw map and add to canvas
 		
 		gc.setFill(Color.BLACK);
-		gc.setStroke(Color.GREY);
+		gc.setStroke(Color.BLUE);
 		gc.setLineWidth(5);
 		map.render2DMap(gc, true);
 		root.getChildren().add(canvas);
-		primaryStage.setScene(new Scene(root));
+		stack.getChildren().add(root);
+		primaryStage.setScene(new Scene(stack));
 		primaryStage.show();
 		
 		//creates a "fast" robot from an xml file
 		wallE = new Robot("fast");
 		// wallE = new Robot("test", 40, 40, 3, 1, 1, 0, 0, 3, 0, 100, 16, 8);
-		
+		Image pattern = new Image(new File("src/eve.png").toURI().toString(), 32, 48, false, true);
+		ImagePattern skin = new ImagePattern(pattern);
+		wallE.setFill(skin);
 		wallE.setFocusTraversable(true);
 		// Robot(xCoordinate, yCoordinate, speed, xVel, yVel, xAcc, yAcc, 
 		// angularVelocity, odometer, 

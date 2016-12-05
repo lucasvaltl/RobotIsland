@@ -1,9 +1,12 @@
 package gametimer;
 
+import java.io.File;
 import java.util.Arrays;
 
 import javafx.animation.AnimationTimer;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.ImagePattern;
 import map.Map;
 import robot.CollisionDetection;
 import robot.Movement;
@@ -17,7 +20,14 @@ import tests.Driver;
 public class GameTimer extends AnimationTimer {
 
 	private int timecounter = 0;
-
+	private static boolean collisionDetected;
+	
+	
+	
+	public static void setCollisionDetected(boolean b){
+		collisionDetected = b;
+	}
+	
 	/**
 	 *  
 	 * Event handler called every timer interval.
@@ -26,7 +36,9 @@ public class GameTimer extends AnimationTimer {
 	 * of the left and right wheels.
 	 */
 	public void handle(long now) {
-				
+		
+		
+		
 		double t = (now - Driver.startnanotime) / 1000000000.0;
 
 		final double wallEorientation = Driver.wallE.getOrientation();
@@ -39,12 +51,26 @@ public class GameTimer extends AnimationTimer {
 			Driver.wallE.singleMoveViaFile("src/movements2.txt");
 		}
 		
+		//switch robot back to normal after given amount of timer after a collision
+		if (GameTimer.collisionDetected){
+			if (this.timecounter==80){
+				Image pattern = new Image(new File("src/eve.png").toURI().toString(), 32, 48, false, true);
+				ImagePattern skin = new ImagePattern(pattern);
+				Driver.wallE.setFill(skin);
+				this.timecounter = 0;
+			} this.timecounter++;
+		}
 		
+		//consume robots battery
+		if(Driver.wallE.getSpeed()>0){
+			Driver.wallE.decreaseCharge(0.05);
+		}
+		Driver.wallE.batteryLowAlert();
 		
 
 		// set speed to zero if collision is found and reverse movements to escape being blocked in walls
 		if (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
-			Driver.wallE.setSpeed(0);
+//			Driver.wallE.setSpeed(0);
 			if (Driver.wallE.getLastMovement().equals("moveDown")) {
 				while (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
 					Movement.moveUp(wallEcomponents);
