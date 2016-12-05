@@ -37,6 +37,14 @@ public class Robot extends ImageView implements EventHandler<KeyEvent> {
 	private double axleLength;
 	private double wheelRadius;
 	private Image looks;
+	private int[] PROJECTIONPLANESIZE = {320, 200};
+	private double height = 32;
+	private int FOVsize = 60;
+	private int[] PROJECTIONPLANECENTRE = {this.PROJECTIONPLANESIZE[0] / 2, 
+			this.PROJECTIONPLANESIZE[1] / 2};
+	private double PROJECTIONPLANEDISTANCETO = this.PROJECTIONPLANECENTRE[0] / 
+			Math.tan(this.FOVsize / 2);
+	private double ANGLEBETWEENRAYS = (1.0 * this.FOVsize) / PROJECTIONPLANESIZE[0]; 
 	
 	
 	
@@ -315,40 +323,94 @@ public class Robot extends ImageView implements EventHandler<KeyEvent> {
 			
 			for (int i = 0; i< input.size(); i++){
 				switch (input.get(i)){
-			case "UP": // increase forward velocity;
-				// TODO
-				System.out.println("UP");
-				this.setxCoordinate(this.xCoordinate + this.speed * xOrientation);
-				this.setyCoordinate(this.yCoordinate - this.speed  * yOrientation);
-				break;
-			case "DOWN": // increase backward velocity;
-				System.out.println("DOWN");				
-				this.setxCoordinate(this.xCoordinate - this.speed * xOrientation);
-				this.setyCoordinate(this.yCoordinate + this.speed  * yOrientation);
-				break;
-			case "LEFT": // rotate left
-				System.out.println("LEFT");
-				
-				this.setRotate(this.getRotate() - Math.abs(this.angularVelocity));
-				System.out.println(this.getRotate());
-				
-				break;
-			case "RIGHT": // rotate right
-				System.out.println("RIGHT");
-				this.setRotate(this.getRotate() + Math.abs(this.angularVelocity));
-				break;
-			default:
-				System.out.println("INVALID");
-				break;
-		}
-			
-		}
+					case "UP": // increase forward velocity;
+						// TODO
+						System.out.println("UP");
+						this.setxCoordinate(this.xCoordinate + this.speed * xOrientation);
+						this.setyCoordinate(this.yCoordinate - this.speed  * yOrientation);
+						break;
+					case "DOWN": // increase backward velocity;
+						System.out.println("DOWN");				
+						this.setxCoordinate(this.xCoordinate - this.speed * xOrientation);
+						this.setyCoordinate(this.yCoordinate + this.speed  * yOrientation);
+						break;
+					case "LEFT": // rotate left
+						System.out.println("LEFT");
+						
+						this.setRotate(this.getRotate() - Math.abs(this.angularVelocity));
+						System.out.println(this.getRotate());
+						
+						break;
+					case "RIGHT": // rotate right
+						System.out.println("RIGHT");
+						this.setRotate(this.getRotate() + Math.abs(this.angularVelocity));
+						break;
+					default:
+						System.out.println("INVALID");
+						break;
+				}		
+			}
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
-		
-}}
+	}
+	
+	public void castRays() {
+		// Get the current orientation
+		double currentOrientation= this.getRotate();
+		// Calculate FOV range
+			// Subtract half of the FOV to current orientation
+			double leftFOV = currentOrientation - this.FOVsize / 2;
+			if (leftFOV < 0) {
+				// add 360degrees
+				leftFOV += 360;
+			} else if (leftFOV > 360) {
+				// minus 360 degrees
+				leftFOV -= 360;
+			}
+			
+		double rayAngle = leftFOV;
+		// Iterate over each pixel column in projection plane
+		for (int i = 0; i < this.PROJECTIONPLANESIZE[0]; i++) {
+			// check for horizontal intersections
+				// find first horizontal intersection
+			
+			double rowDouble;
+			int rowInt;
+			int ceiling;
+			double yDistanceFromCeiling;
+			double xDistanceFromCeilingIntersection;
+			
+			/* check for vertical intersections */
+			if ((currentOrientation >= 270 && currentOrientation <= 360) || 
+					(currentOrientation >= 0 && currentOrientation <= 90)) {
+				// ray facing up
+			
+				// get which grid row the robot is in
+				rowDouble = this.yCoordinate * 1.0 / Driver.map.getRowSize();
+				rowInt = (int) rowDouble;
+				
+				// get the "ceiling" of the block
+				ceiling = rowInt * Driver.map.getBlockHeight();
+				// calculate distance from "ceiling"
+				yDistanceFromCeiling = this.yCoordinate - ceiling;
+				// calculate corresponding horizontal distance
+				xDistanceFromCeilingIntersection = yDistanceFromCeiling * Math.tan(this.getOrientation());
+				double[] pointA = {this.yCoordinate - yDistanceFromCeiling,
+						this.xCoordinate + xDistanceFromCeilingIntersection}; // assumes ray points towards right 				
+				
+				
+			} else {
+				// ray is facing down
+			}
+			
+			// for boundary in range gridBoundaries
+			// if wall hit, record distance
+
+			rayAngle += this.ANGLEBETWEENRAYS;
+		}
+					
+	}
+}

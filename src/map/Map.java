@@ -38,6 +38,22 @@ public class Map {
 		return this.grid;
 	}
 	
+	/** Description: Returns the height of each map block.
+	 * 
+	 * @return: The height of a map block in pixels.
+	 */
+	public int getBlockHeight() {
+		return Driver.SCREENHEIGHT / this.getRowSize();
+	}
+	
+	/** Description: Returns the width of each map block.
+	 * 
+	 * @return: The width of a map block in pixels.
+	 */
+	public int getBlockWidth() {
+		return Driver.SCREENWIDTH / this.getColSize();
+	}
+	
 	public void setGrid(int[][] grid) {
 		/** Method to reset the grid array **/
 		this.grid = grid;

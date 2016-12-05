@@ -83,6 +83,12 @@ public class Driver extends Application {
 		root = new Group();
 		robot = new Group();
 		Canvas canvas = new Canvas(SCREENWIDTH, SCREENHEIGHT);
+		Canvas canvas2 = new Canvas(200, 200); // TODO experimental
+		GraphicsContext gctwo = canvas2.getGraphicsContext2D();
+		
+		gctwo.setFill(Color.RED); // experimental
+		gctwo.fillOval(100, 100, 50, 50); // experimental
+		
 		gc = canvas.getGraphicsContext2D();
 		
 		// Draw map and add to canvas
@@ -93,6 +99,7 @@ public class Driver extends Application {
 		map.render2DMap(gc, true);
 		
 		root.getChildren().add(canvas);
+		root.getChildren().add(canvas2); // experimental
 		root.getChildren().add(robot);
 		primaryStage.setScene(new Scene(root));
 		primaryStage.show();

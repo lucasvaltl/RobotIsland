@@ -24,7 +24,6 @@ public class GameTimer extends AnimationTimer {
 
 		final double[] wallEcomponents = Driver.wallE.getOrientationComponents(wallEorientation);
 
-		
 		Driver.wallE.render(Driver.gc);
 		
 		//changes the robots color back to blue after a set amount of time
