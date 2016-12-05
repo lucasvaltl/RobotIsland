@@ -109,7 +109,7 @@ public class Driver extends Application {
 		//creates a "fast" robot from an xml file
 		wallE = new Robot("fast");
 		// wallE = new Robot("test", 40, 40, 3, 1, 1, 0, 0, 3, 0, 100, 16, 8);
-		Image pattern = new Image(new File("src/eve.png").toURI().toString(), 32, 48, false, true);
+		Image pattern = new Image(new File("src/eve.png").toURI().toString(), 22, 38, false, true);
 		ImagePattern skin = new ImagePattern(pattern);
 		wallE.setFill(skin);
 		wallE.setFocusTraversable(true);

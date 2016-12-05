@@ -391,6 +391,7 @@ public class Robot extends Rectangle implements EventHandler<KeyEvent> {
 			Image pattern = new Image(new File("src/eveLowBattery.png").toURI().toString(), 32, 48, false, true);
 			ImagePattern skin = new ImagePattern(pattern);
 			Driver.wallE.setFill(skin);
+			this.setMaxSpeed(1);
 		}
 	}
 
