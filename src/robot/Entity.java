@@ -5,10 +5,15 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import javafx.geometry.Point2D;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.transform.Rotate;
 
 public class Entity extends Rectangle{
-
+double x;
+double y;
+double width;
+double height;
 	
 	public Entity(int x, int y, int width, int height){
 		super.setX(x);
@@ -38,12 +43,13 @@ public class Entity extends Rectangle{
 	}
 	
 	/**
-	 * 
+	 * Description: find the center point
 	 * 
 	 * @return: Returns centerpoint of the object
 	 */
 	
 	public Point2D center(){
+		
 		return new Point2D((this.getX()+(this.getWidth()/2)),(this.getX()+(this.getHeight()/2)));
 	}
 	
@@ -78,11 +84,34 @@ public class Entity extends Rectangle{
 		return Math.sin(Math.toRadians(angle));
 	}
 	
+	public void draw(GraphicsContext g){
+		g.save();
+		
+		Rotate r = new Rotate(this.getRotate(), this.getX()+ this.getWidth()/2, this.getY()+ this.getHeight()/2);
+		g.setTransform(r.getMxx(), r.getMyx(), r.getMxy(), r.getMyy(), r.getTx(), r.getTy());
+		g.strokeRect(this.getX(), this.getY(), this.getWidth(), this.getHeight());
+		
+		g.restore();
+	}
+	
 	/** Description: Method that returns the orientation of the robot in radians 
      * using the getRotate() method.
 	 * 
 	 * @return: The current orientation of the robot in radians relative to y axis, clockwise.
 	 */
+	
+	public boolean isColliding(Entity e2){
+		return SAT.isColliding(this, e2);
+	}
+	
+	public void changeY(double r) {
+		this.setY(this.getY()+r);
+	}
+	
+	public void changeX(double r) {
+		this.setX(this.getX()+r);
+	}
+	
 	public double getOrientation() {
 		
 		// Get the orientation using the getRotate() method.

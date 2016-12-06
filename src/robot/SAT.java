@@ -11,7 +11,8 @@ import javafx.scene.shape.Rectangle;
 public class SAT {
 
 	
-	public static boolean isColliding(Robot rob, Entity rec){
+	public static boolean isColliding(Entity rob, Entity rec){
+		
 		
 		double robMin = 0;
 		double robMax= 0;
