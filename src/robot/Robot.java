@@ -13,6 +13,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.transform.Rotate;
 import readers.FileReader;
@@ -378,8 +379,10 @@ public class Robot extends ImageView implements EventHandler<KeyEvent> {
 		int colInt;
 		int rowCeiling;
 		int colLeftWall;
-		double yDistanceFromCeiling;
-		double xDistanceToFirstIntersection;
+		double yDistanceFromCeiling; // used in horizontal checking
+		double xDistanceToFirstIntersection; // used in horizontal checking
+		double xDistanceFromLeftWall; // used in vertical checking
+		double yDistanceToFirstIntersection; // used in vertical checking
 			
 		// space between intersection points
 		double horizontalDy = Driver.map.getBlockHeight();
@@ -394,7 +397,9 @@ public class Robot extends ImageView implements EventHandler<KeyEvent> {
 		colInt = (int) colDouble;
 			
 		// get the "ceiling" of robot block
-		rowCeiling = rowInt * Driver.map.getBlockHeight();		
+		rowCeiling = rowInt * Driver.map.getBlockHeight();
+		// left "wall" of block
+		colLeftWall = colInt * Driver.map.getBlockWidth();
 		
 		// first horizontal intersection point, A
 		double[] horizontalPointA = new double[2];
@@ -415,8 +420,8 @@ public class Robot extends ImageView implements EventHandler<KeyEvent> {
 		double horizontalLastyCoordinate;
 		double verticalLastxCoordinate;
 		double verticalLastyCoordinate;
-		double horizontalDistanceToIntersection;
-		double verticalDistanceToIntersection;
+		double horizontalDistanceToIntersection = 0;
+		double verticalDistanceToIntersection = 0;
 		
 		double rayAngle = leftFOV;
 		// Iterate over each column in projection plane and along FOV
@@ -459,17 +464,20 @@ public class Robot extends ImageView implements EventHandler<KeyEvent> {
 					horizontalPointA[0] = this.xCoordinate - xDistanceToFirstIntersection;
 					horizontalPointA[1] = this.yCoordinate - yDistanceFromCeiling;
 				}
-				
 			}
 			
+			System.out.println(Arrays.toString(horizontalPointA));
+			// TODO check behaviour below
+			
 			// get A's grid details (rowInt, colInt).
-			horizontalRowDoubleA = horizontalPointA[0] * 1.0 / Driver.map.getRowSize();
+			horizontalRowDoubleA = horizontalPointA[0] * 1.0 * Driver.map.getRowSize() /
+					Driver.SCREENHEIGHT;
 			horizontalRowIntA = (int) horizontalRowDoubleA;
 			horizontalRowIntA = (horizontalRowIntA == Driver.map.getRowSize()) ? --horizontalRowIntA : horizontalRowIntA;
-			horizontalColDoubleA = horizontalPointA[1] * 1.0 / Driver.map.getColSize();
+			horizontalColDoubleA = horizontalPointA[1] * 1.0  * Driver.map.getColSize() / 
+					Driver.SCREENWIDTH;
 			horizontalColIntA = (int) horizontalColDoubleA;
 			horizontalColIntA = (horizontalColIntA == Driver.map.getColSize()) ? --horizontalColIntA : horizontalColIntA;
-			
 			
 			// iterate along orientation vector until wall is found 
 			// or no more grid
@@ -477,18 +485,27 @@ public class Robot extends ImageView implements EventHandler<KeyEvent> {
 			horizontalLastyCoordinate = horizontalPointA[1];
 			int horizontalCurrentRow = horizontalRowIntA;
 			int horizontalCurrentCol = horizontalColIntA;
-			boolean wallFound = false;
+			boolean horizontalWallFound = false;
 			
-			while (wallFound == false &&
-					(horizontalCurrentRow < Driver.map.getRowSize()) &&
-					(horizontalCurrentCol < Driver.map.getColSize())) {
-				if (Driver.map.getGrid()[horizontalCurrentRow][horizontalCurrentCol] == 1) {
-					wallFound = true;
+			while (horizontalWallFound == false) {
+				if (Driver.map.getGrid()[horizontalCurrentRow][horizontalCurrentCol] == 1 ||
+				(horizontalCurrentRow >= Driver.map.getRowSize()) || 
+				(horizontalCurrentCol >= Driver.map.getColSize())) {
+					horizontalWallFound = true;
+					
 					// calculate distance to wall
+					horizontalDistanceToIntersection = Math.abs((this.yCoordinate - horizontalLastyCoordinate) * 1.0 / 
+							Math.cos(this.getOrientation()));
+					//normalise by Beta
+					
 				} else {
 					// get next intersection coordinate
+					
+					System.out.println(horizontalDx);
 					horizontalLastxCoordinate += horizontalDx;
 					horizontalLastyCoordinate += horizontalDy;
+					System.out.println(horizontalLastxCoordinate);
+					System.out.println(horizontalLastyCoordinate);
 					// convert to grid details
 					double horizontalCurrentRowDouble = horizontalLastyCoordinate / Driver.map.getBlockHeight();
 					double horizontalCurrentColDouble = horizontalLastxCoordinate / Driver.map.getBlockWidth();
@@ -498,18 +515,100 @@ public class Robot extends ImageView implements EventHandler<KeyEvent> {
 			}
 			
 			/* Do horizontal stuff... */
-			if (left ) {
+			if (currentOrientation >= 180 && (currentOrientation <= 360 || currentOrientation == 0)) {
 				// ray is pointing left
+				verticalDx *= -1;
+				// calculate distance to left wall.
+				xDistanceFromLeftWall = this.xCoordinate - colLeftWall;
+				// calculate corresponding horizontal distance
+				yDistanceToFirstIntersection = xDistanceFromLeftWall * 1.0 / Math.tan(this.getOrientation());
+				
+				if ((currentOrientation >= 270 && currentOrientation <= 360) ||
+						(currentOrientation >= 0 && currentOrientation <= 90)){
+					// ray is pointing up
+						verticalPointB[0] = this.xCoordinate - xDistanceFromLeftWall;
+						verticalPointB[1] = this.yCoordinate - yDistanceToFirstIntersection;
+				} else {
+					// ray is pointing down
+						verticalPointB[0] = this.xCoordinate - xDistanceFromLeftWall;
+						verticalPointB[1] = this.yCoordinate + yDistanceToFirstIntersection;
+				}
+				
 			} else {
-				// ray is point right
+				// ray is pointing right
+				verticalDx = Math.abs(verticalDx);
+				// calculate to right wall
+				xDistanceFromLeftWall = this.xCoordinate - colLeftWall;
+				// calculate corresponding vertical distance
+				yDistanceToFirstIntersection = xDistanceFromLeftWall * 1.0 / Math.tan(this.getOrientation());
+				
+				if ((currentOrientation >= 270 && currentOrientation <= 360) ||
+						(currentOrientation >= 0 && currentOrientation <= 90)){
+					// ray is pointing up
+						verticalPointB[0] = this.xCoordinate + (Driver.map.getBlockWidth() - xDistanceFromLeftWall);
+						verticalPointB[1] = this.yCoordinate - yDistanceToFirstIntersection;
+				} else {
+					// ray is pointing down
+						verticalPointB[0] = this.xCoordinate - (Driver.map.getBlockWidth() - xDistanceFromLeftWall);
+						verticalPointB[1] = this.yCoordinate + yDistanceToFirstIntersection;
+				}
 			}
 			
 			// get B's grid details
-			// iterate along orientation vector again until wall is found or no more grid
+			verticalRowDoubleB = verticalPointB[0] * 1.0 / Driver.map.getRowSize();
+			verticalRowIntB = (int) verticalRowDoubleB;
+			verticalRowIntB = (verticalRowIntB == Driver.map.getRowSize()) ? --verticalRowIntB : verticalRowIntB;
+			verticalColDoubleB = verticalPointB[1] * 1.0 / Driver.map.getColSize();
+			verticalColIntB = (int) verticalColDoubleB;
+			verticalColIntB = (verticalColIntB == Driver.map.getColSize()) ? --verticalColIntB : verticalColIntB;
 			
+			// iterate along orientation vector until wall is found 
+			// or no more grid
+			verticalLastxCoordinate = verticalPointB[0];
+			verticalLastyCoordinate = verticalPointB[1];
+			int verticalCurrentRow = verticalRowIntB;
+			int verticalCurrentCol = verticalColIntB;
+			boolean verticalWallFound = false;
+			
+			while (verticalWallFound == false) {
+				if (Driver.map.getGrid()[verticalCurrentRow][verticalCurrentCol] == 1 || 
+						(verticalCurrentRow >= Driver.map.getRowSize()) || 
+						(verticalCurrentCol >= Driver.map.getColSize())) {
+					verticalWallFound = true;
+					// calculate distance to wall
+					verticalDistanceToIntersection = Math.abs((this.yCoordinate - verticalLastyCoordinate) * 1.0 / 
+							Math.cos(this.getOrientation()));
+					// normalise by Beta
+					
+				} else {
+					// get next intersection coordinate
+					verticalLastxCoordinate += verticalDx;
+					verticalLastyCoordinate += verticalDy;
+					// convert to grid details
+					double verticalCurrentRowDouble = verticalLastyCoordinate / Driver.map.getBlockHeight();
+					double verticalCurrentColDouble = verticalLastxCoordinate / Driver.map.getBlockWidth();
+					verticalCurrentRow = (int) verticalCurrentRowDouble;
+					verticalCurrentCol = (int) verticalCurrentColDouble;
+				}
+			}
+						
 			// compare distances, choose shortest.
+			double shortestDistance = (horizontalDistanceToIntersection <= 
+					verticalDistanceToIntersection) ? horizontalDistanceToIntersection : 
+						verticalDistanceToIntersection;
 			
 			// calculate slice height
+			double sliceHeight = Driver.map.getBlockHeight() * 
+					PROJECTIONPLANEDISTANCETO / shortestDistance;
+			
+			// calculate top and bottom of line
+			double lineTop = PROJECTIONPLANECENTRE[1] - (sliceHeight / 2);
+			double lineBottom = PROJECTIONPLANECENTRE[1] + (sliceHeight / 2);
+			
+			Line line = new Line(i, lineTop, i, lineBottom);
+			line.setFill(Color.RED);
+			
+			Driver.root.getChildren().add(line);
 			
 			rayAngle += this.ANGLEBETWEENRAYS;
 		}

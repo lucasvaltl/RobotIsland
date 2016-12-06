@@ -28,9 +28,9 @@ public class Wheel extends Rectangle{
 		
 			double RobotsXCord = r.getxCoordinate();
 			double RobotsYCord = r.getyCoordinate();
-		this.height=r.getHeight();
+		//this.height=r.getHeight();
 		super.setHeight(this.height);
-		this.width=((r.getWidth())/5);
+		//this.width=((r.getWidth())/5);
 		super.setWidth(this.width);
 		this.xCoordinate = RobotsXCord;
 		super.setX(this.xCoordinate);
@@ -39,9 +39,9 @@ public class Wheel extends Rectangle{
 		}else{
 			double RobotsXCord = r.getxCoordinate();
 			double RobotsYCord = r.getyCoordinate();
-		this.height=r.getHeight();
+		//this.height=r.getHeight();
 		super.setHeight(this.height);
-		this.width=((r.getWidth())/5);
+		//this.width=((r.getWidth())/5);
 		super.setWidth(this.width);
 		this.xCoordinate = RobotsXCord + (this.width*4);
 		super.setX(this.xCoordinate);
