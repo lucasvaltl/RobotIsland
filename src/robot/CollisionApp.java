@@ -25,7 +25,7 @@ public class CollisionApp extends Application{
 		e1 = new Entity(200, 100, 40, 40);
 		e2 = new Entity(200, 200, 50, 50);
 		
-		e2.setRotate(45);
+		e2.setRotate(49);
 		
 		render();
 		return root;
@@ -51,8 +51,11 @@ public class CollisionApp extends Application{
 				e1.changeX(-5);
 			} else if (e.getCode () == KeyCode.D){
 				e1.changeX(5);
+			}else if (e.getCode () == KeyCode.X){
+				e2.setRotate(e2.getRotate()+5);
+			}else if (e.getCode () == KeyCode.C){
+				e2.changeX(-5);
 			}
-			
 			render();
 		});
 		primaryStage.setTitle("collisions");

@@ -80,7 +80,7 @@ public class Driver extends Application {
 		Canvas canvas = new Canvas(SCREENWIDTH, SCREENHEIGHT);
 		GraphicsContext gc = canvas.getGraphicsContext2D();
 		
-		stack = new StackPane();
+		stack = new StackPane();	
 //		
 //		Group background = new Group();
 //		Image looks = new Image (new File("src/background.png").toURI().toString(), 1024, 1204, false, true);

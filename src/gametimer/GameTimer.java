@@ -7,6 +7,7 @@ import javafx.animation.AnimationTimer;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
+import javafx.scene.shape.Circle;
 import map.Map;
 import robot.CollisionDetection;
 import robot.Movement;
@@ -22,6 +23,7 @@ public class GameTimer extends AnimationTimer {
 	private int timecounter = 0;
 	private static boolean collisionDetected;
 	
+
 	
 	
 	public static void setCollisionDetected(boolean b){

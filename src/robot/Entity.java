@@ -49,8 +49,10 @@ double height;
 	 */
 	
 	public Point2D center(){
+		System.out.println("CENTER X: " + (this.getX()+(this.getWidth()/2)) + " Y: " + (this.getX()+(this.getHeight()/2)));
+		return new Point2D((this.getX()+(this.getWidth()/2)),(this.getY()+(this.getHeight()/2)));
 		
-		return new Point2D((this.getX()+(this.getWidth()/2)),(this.getX()+(this.getHeight()/2)));
+		
 	}
 	
 	public List<Point2D> cornerVectors(){
@@ -101,7 +103,7 @@ double height;
 	 */
 	
 	public boolean isColliding(Entity e2){
-		return SAT.isColliding(this, e2);
+		return SAT.isColliding(e2, this);
 	}
 	
 	public void changeY(double r) {

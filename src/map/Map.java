@@ -2,6 +2,7 @@ package map;
 
 import java.util.ArrayList;
 
+import javafx.geometry.Point2D;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -81,6 +82,25 @@ public class Map {
 	 * @param gc: insert graphics context
 	 * @param screenEqualsMap: indicates whether the screen (window size) is equal to the map size
 	 */
+	
+	public int[][] getAdjacentBlocks() {
+		// get current row col 
+		int currentRow =  (int) (Driver.wallE.getyCoordinate() * 1.0 * YBLOCKSIZE / Driver.SCREENHEIGHT);
+		int currentCol = (int) (Driver.wallE.getxCoordinate() * 1.0 * XBLOCKSIZE / Driver.SCREENWIDTH);
+				
+		// get adjacent row cols
+		if (currentRow == 0) {
+			int[] adjacentRows = {currentRow, currentRow + 1};
+		} else if (currentRow >= Driver.map.getRowSize() - 1) {
+					
+		} else {
+			//
+		} 
+		
+		int[][] temp = new int[][]();
+		return temp;
+	}
+	
 	public void render2DMap(GraphicsContext gc, boolean screenEqualsMap) {
 		
 		int YBLOCKSIZE;
@@ -98,23 +118,21 @@ public class Map {
 		gc.setStroke(Color.GREY);
 		gc.setLineWidth(5);
 		
-		Entity block = new Entity(300, 300, 100, 100);
-		block.setFill(Color.BLACK);
-		blocks.add(block);
+		
 		Driver.root.getChildren().addAll(blocks);
 		
-//		// iterate over map array
-//		for (int row = 0; row < this.grid.length; row++) {
-//			for (int col = 0; col < this.grid[row].length; col++) {
-//				if (this.grid[row][col] != 0) {
-//					// if map value is non zero, create square of correct size
-//					// and add to the Pane.
-//					Entity block = new Entity((col*XBLOCKSIZE),(row*YBLOCKSIZE), XBLOCKSIZE, YBLOCKSIZE);
-//					block.setFill(Color.BLACK);
-//					blocks.add(block);
-//				}
-//			}
-//		} Driver.root.getChildren().addAll(blocks);
+		// iterate over map array
+		for (int row = 0; row < this.grid.length; row++) {
+			for (int col = 0; col < this.grid[row].length; col++) {
+				if (this.grid[row][col] != 0) {
+					// if map value is non zero, create square of correct size
+					// and add to the Pane.
+					Entity block = new Entity((col*XBLOCKSIZE),(row*YBLOCKSIZE), XBLOCKSIZE, YBLOCKSIZE);
+					block.setFill(Color.BLACK);
+					blocks.add(block);
+				}
+			}
+		} Driver.root.getChildren().addAll(blocks);
 	}
 }
 

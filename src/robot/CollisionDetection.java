@@ -40,7 +40,7 @@ public class CollisionDetection {
 		
 		for (Entity staticblock : blocks) {
 			
-			if (SAT.isColliding(robot, staticblock)) {
+			if (staticblock.isColliding(robot)) {
 //				System.out.println("robot box: "+ (robot.getBoundsInParent()));
 //				System.out.println("Robot get width: ");
 //				System.out.println("Block box: "+ (staticblock.getBoundsInParent()));
