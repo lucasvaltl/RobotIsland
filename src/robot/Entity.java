@@ -49,7 +49,7 @@ double height;
 	 */
 	
 	public Point2D center(){
-		System.out.println("CENTER X: " + (this.getX()+(this.getWidth()/2)) + " Y: " + (this.getX()+(this.getHeight()/2)));
+		
 		return new Point2D((this.getX()+(this.getWidth()/2)),(this.getY()+(this.getHeight()/2)));
 		
 		

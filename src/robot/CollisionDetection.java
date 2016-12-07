@@ -63,7 +63,7 @@ public class CollisionDetection {
 //		Bounds objA = robot.localToScene(robot.getBoundsInLocal());
 		
 		
-		//get nearest nearest blocks depending on robots current position (optimising processing neeD)
+		//get nearest nearest blocks depending on robots current position (for optimisation)
 		ArrayList<Entity> nearestblocks = getAdjacentBlocks(robot);
 		
 		
@@ -76,7 +76,7 @@ public class CollisionDetection {
 				Image pattern = new Image(new File("src/eveCollision.png").toURI().toString(), 32, 48, false, true);
 				ImagePattern skin = new ImagePattern(pattern);
 				Driver.wallE.setFill(skin);
-				GameTimer.setCollisionDetected(true);
+				
 				return true; // collision
 			}
 		}}
@@ -89,7 +89,6 @@ public class CollisionDetection {
 		int currentRow = (int) ((robot.getyCoordinate() / Driver.map.getBlockHeight() * 1.0) );
 		int currentCol = (int) (robot.getxCoordinate() / Driver.map.getBlockWidth() * 1.0);
 		
-		System.out.println("CurrentRow: " + currentRow + " CurrentCol: " + currentCol);
 		
 		ArrayList<Integer> rows = new ArrayList<Integer>(3);
 		ArrayList<Integer> cols = new ArrayList<Integer>(3);
@@ -122,14 +121,10 @@ public class CollisionDetection {
 			for (int j = 0; j < cols.size(); j++) {
 				int x = rows.get(i);
 				int y = cols.get(j);
-//				System.out.println("X: " + x + " Y: " + y);
 				adjacentBlocks.add(Map.getBlocks(Map.getBlockPosition(x, y)));
 			}
 		}
-		
-		
-		
-		
+
 		return adjacentBlocks;
 	} 
 	

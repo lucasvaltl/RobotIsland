@@ -138,7 +138,7 @@ public class Map {
 				}
 			}
 		} Driver.root.getChildren().addAll(blocks);
-		System.out.println(this.getRowSize() + " " + this.getColSize());
+		
 		
 	}
 }

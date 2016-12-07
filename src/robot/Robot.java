@@ -53,6 +53,8 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	private double[] wheelspeeds = {0, 0};
 	private Image skin;
 	private ImagePattern[][] animimages;
+	private int timeSinceCollision = 0;
+	private boolean collisionDetected;
 
 	/** Description: Verbose robot class constructor
 	 * 
@@ -181,6 +183,14 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	public double getBatteryLeft() {
 		return this.batteryLeft;
 	}
+	
+	/** Description: Returns a double representing the amount of battery capacity.
+	 *  
+	 * @return: A double representing the amount of battery capacity.
+	 */
+	public double getBatteryCapacity(){
+		return this.batteryCapacity;
+	}
 
 	/** Description: Returns the robot's axle length.
 	 * 
@@ -242,6 +252,10 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	
 	public double[] getWheelspeeds(){
 		return this.wheelspeeds;
+	}
+	
+	public boolean getCollisionDetected(){
+		return this.collisionDetected;
 	}
 	
 	/** Description: Sets the robot's x position to a given value and calls the 
@@ -384,6 +398,10 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		this.wheelspeeds[0] = left;
 		this.wheelspeeds[1] = right;
 	}
+	
+	public void setCollisionDetected(boolean b){
+		this.collisionDetected = b;
+	}
 
 	/** 
 	 *  Description: Alerts the user of the robot's low battery status.
@@ -421,11 +439,41 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 
 		
 	}
-	
+	/**
+	 * Description: Animate the robot to reflect it's behavior. Direction/speed
+	 * will change the position of its eyes, where as a collision will change the 
+	 * 
+	 * @return
+	 */
 	public boolean animate(){
-		if (this.batteryLeft < 10){
-			return false;
+		
+		//warn if battery is below 33%
+		if ((this.batteryLeft > (this.getBatteryCapacity()/ 10)) && this.batteryLeft < (this.getBatteryCapacity()/ 3)){
+			this.setFill(this.getAnimatedImage(3, 1));
+			return false;//used to jump out of method
 		}
+		
+		//warn if battery is below 10%
+		if (this.batteryLeft < (this.getBatteryCapacity()/ 10)){
+			this.setFill(this.getAnimatedImage(3, 2));
+			return false;//used to jump out of method
+		}
+		
+		
+		
+		
+		if (this.getCollisionDetected()){
+			if(this.timeSinceCollision==80){
+				this.setCollisionDetected(false);
+				this.timeSinceCollision = 0;
+			}else{
+				this.setFill(this.getAnimatedImage(3, 0));
+				this.timeSinceCollision++;
+				return false; //used to jump out of method
+			}
+		}
+		
+		
 		
 		int i = 1;
 		int j = 1;
@@ -443,11 +491,38 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		}else{
 			j=2;
 		}
-		System.out.println("Hi" + "i: "+ i + " j: " + j);
+		
 		this.setFill(this.getAnimatedImage(i, j));
 		return true;
 	}
 	
+	/*
+	 * Description: Consume battery when moving. If battery is low (less than 10%) the robots speed 
+	 * will decrease significantly. If the battery is empty, the robot will fial to move.
+	 * 
+	 * @author Geraint and Lucas
+	 */
+	
+	private void consumeBattery() {
+		
+		if(this.getSpeed() > 0){
+		if ( this.getBatteryLeft()>=(this.getBatteryCapacity()/10)) {
+			this.decreaseCharge(0.5);
+			System.out.println(this.getBatteryLeft());
+		}
+		//if battery lower than 10% of charge, reduce speed, consume less battery
+		if ((this.getBatteryLeft()> 0) &&(this.getBatteryLeft() < (this.getBatteryCapacity()/10))) {
+			System.out.println("restricted movement");
+			System.out.println(this.getBatteryLeft());
+			this.decreaseCharge(0.03125);
+			this.setMaxSpeed(1);
+		}}
+		//if battery empty restrict movement
+		if (this.getBatteryLeft() == 0) {
+			this.setMaxSpeed(0);
+		}
+		
+	}
 	
 	/** Description: Method used to decrease robot charge by a given value at 
 	 *  the end of every move.
@@ -477,7 +552,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		
 		/* Keydown */
 		if (event.getEventType().equals(KeyEvent.KEY_PRESSED)) {
-			System.out.println(Arrays.toString(this.currentKeyPresses));
+//			System.out.println(Arrays.toString(this.currentKeyPresses));
 			switch (event.getCode()) {
 				case UP: // increase forward velocity;
 					/*this.decelerate = (Objects.equals(this.currentKeyPresses[0], 
@@ -553,7 +628,9 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	}
 	
 	/**
-	 * Descripion move the robot depending on keypresses
+	 * Descripion: Moves the robot depending on keypresses. It calls the static methods in the movement class to 
+	 * translate and transform the robot, and calculate the relative velocities
+	 * of the left and right wheels.
 	 * 
 	 * @param wallEcomponents orientation components derived from the robots orientation
 	 */
@@ -666,7 +743,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 */
 	public void detectCollision(Robot robot, double[] wallEcomponents){
 		if (CollisionDetection.collisionDetection(robot)) {
-//			robot.setSpeed(0);
+			robot.setCollisionDetected(true);
 			if (robot.getLastMovement().equals("moveDown")) {
 				while (CollisionDetection.collisionDetection(robot)) {
 					Movement.moveUp(wallEcomponents);
@@ -870,12 +947,30 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 * @author: Geraint and Lucas
 	 */
 	public void update(){
+		
 		final double wallEorientation = this.getOrientation();
 
 		final double[] wallEcomponents = this.getOrientationComponents(wallEorientation);
-	
+		
+		// read commands from file
+				if (Driver.wallE.getInputCommandsReadingInProgress() == true) {
+					// Request a new move
+					Driver.wallE.singleMoveViaFile("src/movements2.txt");
+				}
+		
+		
 		detectCollision(this, wallEcomponents);
+		
 		this.move(wallEcomponents);
-		this.batteryLowAlert();
+		this.animate();
+		this.consumeBattery();
+	
+				
+		
+//		this.batteryLowAlert();
+		
+		
 	}
+	
+	
 }

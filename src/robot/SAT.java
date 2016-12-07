@@ -32,7 +32,6 @@ public class SAT {
 		List<Point2D> recCorners = rec.corners();
 		
 		for (Point2D axis : axes) {
-			System.out.println(axis);
 	
 			robMin = robCorners.stream().mapToDouble(p -> p.dotProduct(axis)).min().getAsDouble();
 			robMax = robCorners.stream().mapToDouble(p -> p.dotProduct(axis)).max().getAsDouble();
@@ -44,7 +43,7 @@ public class SAT {
 				return false;
 			}
 		}
-		System.out.println(" robmin: " + robMin + " robMax: " +robMax + " recmin: " + recMin + " recMax: " + recMax);
+		
 		return true;
 	}
 	
