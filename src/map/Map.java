@@ -131,7 +131,7 @@ public class Map {
 					// if map value is non zero, create square of correct size
 					// and add to the Pane.
 					Entity block = new Entity((col*XBLOCKSIZE),(row*YBLOCKSIZE), XBLOCKSIZE, YBLOCKSIZE);
-					block.setFill(Color.BLACK);
+					block.setFill(Color.TRANSPARENT);
 					blocks.add(block);
 					//save position of the block to the map of blocks for easier access
 					blocksToGrid[row][col] = blocks.indexOf(block);

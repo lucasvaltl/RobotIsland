@@ -23,14 +23,15 @@ import readers.InvalidFormatException;
 import readers.XMLReader;
 import tests.Driver;
 
-/** Description: Class that represents the robot - its movement and perspective. 
- *  Overrides some JavaFX rectangle methods 
+/**
+ * Description: Class that represents the robot - its movement and perspective.
+ * Overrides some JavaFX rectangle methods
  * 
  * @author Geraint and Lucas
  *
  */
 public class Robot extends Entity implements EventHandler<KeyEvent> {
-	
+
 	private String name;
 	private double xCoordinate;
 	private double yCoordinate;
@@ -50,30 +51,42 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	private ArrayList<String> inputCommands = null;
 	private int inputCommandsIndex = 0;
 	private boolean inputCommandsReadingInProgress = false;
-	private double[] wheelspeeds = {0, 0};
+	private double[] wheelspeeds = { 0, 0 };
 	private Image skin;
 	private ImagePattern[][] animimages;
 	private int timeSinceCollision = 0;
 	private boolean collisionDetected;
 
-	/** Description: Verbose robot class constructor
+	/**
+	 * Description: Verbose robot class constructor
 	 * 
-	 * @param name: The robot's ID.
-	 * @param xCoordinate: The robot's initial x position.
-	 * @param yCoordinate: The robot's initial y position.
-	 * @param speed: The robot's initial speed.
-	 * @param maxSpeed: The robot's max speed.
-	 * @param acceleration: The robot's acceleration.
-	 * @param angularVelocity: The robot's angular velocity.
-	 * @param odometer: The robot's initial distance travelled.
-	 * @param batteryLeft: The robot's initial battery level.
-	 * @param batteryCapacity: The robot's battery capacity.
-	 * @param axleLength: The robot's axle length.
-	 * @param wheelRadius: The robot's wheel radius.
+	 * @param name:
+	 *            The robot's ID.
+	 * @param xCoordinate:
+	 *            The robot's initial x position.
+	 * @param yCoordinate:
+	 *            The robot's initial y position.
+	 * @param speed:
+	 *            The robot's initial speed.
+	 * @param maxSpeed:
+	 *            The robot's max speed.
+	 * @param acceleration:
+	 *            The robot's acceleration.
+	 * @param angularVelocity:
+	 *            The robot's angular velocity.
+	 * @param odometer:
+	 *            The robot's initial distance travelled.
+	 * @param batteryLeft:
+	 *            The robot's initial battery level.
+	 * @param batteryCapacity:
+	 *            The robot's battery capacity.
+	 * @param axleLength:
+	 *            The robot's axle length.
+	 * @param wheelRadius:
+	 *            The robot's wheel radius.
 	 */
-	public Robot(String name, double xCoordinate, double yCoordinate, double speed, 
-			double maxSpeed, double acceleration, double angularVelocity, double odometer, 
-			double batteryLeft, double batteryCapacity, 
+	public Robot(String name, double xCoordinate, double yCoordinate, double speed, double maxSpeed,
+			double acceleration, double angularVelocity, double odometer, double batteryLeft, double batteryCapacity,
 			double axleLength, double wheelRadius) {
 		/** Robot class constructor **/
 		this.name = name;
@@ -93,12 +106,15 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		this.wheelRadius = wheelRadius;
 		super.setHeight(this.wheelRadius);
 	}
+
 	/**
 	 * Description: Creates the robot's parameters from an XML file.
-	 * @param s: The ID of the robot you want to load
+	 * 
+	 * @param s:
+	 *            The ID of the robot you want to load
 	 */
 	public Robot(String s) {
-		
+
 		XMLReader xmlr = new XMLReader();
 		ArrayList<String> input = xmlr.read(s, "src/robots.xml");
 		this.name = input.get(0);
@@ -118,293 +134,338 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		this.wheelRadius = Double.valueOf(input.get(11));
 		this.setHeight(this.wheelRadius);
 	}
-	
 
-	/** Description: Returns the robot's x coordinate.
+	/**
+	 * Description: Returns the robot's x coordinate.
 	 * 
 	 * @return: The robot's current x position.
 	 */
 	public double getxCoordinate() {
 		return this.xCoordinate;
 	}
-	
-	/** Description: Returns the robot's y coordinate
+
+	/**
+	 * Description: Returns the robot's y coordinate
 	 * 
 	 * @return: The robot's current y position
 	 */
 	public double getyCoordinate() {
 		return this.yCoordinate;
 	}
-	
-	/** Description: Returns the robot's speed.
+
+	/**
+	 * Description: Returns the robot's speed.
 	 * 
 	 * @return: The robot's current speed.
 	 */
 	public double getSpeed() {
 		return this.speed;
 	}
-	
-	/** Description: Returns the robot's max speed. 
+
+	/**
+	 * Description: Returns the robot's max speed.
 	 * 
 	 * @return: The robot's max speed.
 	 */
 	public double getMaxSpeed() {
 		return this.maxSpeed;
 	}
-	
-	/** Description: Return's the robot's acceleration
+
+	/**
+	 * Description: Return's the robot's acceleration
 	 * 
 	 * @return: The robot's acceleration.
 	 */
 	public double getAcceleration() {
 		return this.acceleration;
 	}
-	
-	/** Description: Returns the robot's angular velocity in degrees per second.
+
+	/**
+	 * Description: Returns the robot's angular velocity in degrees per second.
 	 * 
 	 * @return: The robot's angular velocity in degrees per second.
 	 */
 	public double getAngularVelocity() {
 		return this.angularVelocity;
 	}
-	
-	/** Description: Returns the robot's distance travelled.
+
+	/**
+	 * Description: Returns the robot's distance travelled.
 	 * 
 	 * @return: The robot's distance travelled.
 	 */
 	public double getOdometer() {
 		return this.odometer;
 	}
-	
-	/** Description: Returns a double representing the amount of battery left.
-	 *  
+
+	/**
+	 * Description: Returns a double representing the amount of battery left.
+	 * 
 	 * @return: A double representing the amount of battery left.
 	 */
 	public double getBatteryLeft() {
 		return this.batteryLeft;
 	}
-	
-	/** Description: Returns a double representing the amount of battery capacity.
-	 *  
+
+	/**
+	 * Description: Returns a double representing the amount of battery
+	 * capacity.
+	 * 
 	 * @return: A double representing the amount of battery capacity.
 	 */
-	public double getBatteryCapacity(){
+	public double getBatteryCapacity() {
 		return this.batteryCapacity;
 	}
 
-	/** Description: Returns the robot's axle length.
+	/**
+	 * Description: Returns the robot's axle length.
 	 * 
 	 * @return: A double representing the robot's axle length.
 	 */
 	public double getAxleLength() {
 		return this.axleLength;
 	}
-	
-	/** Description: Returns the robot's wheel radius.
+
+	/**
+	 * Description: Returns the robot's wheel radius.
 	 * 
 	 * @return: A double representing the robot's wheel radius.
 	 */
 	public double getWheelRadius() {
 		return this.wheelRadius;
 	}
-	
-	/** Description: Method that returns the robot's current key presses.
+
+	/**
+	 * Description: Method that returns the robot's current key presses.
 	 * 
 	 * @return A string array of length 2, representing the current key presses.
 	 */
 	public String[] getCurrentKeyPresses() {
 		return this.currentKeyPresses;
 	}
-	
-	/** Description: Method that returns the robot's last up or down command property.
+
+	/**
+	 * Description: Method that returns the robot's last up or down command
+	 * property.
 	 * 
 	 * @return: The last up or down command assigned to the lastUporDown field.
 	 */
 	public String getLastUporDown() {
 		return this.lastUporDown;
 	}
-	
-	/** Description: Method that returns the robot's last left or right command property.
+
+	/**
+	 * Description: Method that returns the robot's last left or right command
+	 * property.
 	 * 
 	 * @return: The last up or down command assigned to the lastUporDown field.
 	 */
 	public String getLastMovement() {
 		return this.lastMovement;
 	}
-	
-	/** Description: Method that returns a boolean to represent the robot's 
-	 *  deceleration status
+
+	/**
+	 * Description: Method that returns a boolean to represent the robot's
+	 * deceleration status
 	 * 
 	 * @return: A boolean that represents the robot's deceleration status.
 	 */
 	public boolean getDecelerate() {
 		return this.decelerate;
 	}
-	
-	/** Description: Method that returns a boolean which will be true when robot commands 
-	 *  are being read from a file.
+
+	/**
+	 * Description: Method that returns a boolean which will be true when robot
+	 * commands are being read from a file.
 	 * 
-	 * @return: A boolean that will be true when robot commands are being read from a file.
+	 * @return: A boolean that will be true when robot commands are being read
+	 *          from a file.
 	 */
 	public boolean getInputCommandsReadingInProgress() {
 		return this.inputCommandsReadingInProgress;
 	}
-	
-	public double[] getWheelspeeds(){
+
+	public double[] getWheelspeeds() {
 		return this.wheelspeeds;
 	}
-	
-	public boolean getCollisionDetected(){
+
+	public boolean getCollisionDetected() {
 		return this.collisionDetected;
 	}
-	
-	/** Description: Sets the robot's x position to a given value and calls the 
-	 *  parent .setX() method.
+
+	/**
+	 * Description: Sets the robot's x position to a given value and calls the
+	 * parent .setX() method.
 	 * 
-	 * @param xCoordinate: The x position to be moved to.
+	 * @param xCoordinate:
+	 *            The x position to be moved to.
 	 */
 	public void setxCoordinate(double xCoordinate) {
 		this.xCoordinate = xCoordinate;
 		super.setX(this.xCoordinate);
 	}
-	
-	/** Description: Sets the robot's y position to a given value and calls the 
-	 *  parent .setY() method.
+
+	/**
+	 * Description: Sets the robot's y position to a given value and calls the
+	 * parent .setY() method.
 	 * 
-	 * @param yCoordinate: The y position to be moved to.
+	 * @param yCoordinate:
+	 *            The y position to be moved to.
 	 */
 	public void setyCoordinate(double yCoordinate) {
 		this.yCoordinate = yCoordinate;
 		super.setY(this.yCoordinate);
 	}
-	
-	/** Description: Sets the robot's speed and limits it to be less than or equal the 
-	 *  robot's maximum speed.
+
+	/**
+	 * Description: Sets the robot's speed and limits it to be less than or
+	 * equal the robot's maximum speed.
 	 * 
-	 * @param speed: The speed the robot will set to, providing that it is less than or 
-	 *  equal to the maximum speed.
+	 * @param speed:
+	 *            The speed the robot will set to, providing that it is less
+	 *            than or equal to the maximum speed.
 	 */
 	public void setSpeed(double speed) {
 		this.speed = (speed > this.maxSpeed) ? this.maxSpeed : speed;
 	}
-	
-	/** Description: Sets the robot's maximum speed.
+
+	/**
+	 * Description: Sets the robot's maximum speed.
 	 * 
-	 * @param maxSpeed: The speed to set as the robot's maximum speed.
+	 * @param maxSpeed:
+	 *            The speed to set as the robot's maximum speed.
 	 */
 	public void setMaxSpeed(double maxSpeed) {
 		this.maxSpeed = maxSpeed;
 	}
-	
-	/** Description: Set's the robot's acceleration. 
+
+	/**
+	 * Description: Set's the robot's acceleration.
 	 * 
-	 * @param acceleration: The acceleration to set as the robot's acceleration.
+	 * @param acceleration:
+	 *            The acceleration to set as the robot's acceleration.
 	 */
 	public void setAcceleration(double acceleration) {
 		this.acceleration = acceleration;
 	}
-	
-	/** Description: Set's the robot's angular velocity (in degrees per second).
+
+	/**
+	 * Description: Set's the robot's angular velocity (in degrees per second).
 	 * 
-	 * @param angularVelocity: The value in degrees per second to set the robot's
-	 *  angular velocity.
+	 * @param angularVelocity:
+	 *            The value in degrees per second to set the robot's angular
+	 *            velocity.
 	 */
 	public void setAngularVelocity(double angularVelocity) {
 		this.angularVelocity = angularVelocity;
 	}
-	
-	/** Description: Sets the robot's odometer to a given distance.
+
+	/**
+	 * Description: Sets the robot's odometer to a given distance.
 	 * 
-	 * @param distance: The distance the robot has travelled so far.
+	 * @param distance:
+	 *            The distance the robot has travelled so far.
 	 */
 	public void setOdometer(double distance) {
 		this.odometer = distance;
 	}
-	
-	/** Description: Sets the robot's battery level to a given value.
+
+	/**
+	 * Description: Sets the robot's battery level to a given value.
 	 * 
-	 * @param batteryLeft: The amount of battery left.
+	 * @param batteryLeft:
+	 *            The amount of battery left.
 	 */
 	public void setBatteryLeft(double batteryLeft) {
 		this.batteryLeft = batteryLeft;
 	}
-	
-	/** Description: Sets the axle length to a given value 
-	 * and calls the Rectangle.setWidth() method 
-	 * (Currently assumes wheels as having no width)
+
+	/**
+	 * Description: Sets the axle length to a given value and calls the
+	 * Rectangle.setWidth() method (Currently assumes wheels as having no width)
 	 * 
-	 * @param axleLength: The robot's axle length.
+	 * @param axleLength:
+	 *            The robot's axle length.
 	 */
 	public void setAxleLength(double axleLength) {
 		this.axleLength = axleLength;
 		super.prefWidth(this.axleLength);
 	}
-	
-	/** Description: Sets the radius of the robot's wheels to a given value 
-	 * and calls the Rectangle.setHeight() method 
+
+	/**
+	 * Description: Sets the radius of the robot's wheels to a given value and
+	 * calls the Rectangle.setHeight() method
 	 * 
-	 * @param radius: The radius of the robot's wheels.
+	 * @param radius:
+	 *            The radius of the robot's wheels.
 	 */
 	public void setWheelRadius(double radius) {
 		this.wheelRadius = radius;
 		super.prefHeight(this.wheelRadius);
 	}
 
-	/** Description: Method that sets a particular index in the CurrentKeyPresses
-	 *  string array to a given value. 
+	/**
+	 * Description: Method that sets a particular index in the CurrentKeyPresses
+	 * string array to a given value.
 	 * 
-	 * @param index: The index of the value to change (must be either 0 or 1.
-	 * @param value: The value to change to.
+	 * @param index:
+	 *            The index of the value to change (must be either 0 or 1.
+	 * @param value:
+	 *            The value to change to.
 	 */
 	public void setCurrentKeyPresses(int index, String value) {
-		if ((index == 0 || index == 1) && (
-				Objects.equals(value, "UP") || 
-				Objects.equals(value, "DOWN"))) {
+		if ((index == 0 || index == 1) && (Objects.equals(value, "UP") || Objects.equals(value, "DOWN"))) {
 			this.currentKeyPresses[index] = value;
 		} else if ((index == 0 || index == 1) && Objects.equals(value, null)) {
 			this.currentKeyPresses[index] = null;
 		}
 	}
-	
-	/** Description: Method used to set the robot's last up or down property.
+
+	/**
+	 * Description: Method used to set the robot's last up or down property.
 	 * 
-	 * @param value: The string to be set (must be "UP", "DOWN", or "null")
+	 * @param value:
+	 *            The string to be set (must be "UP", "DOWN", or "null")
 	 */
-	public void setLastUporDown (String value) {
+	public void setLastUporDown(String value) {
 		if (Objects.equals(value, "UP") || Objects.equals(value, "DOWN")) {
 			this.lastUporDown = value;
 		} else if (Objects.equals(value, "null")) {
 			this.lastUporDown = null;
 		}
 	}
-	
-	/** Description: Method used to set the robot's last up or down property.
+
+	/**
+	 * Description: Method used to set the robot's last up or down property.
 	 * 
-	 * @param value: The string to be set (must be "LEFT", "RIGHT", or "null")
+	 * @param value:
+	 *            The string to be set (must be "LEFT", "RIGHT", or "null")
 	 */
-	public void setLastMovement (String move) {
+	public void setLastMovement(String move) {
 		this.lastMovement = move;
 	}
-	
-	/** Description: Method used to flag the robot's deceleration status.
+
+	/**
+	 * Description: Method used to flag the robot's deceleration status.
 	 * 
-	 * @param value: The boolean value to be set.
+	 * @param value:
+	 *            The boolean value to be set.
 	 */
 	public void setDecelerate(boolean value) {
 		this.decelerate = value;
 	}
-	
-	public void setWheelspeeds(double left, double right){
+
+	public void setWheelspeeds(double left, double right) {
 		this.wheelspeeds[0] = left;
 		this.wheelspeeds[1] = right;
 	}
-	
-	public void setCollisionDetected(boolean b){
+
+	public void setCollisionDetected(boolean b) {
 		this.collisionDetected = b;
 	}
 
-	/** 
-	 *  Description: Alerts the user of the robot's low battery status.
+	/**
+	 * Description: Alerts the user of the robot's low battery status.
 	 */
 	public void batteryLowAlert() {
 		// TODO implement audio alert
@@ -415,271 +476,270 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			this.setMaxSpeed(1);
 		}
 	}
-	
-	public ImagePattern getAnimatedImage(int i, int j){
+
+	public ImagePattern getAnimatedImage(int i, int j) {
 		return this.animimages[i][j];
 	}
 
 	public void createAnimatedImages() {
 		Image[][] images = new Image[4][3];
 		animimages = new ImagePattern[4][3];
-		for (int i=0; i<4; i++){
-			for (int j=0; j < 3; j++){
-			images[i][j] = new Image(new File("src/img/eve"+i+""+j+".png").toURI().toString(), Driver.wallE.getWidth(), Driver.wallE.getWidth(), false, true);
-			
-			
-			}}
-		for (int i=0; i<4; i++){
-			for (int j=0; j <3; j++){
-			ImagePattern thisimage = new ImagePattern(images[i][j]);
-			
-			animimages[i][j] = thisimage;
-			
-		}}
+		for (int i = 0; i < 4; i++) {
+			for (int j = 0; j < 3; j++) {
+				images[i][j] = new Image(new File("src/img/eve" + i + "" + j + ".png").toURI().toString(),
+						Driver.wallE.getWidth(), Driver.wallE.getWidth(), false, true);
 
-		
+			}
+		}
+		for (int i = 0; i < 4; i++) {
+			for (int j = 0; j < 3; j++) {
+				ImagePattern thisimage = new ImagePattern(images[i][j]);
+
+				animimages[i][j] = thisimage;
+
+			}
+		}
+
 	}
+
 	/**
 	 * Description: Animate the robot to reflect it's behavior. Direction/speed
-	 * will change the position of its eyes, where as a collision will change the 
+	 * will change the position of its eyes, where as a collision will change
+	 * the
 	 * 
 	 * @return
 	 */
-	public boolean animate(){
-		
-		//warn if battery is below 33%
-		if ((this.batteryLeft > (this.getBatteryCapacity()/ 10)) && this.batteryLeft < (this.getBatteryCapacity()/ 3)){
+	public boolean animate() {
+
+		// warn if battery is below 33%
+		if ((this.batteryLeft > (this.getBatteryCapacity() / 10))
+				&& this.batteryLeft < (this.getBatteryCapacity() / 3)) {
 			this.setFill(this.getAnimatedImage(3, 1));
-			return false;//used to jump out of method
+			// used to jump out of method
+			return false;
 		}
-		
-		//warn if battery is below 10%
-		if (this.batteryLeft < (this.getBatteryCapacity()/ 10)){
+
+		// warn if battery is below 10%
+		if (this.batteryLeft < (this.getBatteryCapacity() / 10)) {
 			this.setFill(this.getAnimatedImage(3, 2));
-			return false;//used to jump out of method
+			// used to jump out of method
+			return false;
 		}
-		
-		
-		
-		
-		if (this.getCollisionDetected()){
-			if(this.timeSinceCollision==80){
+
+		// check if the robot collided recently
+		if (this.getCollisionDetected()) {
+			if (this.timeSinceCollision == 80) {
 				this.setCollisionDetected(false);
 				this.timeSinceCollision = 0;
-			}else{
+			} else {
 				this.setFill(this.getAnimatedImage(3, 0));
 				this.timeSinceCollision++;
-				return false; //used to jump out of method
+				// used to break out of method
+				return false;
 			}
 		}
-		
-		
-		
+
+		// animate eyes to look into direction of movement
 		int i = 1;
 		int j = 1;
-		if (this.speed == maxSpeed){
-			i=2;
+		if (this.speed == maxSpeed) {
+			i = 2;
 		}
-		if (this.wheelspeeds[0]==this.wheelspeeds[1]){
-			
-		}else if(this.speed==0 && this.wheelspeeds[0]>this.wheelspeeds[1]){
-			j=0;
-		}else if(this.speed==0 && this.wheelspeeds[0]<this.wheelspeeds[1]){
-			j=2;
-		}else if(this.wheelspeeds[0]<this.wheelspeeds[1]){
-			j=0;
-		}else{
-			j=2;
+		if (this.wheelspeeds[0] == this.wheelspeeds[1]) {
+
+		} else if (this.speed == 0 && this.wheelspeeds[0] > this.wheelspeeds[1]) {
+			j = 0;
+		} else if (this.speed == 0 && this.wheelspeeds[0] < this.wheelspeeds[1]) {
+			j = 2;
+		} else if (this.wheelspeeds[0] < this.wheelspeeds[1]) {
+			j = 0;
+		} else {
+			j = 2;
 		}
-		
 		this.setFill(this.getAnimatedImage(i, j));
+		// used to break out of method
 		return true;
 	}
-	
+
 	/*
-	 * Description: Consume battery when moving. If battery is low (less than 10%) the robots speed 
-	 * will decrease significantly. If the battery is empty, the robot will fial to move.
+	 * Description: Consume battery when moving. If battery is low (less than
+	 * 10%) the robots speed will decrease significantly. If the battery is
+	 * empty, the robot will fial to move.
 	 * 
 	 * @author Geraint and Lucas
 	 */
-	
+
 	private void consumeBattery() {
-		
-		if(this.getSpeed() > 0){
-		if ( this.getBatteryLeft()>=(this.getBatteryCapacity()/10)) {
-			this.decreaseCharge(0.5);
-			System.out.println(this.getBatteryLeft());
+
+		if (this.getSpeed() > 0) {
+			if (this.getBatteryLeft() >= (this.getBatteryCapacity() / 10)) {
+				this.decreaseCharge(0.5);
+				System.out.println(this.getBatteryLeft());
+			}
+			// if battery lower than 10% of charge, reduce speed, consume less
+			// battery
+			if ((this.getBatteryLeft() > 0) && (this.getBatteryLeft() < (this.getBatteryCapacity() / 10))) {
+				System.out.println("restricted movement");
+				System.out.println(this.getBatteryLeft());
+				this.decreaseCharge(0.03125);
+				this.setMaxSpeed(1);
+			}
 		}
-		//if battery lower than 10% of charge, reduce speed, consume less battery
-		if ((this.getBatteryLeft()> 0) &&(this.getBatteryLeft() < (this.getBatteryCapacity()/10))) {
-			System.out.println("restricted movement");
-			System.out.println(this.getBatteryLeft());
-			this.decreaseCharge(0.03125);
-			this.setMaxSpeed(1);
-		}}
-		//if battery empty restrict movement
+		// if battery empty restrict movement
 		if (this.getBatteryLeft() == 0) {
 			this.setMaxSpeed(0);
 		}
-		
+
 	}
-	
-	/** Description: Method used to decrease robot charge by a given value at 
-	 *  the end of every move.
+
+	/**
+	 * Description: Method used to decrease robot charge by a given value at the
+	 * end of every move.
 	 * 
-	 * @param decrementValue: The value to decrement the robot's battery by.
+	 * @param decrementValue:
+	 *            The value to decrement the robot's battery by.
 	 */
 	public void decreaseCharge(double decrementValue) {
 		this.batteryLeft -= decrementValue;
 	}
-	
+
 	/**
-	 *  Description: Method used to decrease robot charge at the 
-	 *  end of every move by a default value of 1, when no charge is given.  
+	 * Description: Method used to decrease robot charge at the end of every
+	 * move by a default value of 1, when no charge is given.
 	 */
 	public void decreaseCharge() {
 		this.batteryLeft -= 1;
 	}
-	
 
-
-	/** Description: Event handler for robot key events. 
-	 *  Adds strings to currentKeyPresses array to keep track of 
-	 *  which buttons are being held down. 
+	/**
+	 * Description: Event handler for robot key events. Adds strings to
+	 * currentKeyPresses array to keep track of which buttons are being held
+	 * down.
 	 * 
 	 */
 	public void handle(KeyEvent event) {
-		
+
 		/* Keydown */
 		if (event.getEventType().equals(KeyEvent.KEY_PRESSED)) {
-//			System.out.println(Arrays.toString(this.currentKeyPresses));
+			// System.out.println(Arrays.toString(this.currentKeyPresses));
 			switch (event.getCode()) {
-				case UP: // increase forward velocity;
-					/*this.decelerate = (Objects.equals(this.currentKeyPresses[0], 
-							event.getCode().toString())) ? false : true; */
-					this.decelerate = (Objects.equals(this.currentKeyPresses[0], 
-							event.getCode().toString()) || 
-							(this.currentKeyPresses[0] == null &&
-							this.lastUporDown.equals(event.getCode().toString()) ||
-							this.lastUporDown.isEmpty())) ? false : true;
-					// decelerate is false when last currentKeyPresses[0] is "UP" or 
-					// when last currentKeyPress is null and lastUpOrDown is "UP"
-					
-					this.currentKeyPresses[0] = event.getCode().toString();
-					if (this.decelerate == false || (this.decelerate == true &&
-							Driver.wallE.getSpeed() < 0.6)) { // hack
-						// Only change last up or down if the robot is not in 
-						// decelerate mode (stops weird behaviour when switching 
-						// suddenly from up to down.
-						this.lastUporDown = event.getCode().toString();	
-					}
-					break;
-				case DOWN: // increase backward velocity;
-					this.decelerate = (Objects.equals(this.currentKeyPresses[0], 
-							event.getCode().toString()) || 
-							(this.currentKeyPresses[0] == null &&
-							(this.lastUporDown.equals(event.getCode().toString()) ||
-									this.lastUporDown.isEmpty()))) ? false : true;
-					// decelerate is false when currentKeyPresses[0] is "DOWN" or 
-					// when last currentKeyPress is null and lastUpOrDown is "UP"
-					
-					this.currentKeyPresses[0] = event.getCode().toString();
-					if (this.decelerate == false || (this.decelerate == true && 
-							Driver.wallE.getSpeed() < 0.6)) { // hack
-						// Only change last up or down if the robot is not in 
-						// decelerate mode (stops weird behaviour when switching 
-						// suddenly from up to down.
-						this.lastUporDown = event.getCode().toString();	
-					}
-					break;
-				case LEFT: // rotate left
-					this.currentKeyPresses[1] = event.getCode().toString();
-				
-					break;
-				case RIGHT: // rotate right
-					this.currentKeyPresses[1] = event.getCode().toString();
-					
-					break;
-				default:
-					break;
+			case UP: // increase forward velocity;
+				/*
+				 * this.decelerate = (Objects.equals(this.currentKeyPresses[0],
+				 * event.getCode().toString())) ? false : true;
+				 */
+				this.decelerate = (Objects.equals(this.currentKeyPresses[0], event.getCode().toString())
+						|| (this.currentKeyPresses[0] == null && this.lastUporDown.equals(event.getCode().toString())
+								|| this.lastUporDown.isEmpty())) ? false : true;
+				// decelerate is false when last currentKeyPresses[0] is "UP" or
+				// when last currentKeyPress is null and lastUpOrDown is "UP"
+
+				this.currentKeyPresses[0] = event.getCode().toString();
+				if (this.decelerate == false || (this.decelerate == true && Driver.wallE.getSpeed() < 0.6)) { // hack
+					// Only change last up or down if the robot is not in
+					// decelerate mode (stops weird behaviour when switching
+					// suddenly from up to down.
+					this.lastUporDown = event.getCode().toString();
+				}
+				break;
+			case DOWN: // increase backward velocity;
+				this.decelerate = (Objects.equals(this.currentKeyPresses[0], event.getCode().toString())
+						|| (this.currentKeyPresses[0] == null && (this.lastUporDown.equals(event.getCode().toString())
+								|| this.lastUporDown.isEmpty()))) ? false : true;
+				// decelerate is false when currentKeyPresses[0] is "DOWN" or
+				// when last currentKeyPress is null and lastUpOrDown is "UP"
+
+				this.currentKeyPresses[0] = event.getCode().toString();
+				if (this.decelerate == false || (this.decelerate == true && Driver.wallE.getSpeed() < 0.6)) { // hack
+					// Only change last up or down if the robot is not in
+					// decelerate mode (stops weird behaviour when switching
+					// suddenly from up to down.
+					this.lastUporDown = event.getCode().toString();
+				}
+				break;
+			case LEFT: // rotate left
+				this.currentKeyPresses[1] = event.getCode().toString();
+
+				break;
+			case RIGHT: // rotate right
+				this.currentKeyPresses[1] = event.getCode().toString();
+
+				break;
+			default:
+				break;
 			}
 			event.consume();
 			// Keyreleased
 		} else if (event.getEventType().equals(KeyEvent.KEY_RELEASED)) {
 			/**  **/
 			switch (event.getCode()) {
-				case UP: // 
-					this.currentKeyPresses[0] = null;
-					this.decelerate = true;
-					break;
-				case DOWN: //
-					this.currentKeyPresses[0] = null;
-					this.decelerate = true;
-					break;
-				case LEFT: //
-					this.currentKeyPresses[1] = null;
-					break;
-				case RIGHT: //
-					this.currentKeyPresses[1] = null;
-					break;
+			case UP: //
+				this.currentKeyPresses[0] = null;
+				this.decelerate = true;
+				break;
+			case DOWN: //
+				this.currentKeyPresses[0] = null;
+				this.decelerate = true;
+				break;
+			case LEFT: //
+				this.currentKeyPresses[1] = null;
+				break;
+			case RIGHT: //
+				this.currentKeyPresses[1] = null;
+				break;
 			}
 			event.consume();
-		}		
+		}
 	}
-	
+
 	/**
-	 * Descripion: Moves the robot depending on keypresses. It calls the static methods in the movement class to 
-	 * translate and transform the robot, and calculate the relative velocities
-	 * of the left and right wheels.
+	 * Descripion: Moves the robot depending on keypresses. It calls the static
+	 * methods in the movement class to translate and transform the robot, and
+	 * calculate the relative velocities of the left and right wheels.
 	 * 
-	 * @param wallEcomponents orientation components derived from the robots orientation
+	 * @param wallEcomponents
+	 *            orientation components derived from the robots orientation
 	 */
-	public void move(double[] wallEcomponents){
-		
-	if (this.getCurrentKeyPresses()[0] == "UP" && this.getCurrentKeyPresses()[1] == "LEFT") {
-			
+	public void move(double[] wallEcomponents) {
+
+		if (this.getCurrentKeyPresses()[0] == "UP" && this.getCurrentKeyPresses()[1] == "LEFT") {
+
 			if (this.getDecelerate() == true) {
 				Movement.decelerate(wallEcomponents);
 			} else {
 				Movement.moveUpLeft(wallEcomponents);
 			}
 			this.setLastMovement("moveUpLeft");
-		
-			
-		} else if (this.getCurrentKeyPresses()[0] == "UP" && 
-				this.getCurrentKeyPresses()[1] == "RIGHT") {
-			
+
+		} else if (this.getCurrentKeyPresses()[0] == "UP" && this.getCurrentKeyPresses()[1] == "RIGHT") {
+
 			if (this.getDecelerate() == true) {
 				Movement.decelerate(wallEcomponents);
 			} else {
 				Movement.moveUpRight(wallEcomponents);
 			}
 			this.setLastMovement("moveUpRight");
-			
-			
-			
-		} else if (this.getCurrentKeyPresses()[0] == "DOWN" && 
-				this.getCurrentKeyPresses()[1] == "LEFT") {
+
+		} else if (this.getCurrentKeyPresses()[0] == "DOWN" && this.getCurrentKeyPresses()[1] == "LEFT") {
 			if (this.getDecelerate() == true) {
 				Movement.decelerate(wallEcomponents);
 			} else {
 				Movement.moveDownLeft(wallEcomponents);
 			}
 			this.setLastMovement("moveDownLeft");
-			
-			
-		} else if (this.getCurrentKeyPresses()[0] == "DOWN" && 
-				this.getCurrentKeyPresses()[1] == "RIGHT") {
+
+		} else if (this.getCurrentKeyPresses()[0] == "DOWN" && this.getCurrentKeyPresses()[1] == "RIGHT") {
 			if (this.getDecelerate() == true) {
 				Movement.decelerate(wallEcomponents);
 			} else {
 				Movement.moveDownRight(wallEcomponents);
 			}
 			this.setLastMovement("moveDownRight");
-				
+
 		} else if (this.getCurrentKeyPresses()[0] == "UP") {
 			if (this.getDecelerate() == true) {
-				// Robot must decelerate after previous motion in the opposite direction
+				// Robot must decelerate after previous motion in the opposite
+				// direction
 				Movement.decelerate(wallEcomponents);
 			} else {
 				// accelerate
@@ -688,15 +748,16 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			}
 
 		} else if (this.getCurrentKeyPresses()[0] == "DOWN") {
-			
+
 			if (this.getDecelerate() == true) {
-				// Robot must decelerate after previous motion in the opposite direction
+				// Robot must decelerate after previous motion in the opposite
+				// direction
 				Movement.decelerate(wallEcomponents);
 			} else {
 				// accelerate
 				Movement.moveDown(wallEcomponents);
 				this.setLastMovement("moveDown");
-			}			
+			}
 
 		} else if (this.getCurrentKeyPresses()[1] == "LEFT") {
 			Movement.moveLeft();
@@ -705,8 +766,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			if (this.getDecelerate() == true) {
 				Movement.decelerate(wallEcomponents);
 			}
-			
-			
 
 		} else if (this.getCurrentKeyPresses()[1] == "RIGHT") {
 			Movement.moveRight();
@@ -715,33 +774,31 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			if (this.getDecelerate() == true) {
 				Movement.decelerate(wallEcomponents);
 			}
-			
-			
+
 		} else if (this.getCurrentKeyPresses()[0] == null) {
 			Movement.decelerate(wallEcomponents);
-			
-			
-		} 
-		
+
+		}
+
 		// change decelerate flag to false if speed is 0
 		if (this.getSpeed() <= 0) {
 			this.setDecelerate(false);
-			//Driver.lastUporDown = "";
+			// Driver.lastUporDown = "";
 		}
 	}
-	
-	
-	
+
 	/**
-	 * Description: Detects if the robot is about to collide with a boundry and 
+	 * Description: Detects if the robot is about to collide with a boundry and
 	 * reacts accordingly
 	 * 
-	 * @param robot : robot you want to check for collisions
-	 * @param wallEcomponents: robots orientation components derived from its orientation
+	 * @param robot
+	 *            : robot you want to check for collisions
+	 * @param wallEcomponents:
+	 *            robots orientation components derived from its orientation
 	 * 
 	 * @author Geraint and Lucas
 	 */
-	public void detectCollision(Robot robot, double[] wallEcomponents){
+	public void detectCollision(Robot robot, double[] wallEcomponents) {
 		if (CollisionDetection.collisionDetection(robot)) {
 			robot.setCollisionDetected(true);
 			if (robot.getLastMovement().equals("moveDown")) {
@@ -788,47 +845,48 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 
 		}
 	}
-	
-	
-	
-	/** Description: Method that reads moves from an input file and executes them in order.
+
+	/**
+	 * Description: Method that reads moves from an input file and executes them
+	 * in order.
 	 * 
-	 * @param path: The path of the file to read.
+	 * @param path:
+	 *            The path of the file to read.
 	 */
-	public void moveViaFile(String path){
+	public void moveViaFile(String path) {
 		// TODO Get the orientation using the getRotate() method.
 		double orientation = this.getRotate();
 		orientation = (orientation < 0) ? orientation + 360.0 : orientation;
 		orientation = (orientation > 360) ? orientation % 360.0 : orientation;
-//		System.out.println("Angle: " + orientation);
+		// System.out.println("Angle: " + orientation);
 		double orientationRadians = orientation / 180.0 * Math.PI;
-//		System.out.println("Radians: " + orientationRadians);
+		// System.out.println("Radians: " + orientationRadians);
 		double yOrientation = Math.cos(orientationRadians);
 		double xOrientation = Math.sin(orientationRadians);
-//		System.out.println("x: " + xOrientation  + ", y: " + yOrientation);
+		// System.out.println("x: " + xOrientation + ", y: " + yOrientation);
 		FileReader fr = new FileReader();
 		ArrayList<String> input;
 		try {
 			input = fr.scanFile(path);
-			
-			for (int i = 0; i< input.size(); i++){
-				switch (input.get(i)){
+
+			for (int i = 0; i < input.size(); i++) {
+				switch (input.get(i)) {
 				case "UP": // increase forward velocity;
 					System.out.println("UP");
 					this.setxCoordinate(this.xCoordinate + this.speed * xOrientation);
-					this.setyCoordinate(this.yCoordinate - this.speed  * yOrientation);
+					this.setyCoordinate(this.yCoordinate - this.speed * yOrientation);
 					break;
 				case "DOWN": // increase backward velocity;
-					System.out.println("DOWN");				
+					System.out.println("DOWN");
 					this.setxCoordinate(this.xCoordinate - this.speed * xOrientation);
-					this.setyCoordinate(this.yCoordinate + this.speed  * yOrientation);
+					this.setyCoordinate(this.yCoordinate + this.speed * yOrientation);
 					break;
 				case "LEFT": // rotate left
 					System.out.println("LEFT");
-					
+
 					this.setRotate(this.getRotate() - Math.abs(this.angularVelocity));
 					System.out.println(this.getRotate());
-					
+
 					break;
 				case "RIGHT": // rotate right
 					System.out.println("RIGHT");
@@ -842,17 +900,20 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}	
-	
-	/** Description: Method that reads moves from an input file and 
-	 *  executes them in order.
+	}
+
+	/**
+	 * Description: Method that reads moves from an input file and executes them
+	 * in order.
 	 * 
-	 * @param path: The path of the file to read.
-	 * @param index: The current index to add to currentKeyPresses (must be 
-	 * between 0 (inclusive) and the length of the ArrayList (exclusive).
+	 * @param path:
+	 *            The path of the file to read.
+	 * @param index:
+	 *            The current index to add to currentKeyPresses (must be between
+	 *            0 (inclusive) and the length of the ArrayList (exclusive).
 	 */
-	public void singleMoveViaFile (String path) {
-	// TODO
+	public void singleMoveViaFile(String path) {
+		// TODO
 		if (this.inputCommands == null) {
 			// No commands in file, load them up.
 			this.inputCommands = new ArrayList<String>();
@@ -868,67 +929,63 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			}
 			return;
 		}
-		
-		if (this.inputCommandsReadingInProgress == true ) {
+
+		if (this.inputCommandsReadingInProgress == true) {
 			switch (this.inputCommands.get(this.inputCommandsIndex)) {
-				case "[UP, null]": 
-					// robot.fireEvent(keyevent);
-					KeyEvent keUP = new KeyEvent(KeyEvent.KEY_PRESSED, 
-							KeyCode.UP.toString(), KeyCode.UP.toString(),
-							KeyCode.UP, false, false, false, false);
-					this.fireEvent(keUP);
-					//this.currentKeyPresses[0] = "UP";
-					//this.currentKeyPresses[1] = null;
-					break;
-				case "[UP, LEFT]" :
-					this.currentKeyPresses[0] = "UP";
-					this.currentKeyPresses[1] = "LEFT";
-					break;
-				case "[UP, RIGHT]" :
-					this.currentKeyPresses[0] = "UP";
-					this.currentKeyPresses[1] = "RIGHT";
-					break;
-				case "[DOWN, null]":
-					KeyEvent keDOWN = new KeyEvent(KeyEvent.KEY_PRESSED,
-							KeyCode.DOWN.toString(), KeyCode.DOWN.toString(),
-							KeyCode.DOWN, false, false, false, false);
-					this.fireEvent(keDOWN);
-//					this.currentKeyPresses[0] = "DOWN";
-//					this.currentKeyPresses[1] = null;
-					break;
-				case "[DOWN, LEFT]":
-					this.currentKeyPresses[0] = "DOWN";
-					this.currentKeyPresses[1] = "LEFT";
-					break;
-				case "[DOWN, RIGHT]":
-					this.currentKeyPresses[0] = "DOWN";
-					this.currentKeyPresses[1] = "RIGHT";
-					break;
-				case "[null, LEFT]":
-					KeyEvent keLEFT = new KeyEvent(KeyEvent.KEY_PRESSED,
-							KeyCode.LEFT.toString(), KeyCode.DOWN.toString(),
-							KeyCode.LEFT, false, false, false, false);
-					this.fireEvent(keLEFT);
-//					this.currentKeyPresses[0] = null;
-//					this.currentKeyPresses[1] = "LEFT";
-					break;
-				case "[null, RIGHT]":
-					KeyEvent keRIGHT = new KeyEvent(KeyEvent.KEY_PRESSED,
-							KeyCode.RIGHT.toString(), KeyCode.RIGHT.toString(),
-							KeyCode.RIGHT, false, false, false, false);
-					this.fireEvent(keRIGHT);
-//					this.currentKeyPresses[0] = null;
-//					this.currentKeyPresses[1] = "RIGHT";
-					break;
-				case "[null, null]":
-					this.currentKeyPresses[0] = null;
-					this.currentKeyPresses[1] = null;
-					break;
-				default: 
-					System.out.println("INVALID");
+			case "[UP, null]":
+				// robot.fireEvent(keyevent);
+				KeyEvent keUP = new KeyEvent(KeyEvent.KEY_PRESSED, KeyCode.UP.toString(), KeyCode.UP.toString(),
+						KeyCode.UP, false, false, false, false);
+				this.fireEvent(keUP);
+				// this.currentKeyPresses[0] = "UP";
+				// this.currentKeyPresses[1] = null;
+				break;
+			case "[UP, LEFT]":
+				this.currentKeyPresses[0] = "UP";
+				this.currentKeyPresses[1] = "LEFT";
+				break;
+			case "[UP, RIGHT]":
+				this.currentKeyPresses[0] = "UP";
+				this.currentKeyPresses[1] = "RIGHT";
+				break;
+			case "[DOWN, null]":
+				KeyEvent keDOWN = new KeyEvent(KeyEvent.KEY_PRESSED, KeyCode.DOWN.toString(), KeyCode.DOWN.toString(),
+						KeyCode.DOWN, false, false, false, false);
+				this.fireEvent(keDOWN);
+				// this.currentKeyPresses[0] = "DOWN";
+				// this.currentKeyPresses[1] = null;
+				break;
+			case "[DOWN, LEFT]":
+				this.currentKeyPresses[0] = "DOWN";
+				this.currentKeyPresses[1] = "LEFT";
+				break;
+			case "[DOWN, RIGHT]":
+				this.currentKeyPresses[0] = "DOWN";
+				this.currentKeyPresses[1] = "RIGHT";
+				break;
+			case "[null, LEFT]":
+				KeyEvent keLEFT = new KeyEvent(KeyEvent.KEY_PRESSED, KeyCode.LEFT.toString(), KeyCode.DOWN.toString(),
+						KeyCode.LEFT, false, false, false, false);
+				this.fireEvent(keLEFT);
+				// this.currentKeyPresses[0] = null;
+				// this.currentKeyPresses[1] = "LEFT";
+				break;
+			case "[null, RIGHT]":
+				KeyEvent keRIGHT = new KeyEvent(KeyEvent.KEY_PRESSED, KeyCode.RIGHT.toString(),
+						KeyCode.RIGHT.toString(), KeyCode.RIGHT, false, false, false, false);
+				this.fireEvent(keRIGHT);
+				// this.currentKeyPresses[0] = null;
+				// this.currentKeyPresses[1] = "RIGHT";
+				break;
+			case "[null, null]":
+				this.currentKeyPresses[0] = null;
+				this.currentKeyPresses[1] = null;
+				break;
+			default:
+				System.out.println("INVALID");
 			}
 		}
-		
+
 		// get the inputCommands arrayList size
 		if (this.inputCommandsIndex >= this.inputCommands.size() - 1) {
 			// Cause deceleration
@@ -939,38 +996,33 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			this.inputCommandsIndex++;
 		}
 	}
-	
+
 	/**
-	 * Description: Perform all the actions needed to update the robot in each game
-	 * cycle. 
+	 * Description: Perform all the actions needed to update the robot in each
+	 * game cycle.
 	 * 
 	 * @author: Geraint and Lucas
 	 */
-	public void update(){
-		
+	public void update() {
+
 		final double wallEorientation = this.getOrientation();
 
 		final double[] wallEcomponents = this.getOrientationComponents(wallEorientation);
-		
+
 		// read commands from file
-				if (Driver.wallE.getInputCommandsReadingInProgress() == true) {
-					// Request a new move
-					Driver.wallE.singleMoveViaFile("src/movements2.txt");
-				}
-		
-		
+		if (Driver.wallE.getInputCommandsReadingInProgress() == true) {
+			// Request a new move
+			Driver.wallE.singleMoveViaFile("src/movements2.txt");
+		}
+
 		detectCollision(this, wallEcomponents);
-		
+
 		this.move(wallEcomponents);
 		this.animate();
 		this.consumeBattery();
-	
-				
-		
-//		this.batteryLowAlert();
-		
-		
+
+		// this.batteryLowAlert();
+
 	}
-	
-	
+
 }
