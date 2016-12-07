@@ -11,14 +11,20 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Label;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.BackgroundImage;
 import javafx.scene.layout.BackgroundPosition;
 import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.layout.BackgroundSize;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.TilePane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.stage.Stage;
@@ -47,6 +53,20 @@ public class Driver extends Application {
 	public static Map map;
 	public static Robot wallE;
 	public static Group root;
+	public static TilePane devmode;
+	public static Label labelx;
+	public static Label textx;
+	public static Label labely;
+	public static Label texty;
+	public static Label labelcharge;
+	public static Label textcharge;
+	public static Label labeldistance;
+	public static Label textdistance;
+	public static Label labelangle;
+	public static Label textangle;
+	public static Label labelinfo;
+	public static Label textinfo;
+	public static boolean toggledevmode;
 	
 	
 
@@ -63,10 +83,10 @@ public class Driver extends Application {
 				{ 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1 },
 				{ 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 }, 
 				{ 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-				{ 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1 }, 
-				{ 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1 },
-				{ 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1 }, 
-				{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
+				{ 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1 }, 
+				{ 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+				{ 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1 }, 
+				{ 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
 				{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 } };
 
 		map = new Map(grid); // create map
@@ -84,13 +104,14 @@ public class Driver extends Application {
 		stack = new StackPane();
 
 		// pane used for background
-		Group background = new Group();
-		Image looks = new Image(new File("src/background.png").toURI().toString(), SCREENWIDTH, SCREENHEIGHT, false,
-				true);
-		ImageView pattern = new ImageView(looks);
-
-		background.getChildren().addAll(pattern);
-		stack.getChildren().add(background);
+//		Group background = new Group();
+//		Image looks = new Image(new File("src/background.png").toURI().toString(), SCREENWIDTH, SCREENHEIGHT, false,
+//				true);
+//		ImageView pattern = new ImageView(looks);
+//
+//		background.getChildren().addAll(pattern);
+//		stack.getChildren().add(background);
+		
 
 		// pane used for game itself
 		root = new Group();
@@ -100,9 +121,8 @@ public class Driver extends Application {
 		gc.setLineWidth(5);
 		map.render2DMap(gc, true);
 		root.getChildren().add(canvas);
-		stack.getChildren().add(root);
-		primaryStage.setScene(new Scene(stack));
-		primaryStage.show();
+		
+	
 
 		// creates a "fast" robot from an xml file
 		wallE = new Robot("fast");
@@ -113,7 +133,44 @@ public class Driver extends Application {
 		wallE.setOnKeyPressed(wallE); // adds Event handler
 		wallE.setOnKeyReleased(wallE); // adds Event handler
 		root.getChildren().add(wallE);
-
+		stack.getChildren().add(root);
+		
+		toggledevmode = true;
+		//pane used for devmode
+		if(toggledevmode){
+		devmode = new TilePane();
+		labelx = new Label("X Position: ");
+		textx = new Label("0");
+		HBox hb1 = new HBox(labelx, textx);
+		labely = new Label("Y Position: ");
+		texty = new Label("0");
+		HBox hb2 = new HBox(labely, texty);
+		labelcharge = new Label("Charge Level: ");
+		textcharge = new Label("100%");
+		HBox hb3 = new HBox(labelcharge, textcharge);
+		labeldistance = new Label("Distance: ");
+		textdistance = new Label("0");
+		HBox hb4 = new HBox(labeldistance, textdistance);
+		labelangle = new Label("Angle: ");
+		textangle = new Label("0");
+		HBox hb5 = new HBox(labelangle, textangle);
+		labelinfo = new Label("Info: ");
+		textinfo = new Label();
+		
+		HBox hb6 = new HBox(labelinfo, textinfo);
+		devmode.getChildren().addAll(hb1, hb2, hb3, hb4, hb5, hb6);
+		devmode.setMaxSize(150,200);
+		devmode.setStyle("-fx-background-color: BBBBBB;");
+		
+		root.getChildren().add(devmode);
+		
+		devmode.setLayoutX(400);
+		devmode.setLayoutY(600);
+		}
+		primaryStage.setScene(new Scene(stack));
+		primaryStage.show();
+		
+		
 		// start animation loop
 		startnanotime = System.nanoTime();
 		GameTimer timer = new GameTimer();

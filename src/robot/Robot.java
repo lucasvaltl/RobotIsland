@@ -2,6 +2,7 @@ package robot;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -56,6 +57,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	private ImagePattern[][] animimages;
 	private int timeSinceCollision = 0;
 	private boolean collisionDetected;
+	private double distancetravelled;
 
 	/**
 	 * Description: Verbose robot class constructor
@@ -291,6 +293,10 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 
 	public boolean getCollisionDetected() {
 		return this.collisionDetected;
+	}
+	
+	public double getDistanceTravelled() {
+		return this.distancetravelled;
 	}
 
 	/**
@@ -601,25 +607,43 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 * @author Geraint and Lucas
 	 */
 
-	private void consumeBattery() {
+	private void consumeBattery(double[] ds) {
 
+		
 		if (this.getSpeed() > 0) {
 			if (this.getBatteryLeft() >= (this.getBatteryCapacity() / 10)) {
-				this.decreaseCharge(0.5);
+				//reduce battery relative to distance traveled
+				this.decreaseCharge(0.5*this.getSpeed());
+			}
+			// if battery lower than 10% of charge, reduce speed, consume less battery
+			if ((this.getBatteryLeft() > 0) && (this.getBatteryLeft() < (this.getBatteryCapacity() / 10))) {
 				System.out.println(this.getBatteryLeft());
+				this.decreaseCharge(0.5);
+				this.setMaxSpeed(1);
+				if(Driver.toggledevmode){
+					Driver.textinfo.setText("Battery less than 10%!!!");
+				}
+			}
+		}//decrease charge if robot is turning around its own axis but not moving forward
+		else if (this.getSpeed() == 0 && (ds[0]!= ds[1])) {
+			if (this.getBatteryLeft() >= (this.getBatteryCapacity() / 10)) {
+				this.decreaseCharge(0.0625);
 			}
 			// if battery lower than 10% of charge, reduce speed, consume less
 			// battery
 			if ((this.getBatteryLeft() > 0) && (this.getBatteryLeft() < (this.getBatteryCapacity() / 10))) {
-				System.out.println("restricted movement");
 				System.out.println(this.getBatteryLeft());
-				this.decreaseCharge(0.03125);
+				this.decreaseCharge(0.25);
 				this.setMaxSpeed(1);
+				if(Driver.toggledevmode){
+					Driver.textinfo.setText("Battery less than 10%!!!");
+				}
 			}
 		}
 		// if battery empty restrict movement
-		if (this.getBatteryLeft() == 0) {
+		if (this.getBatteryLeft() < 0) {
 			this.setMaxSpeed(0);
+			this.setBatteryLeft(0);
 		}
 
 	}
@@ -641,6 +665,45 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 */
 	public void decreaseCharge() {
 		this.batteryLeft -= 1;
+	}
+	
+
+	/**
+	 * Description: update the robots distance travelled
+	 * 
+	 */
+	private void updateDistance(){
+		this.distancetravelled += this.speed;
+	}
+	
+	/**
+	 * Updates the Developer panel if developer mode is turned on
+	 * 
+	 */
+	
+	public void updateDevPanel(){
+		if(Driver.toggledevmode){
+			Point2D centercoordinates = this.center();
+			DecimalFormat numberFormat = new DecimalFormat("#.0"); 
+			Driver.textx.setText(numberFormat.format(centercoordinates.getX()));
+			Driver.texty.setText(numberFormat.format(centercoordinates.getY()));
+			Driver.textcharge.setText(numberFormat.format(this.getBatteryLeft()/this.getBatteryCapacity()*100) + "%");
+			Driver.textdistance.setText(numberFormat.format(this.getDistanceTravelled()));
+			//calculate orientation of robots front based on the default getRotate() method;
+			double currentrotation;
+			if(this.getRotate() >0){
+				currentrotation = this.getRotate()%360 ;
+			} else{
+				currentrotation = this.getRotate()%360 +360;
+			}
+			if(currentrotation>180){
+				currentrotation -=180;
+			}else{
+				currentrotation +=180;
+			}
+			Driver.textangle.setText(numberFormat.format(currentrotation));
+			
+		}
 	}
 
 	/**
@@ -1047,13 +1110,15 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			Driver.wallE.singleMoveViaFile("src/movements2.txt");
 		}
 
+		this.setWheelspeeds(0, 0);
+		
 		detectCollision(this, wallEcomponents);
 
 		this.move(wallEcomponents);
 		this.animate(wallEcomponents);
-		this.consumeBattery();
-
-		// this.batteryLowAlert();
+		this.consumeBattery(this.getWheelspeeds());
+		this.updateDevPanel();
+		this.updateDistance();
 
 	}
 

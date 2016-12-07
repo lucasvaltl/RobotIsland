@@ -21,6 +21,12 @@ public class Movement {
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
 	 */
 	public static double[] moveDown(double[] wallEcomponents) {
+		//cancel movement if battery is empty
+				if(Driver.wallE.getBatteryLeft()<=0){
+					System.out.println("Returning null");
+					return null;
+				}
+		
 		Driver.wallE.setSpeed(Driver.wallE.getSpeed() + Driver.wallE.getAcceleration());
 		Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() + Driver.wallE.getSpeed() * wallEcomponents[0]);
 		Driver.wallE.setyCoordinate(Driver.wallE.getyCoordinate() - Driver.wallE.getSpeed() * wallEcomponents[1]);
@@ -42,6 +48,12 @@ public class Movement {
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
 	 */
 	public static double[] moveUp(double[] wallEcomponents) {
+		//cancel movement if battery is empty
+				if(Driver.wallE.getBatteryLeft()<=0){
+					System.out.println("Returning null");
+					return null;
+				}
+		
 		Driver.wallE.setSpeed(Driver.wallE.getSpeed() + Driver.wallE.getAcceleration());
 		Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() - Driver.wallE.getSpeed() * wallEcomponents[0]);
 		Driver.wallE.setyCoordinate(Driver.wallE.getyCoordinate() + Driver.wallE.getSpeed() * wallEcomponents[1]);
@@ -63,6 +75,12 @@ public class Movement {
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
 	 */
 	public static double[] moveDownLeft(double[] wallEcomponents) {
+		//cancel movement if battery is empty
+				if(Driver.wallE.getBatteryLeft()<=0){
+					System.out.println("Returning null");
+					return null;
+				}
+		
 		// Assume average speed is constant throughout the turn		
 		Driver.wallE.setRotate(Driver.wallE.getRotate() - Math.abs(Driver.wallE.getAngularVelocity()));
 		Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() + Driver.wallE.getSpeed() * wallEcomponents[0]);
@@ -94,6 +112,12 @@ public class Movement {
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
 	 */
 	public static double[] moveDownRight(double[] wallEcomponents) {
+		//cancel movement if battery is empty
+				if(Driver.wallE.getBatteryLeft()<=0){
+					System.out.println("Returning null");
+					return null;
+				}
+		
 		// Assume average speed is constant through turn
 		Driver.wallE.setRotate(Driver.wallE.getRotate() + Math.abs(Driver.wallE.getAngularVelocity()));
 		Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() + Driver.wallE.getSpeed() * wallEcomponents[0]);
@@ -126,6 +150,12 @@ public class Movement {
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
 	 */
 	public static double[] moveUpLeft(double[] wallEcomponents) {
+		//cancel movement if battery is empty
+				if(Driver.wallE.getBatteryLeft()<=0){
+					System.out.println("Returning null");
+					return null;
+				}
+		
 		// Assume average speed is constant throughout turn
 		Driver.wallE.setRotate(Driver.wallE.getRotate() - Math.abs(Driver.wallE.getAngularVelocity()));
 		Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() - Driver.wallE.getSpeed() * wallEcomponents[0]);
@@ -157,6 +187,12 @@ public class Movement {
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
 	 */
 	public static double[] moveUpRight(double[] wallEcomponents) {
+		//cancel movement if battery is empty
+				if(Driver.wallE.getBatteryLeft()<=0){
+					System.out.println("Returning null");
+					return null;
+				}
+		
 		// Assume average speed is constant throughout turn
 		Driver.wallE.setRotate(Driver.wallE.getRotate() + Math.abs(Driver.wallE.getAngularVelocity()));
 		Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() - Driver.wallE.getSpeed() * wallEcomponents[0]);
@@ -184,6 +220,12 @@ public class Movement {
 	 * 
 	 */
 	public static double[] moveLeft() {
+		//cancel movement if battery is empty
+		if(Driver.wallE.getBatteryLeft()<=0){
+			System.out.println("Returning null");
+			return null;
+		}
+		
 		Driver.wallE.setRotate(Driver.wallE.getRotate() - Math.abs(Driver.wallE.getAngularVelocity()));
 		
 		// get angularVelocity and convert to radians
@@ -208,6 +250,12 @@ public class Movement {
 	 * 
 	 */
 	public static double[] moveRight() {
+		//cancel movement if battery is empty
+		if(Driver.wallE.getBatteryLeft()<=0){
+			System.out.println("Returning null");
+			return null;
+		}
+		
 		Driver.wallE.setRotate(Driver.wallE.getRotate() + Math.abs(Driver.wallE.getAngularVelocity()));
 		
 		// get angularVelocity and convert to radians
