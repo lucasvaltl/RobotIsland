@@ -1,10 +1,11 @@
-/map/
 /background.png
+/gametimer/
+/img/
+/map/
+/movements.txt
 /movements2.txt
 /readers/
+/resources
 /robot/
+/robots.xml
 /tests/
-/map/
-/gametimer/
-/readers/
-/img/

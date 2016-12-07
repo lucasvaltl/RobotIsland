@@ -73,15 +73,30 @@ public class CollisionDetection {
 				//prorprietary seperating axis theorem based collision detection for narrow phase detection
 			if (staticblock.isColliding(robot)) {
 				
-				Image pattern = new Image(new File("src/eveCollision.png").toURI().toString(), 32, 48, false, true);
-				ImagePattern skin = new ImagePattern(pattern);
-				Driver.wallE.setFill(skin);
+				return true; // collision
+			}
+		}}
+		return false; 
+	}
+	
+	public static boolean chargingDetection(Robot robot, ArrayList<Entity> blocks) {
+//		Bounds objA = robot.localToScene(robot.getBoundsInLocal());
+		
+		
+
+		for (Entity block : blocks) {
+			//regular bounding box based collision detection for broad phase detection
+			if(robot.getBoundsInParent().intersects(block.getBoundsInParent())){
+				//prorprietary seperating axis theorem based collision detection for narrow phase detection
+			if (block.isColliding(robot)) {
 				
 				return true; // collision
 			}
 		}}
 		return false; 
 	}
+	
+	
 	
 	public static ArrayList<Entity> getAdjacentBlocks(Robot robot) {
 		// rounded down current position in rows and columns
