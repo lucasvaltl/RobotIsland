@@ -4,6 +4,7 @@ import map.Map;
 import robot.Robot;
 
 import java.io.File;
+import java.io.IOException;
 
 import gametimer.GameTimer;
 import javafx.application.*;
@@ -22,6 +23,14 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.stage.Stage;
+import loggers.CustomFormatter;
+import loggers.CustomHandler;
+import loggers.CustomLevel;
+
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
 
 public class Driver extends Application {
 	/**
@@ -48,10 +57,52 @@ public class Driver extends Application {
 	public static Robot wallE;
 	public static Group root;
 	
-	
+	// custom logging stuff - outputs to different files based on level
+	public static Logger LOGGER = Logger.getLogger(Driver.class.getName());
+	private static CustomHandler fineHandler;
+	private static CustomHandler finerHandler;
+	private static CustomHandler finestHandler;
+	private static CustomHandler infoHandler;
+	private static CustomHandler warningHandler;
+	private static CustomHandler severeHandler;
+	private static CustomHandler instructionHandler;
 
 	public static void main(String[] args) {
 
+		// setup logger
+		try {
+			fineHandler = new CustomHandler ("src/logs/fine", Level.FINE);
+			finerHandler = new CustomHandler ("src/logs/finer", Level.FINER);
+			finestHandler = new CustomHandler ("src/logs/finest", Level.FINEST);
+			infoHandler = new CustomHandler("src/logs/info", Level.INFO);
+			warningHandler = new CustomHandler("src/logs/warning", Level.WARNING);
+			severeHandler = new CustomHandler("src/logs/severe", Level.SEVERE);
+			instructionHandler = new CustomHandler("src/robotinstructions", CustomLevel.INSTRUCTION);
+			
+			LOGGER.setUseParentHandlers(false);
+			LOGGER.addHandler(instructionHandler);
+			LOGGER.addHandler(fineHandler);
+			LOGGER.addHandler(finerHandler);
+			LOGGER.addHandler(finestHandler);
+			LOGGER.addHandler(infoHandler);
+			LOGGER.addHandler(warningHandler);
+			LOGGER.addHandler(severeHandler);
+			
+			CustomFormatter formatter = new CustomFormatter();
+			fineHandler.setFormatter(formatter);
+			finerHandler.setFormatter(formatter);
+			finestHandler.setFormatter(formatter);
+			infoHandler.setFormatter(formatter);
+			warningHandler.setFormatter(formatter);
+			severeHandler.setFormatter(formatter);
+			instructionHandler.setFormatter(formatter);
+			
+		} catch (SecurityException e1) {
+			e1.printStackTrace();
+		} catch (IOException e2) {
+			e2.printStackTrace();
+		}
+		
 		int[][] grid = { { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
 				{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1 }, 
 				{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1 },
@@ -70,7 +121,7 @@ public class Driver extends Application {
 				{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 } };
 
 		map = new Map(grid); // create map
-
+		
 		launch(args); // launch javaFX
 	}
 

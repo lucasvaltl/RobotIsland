@@ -21,6 +21,8 @@ public class Movement {
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
 	 */
 	public static double[] moveDown(double[] wallEcomponents) {
+		Driver.LOGGER.info("moveDown");
+		
 		Driver.wallE.setSpeed(Driver.wallE.getSpeed() + Driver.wallE.getAcceleration());
 		Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() + Driver.wallE.getSpeed() * wallEcomponents[0]);
 		Driver.wallE.setyCoordinate(Driver.wallE.getyCoordinate() - Driver.wallE.getSpeed() * wallEcomponents[1]);
@@ -30,6 +32,8 @@ public class Movement {
 		double speedLeftWheel = Driver.wallE.getSpeed();
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
 		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
+		
+		Driver.LOGGER.fine(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	}
 
@@ -42,6 +46,8 @@ public class Movement {
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
 	 */
 	public static double[] moveUp(double[] wallEcomponents) {
+		Driver.LOGGER.info("moveUp");
+		
 		Driver.wallE.setSpeed(Driver.wallE.getSpeed() + Driver.wallE.getAcceleration());
 		Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() - Driver.wallE.getSpeed() * wallEcomponents[0]);
 		Driver.wallE.setyCoordinate(Driver.wallE.getyCoordinate() + Driver.wallE.getSpeed() * wallEcomponents[1]);
@@ -51,6 +57,8 @@ public class Movement {
 		double speedLeftWheel = Driver.wallE.getSpeed();
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
 		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
+		
+		Driver.LOGGER.fine(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	}
 	
@@ -63,6 +71,8 @@ public class Movement {
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
 	 */
 	public static double[] moveDownLeft(double[] wallEcomponents) {
+		Driver.LOGGER.info("moveDownLeft");
+		
 		// Assume average speed is constant throughout the turn		
 		Driver.wallE.setRotate(Driver.wallE.getRotate() - Math.abs(Driver.wallE.getAngularVelocity()));
 		Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() + Driver.wallE.getSpeed() * wallEcomponents[0]);
@@ -82,6 +92,8 @@ public class Movement {
 				/ (2 * Driver.wallE.getWheelRadius());
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
 		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
+		
+		Driver.LOGGER.fine(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	}
 	
@@ -94,6 +106,8 @@ public class Movement {
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
 	 */
 	public static double[] moveDownRight(double[] wallEcomponents) {
+		Driver.LOGGER.info("moveDownRight");
+		
 		// Assume average speed is constant through turn
 		Driver.wallE.setRotate(Driver.wallE.getRotate() + Math.abs(Driver.wallE.getAngularVelocity()));
 		Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() + Driver.wallE.getSpeed() * wallEcomponents[0]);
@@ -114,6 +128,8 @@ public class Movement {
 				/ (2 * Driver.wallE.getWheelRadius());
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
 		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
+		
+		Driver.LOGGER.fine(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	}
 	
@@ -126,6 +142,8 @@ public class Movement {
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
 	 */
 	public static double[] moveUpLeft(double[] wallEcomponents) {
+		Driver.LOGGER.info("moveUpLeft");
+		
 		// Assume average speed is constant throughout turn
 		Driver.wallE.setRotate(Driver.wallE.getRotate() - Math.abs(Driver.wallE.getAngularVelocity()));
 		Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() - Driver.wallE.getSpeed() * wallEcomponents[0]);
@@ -145,6 +163,8 @@ public class Movement {
 				/ (2 * Driver.wallE.getWheelRadius());
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
 		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
+		
+		Driver.LOGGER.fine(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	}
 	
@@ -157,6 +177,8 @@ public class Movement {
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
 	 */
 	public static double[] moveUpRight(double[] wallEcomponents) {
+		Driver.LOGGER.info("moveUpRight");
+		
 		// Assume average speed is constant throughout turn
 		Driver.wallE.setRotate(Driver.wallE.getRotate() + Math.abs(Driver.wallE.getAngularVelocity()));
 		Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() - Driver.wallE.getSpeed() * wallEcomponents[0]);
@@ -176,6 +198,8 @@ public class Movement {
 				/ (2 * Driver.wallE.getWheelRadius());
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
 		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
+		
+		Driver.LOGGER.fine(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	}
 	
@@ -184,6 +208,8 @@ public class Movement {
 	 * 
 	 */
 	public static double[] moveLeft() {
+		Driver.LOGGER.info("moveLeft");
+		
 		Driver.wallE.setRotate(Driver.wallE.getRotate() - Math.abs(Driver.wallE.getAngularVelocity()));
 		
 		// get angularVelocity and convert to radians
@@ -199,6 +225,8 @@ public class Movement {
 				/ (2 * Driver.wallE.getWheelRadius());
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
 		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
+		
+		Driver.LOGGER.fine(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	
 	}
@@ -208,6 +236,8 @@ public class Movement {
 	 * 
 	 */
 	public static double[] moveRight() {
+		Driver.LOGGER.info("moveRight");
+		
 		Driver.wallE.setRotate(Driver.wallE.getRotate() + Math.abs(Driver.wallE.getAngularVelocity()));
 		
 		// get angularVelocity and convert to radians
@@ -223,6 +253,8 @@ public class Movement {
 				/ (2 * Driver.wallE.getWheelRadius());
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
 		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
+		
+		Driver.LOGGER.fine(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	
 	}
@@ -235,6 +267,8 @@ public class Movement {
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
 	 */
 	public static void decelerate(double[] wallEcomponents) {
+		Driver.LOGGER.info("decelerate");
+		
 		// Decelerate
 		double speed = Driver.wallE.getSpeed() - Driver.wallE.getAcceleration();
 		speed = (speed < 0) ? 0 : speed;

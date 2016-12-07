@@ -596,7 +596,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	/*
 	 * Description: Consume battery when moving. If battery is low (less than
 	 * 10%) the robots speed will decrease significantly. If the battery is
-	 * empty, the robot will fial to move.
+	 * empty, the robot will fail to move.
 	 * 
 	 * @author Geraint and Lucas
 	 */
@@ -648,12 +648,14 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 * currentKeyPresses array to keep track of which buttons are being held
 	 * down.
 	 * 
+	 *  Logs to src/logs file
 	 */
 	public void handle(KeyEvent event) {
 
 		/* Keydown */
 		if (event.getEventType().equals(KeyEvent.KEY_PRESSED)) {
 			// System.out.println(Arrays.toString(this.currentKeyPresses));
+			
 			switch (event.getCode()) {
 			case UP: // increase forward velocity;
 				/*
