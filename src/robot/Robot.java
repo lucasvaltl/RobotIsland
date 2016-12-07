@@ -607,19 +607,33 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 * @author Geraint and Lucas
 	 */
 
-	private void consumeBattery() {
+	private void consumeBattery(double[] ds) {
 
+		
 		if (this.getSpeed() > 0) {
 			if (this.getBatteryLeft() >= (this.getBatteryCapacity() / 10)) {
-				this.decreaseCharge(0.5);
+				//reduce battery relative to distance traveled
+				this.decreaseCharge(0.5*this.getSpeed());
+			}
+			// if battery lower than 10% of charge, reduce speed, consume less battery
+			if ((this.getBatteryLeft() > 0) && (this.getBatteryLeft() < (this.getBatteryCapacity() / 10))) {
 				System.out.println(this.getBatteryLeft());
+				this.decreaseCharge(0.5);
+				this.setMaxSpeed(1);
+				if(Driver.toggledevmode){
+					Driver.textinfo.setText("Battery less than 10%!!!");
+				}
+			}
+		}//decrease charge if robot is turning around its own axis but not moving forward
+		else if (this.getSpeed() == 0 && (ds[0]!= ds[1])) {
+			if (this.getBatteryLeft() >= (this.getBatteryCapacity() / 10)) {
+				this.decreaseCharge(0.0625);
 			}
 			// if battery lower than 10% of charge, reduce speed, consume less
 			// battery
 			if ((this.getBatteryLeft() > 0) && (this.getBatteryLeft() < (this.getBatteryCapacity() / 10))) {
-				System.out.println("restricted movement");
 				System.out.println(this.getBatteryLeft());
-				this.decreaseCharge(0.03125);
+				this.decreaseCharge(0.25);
 				this.setMaxSpeed(1);
 				if(Driver.toggledevmode){
 					Driver.textinfo.setText("Battery less than 10%!!!");
@@ -627,8 +641,9 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			}
 		}
 		// if battery empty restrict movement
-		if (this.getBatteryLeft() == 0) {
+		if (this.getBatteryLeft() < 0) {
 			this.setMaxSpeed(0);
+			this.setBatteryLeft(0);
 		}
 
 	}
@@ -652,14 +667,19 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		this.batteryLeft -= 1;
 	}
 	
-	public double getFormatedRotation(){
-		
-		return 0.0;
-	}
-	
+
+	/**
+	 * Description: update the robots distance travelled
+	 * 
+	 */
 	private void updateDistance(){
 		this.distancetravelled += this.speed;
 	}
+	
+	/**
+	 * Updates the Developer panel if developer mode is turned on
+	 * 
+	 */
 	
 	public void updateDevPanel(){
 		if(Driver.toggledevmode){
@@ -1090,11 +1110,13 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			Driver.wallE.singleMoveViaFile("src/movements2.txt");
 		}
 
+		this.setWheelspeeds(0, 0);
+		
 		detectCollision(this, wallEcomponents);
 
 		this.move(wallEcomponents);
 		this.animate(wallEcomponents);
-		this.consumeBattery();
+		this.consumeBattery(this.getWheelspeeds());
 		this.updateDevPanel();
 		this.updateDistance();
 

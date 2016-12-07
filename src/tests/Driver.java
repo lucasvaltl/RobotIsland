@@ -156,11 +156,12 @@ public class Driver extends Application {
 		HBox hb5 = new HBox(labelangle, textangle);
 		labelinfo = new Label("Info: ");
 		textinfo = new Label();
+		
 		HBox hb6 = new HBox(labelinfo, textinfo);
 		devmode.getChildren().addAll(hb1, hb2, hb3, hb4, hb5, hb6);
 		devmode.setMaxSize(150,200);
-		
 		devmode.setStyle("-fx-background-color: BBBBBB;");
+		
 		root.getChildren().add(devmode);
 		
 		devmode.setLayoutX(400);
