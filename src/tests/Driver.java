@@ -11,13 +11,18 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.BackgroundImage;
 import javafx.scene.layout.BackgroundPosition;
 import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.layout.BackgroundSize;
+import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
@@ -47,6 +52,15 @@ public class Driver extends Application {
 	public static Map map;
 	public static Robot wallE;
 	public static Group root;
+	public static FlowPane devmode;
+	public static Label labelx;
+	public static TextField textx;
+	public static Label labely;
+	public static TextField texty;
+	public static Label labelcharge;
+	public static TextField textcharge;
+	public static Label labelinfo;
+	public static TextField textinfo;
 	
 	
 
@@ -63,10 +77,10 @@ public class Driver extends Application {
 				{ 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1 },
 				{ 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 }, 
 				{ 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-				{ 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1 }, 
-				{ 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1 },
-				{ 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1 }, 
-				{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
+				{ 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1 }, 
+				{ 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+				{ 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1 }, 
+				{ 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
 				{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 } };
 
 		map = new Map(grid); // create map
@@ -84,13 +98,14 @@ public class Driver extends Application {
 		stack = new StackPane();
 
 		// pane used for background
-		Group background = new Group();
-		Image looks = new Image(new File("src/background.png").toURI().toString(), SCREENWIDTH, SCREENHEIGHT, false,
-				true);
-		ImageView pattern = new ImageView(looks);
-
-		background.getChildren().addAll(pattern);
-		stack.getChildren().add(background);
+//		Group background = new Group();
+//		Image looks = new Image(new File("src/background.png").toURI().toString(), SCREENWIDTH, SCREENHEIGHT, false,
+//				true);
+//		ImageView pattern = new ImageView(looks);
+//
+//		background.getChildren().addAll(pattern);
+//		stack.getChildren().add(background);
+		
 
 		// pane used for game itself
 		root = new Group();
@@ -100,9 +115,8 @@ public class Driver extends Application {
 		gc.setLineWidth(5);
 		map.render2DMap(gc, true);
 		root.getChildren().add(canvas);
-		stack.getChildren().add(root);
-		primaryStage.setScene(new Scene(stack));
-		primaryStage.show();
+		
+	
 
 		// creates a "fast" robot from an xml file
 		wallE = new Robot("fast");
@@ -113,7 +127,36 @@ public class Driver extends Application {
 		wallE.setOnKeyPressed(wallE); // adds Event handler
 		wallE.setOnKeyReleased(wallE); // adds Event handler
 		root.getChildren().add(wallE);
-
+		stack.getChildren().add(root);
+		
+		
+		//pane used for devmode
+		devmode = new FlowPane();
+		labelx = new Label("X Position: ");
+		textx = new TextField();
+		HBox hb1 = new HBox(labelx, textx);
+		labely = new Label("Y Position: ");
+		texty = new TextField();
+		HBox hb2 = new HBox(labely, texty);
+		labelcharge = new Label("Charge Level: ");
+		textcharge = new TextField();
+		HBox hb3 = new HBox(labelcharge, textcharge);
+		labelinfo = new Label("Info: ");
+		textinfo = new TextField();
+		HBox hb4 = new HBox(labelinfo, textinfo);
+		devmode.getChildren().addAll(hb1, hb2, hb3, hb4);
+		devmode.setMaxSize(400,200);
+		
+		devmode.setStyle("-fx-background-color: DAE6F3;");
+		stack.getChildren().add(devmode);
+		
+		devmode.setLayoutX(450);
+		devmode.setLayoutY(650);
+		
+		primaryStage.setScene(new Scene(stack));
+		primaryStage.show();
+		
+		
 		// start animation loop
 		startnanotime = System.nanoTime();
 		GameTimer timer = new GameTimer();
