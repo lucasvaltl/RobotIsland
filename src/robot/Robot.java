@@ -509,7 +509,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 * 
 	 * @return
 	 */
-	public boolean animate() {
+	public boolean animate(double[] wallEcomponents) {
 
 		// warn if battery is below 33%
 		if ((this.batteryLeft > (this.getBatteryCapacity() / 10))
@@ -538,10 +538,18 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 				return false;
 			}
 		}
+		
+		//check if robot is even moving:
+		if(wallEcomponents[0]==0 && wallEcomponents[1]==0){
+			this.setFill(this.getAnimatedImage(1, 1));
+			return false;
+		}
 
 		// animate eyes to look into direction of movement
 		int i = 1;
 		int j = 1;
+		
+		if(this.getLastUporDown().equals("UP")){
 		if (this.speed == maxSpeed) {
 			i = 2;
 		}
@@ -558,7 +566,31 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		}
 		this.setFill(this.getAnimatedImage(i, j));
 		// used to break out of method
-		return true;
+		}
+		
+		if(this.getLastUporDown().equals("DOWN")){
+			i = 0;
+
+			if (this.speed == 0) {
+				i = 1;
+			}
+
+			if (this.wheelspeeds[0] == this.wheelspeeds[1]) {
+
+			} else if (this.speed == 0 && this.wheelspeeds[0] > this.wheelspeeds[1]) {
+				j = 0;
+			} else if (this.speed == 0 && this.wheelspeeds[0] < this.wheelspeeds[1]) {
+				j = 2;
+			} else if (this.wheelspeeds[0] < this.wheelspeeds[1]) {
+				j = 0;
+			} else {
+				j = 2;
+			}
+			this.setFill(this.getAnimatedImage(i, j));
+			
+			}
+		// used to break out of method
+		return true; 
 	}
 
 	/*
@@ -1018,7 +1050,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		detectCollision(this, wallEcomponents);
 
 		this.move(wallEcomponents);
-		this.animate();
+		this.animate(wallEcomponents);
 		this.consumeBattery();
 
 		// this.batteryLowAlert();
