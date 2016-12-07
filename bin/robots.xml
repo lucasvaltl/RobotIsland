@@ -4,13 +4,13 @@
     <name>slowrobot</name>
     <xCoordinate>100</xCoordinate>
     <yCoordinate>100</yCoordinate>
-    <speed>3</speed>
-    <maxSpeed>2</maxSpeed>
+    <speed>0</speed>
+    <maxSpeed>3</maxSpeed>
     <acceleration> 0.05 </acceleration>
     <angularVelocity> 3 </angularVelocity>
     <odometer> 0</odometer>
-    <batteryLeft> 100 </batteryLeft>
-    <batteryCapacity>100 </batteryCapacity>
+    <batteryLeft>1200</batteryLeft>
+    <batteryCapacity>1200</batteryCapacity>
     <axleLength>32</axleLength>
     <wheelRadius>48</wheelRadius>
   </robot>

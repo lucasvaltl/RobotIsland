@@ -18,6 +18,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.transform.Rotate;
+import map.Map;
 import readers.NewFileReader;
 import readers.FileReader;
 import readers.InvalidFormatException;
@@ -38,6 +39,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	private double yCoordinate;
 	private double speed;
 	private double maxSpeed;
+	private final double globalMaxSpeed;
 	private double acceleration;
 	private double angularVelocity;
 	private double odometer;
@@ -58,6 +60,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	private int timeSinceCollision = 0;
 	private boolean collisionDetected;
 	private double distancetravelled;
+	private boolean recharging;
 
 	/**
 	 * Description: Verbose robot class constructor
@@ -98,6 +101,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		super.setY(this.yCoordinate);
 		this.speed = speed;
 		this.maxSpeed = maxSpeed;
+		this.globalMaxSpeed = maxSpeed;
 		this.acceleration = acceleration;
 		this.angularVelocity = angularVelocity;
 		this.odometer = odometer;
@@ -126,6 +130,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		this.setY(this.yCoordinate);
 		this.speed = Double.valueOf(input.get(3));
 		this.maxSpeed = Double.valueOf(input.get(4));
+		this.globalMaxSpeed = Double.valueOf(input.get(4));
 		this.acceleration = Double.valueOf(input.get(5));
 		this.angularVelocity = Double.valueOf(input.get(6));
 		this.odometer = Double.valueOf(input.get(7));
@@ -475,12 +480,12 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 */
 	public void batteryLowAlert() {
 		// TODO implement audio alert
-		if (this.batteryLeft < 10) {
-			Image pattern = new Image(new File("src/eveLowBattery.png").toURI().toString(), 32, 48, false, true);
-			ImagePattern skin = new ImagePattern(pattern);
-			Driver.wallE.setFill(skin);
-			this.setMaxSpeed(1);
-		}
+//		if (this.batteryLeft < 10) {
+//			Image pattern = new Image(new File("src/eveLowBattery.png").toURI().toString(), 32, 48, false, true);
+//			ImagePattern skin = new ImagePattern(pattern);
+//			Driver.wallE.setFill(skin);
+//			this.setMaxSpeed(1);
+//		}
 	}
 
 	public ImagePattern getAnimatedImage(int i, int j) {
@@ -488,16 +493,16 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	}
 
 	public void createAnimatedImages() {
-		Image[][] images = new Image[4][3];
-		animimages = new ImagePattern[4][3];
-		for (int i = 0; i < 4; i++) {
+		Image[][] images = new Image[5][3];
+		animimages = new ImagePattern[5][3];
+		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 3; j++) {
 				images[i][j] = new Image(new File("src/img/eve" + i + "" + j + ".png").toURI().toString(),
 						Driver.wallE.getWidth(), Driver.wallE.getWidth(), false, true);
 
 			}
 		}
-		for (int i = 0; i < 4; i++) {
+		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 3; j++) {
 				ImagePattern thisimage = new ImagePattern(images[i][j]);
 
@@ -517,9 +522,16 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 */
 	public boolean animate(double[] wallEcomponents) {
 
-		// warn if battery is below 33%
+		if(recharging){
+			this.setFill(this.getAnimatedImage(4, 0));
+			// used to jump out of method
+			return false;
+		}
+		
+		
+		// warn if battery is below 20%
 		if ((this.batteryLeft > (this.getBatteryCapacity() / 10))
-				&& this.batteryLeft < (this.getBatteryCapacity() / 3)) {
+				&& this.batteryLeft < (this.getBatteryCapacity() / 5)) {
 			this.setFill(this.getAnimatedImage(3, 1));
 			// used to jump out of method
 			return false;
@@ -613,18 +625,18 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		if (this.getSpeed() > 0) {
 			if (this.getBatteryLeft() >= (this.getBatteryCapacity() / 10)) {
 				//reduce battery relative to distance traveled
-				this.decreaseCharge(0.5*this.getSpeed());
+				this.decreaseCharge(0.25*this.getSpeed());
 			}
 			// if battery lower than 10% of charge, reduce speed, consume less battery
 			if ((this.getBatteryLeft() > 0) && (this.getBatteryLeft() < (this.getBatteryCapacity() / 10))) {
 				System.out.println(this.getBatteryLeft());
-				this.decreaseCharge(0.5);
+				this.decreaseCharge(0.25);
 				this.setMaxSpeed(1);
 				if(Driver.toggledevmode){
 					Driver.textinfo.setText("Battery less than 10%!!!");
 				}
 			}
-		}//decrease charge if robot is turning around its own axis but not moving forward
+		}//decrease charge if robot is turning around its own axis (wheelspeeds unequal) but not moving forward
 		else if (this.getSpeed() == 0 && (ds[0]!= ds[1])) {
 			if (this.getBatteryLeft() >= (this.getBatteryCapacity() / 10)) {
 				this.decreaseCharge(0.0625);
@@ -632,8 +644,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			// if battery lower than 10% of charge, reduce speed, consume less
 			// battery
 			if ((this.getBatteryLeft() > 0) && (this.getBatteryLeft() < (this.getBatteryCapacity() / 10))) {
-				System.out.println(this.getBatteryLeft());
-				this.decreaseCharge(0.25);
+				this.decreaseCharge(0.0625);
 				this.setMaxSpeed(1);
 				if(Driver.toggledevmode){
 					Driver.textinfo.setText("Battery less than 10%!!!");
@@ -667,6 +678,48 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		this.batteryLeft -= 1;
 	}
 	
+	/**
+	 * 
+	 * Description: Recharges the robot by a set value
+	 * 
+	 * @param decrementValue: amount by which the robot is charged
+	 */
+	public void increaseCharge(double decrementValue){
+	
+		if(this.getBatteryLeft() < this.getBatteryCapacity()){
+		this.batteryLeft += decrementValue;
+		}
+		//avoids overcharging
+		else if (this.getBatteryLeft() > this.getBatteryCapacity()){
+		this.batteryLeft = this.getBatteryCapacity();
+		if(Driver.toggledevmode){
+			Driver.textinfo.setText("Recharged!");
+			}
+		}
+		this.setMaxSpeed(this.globalMaxSpeed);
+		
+	}
+	
+	/**
+	 * Description: checks if the robot is in the refueling area. If it is there the robot is charged.
+	 * 
+	 */
+	public void checkForCharging(){
+		if(CollisionDetection.chargingDetection(this, Map.chargingstation)){
+			this.increaseCharge(5);
+			this.recharging = true;
+			//reset time since collision to overwrite collisions happening in the charging station
+			this.setCollisionDetected(false);
+			this.timeSinceCollision = 0;
+			if(Driver.toggledevmode){
+				if(Driver.textinfo.getText().equals("Battery less than 10%!!!")){
+					Driver.textinfo.setText("Recharging!");
+				}}
+			
+		} else if (this.recharging == true){
+			this.recharging = false;
+		}
+	}
 
 	/**
 	 * Description: update the robots distance travelled
@@ -682,7 +735,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 */
 	
 	public void updateDevPanel(){
-		if(Driver.toggledevmode){
+		
 			Point2D centercoordinates = this.center();
 			DecimalFormat numberFormat = new DecimalFormat("#.0"); 
 			Driver.textx.setText(numberFormat.format(centercoordinates.getX()));
@@ -703,7 +756,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			}
 			Driver.textangle.setText(numberFormat.format(currentrotation));
 			
-		}
+		
 	}
 
 	/**
@@ -1117,6 +1170,8 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		this.move(wallEcomponents);
 		this.animate(wallEcomponents);
 		this.consumeBattery(this.getWheelspeeds());
+		this.checkForCharging();
+		if(Driver.toggledevmode)
 		this.updateDevPanel();
 		this.updateDistance();
 
