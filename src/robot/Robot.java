@@ -386,9 +386,9 @@ public class Robot extends ImageView implements EventHandler<KeyEvent> {
 			
 		// space between intersection points
 		double horizontalDy = Driver.map.getBlockHeight();
-		double horizontalDx = horizontalDy / Math.tan(this.getOrientation());
+		double horizontalDx = horizontalDy / Math.tan(this.getOrientation()); // TODO fix error - currently infinity
 		double verticalDx = Driver.map.getBlockWidth();
-		double verticalDy = verticalDx / Math.tan(this.getOrientation());
+		double verticalDy = verticalDx / Math.tan(this.getOrientation()); // TODO fix error - currently infinity
 
 		// get which grid block robot is in: (rowInt, colInt)
 		rowDouble = this.yCoordinate * 1.0 / Driver.map.getRowSize();
