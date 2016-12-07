@@ -115,8 +115,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		this.setWidth(this.axleLength);
 		this.wheelRadius = Double.valueOf(input.get(11));
 		this.setHeight(this.wheelRadius);
-//		skin = new Image(new File("src/eve.png").toURI().toString(), this.axleLength, this.wheelRadius, false, true);
-//		super.setImage(skin);
 	}
 	
 
@@ -554,6 +552,168 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		}		
 	}
 	
+	/**
+	 * Descripion move the robot depending on keypresses
+	 * 
+	 * @param wallEcomponents orientation components derived from the robots orientation
+	 */
+	public void move(double[] wallEcomponents){
+		
+	if (this.getCurrentKeyPresses()[0] == "UP" && this.getCurrentKeyPresses()[1] == "LEFT") {
+			
+			if (this.getDecelerate() == true) {
+				Movement.decelerate(wallEcomponents);
+			} else {
+				Movement.moveUpLeft(wallEcomponents);
+			}
+			this.setLastMovement("moveUpLeft");
+		
+			
+		} else if (this.getCurrentKeyPresses()[0] == "UP" && 
+				this.getCurrentKeyPresses()[1] == "RIGHT") {
+			
+			if (this.getDecelerate() == true) {
+				Movement.decelerate(wallEcomponents);
+			} else {
+				Movement.moveUpRight(wallEcomponents);
+			}
+			this.setLastMovement("moveUpRight");
+			
+			
+			
+		} else if (this.getCurrentKeyPresses()[0] == "DOWN" && 
+				this.getCurrentKeyPresses()[1] == "LEFT") {
+			if (this.getDecelerate() == true) {
+				Movement.decelerate(wallEcomponents);
+			} else {
+				Movement.moveDownLeft(wallEcomponents);
+			}
+			this.setLastMovement("moveDownLeft");
+			
+			
+		} else if (this.getCurrentKeyPresses()[0] == "DOWN" && 
+				this.getCurrentKeyPresses()[1] == "RIGHT") {
+			if (this.getDecelerate() == true) {
+				Movement.decelerate(wallEcomponents);
+			} else {
+				Movement.moveDownRight(wallEcomponents);
+			}
+			this.setLastMovement("moveDownRight");
+				
+		} else if (this.getCurrentKeyPresses()[0] == "UP") {
+			if (this.getDecelerate() == true) {
+				// Robot must decelerate after previous motion in the opposite direction
+				Movement.decelerate(wallEcomponents);
+			} else {
+				// accelerate
+				Movement.moveUp(wallEcomponents);
+				this.setLastMovement("moveUp");
+			}
+
+		} else if (this.getCurrentKeyPresses()[0] == "DOWN") {
+			
+			if (this.getDecelerate() == true) {
+				// Robot must decelerate after previous motion in the opposite direction
+				Movement.decelerate(wallEcomponents);
+			} else {
+				// accelerate
+				Movement.moveDown(wallEcomponents);
+				this.setLastMovement("moveDown");
+			}			
+
+		} else if (this.getCurrentKeyPresses()[1] == "LEFT") {
+			Movement.moveLeft();
+			this.setLastMovement("moveLeft");
+			// allows robot to turn left during deceleration
+			if (this.getDecelerate() == true) {
+				Movement.decelerate(wallEcomponents);
+			}
+			
+			
+
+		} else if (this.getCurrentKeyPresses()[1] == "RIGHT") {
+			Movement.moveRight();
+			this.setLastMovement("moveRight");
+			// allows robot to turn right during deceleration
+			if (this.getDecelerate() == true) {
+				Movement.decelerate(wallEcomponents);
+			}
+			
+			
+		} else if (this.getCurrentKeyPresses()[0] == null) {
+			Movement.decelerate(wallEcomponents);
+			
+			
+		} 
+		
+		// change decelerate flag to false if speed is 0
+		if (this.getSpeed() <= 0) {
+			this.setDecelerate(false);
+			//Driver.lastUporDown = "";
+		}
+	}
+	
+	
+	
+	/**
+	 * Description: Detects if the robot is about to collide with a boundry and 
+	 * reacts accordingly
+	 * 
+	 * @param robot : robot you want to check for collisions
+	 * @param wallEcomponents: robots orientation components derived from its orientation
+	 * 
+	 * @author Geraint and Lucas
+	 */
+	public void detectCollision(Robot robot, double[] wallEcomponents){
+		if (CollisionDetection.collisionDetection(robot)) {
+//			robot.setSpeed(0);
+			if (robot.getLastMovement().equals("moveDown")) {
+				while (CollisionDetection.collisionDetection(robot)) {
+					Movement.moveUp(wallEcomponents);
+				}
+				robot.setSpeed(0);
+			} else if (robot.getLastMovement().equals("moveUp")) {
+				while (CollisionDetection.collisionDetection(robot)) {
+					Movement.moveDown(wallEcomponents);
+				}
+				robot.setSpeed(0);
+			} else if (robot.getLastMovement().equals("moveLeft")) {
+				while (CollisionDetection.collisionDetection(robot)) {
+					Movement.moveRight();
+				}
+				robot.setSpeed(0);
+			} else if (robot.getLastMovement().equals("moveRight")) {
+				while (CollisionDetection.collisionDetection(robot)) {
+					Movement.moveLeft();
+				}
+				robot.setSpeed(0);
+			} else if (robot.getLastMovement().equals("moveUpLeft")) {
+				while (CollisionDetection.collisionDetection(robot)) {
+					Movement.moveDownRight(wallEcomponents);
+				}
+				robot.setSpeed(0);
+			} else if (robot.getLastMovement().equals("moveUpRight")) {
+				while (CollisionDetection.collisionDetection(robot)) {
+					Movement.moveDownLeft(wallEcomponents);
+				}
+				robot.setSpeed(0);
+			} else if (robot.getLastMovement().equals("moveDownLeft")) {
+				while (CollisionDetection.collisionDetection(robot)) {
+					Movement.moveUpRight(wallEcomponents);
+				}
+				robot.setSpeed(0);
+			} else if (robot.getLastMovement().equals("moveDownRight")) {
+				while (CollisionDetection.collisionDetection(robot)) {
+					Movement.moveUpLeft(wallEcomponents);
+				}
+				robot.setSpeed(0);
+			}
+
+		}
+	}
+	
+	
+	
 	/** Description: Method that reads moves from an input file and executes them in order.
 	 * 
 	 * @param path: The path of the file to read.
@@ -701,5 +861,21 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		} else {
 			this.inputCommandsIndex++;
 		}
+	}
+	
+	/**
+	 * Description: Perform all the actions needed to update the robot in each game
+	 * cycle. 
+	 * 
+	 * @author: Geraint and Lucas
+	 */
+	public void update(){
+		final double wallEorientation = this.getOrientation();
+
+		final double[] wallEcomponents = this.getOrientationComponents(wallEorientation);
+	
+		detectCollision(this, wallEcomponents);
+		this.move(wallEcomponents);
+		this.batteryLowAlert();
 	}
 }

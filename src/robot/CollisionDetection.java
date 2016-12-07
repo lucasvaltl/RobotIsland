@@ -84,11 +84,7 @@ public class CollisionDetection {
 	}
 	
 	public static ArrayList<Entity> getAdjacentBlocks(Robot robot) {
-		// rounded down.
-		double ycor = robot.getyCoordinate();
-		double blockh = Driver.map.getBlockHeight();
-		double screenh = Driver.SCREENWIDTH;
-		
+		// rounded down current position in rows and columns
 		
 		int currentRow = (int) ((robot.getyCoordinate() / Driver.map.getBlockHeight() * 1.0) );
 		int currentCol = (int) (robot.getxCoordinate() / Driver.map.getBlockWidth() * 1.0);
