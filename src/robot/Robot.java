@@ -2,6 +2,7 @@ package robot;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -56,6 +57,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	private ImagePattern[][] animimages;
 	private int timeSinceCollision = 0;
 	private boolean collisionDetected;
+	private double distancetravelled;
 
 	/**
 	 * Description: Verbose robot class constructor
@@ -291,6 +293,10 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 
 	public boolean getCollisionDetected() {
 		return this.collisionDetected;
+	}
+	
+	public double getDistanceTravelled() {
+		return this.distancetravelled;
 	}
 
 	/**
@@ -615,6 +621,9 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 				System.out.println(this.getBatteryLeft());
 				this.decreaseCharge(0.03125);
 				this.setMaxSpeed(1);
+				if(Driver.toggledevmode){
+					Driver.textinfo.setText("Battery less than 10%!!!");
+				}
 			}
 		}
 		// if battery empty restrict movement
@@ -641,6 +650,40 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 */
 	public void decreaseCharge() {
 		this.batteryLeft -= 1;
+	}
+	
+	public double getFormatedRotation(){
+		
+		return 0.0;
+	}
+	
+	private void updateDistance(){
+		this.distancetravelled += this.speed;
+	}
+	
+	public void updateDevPanel(){
+		if(Driver.toggledevmode){
+			Point2D centercoordinates = this.center();
+			DecimalFormat numberFormat = new DecimalFormat("#.0"); 
+			Driver.textx.setText(numberFormat.format(centercoordinates.getX()));
+			Driver.texty.setText(numberFormat.format(centercoordinates.getY()));
+			Driver.textcharge.setText(numberFormat.format(this.getBatteryLeft()/this.getBatteryCapacity()*100) + "%");
+			Driver.textdistance.setText(numberFormat.format(this.getDistanceTravelled()));
+			//calculate orientation of robots front based on the default getRotate() method;
+			double currentrotation;
+			if(this.getRotate() >0){
+				currentrotation = this.getRotate()%360 ;
+			} else{
+				currentrotation = this.getRotate()%360 +360;
+			}
+			if(currentrotation>180){
+				currentrotation -=180;
+			}else{
+				currentrotation +=180;
+			}
+			Driver.textangle.setText(numberFormat.format(currentrotation));
+			
+		}
 	}
 
 	/**
@@ -1052,8 +1095,8 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		this.move(wallEcomponents);
 		this.animate(wallEcomponents);
 		this.consumeBattery();
-
-		// this.batteryLowAlert();
+		this.updateDevPanel();
+		this.updateDistance();
 
 	}
 

@@ -12,7 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Background;
@@ -24,6 +24,7 @@ import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.TilePane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.stage.Stage;
@@ -52,15 +53,20 @@ public class Driver extends Application {
 	public static Map map;
 	public static Robot wallE;
 	public static Group root;
-	public static FlowPane devmode;
+	public static TilePane devmode;
 	public static Label labelx;
-	public static TextField textx;
+	public static Label textx;
 	public static Label labely;
-	public static TextField texty;
+	public static Label texty;
 	public static Label labelcharge;
-	public static TextField textcharge;
+	public static Label textcharge;
+	public static Label labeldistance;
+	public static Label textdistance;
+	public static Label labelangle;
+	public static Label textangle;
 	public static Label labelinfo;
-	public static TextField textinfo;
+	public static Label textinfo;
+	public static boolean toggledevmode;
 	
 	
 
@@ -129,30 +135,37 @@ public class Driver extends Application {
 		root.getChildren().add(wallE);
 		stack.getChildren().add(root);
 		
-		
+		toggledevmode = true;
 		//pane used for devmode
-		devmode = new FlowPane();
+		if(toggledevmode){
+		devmode = new TilePane();
 		labelx = new Label("X Position: ");
-		textx = new TextField();
+		textx = new Label("0");
 		HBox hb1 = new HBox(labelx, textx);
 		labely = new Label("Y Position: ");
-		texty = new TextField();
+		texty = new Label("0");
 		HBox hb2 = new HBox(labely, texty);
 		labelcharge = new Label("Charge Level: ");
-		textcharge = new TextField();
+		textcharge = new Label("100%");
 		HBox hb3 = new HBox(labelcharge, textcharge);
+		labeldistance = new Label("Distance: ");
+		textdistance = new Label("0");
+		HBox hb4 = new HBox(labeldistance, textdistance);
+		labelangle = new Label("Angle: ");
+		textangle = new Label("0");
+		HBox hb5 = new HBox(labelangle, textangle);
 		labelinfo = new Label("Info: ");
-		textinfo = new TextField();
-		HBox hb4 = new HBox(labelinfo, textinfo);
-		devmode.getChildren().addAll(hb1, hb2, hb3, hb4);
-		devmode.setMaxSize(400,200);
+		textinfo = new Label();
+		HBox hb6 = new HBox(labelinfo, textinfo);
+		devmode.getChildren().addAll(hb1, hb2, hb3, hb4, hb5, hb6);
+		devmode.setMaxSize(150,200);
 		
-		devmode.setStyle("-fx-background-color: DAE6F3;");
-		stack.getChildren().add(devmode);
+		devmode.setStyle("-fx-background-color: BBBBBB;");
+		root.getChildren().add(devmode);
 		
-		devmode.setLayoutX(450);
-		devmode.setLayoutY(650);
-		
+		devmode.setLayoutX(400);
+		devmode.setLayoutY(600);
+		}
 		primaryStage.setScene(new Scene(stack));
 		primaryStage.show();
 		
