@@ -29,10 +29,6 @@ public class SAT {
 				.map(Point2D::normalize)
 				.collect(Collectors.toList());
 		List<Point2D> robCorners = rob.corners();
-		Circle topLeft = new Circle (robCorners.get(0).getX(),robCorners.get(0).getY(), 0.5, Color.BLACK);
-		Driver.root.getChildren().add(topLeft);
-		Circle topRight = new Circle (robCorners.get(1).getX(),robCorners.get(1).getY(), 0.5, Color.BLACK);
-		Driver.root.getChildren().add(topRight);
 		List<Point2D> recCorners = rec.corners();
 		
 		for (Point2D axis : axes) {

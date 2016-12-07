@@ -22,7 +22,8 @@ public class GameTimer extends AnimationTimer {
 
 	private int timecounter = 0;
 	private static boolean collisionDetected;
-	
+	int i = 0;
+	int j = 0;
 
 	
 	
@@ -46,7 +47,10 @@ public class GameTimer extends AnimationTimer {
 		final double wallEorientation = Driver.wallE.getOrientation();
 
 		final double[] wallEcomponents = Driver.wallE.getOrientationComponents(wallEorientation);
+		
 
+	Driver.wallE.animate();
+		
 		// read commands from file
 		if (Driver.wallE.getInputCommandsReadingInProgress() == true) {
 			// Request a new move
@@ -71,45 +75,91 @@ public class GameTimer extends AnimationTimer {
 		
 //CollisionDetection.collisionDetection(Driver.wallE, Map.blocks) --> old
 		// set speed to zero if collision is found and reverse movements to escape being blocked in walls
-		if (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
+//		if (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
+////			Driver.wallE.setSpeed(0);
+//			if (Driver.wallE.getLastMovement().equals("moveDown")) {
+//				while (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
+//					Movement.moveUp(wallEcomponents);
+//				}
+//				Driver.wallE.setSpeed(0);
+//			} else if (Driver.wallE.getLastMovement().equals("moveUp")) {
+//				while (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
+//					Movement.moveDown(wallEcomponents);
+//				}
+//				Driver.wallE.setSpeed(0);
+//			} else if (Driver.wallE.getLastMovement().equals("moveLeft")) {
+//				while (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
+//					Movement.moveRight();
+//				}
+//				Driver.wallE.setSpeed(0);
+//			} else if (Driver.wallE.getLastMovement().equals("moveRight")) {
+//				while (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
+//					Movement.moveLeft();
+//				}
+//				Driver.wallE.setSpeed(0);
+//			} else if (Driver.wallE.getLastMovement().equals("moveUpLeft")) {
+//				while (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
+//					Movement.moveDownRight(wallEcomponents);
+//				}
+//				Driver.wallE.setSpeed(0);
+//			} else if (Driver.wallE.getLastMovement().equals("moveUpRight")) {
+//				while (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
+//					Movement.moveDownLeft(wallEcomponents);
+//				}
+//				Driver.wallE.setSpeed(0);
+//			} else if (Driver.wallE.getLastMovement().equals("moveDownLeft")) {
+//				while (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
+//					Movement.moveUpRight(wallEcomponents);
+//				}
+//				Driver.wallE.setSpeed(0);
+//			} else if (Driver.wallE.getLastMovement().equals("moveDownRight")) {
+//				while (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
+//					Movement.moveUpLeft(wallEcomponents);
+//				}
+//				Driver.wallE.setSpeed(0);
+//			}
+//
+//		}
+//		
+		if (CollisionDetection.collisionDetection(Driver.wallE)) {
 //			Driver.wallE.setSpeed(0);
 			if (Driver.wallE.getLastMovement().equals("moveDown")) {
-				while (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
+				while (CollisionDetection.collisionDetection(Driver.wallE)) {
 					Movement.moveUp(wallEcomponents);
 				}
 				Driver.wallE.setSpeed(0);
 			} else if (Driver.wallE.getLastMovement().equals("moveUp")) {
-				while (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
+				while (CollisionDetection.collisionDetection(Driver.wallE)) {
 					Movement.moveDown(wallEcomponents);
 				}
 				Driver.wallE.setSpeed(0);
 			} else if (Driver.wallE.getLastMovement().equals("moveLeft")) {
-				while (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
+				while (CollisionDetection.collisionDetection(Driver.wallE)) {
 					Movement.moveRight();
 				}
 				Driver.wallE.setSpeed(0);
 			} else if (Driver.wallE.getLastMovement().equals("moveRight")) {
-				while (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
+				while (CollisionDetection.collisionDetection(Driver.wallE)) {
 					Movement.moveLeft();
 				}
 				Driver.wallE.setSpeed(0);
 			} else if (Driver.wallE.getLastMovement().equals("moveUpLeft")) {
-				while (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
+				while (CollisionDetection.collisionDetection(Driver.wallE)) {
 					Movement.moveDownRight(wallEcomponents);
 				}
 				Driver.wallE.setSpeed(0);
 			} else if (Driver.wallE.getLastMovement().equals("moveUpRight")) {
-				while (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
+				while (CollisionDetection.collisionDetection(Driver.wallE)) {
 					Movement.moveDownLeft(wallEcomponents);
 				}
 				Driver.wallE.setSpeed(0);
 			} else if (Driver.wallE.getLastMovement().equals("moveDownLeft")) {
-				while (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
+				while (CollisionDetection.collisionDetection(Driver.wallE)) {
 					Movement.moveUpRight(wallEcomponents);
 				}
 				Driver.wallE.setSpeed(0);
 			} else if (Driver.wallE.getLastMovement().equals("moveDownRight")) {
-				while (CollisionDetection.collisionDetection(Driver.wallE, Map.blocks)) {
+				while (CollisionDetection.collisionDetection(Driver.wallE)) {
 					Movement.moveUpLeft(wallEcomponents);
 				}
 				Driver.wallE.setSpeed(0);

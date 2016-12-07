@@ -16,7 +16,10 @@ public class Map {
 	private int colSize;
 	private int rowSize;
 	private int[][] grid;
+	private static int[][] blocksToGrid;
 	public static ArrayList<Entity> blocks = new ArrayList<Entity>(256);
+	int YBLOCKSIZE;
+	int XBLOCKSIZE;
 	
 	public Map (int[][] grid) {
 		/** Class constructor **/
@@ -65,13 +68,15 @@ public class Map {
 		
 	}
 	
-	/** 
-	 * Renders a 2D version of the map and adds it to an ArrayList of blocks
-	 * that is used for collision detection
-	 * 
-	 * @para: graphics context, boolean to indicate 
-	 * 
-	 */
+	public static Entity getBlocks(int i){
+		return blocks.get(i);
+	}
+	
+	public static int getBlockPosition(int i, int j){
+		return blocksToGrid[i][j];
+	}
+	
+	
 	
 	
 	/**
@@ -83,28 +88,23 @@ public class Map {
 	 * @param screenEqualsMap: indicates whether the screen (window size) is equal to the map size
 	 */
 	
-	public int[][] getAdjacentBlocks() {
-		// get current row col 
-		int currentRow =  (int) (Driver.wallE.getyCoordinate() * 1.0 * YBLOCKSIZE / Driver.SCREENHEIGHT);
-		int currentCol = (int) (Driver.wallE.getxCoordinate() * 1.0 * XBLOCKSIZE / Driver.SCREENWIDTH);
-				
-		// get adjacent row cols
-		if (currentRow == 0) {
-			int[] adjacentRows = {currentRow, currentRow + 1};
-		} else if (currentRow >= Driver.map.getRowSize() - 1) {
-					
-		} else {
-			//
-		} 
+	/** Description: Returns the height of each map block.
+	 * 
+	 * @return: The height of a map block in pixels.
+	 */
+	public int getBlockHeight() {
+		return Driver.SCREENHEIGHT / this.getRowSize();
+	}
 		
-		int[][] temp = new int[][]();
-		return temp;
+	/** Description: Returns the width of each map block.
+	 * 
+	 * @return: The width of a map block in pixels.
+	 */
+	public int getBlockWidth() {
+		return Driver.SCREENWIDTH / this.getColSize();
 	}
 	
 	public void render2DMap(GraphicsContext gc, boolean screenEqualsMap) {
-		
-		int YBLOCKSIZE;
-		int XBLOCKSIZE;
 		if (screenEqualsMap == true) {
 			// divide screen dimensions by map dimensions to derive block sizes
 			YBLOCKSIZE = Driver.SCREENHEIGHT / this.rowSize;
@@ -114,12 +114,15 @@ public class Map {
 			XBLOCKSIZE = 32; 
 		}
 		
+		
 		gc.setFill(Color.BLACK);
 		gc.setStroke(Color.GREY);
 		gc.setLineWidth(5);
 		
 		
 		Driver.root.getChildren().addAll(blocks);
+		blocksToGrid = new int[this.grid.length][this.grid[0].length];
+		
 		
 		// iterate over map array
 		for (int row = 0; row < this.grid.length; row++) {
@@ -130,9 +133,13 @@ public class Map {
 					Entity block = new Entity((col*XBLOCKSIZE),(row*YBLOCKSIZE), XBLOCKSIZE, YBLOCKSIZE);
 					block.setFill(Color.BLACK);
 					blocks.add(block);
+					//save position of the block to the map of blocks for easier access
+					blocksToGrid[row][col] = blocks.indexOf(block);
 				}
 			}
 		} Driver.root.getChildren().addAll(blocks);
+		System.out.println(this.getRowSize() + " " + this.getColSize());
+		
 	}
 }
 

@@ -52,6 +52,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	private boolean inputCommandsReadingInProgress = false;
 	private double[] wheelspeeds = {0, 0};
 	private Image skin;
+	private ImagePattern[][] animimages;
 
 	/** Description: Verbose robot class constructor
 	 * 
@@ -395,9 +396,61 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			Image pattern = new Image(new File("src/eveLowBattery.png").toURI().toString(), 32, 48, false, true);
 			ImagePattern skin = new ImagePattern(pattern);
 			Driver.wallE.setFill(skin);
+			this.setMaxSpeed(1);
 		}
 	}
+	
+	public ImagePattern getAnimatedImage(int i, int j){
+		return this.animimages[i][j];
+	}
 
+	public void createAnimatedImages() {
+		Image[][] images = new Image[4][3];
+		animimages = new ImagePattern[4][3];
+		for (int i=0; i<4; i++){
+			for (int j=0; j < 3; j++){
+			images[i][j] = new Image(new File("src/img/eve"+i+""+j+".png").toURI().toString(), Driver.wallE.getWidth(), Driver.wallE.getWidth(), false, true);
+			
+			
+			}}
+		for (int i=0; i<4; i++){
+			for (int j=0; j <3; j++){
+			ImagePattern thisimage = new ImagePattern(images[i][j]);
+			
+			animimages[i][j] = thisimage;
+			
+		}}
+
+		
+	}
+	
+	public boolean animate(){
+		if (this.batteryLeft < 10){
+			return false;
+		}
+		
+		int i = 1;
+		int j = 1;
+		if (this.speed == maxSpeed){
+			i=2;
+		}
+		if (this.wheelspeeds[0]==this.wheelspeeds[1]){
+			
+		}else if(this.speed==0 && this.wheelspeeds[0]>this.wheelspeeds[1]){
+			j=0;
+		}else if(this.speed==0 && this.wheelspeeds[0]<this.wheelspeeds[1]){
+			j=2;
+		}else if(this.wheelspeeds[0]<this.wheelspeeds[1]){
+			j=0;
+		}else{
+			j=2;
+		}
+		System.out.println("Hi" + "i: "+ i + " j: " + j);
+		this.setFill(this.getAnimatedImage(i, j));
+		return true;
+	}
+	
+	
 	/** Description: Method used to decrease robot charge by a given value at 
 	 *  the end of every move.
 	 * 
