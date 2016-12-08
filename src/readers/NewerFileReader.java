@@ -66,4 +66,42 @@ public class NewerFileReader {
 			return input;
 		
 	}
+	public ArrayList<String> scanFile(File file) throws InvalidFormatException, FileNotFoundException {
+
+		ArrayList<String> input = new ArrayList<String>();
+		Scanner scanner = new Scanner(file);
+		while (scanner.hasNext()) {
+			input.add(scanner.nextLine());
+		}
+		for (int i = 0; i < input.size(); i++) {
+			
+			switch (input.get(i)) {
+			case "moveDown":
+				break;
+			case "moveUp":
+				break;
+			case "moveDownLeft":
+				break;
+			case "moveDownRight":
+				break;
+			case "moveUpLeft":
+				break;
+			case "moveUpRight":
+				break;
+			case "moveLeft":
+				break;
+			case "moveRight":
+				break;
+			case "decelerate":
+				break;
+			default:
+				
+				throw new InvalidFormatException("Invalid formatting found in movement file on line / word " + i+1);
+			}
+
+		}
+		scanner.close();
+		return input;
+	
+}
 }
