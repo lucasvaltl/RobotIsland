@@ -1,18 +1,26 @@
 package tests;
 
 import map.Map;
+import readers.InvalidFormatException;
+import readers.NewerFileReader;
 import robot.Robot;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import gametimer.GameTimer;
 import javafx.application.*;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -28,6 +36,8 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.TilePane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
+import javafx.stage.FileChooser;
+import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 import loggers.CustomFormatter;
 import loggers.CustomHandler;
@@ -75,7 +85,11 @@ public class Driver extends Application {
 	public static Label textangle;
 	public static Label labelinfo;
 	public static Label textinfo;
+	public static Button getfile;
 	public static boolean toggledevmode;
+	public static File movementFile;
+	public static Alert alert = new Alert(AlertType.WARNING);
+	public static boolean alerttriggered;
 	
 	// custom logging stuff - outputs to different files based on level
 	public static Logger LOGGER = Logger.getLogger(Driver.class.getName());
@@ -91,13 +105,13 @@ public class Driver extends Application {
 
 		// setup logger
 		try {
-			fineHandler = new CustomHandler ("src/logs/fine", Level.FINE);
-			finerHandler = new CustomHandler ("src/logs/finer", Level.FINER);
-			finestHandler = new CustomHandler ("src/logs/finest", Level.FINEST);
-			infoHandler = new CustomHandler("src/logs/info", Level.INFO);
-			warningHandler = new CustomHandler("src/logs/warning", Level.WARNING);
-			severeHandler = new CustomHandler("src/logs/severe", Level.SEVERE);
-			instructionHandler = new CustomHandler("src/robotinstructions", CustomLevel.INSTRUCTION);
+			fineHandler = new CustomHandler ("src/logs/fine.txt", Level.FINE);
+			finerHandler = new CustomHandler ("src/logs/finer.txt", Level.FINER);
+			finestHandler = new CustomHandler ("src/logs/finest.txt", Level.FINEST);
+			infoHandler = new CustomHandler("src/logs/info.txt", Level.INFO);
+			warningHandler = new CustomHandler("src/logs/warning.txt", Level.WARNING);
+			severeHandler = new CustomHandler("src/logs/severe.txt", Level.SEVERE);
+			instructionHandler = new CustomHandler("src/robotinstructions.txt", CustomLevel.INSTRUCTION);
 			
 			LOGGER.setUseParentHandlers(false);
 			LOGGER.addHandler(instructionHandler);
@@ -123,6 +137,7 @@ public class Driver extends Application {
 			e2.printStackTrace();
 		}
 		
+		 
 		int[][] grid = { { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
 				{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1 }, 
 				{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1 },
@@ -146,6 +161,8 @@ public class Driver extends Application {
 	}
 
 	public void start(Stage primaryStage) throws Exception {
+		
+		
 		/** Start method for JavaFX. Draws the robot and maps. **/
 		primaryStage.setTitle("Robot test");
 
@@ -207,16 +224,54 @@ public class Driver extends Application {
 		HBox hb5 = new HBox(labelangle, textangle);
 		labelinfo = new Label("Info: ");
 		textinfo = new Label();
-		
 		HBox hb6 = new HBox(labelinfo, textinfo);
-		devmode.getChildren().addAll(hb1, hb2, hb3, hb4, hb5, hb6);
+		getfile = new Button("Execute Movements from File");
+		
+			getfile.setOnAction(new EventHandler<ActionEvent>() {
+				@Override
+				public void handle(final ActionEvent e) {
+					// create filechooser
+					final FileChooser fileChooser = new FileChooser();
+					// only allow text files
+					fileChooser.getExtensionFilters().add(new ExtensionFilter("Text Files", "*.txt"));
+					movementFile = fileChooser.showOpenDialog(primaryStage);
+
+					if (movementFile != null) {
+						NewerFileReader nfr = null;
+						try {
+							// validate file, alert if invalid format or not
+							// found
+							nfr = new NewerFileReader();
+							nfr.scanFile(movementFile);
+							wallE.setInputComandsReadingInProgress(true);
+						} catch (InvalidFormatException ex) {
+							Driver.LOGGER.severe("WARNING: Invalid command in text file "+ e.toString());
+							alert.setTitle("Invalid Format Error");
+							alert.setHeaderText("Invalid format found in movement file!");
+							alert.setContentText(
+									"This app only accepts the following movements, each on a single line: moveUp, moveDown, moveLeft, moveRight as well as "
+											+ "moveUpLeft, moveUpRight, moveDownLeft, and moveDownRight.");
+							alert.showAndWait();
+						} catch (FileNotFoundException ex) {
+							Driver.LOGGER.severe("WARNING: File not found "+ e.toString());
+							alert.setTitle("File Not Found");
+							alert.setHeaderText("Unfortunately the file could not be found");
+							alert.setContentText(
+									"Please mke sure the file is stil where you it was when you selected it");
+							alert.showAndWait();
+						}
+					}
+
+				}
+			});
+		devmode.getChildren().addAll(hb1, hb2, hb3, hb4, hb5, hb6, getfile);
 		devmode.setMaxSize(150,200);
 		devmode.setStyle("-fx-background-color: BBBBBB;");
 		
 		root.getChildren().add(devmode);
 		
 		devmode.setLayoutX(400);
-		devmode.setLayoutY(600);
+		devmode.setLayoutY(580);
 		}
 		primaryStage.setScene(new Scene(stack));
 		primaryStage.show();
@@ -227,7 +282,7 @@ public class Driver extends Application {
 		GameTimer timer = new GameTimer();
 		timer.start();
 
-		// wallE.singleMoveViaFile("src/movements2.txt");
+		
 
 	}
 

@@ -43,7 +43,7 @@ public class GameTimer extends AnimationTimer {
 	public void handle(long now) {
 
 		// Log current key presses to file
-		Driver.LOGGER.log(CustomLevel.INSTRUCTION, Arrays.toString(Driver.wallE.getCurrentKeyPresses()));
+		//Driver.LOGGER.log(CustomLevel.INSTRUCTION, Arrays.toString(Driver.wallE.getCurrentKeyPresses()));
 		
 		double t = (now - Driver.startnanotime) / 1000000000.0;	
 		
