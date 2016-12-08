@@ -18,6 +18,7 @@ public class Map {
 	private int[][] grid;
 	private static int[][] blocksToGrid;
 	public static ArrayList<Entity> blocks = new ArrayList<Entity>(256);
+	public static ArrayList<Entity> chargingstation = new ArrayList<Entity>(4);
 	int YBLOCKSIZE;
 	int XBLOCKSIZE;
 	
@@ -120,7 +121,6 @@ public class Map {
 		gc.setLineWidth(5);
 		
 		
-		Driver.root.getChildren().addAll(blocks);
 		blocksToGrid = new int[this.grid.length][this.grid[0].length];
 		
 		
@@ -131,13 +131,22 @@ public class Map {
 					// if map value is non zero, create square of correct size
 					// and add to the Pane.
 					Entity block = new Entity((col*XBLOCKSIZE),(row*YBLOCKSIZE), XBLOCKSIZE, YBLOCKSIZE);
-					block.setFill(Color.TRANSPARENT);
+					block.setFill(Color.BLACK);
 					blocks.add(block);
-					//save position of the block to the map of blocks for easier access
+					//save position of the block to the map of blocks for easier access when detecting collision
 					blocksToGrid[row][col] = blocks.indexOf(block);
 				}
 			}
 		} Driver.root.getChildren().addAll(blocks);
+		
+		//add blocks from the refueling station to the respective ArrayList
+		int numberofblocks = 2+4;
+		for (int i=4; i < numberofblocks;i++){
+			Entity block = new Entity((i*XBLOCKSIZE),(3*YBLOCKSIZE), XBLOCKSIZE, YBLOCKSIZE);
+			block.setFill(Color.GREEN);
+			chargingstation.add(block);
+		}
+		Driver.root.getChildren().addAll(chargingstation);	
 		
 		
 	}

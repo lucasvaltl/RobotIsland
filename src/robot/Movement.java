@@ -23,6 +23,12 @@ public class Movement {
 	public static double[] moveDown(double[] wallEcomponents) {
 		Driver.LOGGER.info("moveDown");
 		
+		//cancel movement if battery is empty
+				if(Driver.wallE.getBatteryLeft()<=0){
+					System.out.println("Returning null");
+					return null;
+				}
+		
 		Driver.wallE.setSpeed(Driver.wallE.getSpeed() + Driver.wallE.getAcceleration());
 		Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() + Driver.wallE.getSpeed() * wallEcomponents[0]);
 		Driver.wallE.setyCoordinate(Driver.wallE.getyCoordinate() - Driver.wallE.getSpeed() * wallEcomponents[1]);
@@ -46,7 +52,13 @@ public class Movement {
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
 	 */
 	public static double[] moveUp(double[] wallEcomponents) {
-		Driver.LOGGER.info("moveUp");
+        Driver.LOGGER.info("moveUp");
+		
+		//cancel movement if battery is empty
+				if(Driver.wallE.getBatteryLeft()<=0){
+					System.out.println("Returning null");
+					return null;
+				}
 		
 		Driver.wallE.setSpeed(Driver.wallE.getSpeed() + Driver.wallE.getAcceleration());
 		Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() - Driver.wallE.getSpeed() * wallEcomponents[0]);
@@ -72,7 +84,13 @@ public class Movement {
 	 */
 	public static double[] moveDownLeft(double[] wallEcomponents) {
 		Driver.LOGGER.info("moveDownLeft");
-		
+
+		//cancel movement if battery is empty
+				if(Driver.wallE.getBatteryLeft()<=0){
+					System.out.println("Returning null");
+					return null;
+				}
+				
 		// Assume average speed is constant throughout the turn		
 		Driver.wallE.setRotate(Driver.wallE.getRotate() - Math.abs(Driver.wallE.getAngularVelocity()));
 		Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() + Driver.wallE.getSpeed() * wallEcomponents[0]);
@@ -107,6 +125,12 @@ public class Movement {
 	 */
 	public static double[] moveDownRight(double[] wallEcomponents) {
 		Driver.LOGGER.info("moveDownRight");
+
+		//cancel movement if battery is empty
+				if(Driver.wallE.getBatteryLeft()<=0){
+					System.out.println("Returning null");
+					return null;
+				}
 		
 		// Assume average speed is constant through turn
 		Driver.wallE.setRotate(Driver.wallE.getRotate() + Math.abs(Driver.wallE.getAngularVelocity()));
@@ -143,6 +167,12 @@ public class Movement {
 	 */
 	public static double[] moveUpLeft(double[] wallEcomponents) {
 		Driver.LOGGER.info("moveUpLeft");
+
+		//cancel movement if battery is empty
+				if(Driver.wallE.getBatteryLeft()<=0){
+					System.out.println("Returning null");
+					return null;
+				}
 		
 		// Assume average speed is constant throughout turn
 		Driver.wallE.setRotate(Driver.wallE.getRotate() - Math.abs(Driver.wallE.getAngularVelocity()));
@@ -178,6 +208,11 @@ public class Movement {
 	 */
 	public static double[] moveUpRight(double[] wallEcomponents) {
 		Driver.LOGGER.info("moveUpRight");
+		//cancel movement if battery is empty
+				if(Driver.wallE.getBatteryLeft()<=0){
+					System.out.println("Returning null");
+					return null;
+				}
 		
 		// Assume average speed is constant throughout turn
 		Driver.wallE.setRotate(Driver.wallE.getRotate() + Math.abs(Driver.wallE.getAngularVelocity()));
@@ -209,6 +244,11 @@ public class Movement {
 	 */
 	public static double[] moveLeft() {
 		Driver.LOGGER.info("moveLeft");
+		//cancel movement if battery is empty
+		if(Driver.wallE.getBatteryLeft()<=0){
+			System.out.println("Returning null");
+			return null;
+		}
 		
 		Driver.wallE.setRotate(Driver.wallE.getRotate() - Math.abs(Driver.wallE.getAngularVelocity()));
 		
@@ -237,6 +277,12 @@ public class Movement {
 	 */
 	public static double[] moveRight() {
 		Driver.LOGGER.info("moveRight");
+
+		//cancel movement if battery is empty
+		if(Driver.wallE.getBatteryLeft()<=0){
+			System.out.println("Returning null");
+			return null;
+		}
 		
 		Driver.wallE.setRotate(Driver.wallE.getRotate() + Math.abs(Driver.wallE.getAngularVelocity()));
 		
