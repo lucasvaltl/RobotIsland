@@ -21,6 +21,8 @@ public class Movement {
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
 	 */
 	public static double[] moveDown(double[] wallEcomponents) {
+		Driver.LOGGER.info("moveDown");
+		
 		//cancel movement if battery is empty
 				if(Driver.wallE.getBatteryLeft()<=0){
 					System.out.println("Returning null");
@@ -36,6 +38,8 @@ public class Movement {
 		double speedLeftWheel = Driver.wallE.getSpeed();
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
 		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
+		
+		Driver.LOGGER.fine(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	}
 
@@ -48,6 +52,8 @@ public class Movement {
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
 	 */
 	public static double[] moveUp(double[] wallEcomponents) {
+        Driver.LOGGER.info("moveUp");
+		
 		//cancel movement if battery is empty
 				if(Driver.wallE.getBatteryLeft()<=0){
 					System.out.println("Returning null");
@@ -63,6 +69,8 @@ public class Movement {
 		double speedLeftWheel = Driver.wallE.getSpeed();
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
 		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
+		
+		Driver.LOGGER.fine(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	}
 	
@@ -75,12 +83,14 @@ public class Movement {
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
 	 */
 	public static double[] moveDownLeft(double[] wallEcomponents) {
+		Driver.LOGGER.info("moveDownLeft");
+
 		//cancel movement if battery is empty
 				if(Driver.wallE.getBatteryLeft()<=0){
 					System.out.println("Returning null");
 					return null;
 				}
-		
+				
 		// Assume average speed is constant throughout the turn		
 		Driver.wallE.setRotate(Driver.wallE.getRotate() - Math.abs(Driver.wallE.getAngularVelocity()));
 		Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() + Driver.wallE.getSpeed() * wallEcomponents[0]);
@@ -100,6 +110,8 @@ public class Movement {
 				/ (2 * Driver.wallE.getWheelRadius());
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
 		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
+		
+		Driver.LOGGER.fine(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	}
 	
@@ -112,6 +124,8 @@ public class Movement {
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
 	 */
 	public static double[] moveDownRight(double[] wallEcomponents) {
+		Driver.LOGGER.info("moveDownRight");
+
 		//cancel movement if battery is empty
 				if(Driver.wallE.getBatteryLeft()<=0){
 					System.out.println("Returning null");
@@ -138,6 +152,8 @@ public class Movement {
 				/ (2 * Driver.wallE.getWheelRadius());
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
 		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
+		
+		Driver.LOGGER.fine(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	}
 	
@@ -150,6 +166,8 @@ public class Movement {
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
 	 */
 	public static double[] moveUpLeft(double[] wallEcomponents) {
+		Driver.LOGGER.info("moveUpLeft");
+
 		//cancel movement if battery is empty
 				if(Driver.wallE.getBatteryLeft()<=0){
 					System.out.println("Returning null");
@@ -175,6 +193,8 @@ public class Movement {
 				/ (2 * Driver.wallE.getWheelRadius());
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
 		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
+		
+		Driver.LOGGER.fine(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	}
 	
@@ -187,6 +207,7 @@ public class Movement {
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
 	 */
 	public static double[] moveUpRight(double[] wallEcomponents) {
+		Driver.LOGGER.info("moveUpRight");
 		//cancel movement if battery is empty
 				if(Driver.wallE.getBatteryLeft()<=0){
 					System.out.println("Returning null");
@@ -212,6 +233,8 @@ public class Movement {
 				/ (2 * Driver.wallE.getWheelRadius());
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
 		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
+		
+		Driver.LOGGER.fine(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	}
 	
@@ -220,6 +243,7 @@ public class Movement {
 	 * 
 	 */
 	public static double[] moveLeft() {
+		Driver.LOGGER.info("moveLeft");
 		//cancel movement if battery is empty
 		if(Driver.wallE.getBatteryLeft()<=0){
 			System.out.println("Returning null");
@@ -241,6 +265,8 @@ public class Movement {
 				/ (2 * Driver.wallE.getWheelRadius());
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
 		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
+		
+		Driver.LOGGER.fine(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	
 	}
@@ -250,6 +276,8 @@ public class Movement {
 	 * 
 	 */
 	public static double[] moveRight() {
+		Driver.LOGGER.info("moveRight");
+
 		//cancel movement if battery is empty
 		if(Driver.wallE.getBatteryLeft()<=0){
 			System.out.println("Returning null");
@@ -271,6 +299,8 @@ public class Movement {
 				/ (2 * Driver.wallE.getWheelRadius());
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
 		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
+		
+		Driver.LOGGER.fine(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	
 	}
@@ -283,6 +313,8 @@ public class Movement {
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
 	 */
 	public static void decelerate(double[] wallEcomponents) {
+		Driver.LOGGER.info("decelerate");
+		
 		// Decelerate
 		double speed = Driver.wallE.getSpeed() - Driver.wallE.getAcceleration();
 		speed = (speed < 0) ? 0 : speed;
