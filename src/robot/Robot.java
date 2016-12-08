@@ -20,6 +20,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.transform.Rotate;
 import map.Map;
 import readers.NewFileReader;
+import readers.NewerFileReader;
 import readers.FileReader;
 import readers.InvalidFormatException;
 import readers.XMLReader;
@@ -473,6 +474,10 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 
 	public void setCollisionDetected(boolean b) {
 		this.collisionDetected = b;
+	}
+	
+	public void setInputComandsReadingInProgress(boolean value) {
+		this.inputCommandsReadingInProgress = value;
 	}
 
 	/**
@@ -1063,7 +1068,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 *            0 (inclusive) and the length of the ArrayList (exclusive).
 	 */
 	public void singleMoveViaFile(String path) {
-		// TODO
 		if (this.inputCommands == null) {
 			// No commands in file, load them up.
 			this.inputCommands = new ArrayList<String>();
@@ -1146,6 +1150,68 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			this.inputCommandsIndex++;
 		}
 	}
+	
+	public void anotherSingleMoveViaFile(String path, double[] wallEcomponents) {
+		if (this.inputCommands == null) {
+			// No commands in file, load them up.
+			this.inputCommands = new ArrayList<String>();
+			this.inputCommandsReadingInProgress = true;
+			NewerFileReader nfr = null;
+			try {
+				nfr = new NewerFileReader();
+				this.inputCommands = nfr.scanFile(path);
+				System.out.println(this.inputCommands);
+				System.out.println(this.inputCommandsReadingInProgress);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return;
+		}
+
+		if (this.inputCommandsReadingInProgress == true) {
+			switch (this.inputCommands.get(this.inputCommandsIndex)) {
+			case "moveDown":
+				Movement.moveDown(wallEcomponents);
+				break;
+			case "moveUp":
+				Movement.moveUp(wallEcomponents);
+				break;
+			case "moveDownLeft":
+				Movement.moveDownLeft(wallEcomponents);
+				break;
+			case "moveDownRight":
+				Movement.moveDownRight(wallEcomponents);
+				break;
+			case "moveUpLeft":
+				Movement.moveUpLeft(wallEcomponents);
+				break;
+			case "moveUpRight":
+				Movement.moveUpRight(wallEcomponents);
+				break;
+			case "moveLeft":
+				Movement.moveLeft();
+				break;
+			case "moveRight":
+				Movement.moveRight();
+				break;
+			case "decelerate":
+				Movement.decelerate(wallEcomponents);
+				break;
+			default:
+				System.out.println("INVALID");
+			}
+		}
+
+		// get the inputCommands arrayList size
+		if (this.inputCommandsIndex >= this.inputCommands.size() - 1) {
+			// Cause deceleration
+			this.inputCommandsReadingInProgress = false;
+			this.currentKeyPresses[0] = null;
+			this.currentKeyPresses[1] = null;
+		} else {
+			this.inputCommandsIndex++;
+		}
+}
 
 	/**
 	 * Description: Perform all the actions needed to update the robot in each
@@ -1162,7 +1228,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		// read commands from file
 		if (Driver.wallE.getInputCommandsReadingInProgress() == true) {
 			// Request a new move
-			Driver.wallE.singleMoveViaFile("src/movements2.txt");
+			Driver.wallE.anotherSingleMoveViaFile("src/movements2.txt", wallEcomponents);
 		}
 
 		this.setWheelspeeds(0, 0);
