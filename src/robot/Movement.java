@@ -27,7 +27,7 @@ public class Movement {
 		
 		//cancel movement if battery is empty
 				if(Driver.wallE.getBatteryLeft()<=0){
-					System.out.println("Returning null");
+				
 					return null;
 				}
 		
@@ -59,7 +59,7 @@ public class Movement {
 		
 		//cancel movement if battery is empty
 				if(Driver.wallE.getBatteryLeft()<=0){
-					System.out.println("Returning null");
+	
 					return null;
 				}
 		
@@ -91,7 +91,7 @@ public class Movement {
 
 		//cancel movement if battery is empty
 				if(Driver.wallE.getBatteryLeft()<=0){
-					System.out.println("Returning null");
+
 					return null;
 				}
 				
@@ -133,7 +133,7 @@ public class Movement {
 
 		//cancel movement if battery is empty
 				if(Driver.wallE.getBatteryLeft()<=0){
-					System.out.println("Returning null");
+
 					return null;
 				}
 		
@@ -176,7 +176,7 @@ public class Movement {
 
 		//cancel movement if battery is empty
 				if(Driver.wallE.getBatteryLeft()<=0){
-					System.out.println("Returning null");
+
 					return null;
 				}
 		
@@ -217,7 +217,7 @@ public class Movement {
 		Driver.LOGGER.log(CustomLevel.INSTRUCTION, "moveUpRight");
 		//cancel movement if battery is empty
 				if(Driver.wallE.getBatteryLeft()<=0){
-					System.out.println("Returning null");
+
 					return null;
 				}
 		
@@ -254,7 +254,7 @@ public class Movement {
 		Driver.LOGGER.log(CustomLevel.INSTRUCTION, "moveLeft");
 		//cancel movement if battery is empty
 		if(Driver.wallE.getBatteryLeft()<=0){
-			System.out.println("Returning null");
+
 			return null;
 		}
 		
@@ -289,7 +289,7 @@ public class Movement {
 
 		//cancel movement if battery is empty
 		if(Driver.wallE.getBatteryLeft()<=0){
-			System.out.println("Returning null");
+
 			return null;
 		}
 		

@@ -179,7 +179,7 @@ public class Driver extends Application {
 //
 //		background.getChildren().addAll(pattern);
 //		stack.getChildren().add(background);
-		
+//		
 
 		// pane used for game itself
 		root = new Group();
