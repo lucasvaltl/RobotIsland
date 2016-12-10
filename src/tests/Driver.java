@@ -265,7 +265,7 @@ public class Driver extends Application {
 						Driver.LOGGER.severe("WARNING: File not found "+ e.toString());
 						alert.setTitle("File Not Found");
 						alert.setHeaderText("Unfortunately the file could not be found");
-						alert.setContentText("Please mke sure the file is stil where you it was when you selected it");
+						alert.setContentText("Please mke sure the file is still where it was when you selected it");
 						alert.showAndWait();
 					}
 				}
@@ -291,14 +291,15 @@ public class Driver extends Application {
 						Driver.LOGGER.severe("WARNING: Invalid command in text file "+ e.toString());
 						alert.setTitle("Invalid Format Error");
 						alert.setHeaderText("Invalid format found in movement file!");
-						alert.setContentText("This app only accepts the following movements, each on a single line: moveUp, moveDown, moveLeft, moveRight as well as "
-												+ "moveUpLeft, moveUpRight, moveDownLeft, and moveDownRight.");
+						alert.setContentText("Each line of the time trial file should"
+								+ " be of the form [x position, y position, robot orientation, "
+								+ "robot speed, robot battery left]");
 						alert.showAndWait();
 					} catch (FileNotFoundException ex) {
 						Driver.LOGGER.severe("WARNING: File not found "+ e.toString());
 						alert.setTitle("File Not Found");
 						alert.setHeaderText("Unfortunately the file could not be found");
-						alert.setContentText("Please mke sure the file is stil where you it was when you selected it");
+						alert.setContentText("Please mke sure the file is still where it was when you selected it");
 						alert.showAndWait();
 					}
 				}
