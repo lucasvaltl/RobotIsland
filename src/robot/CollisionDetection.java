@@ -88,10 +88,8 @@ public class CollisionDetection {
 		return false; 
 	}
 	
-	public static boolean chargingDetection(Robot robot, ArrayList<Entity> blocks) {
-//		Bounds objA = robot.localToScene(robot.getBoundsInLocal());
-		
-		
+	public static boolean detectLocation(Robot robot, ArrayList<Entity> blocks) {
+	
 
 		for (Entity block : blocks) {
 			//regular bounding box based collision detection for broad phase detection

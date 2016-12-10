@@ -1,3 +1,7 @@
+moveUpRight
+moveUpLeft
+moveDownRight
+moveDownLeft
 moveRight
 moveRight
 moveRight

@@ -19,6 +19,8 @@ public class Map {
 	private static int[][] blocksToGrid;
 	public static ArrayList<Entity> blocks = new ArrayList<Entity>(256);
 	public static ArrayList<Entity> chargingstation = new ArrayList<Entity>(4);
+	public static ArrayList<Entity> finishLine = new ArrayList<Entity>(2);
+	public static ArrayList<Entity> antiCheatLine = new ArrayList<Entity>(2);
 	int YBLOCKSIZE;
 	int XBLOCKSIZE;
 	
@@ -131,7 +133,7 @@ public class Map {
 					// if map value is non zero, create square of correct size
 					// and add to the Pane.
 					Entity block = new Entity((col*XBLOCKSIZE),(row*YBLOCKSIZE), XBLOCKSIZE, YBLOCKSIZE);
-					block.setFill(Color.BLACK);
+					block.setFill(Color.TRANSPARENT);
 					blocks.add(block);
 					//save position of the block to the map of blocks for easier access when detecting collision
 					blocksToGrid[row][col] = blocks.indexOf(block);
@@ -143,12 +145,25 @@ public class Map {
 		int numberofblocks = 2+4;
 		for (int i=4; i < numberofblocks;i++){
 			Entity block = new Entity((i*XBLOCKSIZE),(3*YBLOCKSIZE), XBLOCKSIZE, YBLOCKSIZE);
-			block.setFill(Color.GREEN);
+			block.setFill(Color.TRANSPARENT);
 			chargingstation.add(block);
 		}
 		Driver.root.getChildren().addAll(chargingstation);	
 		
 		
+		for (int i=1; i < 3;i++){
+			Entity block = new Entity((i*XBLOCKSIZE),(3*YBLOCKSIZE), XBLOCKSIZE, 5);
+			block.setFill(Color.GREEN);
+			finishLine.add(block);
+		}
+		Driver.root.getChildren().addAll(finishLine);	
+		
+		for (int i=13; i < 15;i++){
+			Entity block = new Entity((i*XBLOCKSIZE),(7*YBLOCKSIZE), XBLOCKSIZE, 5);
+			block.setFill(Color.GREEN);
+			antiCheatLine.add(block);
+		}
+		Driver.root.getChildren().addAll(antiCheatLine);
 	}
 }
 

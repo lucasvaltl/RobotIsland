@@ -1,13 +1,25 @@
 package robot;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.nio.charset.Charset;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
+import java.util.Timer;
 import java.util.stream.Collectors;
+
+import javax.swing.JOptionPane;
 
 import javafx.event.EventHandler;
 import javafx.geometry.Point2D;
@@ -63,8 +75,19 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	private int timeSinceCollision = 0;
 	private boolean collisionDetected;
 	private double distancetravelled;
-	private boolean recharging;
-	
+	private boolean recharging;;
+	private boolean lapInProgress = false;
+	private double startTime;
+	private double stopTime;
+	private double lastLapTime;
+	private double highscore = 999999999;
+	private double currentLapTime;
+	DecimalFormat df = new DecimalFormat("#.00");
+	private boolean notCheating = true;
+	private boolean newHighScore;
+	private int timeSinceHighScore;
+	private int highScoreAnimation;
+	private int highScoreToggle = 1;
 
 	/**
 	 * Description: Verbose robot class constructor
@@ -115,6 +138,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		super.setWidth(this.axleLength);
 		this.wheelRadius = wheelRadius;
 		super.setHeight(this.wheelRadius);
+		this.loadHighScore();
 	}
 
 	/**
@@ -144,6 +168,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		this.setWidth(this.axleLength);
 		this.wheelRadius = Double.valueOf(input.get(11));
 		this.setHeight(this.wheelRadius);
+		this.loadHighScore();
 	}
 
 	/**
@@ -303,7 +328,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	public boolean getCollisionDetected() {
 		return this.collisionDetected;
 	}
-	
+
 	public double getDistanceTravelled() {
 		return this.distancetravelled;
 	}
@@ -470,36 +495,55 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		this.decelerate = value;
 	}
 
+	/**
+	 * Description: Set the robots wheel speeds
+	 * 
+	 * 
+	 * @param left: Left wheel speed
+	 * @param right: Right wheel speed
+	 */
 	public void setWheelspeeds(double left, double right) {
 		this.wheelspeeds[0] = left;
 		this.wheelspeeds[1] = right;
 	}
 
+	
+	/**
+	 * Description: Set the if the robot detected a collision
+	 * 
+	 * @param b: true or false
+	 */
 	public void setCollisionDetected(boolean b) {
 		this.collisionDetected = b;
 	}
-	
+
+	/**
+	 * Description: set if the robot is reading inputs from a file
+	 * 
+	 * @param value: true or false
+	 */
 	public void setInputComandsReadingInProgress(boolean value) {
 		this.inputCommandsReadingInProgress = value;
 	}
 
+	
 	/**
-	 * Description: Alerts the user of the robot's low battery status.
+	 * Description: get an image from the image array
+	 * 
+	 * @param i: row number
+	 * @param j: column number
+	 * @return
 	 */
-	public void batteryLowAlert() {
-		// TODO implement audio alert
-//		if (this.batteryLeft < 10) {
-//			Image pattern = new Image(new File("src/eveLowBattery.png").toURI().toString(), 32, 48, false, true);
-//			ImagePattern skin = new ImagePattern(pattern);
-//			Driver.wallE.setFill(skin);
-//			this.setMaxSpeed(1);
-//		}
+	public ImagePattern getAnimatedImage(int row, int column) {
+		return this.animimages[row][column];
 	}
 
-	public ImagePattern getAnimatedImage(int i, int j) {
-		return this.animimages[i][j];
-	}
-
+	
+	/**
+	 * Description: Create a array of arrays storing images later used
+	 * for animation.
+	 * 
+	 */
 	public void createAnimatedImages() {
 		Image[][] images = new Image[5][3];
 		animimages = new ImagePattern[5][3];
@@ -513,9 +557,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 3; j++) {
 				ImagePattern thisimage = new ImagePattern(images[i][j]);
-
 				animimages[i][j] = thisimage;
-
 			}
 		}
 
@@ -529,14 +571,13 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 * @return
 	 */
 	public boolean animate(double[] wallEcomponents) {
-
-		if(recharging){
+		
+		if (recharging) {
 			this.setFill(this.getAnimatedImage(4, 0));
 			// used to jump out of method
 			return false;
 		}
-		
-		
+
 		// warn if battery is below 20%
 		if ((this.batteryLeft > (this.getBatteryCapacity() / 10))
 				&& this.batteryLeft < (this.getBatteryCapacity() / 5)) {
@@ -565,37 +606,56 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			}
 		}
 		
-		//check if robot is even moving:
-		if(this.wheelspeeds[0] == 0 && this.wheelspeeds[1] == 0 &&this.speed==0){
+		// high score animation
+				if (this.newHighScore) {
+					if (this.timeSinceHighScore == 100) {
+						this.newHighScore = false;
+						this.timeSinceHighScore = 0;
+					} else {
+						//toggle between images to create animation
+						if(timeSinceHighScore % 10 == 0){
+							this.highScoreToggle = 	this.highScoreToggle == 1 ? 2 : 1;
+						}
+						this.setFill(this.getAnimatedImage(4, highScoreToggle));
+						this.timeSinceHighScore++;
+						System.out.println(timeSinceHighScore);
+						// used to break out of method
+						return false;
+					}
+				}
+
+		// check if robot is even moving:
+		if (this.wheelspeeds[0] == 0 && this.wheelspeeds[1] == 0 && this.speed == 0) {
 			this.setFill(this.getAnimatedImage(1, 1));
 			return false;
 		}
 
-		// animate eyes to look into direction of movement
+		// animate eyes to look into direction of movement using the difference in wheelspeeds
 		int i = 1;
 		int j = 1;
-		
-		
-		if(this.getLastUporDown().equals("UP")){
-		if (this.speed == maxSpeed) {
-			i = 2;
-		}
-		if (this.wheelspeeds[0] == this.wheelspeeds[1]) {
 
-		} else if (this.speed == 0 && this.wheelspeeds[0] > this.wheelspeeds[1] || this.decelerate == true && this.wheelspeeds[0] > this.wheelspeeds[1]) {
-			j = 0;
-		} else if (this.speed == 0 && this.wheelspeeds[0] < this.wheelspeeds[1] || this.decelerate == true && this.wheelspeeds[0] < this.wheelspeeds[1]) {
-			j = 2;
-		} else if (this.wheelspeeds[0] < this.wheelspeeds[1]) {
-			j = 0;
-		} else {
-			j = 2;
-		} 
-		this.setFill(this.getAnimatedImage(i, j));
-		
+		if (this.getLastUporDown().equals("UP")) {
+			if (this.speed == maxSpeed) {
+				i = 2;
+			}
+			if (this.wheelspeeds[0] == this.wheelspeeds[1]) {
+
+			} else if (this.speed == 0 && this.wheelspeeds[0] > this.wheelspeeds[1]
+					|| this.decelerate == true && this.wheelspeeds[0] > this.wheelspeeds[1]) {
+				j = 0;
+			} else if (this.speed == 0 && this.wheelspeeds[0] < this.wheelspeeds[1]
+					|| this.decelerate == true && this.wheelspeeds[0] < this.wheelspeeds[1]) {
+				j = 2;
+			} else if (this.wheelspeeds[0] < this.wheelspeeds[1]) {
+				j = 0;
+			} else {
+				j = 2;
+			}
+			this.setFill(this.getAnimatedImage(i, j));
+
 		}
-		
-		if(this.getLastUporDown().equals("DOWN")){
+
+		if (this.getLastUporDown().equals("DOWN")) {
 			i = 0;
 
 			if (this.speed == 0) {
@@ -614,10 +674,10 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 				j = 2;
 			}
 			this.setFill(this.getAnimatedImage(i, j));
-			
-			}
+
+		}
 		// used to break out of method
-		return true; 
+		return true;
 	}
 
 	/*
@@ -627,30 +687,30 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 * 
 	 * @author Geraint and Lucas
 	 */
-
 	private void consumeBattery(double[] ds) {
 
-		
 		if (this.getSpeed() > 0) {
 			if (this.getBatteryLeft() >= (this.getBatteryCapacity() / 10)) {
-				//reduce battery relative to distance traveled
-				this.decreaseCharge(0.25*this.getSpeed());
+				// reduce battery relative to distance traveled
+				this.decreaseCharge(0.25 * this.getSpeed());
 			}
-			// if battery lower than 10% of charge, reduce speed, consume less battery
+			// if battery lower than 10% of charge, reduce speed, consume less
+			// battery
 			if ((this.getBatteryLeft() > 0) && (this.getBatteryLeft() < (this.getBatteryCapacity() / 10))) {
 				this.decreaseCharge(0.25);
 				this.setMaxSpeed(1);
-				if(Driver.toggledevmode){
+				if (Driver.toggledevmode) {
 					Driver.textinfo.setText("Battery less than 10%!!!");
-					
+
 					if (Driver.batteryLowSound.isPlaying() == false) {
 						Driver.batteryLowSound.play(0.4);
 					}
-					
+
 				}
 			}
-		}//decrease charge if robot is turning around its own axis (wheelspeeds unequal) but not moving forward
-		else if (this.getSpeed() == 0 && (ds[0]!= ds[1])) {
+		} // decrease charge if robot is turning around its own axis
+			// (wheelspeeds unequal) but not moving forward
+		else if (this.getSpeed() == 0 && (ds[0] != ds[1])) {
 			if (this.getBatteryLeft() >= (this.getBatteryCapacity() / 10)) {
 				this.decreaseCharge(0.0625);
 			}
@@ -659,9 +719,9 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			if ((this.getBatteryLeft() > 0) && (this.getBatteryLeft() < (this.getBatteryCapacity() / 10))) {
 				this.decreaseCharge(0.0625);
 				this.setMaxSpeed(1);
-				if(Driver.toggledevmode){
+				if (Driver.toggledevmode) {
 					Driver.textinfo.setText("Battery less than 10%!!!");
-				
+
 					if (Driver.batteryLowSound.isPlaying() == false) {
 						Driver.batteryLowSound.play();
 					}
@@ -672,14 +732,14 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		if (this.getBatteryLeft() < 0) {
 			this.setMaxSpeed(0);
 			this.setBatteryLeft(0);
-			
+
 			if (Driver.batteryLowSound.isPlaying() == true) {
 				Driver.batteryLowSound.stop();
 			}
 			if (Driver.batteryDeadSound.isPlaying() == false) {
 				Driver.batteryDeadSound.play();
 			}
-			
+
 		}
 
 	}
@@ -702,24 +762,25 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	public void decreaseCharge() {
 		this.batteryLeft -= 1;
 	}
-	
+
 	/**
 	 * 
 	 * Description: Recharges the robot by a set value
 	 * 
-	 * @param decrementValue: amount by which the robot is charged
+	 * @param decrementValue:
+	 *            amount by which the robot is charged
 	 */
-	public void increaseCharge(double decrementValue){
-	
-		if(this.getBatteryLeft() < this.getBatteryCapacity()){
+	public void increaseCharge(double decrementValue) {
+
+		if (this.getBatteryLeft() < this.getBatteryCapacity()) {
 			this.batteryLeft += decrementValue;
 		}
-		//avoids overcharging
-		else if (this.getBatteryLeft() > this.getBatteryCapacity()){
+		// avoids overcharging
+		else if (this.getBatteryLeft() > this.getBatteryCapacity()) {
 			this.batteryLeft = this.getBatteryCapacity();
-			if(Driver.toggledevmode){
+			if (Driver.toggledevmode) {
 				Driver.textinfo.setText("Recharged!");
-			
+
 				if (Driver.batteryLowSound.isPlaying() == true) {
 					Driver.batteryLowSound.stop();
 				}
@@ -729,27 +790,135 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			}
 		}
 		this.setMaxSpeed(this.globalMaxSpeed);
-		
+
 	}
-	
+
 	/**
-	 * Description: checks if the robot is in the refueling area. If it is there the robot is charged.
+	 * Description: checks if the robot is in the refueling area. If it is there
+	 * the robot is charged.
 	 * 
 	 */
-	public void checkForCharging(){
-		if(CollisionDetection.chargingDetection(this, Map.chargingstation)){
+	public void checkForCharging() {
+		if (CollisionDetection.detectLocation(this, Map.chargingstation)) {
 			this.increaseCharge(5);
 			this.recharging = true;
-			//reset time since collision to overwrite collisions happening in the charging station
+			// reset time since collision to overwrite collisions happening in
+			// the charging station
 			this.setCollisionDetected(false);
 			this.timeSinceCollision = 0;
-			if(Driver.toggledevmode){
-				if(Driver.textinfo.getText().equals("Battery less than 10%!!!")){
+			if (Driver.toggledevmode) {
+				if (Driver.textinfo.getText().equals("Battery less than 10%!!!")) {
 					Driver.textinfo.setText("Recharging!");
-				}}
-			
-		} else if (this.recharging == true){
+				}
+			}
+
+		} else if (this.recharging == true) {
 			this.recharging = false;
+		}
+	}
+
+	/**
+	 * Description: Checks if the robot passes the finish line. DIsabled if
+	 * player is trying to cheat by not doing a full lap.
+	 */
+	public void checkForFinishLine() {
+		if (CollisionDetection.detectLocation(this, Map.finishLine)) {
+			// check if player is cheating
+			if (notCheating) {
+				this.timeLap();
+				if (Driver.toggledevmode) {
+					Driver.textinfo.setText("Crossed Finishline");
+				}
+				this.notCheating = false;
+				return;
+			}
+		}
+
+	}
+
+	/**
+	 * Checks if robot actually did a lap around the track to avoid cheating.
+	 * 
+	 */
+	public void checkIfCheckIfCheating() {
+		if (CollisionDetection.detectLocation(this, Map.antiCheatLine)) {
+			this.notCheating = true;
+		}
+	}
+
+	/**
+	 * Description: Time the current lap. Checks if new lap time is the new high
+	 * score
+	 * 
+	 */
+	public void timeLap() {
+
+		this.stopTime = System.currentTimeMillis();
+		this.lastLapTime = (this.stopTime - this.startTime) / 1000.0;
+		if(lapInProgress){
+		Driver.lastLapTime.setText(df.format(lastLapTime));}
+		if (lastLapTime < this.highscore) {
+			this.highscore = this.lastLapTime;
+			Driver.highscore.setText(df.format(this.highscore) + " s");
+			saveHighScore();
+			newHighScore = true;
+		}
+		this.startTime = System.currentTimeMillis();
+		this.lapInProgress = true;
+
+	}
+
+	/**
+	 * Description: Calculate and Display current lap time in label
+	 */
+	public void displayLapTime() {
+		if (this.startTime != 0) {
+			this.currentLapTime = (System.currentTimeMillis() - this.startTime) / 1000.0;
+
+			Driver.time.setText(df.format(this.currentLapTime) + " s");
+		}
+
+	}
+
+	/**
+	 * Description: Save high score to file
+	 */
+	private void saveHighScore() {
+		BufferedWriter bw = null;
+		try {
+			bw = new BufferedWriter(new FileWriter(new File("highscore.txt"), false));																				// false
+			bw.write("" + highscore);
+			bw.flush();
+			bw.close();
+		} catch (IOException e) {
+			Driver.LOGGER.severe("error while saving highscore to file");
+		}
+	}
+
+	/**
+	 * Description: Load high score from file
+	 * 
+	 */
+
+	private void loadHighScore() {
+
+		String line = "";
+		try {
+			InputStream fis = new FileInputStream("highscore.txt");
+			InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
+			BufferedReader br = new BufferedReader(isr);
+			// BufferedReader br = new BufferedReader(new FileReader(new
+			// File("highscore.txt")));
+			line = br.readLine();
+			br.close();
+		} catch (IOException e) {
+			line = "";
+			Driver.LOGGER.info("No highscore file found");
+		}
+
+		if (line != "") {
+			highscore = Double.parseDouble(line);
+			Driver.highscore.setText(df.format(this.highscore) + " s");
 		}
 	}
 
@@ -757,38 +926,38 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 * Description: update the robots distance travelled
 	 * 
 	 */
-	private void updateDistance(){
+	private void updateDistance() {
 		this.distancetravelled += this.speed;
 	}
-	
+
 	/**
 	 * Updates the Developer panel if developer mode is turned on
 	 * 
 	 */
-	
-	public void updateDevPanel(){
-		
-			Point2D centercoordinates = this.center();
-			DecimalFormat numberFormat = new DecimalFormat("#.0"); 
-			Driver.textx.setText(numberFormat.format(centercoordinates.getX()));
-			Driver.texty.setText(numberFormat.format(centercoordinates.getY()));
-			Driver.textcharge.setText(numberFormat.format(this.getBatteryLeft()/this.getBatteryCapacity()*100) + "%");
-			Driver.textdistance.setText(numberFormat.format(this.getDistanceTravelled()));
-			//calculate orientation of robots front based on the default getRotate() method;
-			double currentrotation;
-			if(this.getRotate() >0){
-				currentrotation = this.getRotate()%360 ;
-			} else{
-				currentrotation = this.getRotate()%360 +360;
-			}
-			if(currentrotation>180){
-				currentrotation -=180;
-			}else{
-				currentrotation +=180;
-			}
-			Driver.textangle.setText(numberFormat.format(currentrotation));
-			
-		
+
+	public void updateDevPanel() {
+
+		Point2D centercoordinates = this.center();
+		DecimalFormat numberFormat = new DecimalFormat("#.0");
+		Driver.textx.setText(numberFormat.format(centercoordinates.getX()));
+		Driver.texty.setText(numberFormat.format(centercoordinates.getY()));
+		Driver.textcharge.setText(numberFormat.format(this.getBatteryLeft() / this.getBatteryCapacity() * 100) + "%");
+		Driver.textdistance.setText(numberFormat.format(this.getDistanceTravelled()));
+		// calculate orientation of robots front based on the default
+		// getRotate() method;
+		double currentrotation;
+		if (this.getRotate() > 0) {
+			currentrotation = this.getRotate() % 360;
+		} else {
+			currentrotation = this.getRotate() % 360 + 360;
+		}
+		if (currentrotation > 180) {
+			currentrotation -= 180;
+		} else {
+			currentrotation += 180;
+		}
+		Driver.textangle.setText(numberFormat.format(currentrotation));
+
 	}
 
 	/**
@@ -796,14 +965,14 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 * currentKeyPresses array to keep track of which buttons are being held
 	 * down.
 	 * 
-	 *  Logs to src/logs file
+	 * Logs to src/logs file
 	 */
 	public void handle(KeyEvent event) {
 
 		/* Keydown */
 		if (event.getEventType().equals(KeyEvent.KEY_PRESSED)) {
 			// System.out.println(Arrays.toString(this.currentKeyPresses));
-			
+
 			switch (event.getCode()) {
 			case UP: // increase forward velocity;
 				/*
@@ -1116,8 +1285,8 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			case "[UP, null]":
 				// robot.fireEvent(keyevent);
 
-				 this.currentKeyPresses[0] = "UP";
-				 this.currentKeyPresses[1] = null;
+				this.currentKeyPresses[0] = "UP";
+				this.currentKeyPresses[1] = null;
 				break;
 			case "[UP, LEFT]":
 				this.currentKeyPresses[0] = "UP";
@@ -1128,9 +1297,9 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 				this.currentKeyPresses[1] = "RIGHT";
 				break;
 			case "[DOWN, null]":
-			
-				 this.currentKeyPresses[0] = "DOWN";
-				 this.currentKeyPresses[1] = null;
+
+				this.currentKeyPresses[0] = "DOWN";
+				this.currentKeyPresses[1] = null;
 				break;
 			case "[DOWN, LEFT]":
 				this.currentKeyPresses[0] = "DOWN";
@@ -1142,12 +1311,12 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 				break;
 			case "[null, LEFT]":
 
-				 this.currentKeyPresses[0] = null;
-				 this.currentKeyPresses[1] = "LEFT";
+				this.currentKeyPresses[0] = null;
+				this.currentKeyPresses[1] = "LEFT";
 				break;
 			case "[null, RIGHT]":
-				 this.currentKeyPresses[0] = null;
-				 this.currentKeyPresses[1] = "RIGHT";
+				this.currentKeyPresses[0] = null;
+				this.currentKeyPresses[1] = "RIGHT";
 				break;
 			case "[null, null]":
 				this.currentKeyPresses[0] = null;
@@ -1168,7 +1337,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			this.inputCommandsIndex++;
 		}
 	}
-	
+
 	public void anotherSingleMoveViaFile(File file, double[] wallEcomponents) {
 		if (this.inputCommands == null) {
 			// No commands in file, load them up.
@@ -1178,15 +1347,16 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			try {
 				nfr = new NewerFileReader();
 				this.inputCommands = nfr.scanFile(file);
-				
+
 			} catch (InvalidFormatException e) {
-//				Driver.labelinfo.setText("WARNING: Invalid command in text file");
-				Driver.LOGGER.severe("WARNING: Invalid command in text file "+ e.toString());
+				// Driver.labelinfo.setText("WARNING: Invalid command in text
+				// file");
+				Driver.LOGGER.severe("WARNING: Invalid command in text file " + e.toString());
 				this.inputCommandsReadingInProgress = false;
 				return;
-			}catch (FileNotFoundException e) {
-//				Driver.labelinfo.setText("WARNING: File not found");
-				Driver.LOGGER.severe("WARNING: File not found "+ e.toString());
+			} catch (FileNotFoundException e) {
+				// Driver.labelinfo.setText("WARNING: File not found");
+				Driver.LOGGER.severe("WARNING: File not found " + e.toString());
 				this.inputCommandsReadingInProgress = false;
 				return;
 			}
@@ -1196,89 +1366,90 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		if (this.inputCommandsReadingInProgress == true) {
 			if (this.inputCommands.get(this.inputCommandsIndex).equals("moveUpLeft")) {
 
-			if (this.getDecelerate() == true) {
+				if (this.getDecelerate() == true) {
+					Movement.decelerate(wallEcomponents);
+				} else {
+					Movement.moveUpLeft(wallEcomponents);
+				}
+				this.setLastMovement("moveUpLeft");
+
+			} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveUpRight")) {
+
+				if (this.getDecelerate() == true) {
+					Movement.decelerate(wallEcomponents);
+				} else {
+					Movement.moveUpRight(wallEcomponents);
+				}
+				this.setLastMovement("moveUpRight");
+
+			} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveDownLeft")) {
+				if (this.getDecelerate() == true) {
+					Movement.decelerate(wallEcomponents);
+				} else {
+					Movement.moveDownLeft(wallEcomponents);
+				}
+				this.setLastMovement("moveDownLeft");
+
+			} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveDownRight")) {
+				if (this.getDecelerate() == true) {
+					Movement.decelerate(wallEcomponents);
+				} else {
+					Movement.moveDownRight(wallEcomponents);
+				}
+				this.setLastMovement("moveDownRight");
+
+			} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveUp")) {
+				if (this.getDecelerate() == true) {
+					// Robot must decelerate after previous motion in the
+					// opposite
+					// direction
+					Movement.decelerate(wallEcomponents);
+				} else {
+					// accelerate
+					Movement.moveUp(wallEcomponents);
+					this.setLastMovement("moveUp");
+				}
+
+			} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveDown")) {
+
+				if (this.getDecelerate() == true) {
+					// Robot must decelerate after previous motion in the
+					// opposite
+					// direction
+					Movement.decelerate(wallEcomponents);
+				} else {
+					// accelerate
+					Movement.moveDown(wallEcomponents);
+					this.setLastMovement("moveDown");
+				}
+
+			} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveLeft")) {
+				Movement.moveLeft();
+				this.setLastMovement("moveLeft");
+				// allows robot to turn left during deceleration
+				if (this.getDecelerate() == true) {
+					Movement.decelerate(wallEcomponents);
+				}
+
+			} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveRight")) {
+				Movement.moveRight();
+				this.setLastMovement("moveRight");
+				// allows robot to turn right during deceleration
+				if (this.getDecelerate() == true) {
+					Movement.decelerate(wallEcomponents);
+				}
+
+			} else if (this.inputCommands.get(this.inputCommandsIndex).equals("decelerate")) {
 				Movement.decelerate(wallEcomponents);
-			} else {
-				Movement.moveUpLeft(wallEcomponents);
-			}
-			this.setLastMovement("moveUpLeft");
 
-		} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveUpRight")) {
-
-			if (this.getDecelerate() == true) {
-				Movement.decelerate(wallEcomponents);
-			} else {
-				Movement.moveUpRight(wallEcomponents);
-			}
-			this.setLastMovement("moveUpRight");
-
-		} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveDownLeft")) {
-			if (this.getDecelerate() == true) {
-				Movement.decelerate(wallEcomponents);
-			} else {
-				Movement.moveDownLeft(wallEcomponents);
-			}
-			this.setLastMovement("moveDownLeft");
-
-		} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveDownRight")) {
-			if (this.getDecelerate() == true) {
-				Movement.decelerate(wallEcomponents);
-			} else {
-				Movement.moveDownRight(wallEcomponents);
-			}
-			this.setLastMovement("moveDownRight");
-
-		} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveUp")) {
-			if (this.getDecelerate() == true) {
-				// Robot must decelerate after previous motion in the opposite
-				// direction
-				Movement.decelerate(wallEcomponents);
-			} else {
-				// accelerate
-				Movement.moveUp(wallEcomponents);
-				this.setLastMovement("moveUp");
 			}
 
-		} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveDown")) {
-
-			if (this.getDecelerate() == true) {
-				// Robot must decelerate after previous motion in the opposite
-				// direction
-				Movement.decelerate(wallEcomponents);
-			} else {
-				// accelerate
-				Movement.moveDown(wallEcomponents);
-				this.setLastMovement("moveDown");
+			// change decelerate flag to false if speed is 0
+			if (this.getSpeed() <= 0) {
+				this.setDecelerate(false);
+				// Driver.lastUporDown = "";
 			}
-
-		} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveLeft")) {
-			Movement.moveLeft();
-			this.setLastMovement("moveLeft");
-			// allows robot to turn left during deceleration
-			if (this.getDecelerate() == true) {
-				Movement.decelerate(wallEcomponents);
-			}
-
-		} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveRight")) {
-			Movement.moveRight();
-			this.setLastMovement("moveRight");
-			// allows robot to turn right during deceleration
-			if (this.getDecelerate() == true) {
-				Movement.decelerate(wallEcomponents);
-			}
-
-		} else if (this.inputCommands.get(this.inputCommandsIndex).equals("decelerate")) {
-			Movement.decelerate(wallEcomponents);
-
 		}
-
-		// change decelerate flag to false if speed is 0
-		if (this.getSpeed() <= 0) {
-			this.setDecelerate(false);
-			// Driver.lastUporDown = "";
-		}
-			}
-		
 
 		// get the inputCommands arrayList size
 		if (this.inputCommandsIndex >= this.inputCommands.size() - 1) {
@@ -1289,9 +1460,9 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			this.currentKeyPresses[1] = null;
 		} else {
 			this.inputCommandsIndex++;
-			
+
 		}
-}
+	}
 
 	/**
 	 * Description: Perform all the actions needed to update the robot in each
@@ -1306,21 +1477,25 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		final double[] wallEcomponents = this.getOrientationComponents(wallEorientation);
 
 		this.setWheelspeeds(0, 0);
-		
+
 		detectCollision(this, wallEcomponents);
-		
+
 		// read commands from file
-				if (Driver.wallE.getInputCommandsReadingInProgress() == true) {
-					
-					// Request a new move
-					Driver.wallE.anotherSingleMoveViaFile(Driver.movementFile, wallEcomponents);
-				}else{
-		this.move(wallEcomponents);}
-	this.animate(wallEcomponents);
+		if (Driver.wallE.getInputCommandsReadingInProgress() == true) {
+
+			// Request a new move
+			Driver.wallE.anotherSingleMoveViaFile(Driver.movementFile, wallEcomponents);
+		} else {
+			this.move(wallEcomponents);
+		}
+		this.animate(wallEcomponents);
 		this.consumeBattery(this.getWheelspeeds());
 		this.checkForCharging();
-		if(Driver.toggledevmode)
-		this.updateDevPanel();
+		this.checkIfCheckIfCheating();
+		this.checkForFinishLine();
+		this.displayLapTime();
+		if (Driver.toggledevmode)
+			this.updateDevPanel();
 		this.updateDistance();
 	}
 
