@@ -385,16 +385,14 @@ public class Robot extends ImageView implements EventHandler<KeyEvent> {
 		double yDistanceToFirstIntersection; // used in vertical checking
 			
 		// space between intersection points
-		double horizontalDy = Driver.map.getBlockHeight();
-		double horizontalDx = horizontalDy / Math.tan(this.getOrientation()); // TODO fix error - currently infinity
-		double verticalDx = Driver.map.getBlockWidth();
-		double verticalDy = verticalDx / Math.tan(this.getOrientation()); // TODO fix error - currently infinity
+		double horizontalDy;
+		double horizontalDx;
+		double verticalDx;
+		double verticalDy;
 
 		// get which grid block robot is in: (rowInt, colInt)
-		rowDouble = this.yCoordinate * 1.0 / Driver.map.getRowSize();
-		rowInt = (int) rowDouble;
-		colDouble = this.xCoordinate * 1.0 / Driver.map.getColSize();
-		colInt = (int) colDouble;
+		rowInt = (int) (this.yCoordinate * 1.0 / Driver.map.getBlockHeight());
+		colInt = (int) (this.xCoordinate * 1.0 / Driver.map.getBlockWidth());
 			
 		// get the "ceiling" of robot block
 		rowCeiling = rowInt * Driver.map.getBlockHeight();
@@ -420,23 +418,31 @@ public class Robot extends ImageView implements EventHandler<KeyEvent> {
 		double horizontalLastyCoordinate;
 		double verticalLastxCoordinate;
 		double verticalLastyCoordinate;
-		double horizontalDistanceToIntersection = 0;
-		double verticalDistanceToIntersection = 0;
+		double horizontalDistanceToIntersection = 0; 
+		double verticalDistanceToIntersection = 0; // TODO could be causing an error
 		
 		double rayAngle = leftFOV;
 		// Iterate over each column in projection plane and along FOV
 		for (int i = 0; i < this.PROJECTIONPLANESIZE[0]; i++) {
+			
+			// space between intersection points
+			horizontalDy = Driver.map.getBlockHeight();
+			horizontalDx = horizontalDy / Math.tan(Math.toRadians(rayAngle)); // TODO fix error - currently infinity
+			verticalDx = Driver.map.getBlockWidth();
+			verticalDy = verticalDx * Math.tan(Math.toRadians(rayAngle)); // TODO fix error - currently infinity
+
+			
 			/* check for horizontal intersections */
-			if ((currentOrientation >= 270 && currentOrientation <= 360) || 
-					(currentOrientation >= 0 && currentOrientation <= 90)) {
+			if ((rayAngle>= 270 && rayAngle <= 360) || 
+					(rayAngle >= 0 && rayAngle <= 90)) {
 				// ray facing up
-				horizontalDy *= -1;
+				horizontalDy = 0 - Math.abs(horizontalDy);
 				// calculate distance from "ceiling"
 				yDistanceFromCeiling = this.yCoordinate - rowCeiling;
 				// calculate corresponding horizontal distance
-				xDistanceToFirstIntersection = yDistanceFromCeiling * Math.tan(this.getOrientation());
+				xDistanceToFirstIntersection = yDistanceFromCeiling * Math.tan(Math.toRadians(rayAngle)); // TODO might be giving a negative value
 				// calculate first intersection point, A (
-				if (currentOrientation >= 0 && currentOrientation <= 90) {
+				if (rayAngle >= 0 && rayAngle <= 90) {
 					// ray is pointing right - add x Coordinate.
 					horizontalPointA[0] = this.xCoordinate + xDistanceToFirstIntersection;
 					horizontalPointA[1] = this.yCoordinate - yDistanceFromCeiling; 
@@ -453,10 +459,10 @@ public class Robot extends ImageView implements EventHandler<KeyEvent> {
 				// calculate distance from "ceiling"
 				yDistanceFromCeiling = rowCeiling + Driver.map.getBlockHeight() - this.yCoordinate;
 				// calculate corresponding horizontal distance.
-				xDistanceToFirstIntersection = yDistanceFromCeiling * Math.tan(this.getOrientation());
+				xDistanceToFirstIntersection = yDistanceFromCeiling * Math.tan(Math.toRadians(rayAngle));
 				
 				// calculate first intersection point, A (x, y)
-				if (currentOrientation >=90 && currentOrientation <= 180) {
+				if (rayAngle >=90 && rayAngle <= 180) {
 					// ray is pointing right - add x distance
 					horizontalPointA[0] = this.xCoordinate + xDistanceToFirstIntersection;
 					horizontalPointA[1] = this.yCoordinate - yDistanceFromCeiling;
@@ -470,16 +476,15 @@ public class Robot extends ImageView implements EventHandler<KeyEvent> {
 			// TODO check behaviour below
 			
 			// get A's grid details (rowInt, colInt).
-			horizontalRowDoubleA = horizontalPointA[0] * 1.0 * Driver.map.getRowSize() /
-					Driver.SCREENHEIGHT;
+			horizontalRowDoubleA = horizontalPointA[0] * 1.0 /
+					Driver.map.getBlockHeight();
 			horizontalRowIntA = (int) horizontalRowDoubleA;
 			horizontalRowIntA = (horizontalRowIntA == Driver.map.getRowSize()) ? --horizontalRowIntA : horizontalRowIntA;
-			horizontalColDoubleA = horizontalPointA[1] * 1.0  * Driver.map.getColSize() / 
-					Driver.SCREENWIDTH;
+			horizontalColDoubleA = horizontalPointA[1] * 1.0 / Driver.map.getBlockWidth();
 			horizontalColIntA = (int) horizontalColDoubleA;
 			horizontalColIntA = (horizontalColIntA == Driver.map.getColSize()) ? --horizontalColIntA : horizontalColIntA;
 			
-			// iterate along orientation vector until wall is found 
+			// iterate along ray vector until wall is found 
 			// or no more grid
 			horizontalLastxCoordinate = horizontalPointA[0];
 			horizontalLastyCoordinate = horizontalPointA[1];
@@ -488,22 +493,24 @@ public class Robot extends ImageView implements EventHandler<KeyEvent> {
 			boolean horizontalWallFound = false;
 			
 			while (horizontalWallFound == false) {
-				if (Driver.map.getGrid()[horizontalCurrentRow][horizontalCurrentCol] == 1 ||
-				(horizontalCurrentRow >= Driver.map.getRowSize()) || 
-				(horizontalCurrentCol >= Driver.map.getColSize())) {
+				if (Driver.map.getGrid()[horizontalCurrentRow][horizontalCurrentCol] == 1) {
 					horizontalWallFound = true;
-					
 					// calculate distance to wall
 					horizontalDistanceToIntersection = Math.abs((this.yCoordinate - horizontalLastyCoordinate) * 1.0 / 
-							Math.cos(this.getOrientation()));
+							Math.cos(Math.toRadians(rayAngle)));
 					//normalise by Beta
 					
+				} else if ((horizontalCurrentRow >= Driver.map.getRowSize() - 1) ||
+						(horizontalCurrentRow < 0) ||
+						(horizontalCurrentCol >= Driver.map.getColSize() - 1) ||
+						(horizontalCurrentCol < 0)) {
+					break;
 				} else {
 					// get next intersection coordinate
 					
-					System.out.println(horizontalDx);
+					System.out.println("horizontal Dx" + horizontalDx);
 					horizontalLastxCoordinate += horizontalDx;
-					horizontalLastyCoordinate += horizontalDy;
+					horizontalLastyCoordinate += horizontalDy; // TODO hmm errors are probably due to minus signs
 					System.out.println(horizontalLastxCoordinate);
 					System.out.println(horizontalLastyCoordinate);
 					// convert to grid details
@@ -514,17 +521,17 @@ public class Robot extends ImageView implements EventHandler<KeyEvent> {
 				}
 			}
 			
-			/* Do horizontal stuff... */
-			if (currentOrientation >= 180 && (currentOrientation <= 360 || currentOrientation == 0)) {
+			/* Do vertical stuff... */
+			if (rayAngle >= 180 && (rayAngle <= 360 || rayAngle == 0)) {
 				// ray is pointing left
-				verticalDx *= -1;
+				verticalDx = 0 - Math.abs(verticalDx);
 				// calculate distance to left wall.
 				xDistanceFromLeftWall = this.xCoordinate - colLeftWall;
 				// calculate corresponding horizontal distance
-				yDistanceToFirstIntersection = xDistanceFromLeftWall * 1.0 / Math.tan(this.getOrientation());
+				yDistanceToFirstIntersection = xDistanceFromLeftWall * 1.0 / Math.tan(Math.toRadians(rayAngle));
 				
-				if ((currentOrientation >= 270 && currentOrientation <= 360) ||
-						(currentOrientation >= 0 && currentOrientation <= 90)){
+				if ((rayAngle >= 270 && rayAngle <= 360) ||
+						(rayAngle >= 0 && rayAngle <= 90)){
 					// ray is pointing up
 						verticalPointB[0] = this.xCoordinate - xDistanceFromLeftWall;
 						verticalPointB[1] = this.yCoordinate - yDistanceToFirstIntersection;
@@ -540,10 +547,10 @@ public class Robot extends ImageView implements EventHandler<KeyEvent> {
 				// calculate to right wall
 				xDistanceFromLeftWall = this.xCoordinate - colLeftWall;
 				// calculate corresponding vertical distance
-				yDistanceToFirstIntersection = xDistanceFromLeftWall * 1.0 / Math.tan(this.getOrientation());
+				yDistanceToFirstIntersection = xDistanceFromLeftWall * 1.0 / Math.tan(Math.toRadians(rayAngle));
 				
-				if ((currentOrientation >= 270 && currentOrientation <= 360) ||
-						(currentOrientation >= 0 && currentOrientation <= 90)){
+				if ((rayAngle >= 270 && rayAngle <= 360) ||
+						(rayAngle >= 0 && rayAngle <= 90)){
 					// ray is pointing up
 						verticalPointB[0] = this.xCoordinate + (Driver.map.getBlockWidth() - xDistanceFromLeftWall);
 						verticalPointB[1] = this.yCoordinate - yDistanceToFirstIntersection;
@@ -577,7 +584,7 @@ public class Robot extends ImageView implements EventHandler<KeyEvent> {
 					verticalWallFound = true;
 					// calculate distance to wall
 					verticalDistanceToIntersection = Math.abs((this.yCoordinate - verticalLastyCoordinate) * 1.0 / 
-							Math.cos(this.getOrientation()));
+							Math.cos(Math.toRadians(rayAngle)));
 					// normalise by Beta
 					
 				} else {
