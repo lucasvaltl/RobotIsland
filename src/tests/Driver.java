@@ -228,7 +228,6 @@ public class Driver extends Application {
 		wallE.createAnimatedImages();
 		wallE.setFill(wallE.getAnimatedImage(1, 1));
 		wallE.setFocusTraversable(true);
-
 		wallE.setOnKeyPressed(wallE); // adds Event handler
 		wallE.setOnKeyReleased(wallE); // adds Event handler
 		root.getChildren().add(wallE);
