@@ -2,6 +2,7 @@ package tests;
 
 import map.Map;
 import readers.InvalidFormatException;
+import readers.NewFileReader;
 import readers.NewerFileReader;
 import robot.Robot;
 
@@ -92,9 +93,11 @@ public class Driver extends Application {
 	public static Label textangle;
 	public static Label labelinfo;
 	public static Label textinfo;
-	public static Button getfile;
+	public static Button getmovementfile;
+	public static Button gettimetrialfile;
 	public static boolean toggledevmode;
 	public static File movementFile;
+	public static File timeTrialFile;
 	public static Alert alert = new Alert(AlertType.WARNING);
 	public static boolean alerttriggered;
 	
@@ -232,46 +235,77 @@ public class Driver extends Application {
 		labelinfo = new Label("Info: ");
 		textinfo = new Label();
 		HBox hb6 = new HBox(labelinfo, textinfo);
-		getfile = new Button("Execute Movements from File");
+		getmovementfile = new Button("Execute Movements from File");
+		gettimetrialfile = new Button("Time trial");
 		
-			getfile.setOnAction(new EventHandler<ActionEvent>() {
-				@Override
-				public void handle(final ActionEvent e) {
-					// create filechooser
-					final FileChooser fileChooser = new FileChooser();
-					// only allow text files
-					fileChooser.getExtensionFilters().add(new ExtensionFilter("Text Files", "*.txt"));
-					movementFile = fileChooser.showOpenDialog(primaryStage);
-
-					if (movementFile != null) {
-						NewerFileReader nfr = null;
-						try {
-							// validate file, alert if invalid format or not
-							// found
-							nfr = new NewerFileReader();
-							nfr.scanFile(movementFile);
-							wallE.setInputComandsReadingInProgress(true);
-						} catch (InvalidFormatException ex) {
-							Driver.LOGGER.severe("WARNING: Invalid command in text file "+ e.toString());
-							alert.setTitle("Invalid Format Error");
-							alert.setHeaderText("Invalid format found in movement file!");
-							alert.setContentText(
-									"This app only accepts the following movements, each on a single line: moveUp, moveDown, moveLeft, moveRight as well as "
-											+ "moveUpLeft, moveUpRight, moveDownLeft, and moveDownRight.");
-							alert.showAndWait();
-						} catch (FileNotFoundException ex) {
-							Driver.LOGGER.severe("WARNING: File not found "+ e.toString());
-							alert.setTitle("File Not Found");
-							alert.setHeaderText("Unfortunately the file could not be found");
-							alert.setContentText(
-									"Please mke sure the file is stil where you it was when you selected it");
-							alert.showAndWait();
-						}
+		getmovementfile.setOnAction(new EventHandler<ActionEvent>() {
+			public void handle(final ActionEvent e) {
+				// create filechooser
+				final FileChooser fileChooser = new FileChooser();
+				// only allow text files
+				fileChooser.getExtensionFilters().add(new ExtensionFilter("Text Files", "*.txt"));
+				movementFile = fileChooser.showOpenDialog(primaryStage);
+	
+				if (movementFile != null) {
+					NewerFileReader nfr = null;
+					try {
+						// validate file, alert if invalid format or not
+						// found
+						nfr = new NewerFileReader();
+						nfr.scanFile(movementFile);
+						wallE.setInputCommandsReadingInProgress(true);
+					} catch (InvalidFormatException ex) {
+						Driver.LOGGER.severe("WARNING: Invalid command in text file "+ e.toString());
+						alert.setTitle("Invalid Format Error");
+						alert.setHeaderText("Invalid format found in movement file!");
+						alert.setContentText("This app only accepts the following movements, each on a single line: moveUp, moveDown, moveLeft, moveRight as well as "
+												+ "moveUpLeft, moveUpRight, moveDownLeft, and moveDownRight.");
+						alert.showAndWait();
+					} catch (FileNotFoundException ex) {
+						Driver.LOGGER.severe("WARNING: File not found "+ e.toString());
+						alert.setTitle("File Not Found");
+						alert.setHeaderText("Unfortunately the file could not be found");
+						alert.setContentText("Please mke sure the file is stil where you it was when you selected it");
+						alert.showAndWait();
 					}
-
 				}
-			});
-		devmode.getChildren().addAll(hb1, hb2, hb3, hb4, hb5, hb6, getfile);
+			}
+		});
+		gettimetrialfile.setOnAction(new EventHandler<ActionEvent>() {
+			public void handle(final ActionEvent e) {
+				// create filechooser
+				final FileChooser fileChooser = new FileChooser();
+				// only allow text files
+				fileChooser.getExtensionFilters().add(new ExtensionFilter("Text Files", "*.txt"));
+				timeTrialFile = fileChooser.showOpenDialog(primaryStage);
+	
+				if (timeTrialFile != null) {
+					NewFileReader nfr = null;
+					try {
+						// validate file, alert if invalid format or not
+						// found
+						nfr = new NewFileReader();
+						nfr.scanFile(timeTrialFile);
+						wallE.setTimeTrialInputInProgress(true);
+					} catch (InvalidFormatException ex) {
+						Driver.LOGGER.severe("WARNING: Invalid command in text file "+ e.toString());
+						alert.setTitle("Invalid Format Error");
+						alert.setHeaderText("Invalid format found in movement file!");
+						alert.setContentText("This app only accepts the following movements, each on a single line: moveUp, moveDown, moveLeft, moveRight as well as "
+												+ "moveUpLeft, moveUpRight, moveDownLeft, and moveDownRight.");
+						alert.showAndWait();
+					} catch (FileNotFoundException ex) {
+						Driver.LOGGER.severe("WARNING: File not found "+ e.toString());
+						alert.setTitle("File Not Found");
+						alert.setHeaderText("Unfortunately the file could not be found");
+						alert.setContentText("Please mke sure the file is stil where you it was when you selected it");
+						alert.showAndWait();
+					}
+				}
+			}
+		});
+		
+		devmode.getChildren().addAll(hb1, hb2, hb3, hb4, hb5, hb6, getmovementfile, gettimetrialfile);
 		devmode.setMaxSize(150,200);
 		devmode.setStyle("-fx-background-color: BBBBBB;");
 		

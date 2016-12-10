@@ -23,7 +23,6 @@ public class Movement {
 	 */
 	public static double[] moveDown(double[] wallEcomponents) {
 		Driver.LOGGER.info("moveDown");
-		Driver.LOGGER.log(CustomLevel.INSTRUCTION, "moveDown");
 		
 		//cancel movement if battery is empty
 				if(Driver.wallE.getBatteryLeft()<=0){
@@ -55,8 +54,7 @@ public class Movement {
 	 */
 	public static double[] moveUp(double[] wallEcomponents) {
         Driver.LOGGER.info("moveUp");
-        Driver.LOGGER.log(CustomLevel.INSTRUCTION, "moveUp");
-		
+        
 		//cancel movement if battery is empty
 				if(Driver.wallE.getBatteryLeft()<=0){
 	
@@ -87,8 +85,7 @@ public class Movement {
 	 */
 	public static double[] moveDownLeft(double[] wallEcomponents) {
 		Driver.LOGGER.info("moveDownLeft");
-		Driver.LOGGER.log(CustomLevel.INSTRUCTION, "moveDownLeft");
-
+		
 		//cancel movement if battery is empty
 				if(Driver.wallE.getBatteryLeft()<=0){
 
@@ -129,8 +126,7 @@ public class Movement {
 	 */
 	public static double[] moveDownRight(double[] wallEcomponents) {
 		Driver.LOGGER.info("moveDownRight");
-		Driver.LOGGER.log(CustomLevel.INSTRUCTION, "moveDownRight");
-
+		
 		//cancel movement if battery is empty
 				if(Driver.wallE.getBatteryLeft()<=0){
 
@@ -172,8 +168,7 @@ public class Movement {
 	 */
 	public static double[] moveUpLeft(double[] wallEcomponents) {
 		Driver.LOGGER.info("moveUpLeft");
-		Driver.LOGGER.log(CustomLevel.INSTRUCTION, "moveUpLeft");
-
+		
 		//cancel movement if battery is empty
 				if(Driver.wallE.getBatteryLeft()<=0){
 
@@ -214,7 +209,7 @@ public class Movement {
 	 */
 	public static double[] moveUpRight(double[] wallEcomponents) {
 		Driver.LOGGER.info("moveUpRight");
-		Driver.LOGGER.log(CustomLevel.INSTRUCTION, "moveUpRight");
+		
 		//cancel movement if battery is empty
 				if(Driver.wallE.getBatteryLeft()<=0){
 
@@ -251,7 +246,7 @@ public class Movement {
 	 */
 	public static double[] moveLeft() {
 		Driver.LOGGER.info("moveLeft");
-		Driver.LOGGER.log(CustomLevel.INSTRUCTION, "moveLeft");
+		
 		//cancel movement if battery is empty
 		if(Driver.wallE.getBatteryLeft()<=0){
 
@@ -285,8 +280,7 @@ public class Movement {
 	 */
 	public static double[] moveRight() {
 		Driver.LOGGER.info("moveRight");
-		Driver.LOGGER.log(CustomLevel.INSTRUCTION, "moveRight");
-
+		
 		//cancel movement if battery is empty
 		if(Driver.wallE.getBatteryLeft()<=0){
 
@@ -323,7 +317,6 @@ public class Movement {
 	 */
 	public static void decelerate(double[] wallEcomponents) {
 		Driver.LOGGER.info("decelerate");
-		Driver.LOGGER.log(CustomLevel.INSTRUCTION, "decelerate");
 		
 		// Decelerate
 		double speed = Driver.wallE.getSpeed() - Driver.wallE.getAcceleration();

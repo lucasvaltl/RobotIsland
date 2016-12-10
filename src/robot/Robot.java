@@ -55,8 +55,11 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	private String lastMovement = "";
 	private boolean decelerate = false;
 	private ArrayList<String> inputCommands = null;
+	private ArrayList<String> timeTrialInputCommands = null;
 	private int inputCommandsIndex = 0;
+	private int timeTrialInputCommandsIndex = 0;
 	private boolean inputCommandsReadingInProgress = false;
+	private boolean timeTrialInputInProgress = false;
 	private double[] wheelspeeds = { 0, 0 };
 	private Image skin;
 	private ImagePattern[][] animimages;
@@ -308,6 +311,10 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		return this.distancetravelled;
 	}
 
+	public boolean getTimeTrialInputInProgress() {
+		return this.timeTrialInputInProgress;
+	}
+	
 	/**
 	 * Description: Sets the robot's x position to a given value and calls the
 	 * parent .setX() method.
@@ -479,8 +486,12 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		this.collisionDetected = b;
 	}
 	
-	public void setInputComandsReadingInProgress(boolean value) {
+	public void setInputCommandsReadingInProgress(boolean value) {
 		this.inputCommandsReadingInProgress = value;
+	}
+	
+	public void setTimeTrialInputInProgress(boolean value) {
+		this.timeTrialInputInProgress = value;
 	}
 
 	/**
@@ -1094,79 +1105,57 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 *            The current index to add to currentKeyPresses (must be between
 	 *            0 (inclusive) and the length of the ArrayList (exclusive).
 	 */
-	public void singleMoveViaFile(String path) {
-		if (this.inputCommands == null) {
+	public void timeTrialSingleMoveViaFile(File file) {
+		if (this.timeTrialInputCommands == null) {
 			// No commands in file, load them up.
-			this.inputCommands = new ArrayList<String>();
-			this.inputCommandsReadingInProgress = true;
+			this.timeTrialInputCommands = new ArrayList<String>();
+			this.timeTrialInputInProgress= true;
 			NewFileReader nfr = null;
 			try {
 				nfr = new NewFileReader();
-				this.inputCommands = nfr.scanFile(path);
-				System.out.println(this.inputCommands);
-				System.out.println(this.inputCommandsReadingInProgress);
-			} catch (Exception e) {
+				this.timeTrialInputCommands = nfr.scanFile(file);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (InvalidFormatException e) {
 				e.printStackTrace();
 			}
-			return;
-		}
-
-		if (this.inputCommandsReadingInProgress == true) {
-			switch (this.inputCommands.get(this.inputCommandsIndex)) {
-			case "[UP, null]":
-				// robot.fireEvent(keyevent);
-
-				 this.currentKeyPresses[0] = "UP";
-				 this.currentKeyPresses[1] = null;
-				break;
-			case "[UP, LEFT]":
-				this.currentKeyPresses[0] = "UP";
-				this.currentKeyPresses[1] = "LEFT";
-				break;
-			case "[UP, RIGHT]":
-				this.currentKeyPresses[0] = "UP";
-				this.currentKeyPresses[1] = "RIGHT";
-				break;
-			case "[DOWN, null]":
-			
-				 this.currentKeyPresses[0] = "DOWN";
-				 this.currentKeyPresses[1] = null;
-				break;
-			case "[DOWN, LEFT]":
-				this.currentKeyPresses[0] = "DOWN";
-				this.currentKeyPresses[1] = "LEFT";
-				break;
-			case "[DOWN, RIGHT]":
-				this.currentKeyPresses[0] = "DOWN";
-				this.currentKeyPresses[1] = "RIGHT";
-				break;
-			case "[null, LEFT]":
-
-				 this.currentKeyPresses[0] = null;
-				 this.currentKeyPresses[1] = "LEFT";
-				break;
-			case "[null, RIGHT]":
-				 this.currentKeyPresses[0] = null;
-				 this.currentKeyPresses[1] = "RIGHT";
-				break;
-			case "[null, null]":
-				this.currentKeyPresses[0] = null;
-				this.currentKeyPresses[1] = null;
-				break;
-			default:
-				System.out.println("INVALID");
+			finally {
+				// do nothing
 			}
+		}
+		
+		if (this.timeTrialInputInProgress == true) {
+		
+			String robotInfo = (this.timeTrialInputCommands.get(this.timeTrialInputCommandsIndex).toString());
+			
+			// Split string by whitespace
+			String xPos = robotInfo.split("\\s+")[0];
+			xPos = xPos.substring(1, xPos.length() - 1);
+			String yPos = robotInfo.split("\\s+")[1];
+			yPos = yPos.substring(0, yPos.length() - 1);
+			String orientation = robotInfo.split("\\s+")[2];
+			orientation = orientation.substring(0, orientation.length() - 1);
+			String speed = robotInfo.split("\\s+")[3];
+			speed = speed.substring(0, speed.length() - 1);
+			String battery = robotInfo.split("\\s+")[4];
+			battery = battery.substring(0, battery.length() - 1);
+			
+			this.setxCoordinate(Double.parseDouble(xPos));
+			this.setyCoordinate(Double.parseDouble(yPos));
+			this.setRotate(Double.parseDouble(orientation));
+			this.setSpeed(Double.parseDouble(speed));
+			this.setBatteryLeft(Double.parseDouble(battery));
 		}
 
 		// get the inputCommands arrayList size
-		if (this.inputCommandsIndex >= this.inputCommands.size() - 1) {
+		if (this.timeTrialInputCommandsIndex >= this.timeTrialInputCommands.size() - 1) {
 			// Cause deceleration
-			this.inputCommandsReadingInProgress = false;
+			this.timeTrialInputInProgress = false;
 			this.currentKeyPresses[0] = null;
 			this.currentKeyPresses[1] = null;
 		} else {
-			this.inputCommandsIndex++;
-		}
+			this.timeTrialInputCommandsIndex++;
+		}	
 	}
 	
 	public void anotherSingleMoveViaFile(File file, double[] wallEcomponents) {
@@ -1303,25 +1292,29 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 
 		final double wallEorientation = this.getOrientation();
 
-		final double[] wallEcomponents = this.getOrientationComponents(wallEorientation);
+		double[] wallEcomponents = this.getOrientationComponents(wallEorientation);
 
 		this.setWheelspeeds(0, 0);
 		
 		detectCollision(this, wallEcomponents);
 		
 		// read commands from file
-				if (Driver.wallE.getInputCommandsReadingInProgress() == true) {
-					
-					// Request a new move
-					Driver.wallE.anotherSingleMoveViaFile(Driver.movementFile, wallEcomponents);
-				}else{
-		this.move(wallEcomponents);}
-	this.animate(wallEcomponents);
-		this.consumeBattery(this.getWheelspeeds());
-		this.checkForCharging();
-		if(Driver.toggledevmode)
-		this.updateDevPanel();
-		this.updateDistance();
+		if (Driver.wallE.getInputCommandsReadingInProgress() == true) {
+			// Request a new move
+			Driver.wallE.anotherSingleMoveViaFile(Driver.movementFile, wallEcomponents);
+			
+		} else if (Driver.wallE.getTimeTrialInputInProgress() == true) {
+			Driver.wallE.timeTrialSingleMoveViaFile(Driver.timeTrialFile);
+		}
+		else {
+			this.move(wallEcomponents);}
+			this.animate(wallEcomponents);
+			this.consumeBattery(this.getWheelspeeds());
+			this.checkForCharging();
+			
+			if(Driver.toggledevmode)
+				this.updateDevPanel();
+			
+			this.updateDistance();
+		}
 	}
-
-}

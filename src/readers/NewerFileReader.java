@@ -35,6 +35,8 @@ public class NewerFileReader {
 			while (scanner.hasNext()) {
 				input.add(scanner.nextLine());
 			}
+			
+			// Validate format
 			for (int i = 0; i < input.size(); i++) {
 				
 				switch (input.get(i)) {
