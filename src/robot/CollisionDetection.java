@@ -7,6 +7,7 @@ import gametimer.GameTimer;
 import javafx.geometry.Bounds;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.media.AudioClip;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
@@ -22,7 +23,6 @@ import tests.Driver;
 
 public class CollisionDetection {
 
-	
 	/**
 	 * Description: this function detects if a rectangle (here a robot) is colliding
 	 * with another rectangle stored in an ArrayList of rectangles
@@ -72,6 +72,15 @@ public class CollisionDetection {
 			if(robot.getBoundsInParent().intersects(staticblock.getBoundsInParent())){
 				//prorprietary seperating axis theorem based collision detection for narrow phase detection
 			if (staticblock.isColliding(robot)) {
+				
+				// Play soundFX
+				if (Driver.collisionSound.isPlaying() == true) {
+					Driver.collisionSound.stop();
+				} 
+				if (Driver.collisionSound.isPlaying() == false) {
+					Driver.collisionSound.play(0.4);
+				}
+				
 				
 				return true; // collision
 			}

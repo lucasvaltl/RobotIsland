@@ -26,6 +26,7 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.TilePane;
+import javafx.scene.media.AudioClip;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.stage.Stage;
@@ -45,6 +46,12 @@ public class Driver extends Application {
 	 * map instance and rendering them, responding to various action events.
 	 */
 
+	public static final AudioClip soundtrack = new AudioClip(new File("src/wav/chibininja.wav").toURI().toString());
+	public static final AudioClip collisionSound = new AudioClip(new File("src/wav/collision.wav").toURI().toString());
+	public static final AudioClip rechargeSound = new AudioClip(new File("src/wav/recharge.wav").toURI().toString());
+	public static final AudioClip batteryDeadSound = new AudioClip(new File("src/wav/batterydead.wav").toURI().toString());
+	public static final AudioClip batteryLowSound = new AudioClip(new File("src/wav/batterylow.wav").toURI().toString());
+	
 	public static final int SCREENWIDTH = 800;
 	public static final int SCREENHEIGHT = 800;
 	// raycasting variables

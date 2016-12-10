@@ -634,6 +634,11 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 				this.setMaxSpeed(1);
 				if(Driver.toggledevmode){
 					Driver.textinfo.setText("Battery less than 10%!!!");
+					
+					if (Driver.batteryLowSound.isPlaying() == false) {
+						Driver.batteryLowSound.play(0.4);
+					}
+					
 				}
 			}
 		}//decrease charge if robot is turning around its own axis (wheelspeeds unequal) but not moving forward
@@ -648,6 +653,10 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 				this.setMaxSpeed(1);
 				if(Driver.toggledevmode){
 					Driver.textinfo.setText("Battery less than 10%!!!");
+				
+					if (Driver.batteryLowSound.isPlaying() == false) {
+						Driver.batteryLowSound.play();
+					}
 				}
 			}
 		}
@@ -655,6 +664,14 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		if (this.getBatteryLeft() < 0) {
 			this.setMaxSpeed(0);
 			this.setBatteryLeft(0);
+			
+			if (Driver.batteryLowSound.isPlaying() == true) {
+				Driver.batteryLowSound.stop();
+			}
+			if (Driver.batteryDeadSound.isPlaying() == false) {
+				Driver.batteryDeadSound.play();
+			}
+			
 		}
 
 	}
@@ -687,13 +704,20 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	public void increaseCharge(double decrementValue){
 	
 		if(this.getBatteryLeft() < this.getBatteryCapacity()){
-		this.batteryLeft += decrementValue;
+			this.batteryLeft += decrementValue;
 		}
 		//avoids overcharging
 		else if (this.getBatteryLeft() > this.getBatteryCapacity()){
-		this.batteryLeft = this.getBatteryCapacity();
-		if(Driver.toggledevmode){
-			Driver.textinfo.setText("Recharged!");
+			this.batteryLeft = this.getBatteryCapacity();
+			if(Driver.toggledevmode){
+				Driver.textinfo.setText("Recharged!");
+			
+				if (Driver.batteryLowSound.isPlaying() == true) {
+					Driver.batteryLowSound.stop();
+				}
+				if (Driver.batteryDeadSound.isPlaying() == false) {
+					Driver.batteryDeadSound.play();
+				}
 			}
 		}
 		this.setMaxSpeed(this.globalMaxSpeed);
