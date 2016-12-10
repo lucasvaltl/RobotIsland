@@ -79,6 +79,7 @@ public class Driver extends Application {
 	public static Map map;
 	public static Robot wallE;
 	public static Group root;
+	public static TilePane lapTimes;
 	public static TilePane devmode;
 	public static Label labelx;
 	public static Label textx;
@@ -93,6 +94,12 @@ public class Driver extends Application {
 	public static Label labelinfo;
 	public static Label textinfo;
 	public static Button getfile;
+	public static Label time;
+	public static Label timeLabel;
+	public static Label lastLapTimeLabel;
+	public static Label lastLapTime;
+	public static Label highscoreLabel;
+	public static Label highscore;
 	public static boolean toggledevmode;
 	public static File movementFile;
 	public static Alert alert = new Alert(AlertType.WARNING);
@@ -179,14 +186,13 @@ public class Driver extends Application {
 		stack = new StackPane();
 
 		// pane used for background
-//		Group background = new Group();
-//		Image looks = new Image(new File("src/background.png").toURI().toString(), SCREENWIDTH, SCREENHEIGHT, false,
-//				true);
-//		ImageView pattern = new ImageView(looks);
-//
-//		background.getChildren().addAll(pattern);
-//		stack.getChildren().add(background);
-//		
+		Group background = new Group();
+		Image looks = new Image(new File("src/background.png").toURI().toString(), SCREENWIDTH, SCREENHEIGHT, false,
+				true);
+		ImageView pattern = new ImageView(looks);
+
+		background.getChildren().addAll(pattern);
+		stack.getChildren().add(background);
 
 		// pane used for game itself
 		root = new Group();
@@ -197,6 +203,24 @@ public class Driver extends Application {
 		map.render2DMap(gc, true);
 		root.getChildren().add(canvas);
 		
+		//pane for displaying lap times
+		lapTimes = new TilePane();
+		timeLabel = new Label("Current Time: ");
+		time = new Label("0 s");	
+		HBox hb7 = new HBox(timeLabel, time);
+		lastLapTimeLabel = new Label("Current Time: ");
+		lastLapTime = new Label("0 s");	
+		HBox hb8 = new HBox(lastLapTimeLabel, lastLapTime);
+		highscoreLabel = new Label("Highscore: ");
+		highscore = new Label("0 s");
+		HBox hb9 = new HBox(highscoreLabel, highscore);
+		lapTimes.getChildren().addAll(hb7, hb8, hb9);
+		lapTimes.setMaxHeight(100);
+		lapTimes.setMaxWidth(70);
+	
+		root.getChildren().add(lapTimes);
+		lapTimes.setLayoutX(600);
+		lapTimes.setLayoutY(20);
 	
 
 		// creates a "fast" robot from an xml file
@@ -210,6 +234,7 @@ public class Driver extends Application {
 		root.getChildren().add(wallE);
 		stack.getChildren().add(root);
 		
+		//toggle to enable dev mode
 		toggledevmode = true;
 		//pane used for devmode
 		if(toggledevmode){
@@ -280,6 +305,8 @@ public class Driver extends Application {
 		devmode.setLayoutX(400);
 		devmode.setLayoutY(580);
 		}
+		
+		
 		primaryStage.setScene(new Scene(stack));
 		primaryStage.show();
 		
