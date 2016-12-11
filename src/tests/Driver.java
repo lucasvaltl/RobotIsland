@@ -86,6 +86,7 @@ public class Driver extends Application {
 	public static Group root;
 	public static TilePane lapTimes;
 	public static TilePane devmode;
+	public static StackPane splashscreen;
 	public static Label labelx;
 	public static Label textx;
 	public static Label labely;
@@ -109,6 +110,7 @@ public class Driver extends Application {
 	public static File movementFile;
 	public static Alert alert = new Alert(AlertType.WARNING);
 	public static boolean alerttriggered;
+	public static boolean gameInProgress = false;
 	
 	// custom logging stuff - outputs to different files based on level
 	public static Logger LOGGER = Logger.getLogger(Driver.class.getName());
@@ -314,6 +316,16 @@ public class Driver extends Application {
 		
 		devmode.setLayoutX(400);
 		devmode.setLayoutY(580);
+		}
+		
+		if (this.gameInProgress == false) {
+			splashscreen = new StackPane();
+			Image splashImage = new Image(new File("src/img/tempsplash.png").toURI().toString());
+			ImageView splashView = new ImageView(splashImage);
+			splashscreen.getChildren().add(splashView);
+			root.getChildren().add(splashscreen);
+			splashscreen.setLayoutX(0);
+			splashscreen.setLayoutY(0);
 		}
 		
 		

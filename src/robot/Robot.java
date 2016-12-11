@@ -740,6 +740,10 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			if (Driver.batteryDeadSound.isPlaying() == false) {
 				Driver.batteryDeadSound.play();
 			}
+			
+			Driver.gameInProgress = false;
+			Driver.splashscreen.setVisible(true);
+			this.stopTime = 0; // stops timer being updated
 
 		}
 
@@ -853,7 +857,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 * 
 	 */
 	public void timeLap() {
-
+		
 		this.stopTime = System.currentTimeMillis();
 		this.lastLapTime = (this.stopTime - this.startTime) / 1000.0;
 		if(lapInProgress){
@@ -876,7 +880,8 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		}
 		this.startTime = System.currentTimeMillis();
 		this.lapInProgress = true;
-
+		Driver.gameInProgress = true;
+		Driver.splashscreen.setVisible(false);
 	}
 
 	/**
