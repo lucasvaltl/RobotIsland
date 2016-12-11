@@ -608,6 +608,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		
 		// high score animation
 				if (this.newHighScore) {
+					
 					if (this.timeSinceHighScore == 100) {
 						this.newHighScore = false;
 						this.timeSinceHighScore = 0;
@@ -784,8 +785,8 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 				if (Driver.batteryLowSound.isPlaying() == true) {
 					Driver.batteryLowSound.stop();
 				}
-				if (Driver.batteryDeadSound.isPlaying() == false) {
-					Driver.batteryDeadSound.play();
+				if (Driver.batteryFullSound.isPlaying() == false) {
+					Driver.batteryFullSound.play();
 				}
 			}
 		}
@@ -862,6 +863,16 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			Driver.highscore.setText(df.format(this.highscore) + " s");
 			saveHighScore();
 			newHighScore = true;
+		
+			// play highscore soundFX
+			if (Driver.highscoreSound.isPlaying() == false) {
+				Driver.highscoreSound.play();
+			}
+		} else {
+			// No new highscore - play normal sound
+			if (Driver.finishLine.isPlaying() == false) {
+				Driver.finishLine.play();
+			}
 		}
 		this.startTime = System.currentTimeMillis();
 		this.lapInProgress = true;

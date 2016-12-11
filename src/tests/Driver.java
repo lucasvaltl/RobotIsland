@@ -57,11 +57,15 @@ public class Driver extends Application {
 	 * map instance and rendering them, responding to various action events.
 	 */
 
+	// Load audio
 	public static final AudioClip soundtrack = new AudioClip(new File("src/wav/chibininja.wav").toURI().toString());
 	public static final AudioClip collisionSound = new AudioClip(new File("src/wav/collision.wav").toURI().toString());
 	public static final AudioClip rechargeSound = new AudioClip(new File("src/wav/recharge.wav").toURI().toString());
 	public static final AudioClip batteryDeadSound = new AudioClip(new File("src/wav/batterydead.wav").toURI().toString());
 	public static final AudioClip batteryLowSound = new AudioClip(new File("src/wav/batterylow.wav").toURI().toString());
+	public static final AudioClip highscoreSound = new AudioClip(new File("src/wav/highscore.wav").toURI().toString());
+	public static final AudioClip batteryFullSound = new AudioClip(new File("src/wav/fullrecharge.wav").toURI().toString());
+	public static final AudioClip finishLine = new AudioClip(new File("src/wav/finishline.wav").toURI().toString());
 	
 	public static final int SCREENWIDTH = 800;
 	public static final int SCREENHEIGHT = 800;
