@@ -38,7 +38,7 @@ public class Robot extends ImageView implements EventHandler<KeyEvent> {
 	private double axleLength;
 	private double wheelRadius;
 	private Image looks;
-	private int[] PROJECTIONPLANESIZE = {320, 200};
+	private int[] PROJECTIONPLANESIZE = {160, 100};
 	private double height = 32;
 	private int FOVsize = 60;
 	private int[] PROJECTIONPLANECENTRE = {this.PROJECTIONPLANESIZE[0] / 2, 
