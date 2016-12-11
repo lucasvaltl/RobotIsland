@@ -739,8 +739,8 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			if (Driver.batteryDeadSound.isPlaying() == false) {
 				Driver.batteryDeadSound.play();
 			}
-			
 			this.gameOver();
+			this.reset(Driver.robotType);
 		}
 
 	}
@@ -750,11 +750,8 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 * 
 	 */
 	public void gameOver(){
-		Driver.gameInProgress = false;
 		Driver.gameOverScreen.setVisible(true);
-		this.notCheating = true;
-		this.reset(Driver.robotType);
-		this.lapInProgress = false;
+
 	}
 	
 	/**
@@ -764,6 +761,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 * @param robottype: type of robot you want to load (type found in xml)
 	 */
 	public void reset(String robottype) {
+		//reload robot from xml
 		XMLReader xmlr = new XMLReader();
 		ArrayList<String> input = xmlr.read(robottype, "src/robots.xml");
 		this.name = input.get(0);
@@ -782,9 +780,11 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		this.setWidth(this.axleLength);
 		this.wheelRadius = Double.valueOf(input.get(11));
 		this.setHeight(this.wheelRadius);
-		this.loadHighScore();
 		this.setRotate(0);
-		
+		//reset lap 
+		Driver.gameInProgress = false;
+		this.notCheating = true;
+		this.lapInProgress = false;
 	}
 
 	/**

@@ -238,14 +238,6 @@ public class Driver extends Application {
 		lapTimes.setLayoutY(38);
 		
 		PerspectiveTransform pt = new PerspectiveTransform();
-//		pt.setUlx(520.0f);
-//		pt.setUly(40.0f);
-//		pt.setUrx(590.0f);
-//		pt.setUry(40.0f);
-//		pt.setLrx(500.0f);
-//		pt.setLry(140.0f);
-//		pt.setLlx(570.0f);
-//		pt.setLly(140.0f);
 		pt.setUlx(35.0);
 		 pt.setUly(0.0);
 		 pt.setUrx(215.0);
