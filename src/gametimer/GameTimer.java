@@ -25,7 +25,7 @@ public class GameTimer extends AnimationTimer {
 		final double[] wallEcomponents = Driver.wallE.getOrientationComponents(wallEorientation);
 
 		Driver.wallE.render(Driver.gc); // TODO adds the red circle
-		Driver.wallE.castRays();
+		Driver.wallE.castRaysAgain();
 		
 		//changes the robots color back to blue after a set amount of time
 //		if (Driver.wallE.getFill().equals(Color.RED)) {
