@@ -153,14 +153,14 @@ public class Map {
 		
 		for (int i=1; i < 3;i++){
 			Entity block = new Entity((i*XBLOCKSIZE),(3*YBLOCKSIZE), XBLOCKSIZE, 5);
-			block.setFill(Color.GREEN);
+			block.setFill(Color.TRANSPARENT);
 			finishLine.add(block);
 		}
 		Driver.root.getChildren().addAll(finishLine);	
 		
 		for (int i=13; i < 15;i++){
 			Entity block = new Entity((i*XBLOCKSIZE),(7*YBLOCKSIZE), XBLOCKSIZE, 5);
-			block.setFill(Color.GREEN);
+			block.setFill(Color.TRANSPARENT);
 			antiCheatLine.add(block);
 		}
 		Driver.root.getChildren().addAll(antiCheatLine);

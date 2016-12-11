@@ -37,6 +37,7 @@ import javafx.scene.layout.TilePane;
 import javafx.scene.media.AudioClip;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
+import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
@@ -178,7 +179,7 @@ public class Driver extends Application {
 		
 		
 		/** Start method for JavaFX. Draws the robot and maps. **/
-		primaryStage.setTitle("Robot test");
+		primaryStage.setTitle("Robot Island");
 
 		Canvas canvas = new Canvas(SCREENWIDTH, SCREENHEIGHT);
 		GraphicsContext gc = canvas.getGraphicsContext2D();
@@ -205,22 +206,28 @@ public class Driver extends Application {
 		
 		//pane for displaying lap times
 		lapTimes = new TilePane();
-		timeLabel = new Label("Current Time: ");
-		time = new Label("0 s");	
+		timeLabel = new Label("Current Lap: ");
+		timeLabel.setStyle("-fx-font-size: 20;");
+		time = new Label("0 s");
+		time.setStyle("-fx-font-size: 20;");
 		HBox hb7 = new HBox(timeLabel, time);
-		lastLapTimeLabel = new Label("Current Time: ");
+		lastLapTimeLabel = new Label("Last Lap: ");
+		lastLapTimeLabel.setStyle("-fx-font-size: 15;");
 		lastLapTime = new Label("0 s");	
+		lastLapTime.setStyle("-fx-font-size: 15;");
 		HBox hb8 = new HBox(lastLapTimeLabel, lastLapTime);
 		highscoreLabel = new Label("Highscore: ");
+		highscoreLabel.setStyle("-fx-font-size: 15;");
 		highscore = new Label("0 s");
+		highscore.setStyle("-fx-font-size: 15;");
 		HBox hb9 = new HBox(highscoreLabel, highscore);
 		lapTimes.getChildren().addAll(hb7, hb8, hb9);
 		lapTimes.setMaxHeight(100);
 		lapTimes.setMaxWidth(70);
-	
+		lapTimes.setStyle("-fx-font-family: \"Monaco\";");
 		root.getChildren().add(lapTimes);
-		lapTimes.setLayoutX(600);
-		lapTimes.setLayoutY(20);
+		lapTimes.setLayoutX(500);
+		lapTimes.setLayoutY(50);
 	
 
 		// creates a "fast" robot from an xml file
@@ -297,7 +304,7 @@ public class Driver extends Application {
 			});
 		devmode.getChildren().addAll(hb1, hb2, hb3, hb4, hb5, hb6, getfile);
 		devmode.setMaxSize(150,200);
-		devmode.setStyle("-fx-background-color: BBBBBB;");
+		devmode.setStyle("-fx-background-color: BBBBBB; -fx-font-family: \"Monaco\";");
 		
 		root.getChildren().add(devmode);
 		

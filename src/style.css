@@ -1,0 +1,10 @@
+
+/* \
+    Document   : controlStyle1\
+*/\
+
+.root\{
+    -fx-font-size: 12pt;
+    -fx-font-family: "Monaco";
+    -fx-background: #bbbbbb;
+}
