@@ -20,6 +20,7 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.effect.PerspectiveTransform;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -86,6 +87,8 @@ public class Driver extends Application {
 	public static Group root;
 	public static TilePane lapTimes;
 	public static TilePane devmode;
+	public static StackPane splashscreen;
+	public static StackPane gameOverScreen;
 	public static Label labelx;
 	public static Label textx;
 	public static Label labely;
@@ -109,6 +112,8 @@ public class Driver extends Application {
 	public static File movementFile;
 	public static Alert alert = new Alert(AlertType.WARNING);
 	public static boolean alerttriggered;
+	public static boolean gameInProgress = false;
+	public static String robotType;
 	
 	// custom logging stuff - outputs to different files based on level
 	public static Logger LOGGER = Logger.getLogger(Driver.class.getName());
@@ -192,7 +197,7 @@ public class Driver extends Application {
 
 		// pane used for background
 		Group background = new Group();
-		Image looks = new Image(new File("src/background.png").toURI().toString(), SCREENWIDTH, SCREENHEIGHT, false,
+		Image looks = new Image(new File("src/img/background.png").toURI().toString(), SCREENWIDTH, SCREENHEIGHT, false,
 				true);
 		ImageView pattern = new ImageView(looks);
 
@@ -229,13 +234,36 @@ public class Driver extends Application {
 		lapTimes.setMaxHeight(100);
 		lapTimes.setMaxWidth(70);
 		lapTimes.setStyle("-fx-font-family: \"Monaco\";");
-		root.getChildren().add(lapTimes);
 		lapTimes.setLayoutX(500);
-		lapTimes.setLayoutY(50);
+		lapTimes.setLayoutY(38);
+		
+		PerspectiveTransform pt = new PerspectiveTransform();
+//		pt.setUlx(520.0f);
+//		pt.setUly(40.0f);
+//		pt.setUrx(590.0f);
+//		pt.setUry(40.0f);
+//		pt.setLrx(500.0f);
+//		pt.setLry(140.0f);
+//		pt.setLlx(570.0f);
+//		pt.setLly(140.0f);
+		pt.setUlx(35.0);
+		 pt.setUly(0.0);
+		 pt.setUrx(215.0);
+		 pt.setUry(0.0);
+		 pt.setLrx(180.0);
+		 pt.setLry(70.0);
+		 pt.setLlx(0.0);
+		 pt.setLly(70.0);
+		lapTimes.setEffect(pt);
+		lapTimes.setCache(true);
+		
+		root.getChildren().add(lapTimes);
+		
 	
 
 		// creates a "fast" robot from an xml file
-		wallE = new Robot("fast");
+		robotType = "fast";
+		wallE = new Robot(robotType);
 		wallE.createAnimatedImages();
 		wallE.setFill(wallE.getAnimatedImage(1, 1));
 		wallE.setFocusTraversable(true);
@@ -315,6 +343,31 @@ public class Driver extends Application {
 		devmode.setLayoutX(400);
 		devmode.setLayoutY(580);
 		}
+		
+		//create splash screen
+		if (Driver.gameInProgress == false) {
+			splashscreen = new StackPane();
+			Image splashImage = new Image(new File("src/img/splash.png").toURI().toString());
+			ImageView splashView = new ImageView(splashImage);
+			splashView.setFitHeight(SCREENHEIGHT);
+			splashView.setFitWidth(SCREENWIDTH);
+			splashscreen.getChildren().add(splashView);
+			root.getChildren().add(splashscreen);
+			splashscreen.setLayoutX(0);
+			splashscreen.setLayoutY(0);
+		}
+		
+		//create gameover screen
+		gameOverScreen = new StackPane();
+		Image gameOverImage = new Image(new File("src/img/gameover.png").toURI().toString());
+		ImageView gameOverView = new ImageView(gameOverImage);
+		gameOverView.setFitHeight(SCREENHEIGHT);
+		gameOverView.setFitWidth(SCREENWIDTH);
+		gameOverScreen.getChildren().add(gameOverView);
+		root.getChildren().add(gameOverScreen);
+		gameOverScreen.setLayoutX(0);
+		gameOverScreen.setLayoutY(0);
+		gameOverScreen.setVisible(false);
 		
 		
 		primaryStage.setScene(new Scene(stack));

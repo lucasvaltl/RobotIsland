@@ -51,7 +51,18 @@ public class GameTimer extends AnimationTimer {
 		
 		double t = (now - Driver.startnanotime) / 1000000000.0;	
 		
+		/*
+		 * catch index out of bounds exeption that can occur when 
+		 * the collision detection malfunctions 
+		 * (usually never happens, but this is just a safety net)
+		*/
+		try{
 		Driver.wallE.update();;
-
+		}catch (IndexOutOfBoundsException e){
+			Driver.LOGGER.severe("Collision detection malfunctioned, "
+					+ "Robot made it out of the racetrack");
+			Driver.wallE.reset(Driver.robotType);
+		}
+		
 	}
 }

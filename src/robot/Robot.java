@@ -619,7 +619,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 						}
 						this.setFill(this.getAnimatedImage(4, highScoreToggle));
 						this.timeSinceHighScore++;
-						System.out.println(timeSinceHighScore);
 						// used to break out of method
 						return false;
 					}
@@ -740,9 +739,52 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			if (Driver.batteryDeadSound.isPlaying() == false) {
 				Driver.batteryDeadSound.play();
 			}
-
+			
+			this.gameOver();
 		}
 
+	}
+	
+	/**
+	 * Description: Resets lap and rsets robot to initial state.
+	 * 
+	 */
+	public void gameOver(){
+		Driver.gameInProgress = false;
+		Driver.gameOverScreen.setVisible(true);
+		this.notCheating = true;
+		this.reset(Driver.robotType);
+		this.lapInProgress = false;
+	}
+	
+	/**
+	 * Description: Resets the robot ot its initial position using an 
+	 * xml file to load the different specifications of the robot.
+	 * 
+	 * @param robottype: type of robot you want to load (type found in xml)
+	 */
+	public void reset(String robottype) {
+		XMLReader xmlr = new XMLReader();
+		ArrayList<String> input = xmlr.read(robottype, "src/robots.xml");
+		this.name = input.get(0);
+		this.xCoordinate = Double.valueOf(input.get(1));
+		this.setX(this.xCoordinate);
+		this.yCoordinate = Double.valueOf(input.get(2));
+		this.setY(this.yCoordinate);
+		this.speed = Double.valueOf(input.get(3));
+		this.maxSpeed = Double.valueOf(input.get(4));
+		this.acceleration = Double.valueOf(input.get(5));
+		this.angularVelocity = Double.valueOf(input.get(6));
+		this.odometer = Double.valueOf(input.get(7));
+		this.batteryLeft = Double.valueOf(input.get(8));
+		this.batteryCapacity = Double.valueOf(input.get(9));
+		this.axleLength = Double.valueOf(input.get(10));
+		this.setWidth(this.axleLength);
+		this.wheelRadius = Double.valueOf(input.get(11));
+		this.setHeight(this.wheelRadius);
+		this.loadHighScore();
+		this.setRotate(0);
+		
 	}
 
 	/**
@@ -853,11 +895,11 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 * 
 	 */
 	public void timeLap() {
-
+		
 		this.stopTime = System.currentTimeMillis();
 		this.lastLapTime = (this.stopTime - this.startTime) / 1000.0;
 		if(lapInProgress){
-		Driver.lastLapTime.setText(df.format(lastLapTime));}
+		Driver.lastLapTime.setText(df.format(lastLapTime) + " s");
 		if (lastLapTime < this.highscore) {
 			this.highscore = this.lastLapTime;
 			Driver.highscore.setText(df.format(this.highscore) + " s");
@@ -873,10 +915,12 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			if (Driver.finishLine.isPlaying() == false) {
 				Driver.finishLine.play();
 			}
-		}
+		}}
 		this.startTime = System.currentTimeMillis();
 		this.lapInProgress = true;
-
+		Driver.gameInProgress = true;
+		Driver.splashscreen.setVisible(false);
+		Driver.gameOverScreen.setVisible(false);
 	}
 
 	/**
