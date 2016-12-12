@@ -14,6 +14,32 @@ import tests.Driver;
 public class Movement {
 
 	/**
+	 * Description: causes the robot to decelerate
+	 * 
+	 * @param wallEcomponents:
+	 *            a double array containing the orientation of a
+	 *            robot(rectangle) in the form {xOrientation, yOrientation}
+	 */
+	public static void decelerate(double[] wallEcomponents) {
+		Driver.LOGGER.info("decelerate");
+		Driver.LOGGER.log(CustomLevel.INSTRUCTION, "decelerate");
+		
+		// Decelerate
+		double speed = Driver.wallE.getSpeed() - Driver.wallE.getAcceleration();
+		speed = (speed < 0) ? 0 : speed;
+		Driver.wallE.setSpeed(speed);
+		
+		// Check whether down or up
+		if (Driver.wallE.getLastUporDown().equals("UP")) {
+			Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() - Driver.wallE.getSpeed() * wallEcomponents[0]);
+			Driver.wallE.setyCoordinate(Driver.wallE.getyCoordinate() + Driver.wallE.getSpeed() * wallEcomponents[1]);
+		} else if (Driver.wallE.getLastUporDown().equals("DOWN")) {
+			Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() + Driver.wallE.getSpeed() * wallEcomponents[0]);
+			Driver.wallE.setyCoordinate(Driver.wallE.getyCoordinate() - Driver.wallE.getSpeed() * wallEcomponents[1]);
+		}
+	}
+	
+	/**
 	 * Description: Moves the robot down.
 	 * Returns a double[] array of the wheel speeds in the form 
 	 * {speedLeftWheel, speedRightWheel}.
@@ -36,38 +62,6 @@ public class Movement {
 		Driver.wallE.setyCoordinate(Driver.wallE.getyCoordinate() - Driver.wallE.getSpeed() * wallEcomponents[1]);
 	
 		//calculate wheelspeeds
-		double speedRightWheel = Driver.wallE.getSpeed();
-		double speedLeftWheel = Driver.wallE.getSpeed();
-		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
-		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
-		
-		Driver.LOGGER.fine(Arrays.toString(wheelspeeds));
-		return wheelspeeds;
-	}
-
-	/**
-	 * Description: Moves the robot up.
-	 * Returns a double[] array of the wheel speeds in the form 
-	 * {speedLeftWheel, speedRightWheel}.
-	 * @param wallEcomponents:
-	 *            a double array containing the orientation of a
-	 *            robot(rectangle) in the form {xOrientation, yOrientation}
-	 */
-	public static double[] moveUp(double[] wallEcomponents) {
-        Driver.LOGGER.info("moveUp");
-        Driver.LOGGER.log(CustomLevel.INSTRUCTION, "moveUp");
-		
-		//cancel movement if battery is empty
-				if(Driver.wallE.getBatteryLeft()<=0){
-	
-					return null;
-				}
-		
-		Driver.wallE.setSpeed(Driver.wallE.getSpeed() + Driver.wallE.getAcceleration());
-		Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() - Driver.wallE.getSpeed() * wallEcomponents[0]);
-		Driver.wallE.setyCoordinate(Driver.wallE.getyCoordinate() + Driver.wallE.getSpeed() * wallEcomponents[1]);
-	
-		// calculate wheelspeeds
 		double speedRightWheel = Driver.wallE.getSpeed();
 		double speedLeftWheel = Driver.wallE.getSpeed();
 		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
@@ -163,6 +157,107 @@ public class Movement {
 	}
 	
 	/**
+	 * Description: Turns the robot to the left
+	 * 
+	 */
+	public static double[] moveLeft() {
+		Driver.LOGGER.info("moveLeft");
+		Driver.LOGGER.log(CustomLevel.INSTRUCTION, "moveLeft");
+		//cancel movement if battery is empty
+		if(Driver.wallE.getBatteryLeft()<=0){
+
+			return null;
+		}
+		
+		Driver.wallE.setRotate(Driver.wallE.getRotate() - Math.abs(Driver.wallE.getAngularVelocity()));
+		
+		// get angularVelocity and convert to radians
+		double angularVelocity = (Driver.wallE.getAngularVelocity() * 2 * Math.PI) / 360.0;
+		// get current speed 
+		double currentSpeed = Driver.wallE.getSpeed();
+	
+		double speedRightWheel = (2 * currentSpeed +
+				angularVelocity * Driver.wallE.getAxleLength())
+				/ (2 * Driver.wallE.getWheelRadius());
+		double speedLeftWheel = (2 * currentSpeed -
+				angularVelocity * Driver.wallE.getAxleLength())
+				/ (2 * Driver.wallE.getWheelRadius());
+		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
+		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
+		
+		Driver.LOGGER.fine(Arrays.toString(wheelspeeds));
+		return wheelspeeds;
+	
+	}
+
+	/**
+	 * Description: Turns the robot to the right
+	 * 
+	 */
+	public static double[] moveRight() {
+		Driver.LOGGER.info("moveRight");
+		Driver.LOGGER.log(CustomLevel.INSTRUCTION, "moveRight");
+
+		//cancel movement if battery is empty
+		if(Driver.wallE.getBatteryLeft()<=0){
+
+			return null;
+		}
+		
+		Driver.wallE.setRotate(Driver.wallE.getRotate() + Math.abs(Driver.wallE.getAngularVelocity()));
+		
+		// get angularVelocity and convert to radians
+		double angularVelocity = (Driver.wallE.getAngularVelocity() * 2 * Math.PI) / 360.0;
+		// get current speed 
+		double currentSpeed = Driver.wallE.getSpeed();
+			
+		double speedLeftWheel = (2 * currentSpeed +
+				angularVelocity * Driver.wallE.getAxleLength())
+				/ (2 * Driver.wallE.getWheelRadius());
+		double speedRightWheel = (2 * currentSpeed -
+				angularVelocity * Driver.wallE.getAxleLength())
+				/ (2 * Driver.wallE.getWheelRadius());
+		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
+		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
+		
+		Driver.LOGGER.fine(Arrays.toString(wheelspeeds));
+		return wheelspeeds;
+	
+	}
+	
+	/**
+	 * Description: Moves the robot up.
+	 * Returns a double[] array of the wheel speeds in the form 
+	 * {speedLeftWheel, speedRightWheel}.
+	 * @param wallEcomponents:
+	 *            a double array containing the orientation of a
+	 *            robot(rectangle) in the form {xOrientation, yOrientation}
+	 */
+	public static double[] moveUp(double[] wallEcomponents) {
+        Driver.LOGGER.info("moveUp");
+        Driver.LOGGER.log(CustomLevel.INSTRUCTION, "moveUp");
+		
+		//cancel movement if battery is empty
+				if(Driver.wallE.getBatteryLeft()<=0){
+	
+					return null;
+				}
+		
+		Driver.wallE.setSpeed(Driver.wallE.getSpeed() + Driver.wallE.getAcceleration());
+		Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() - Driver.wallE.getSpeed() * wallEcomponents[0]);
+		Driver.wallE.setyCoordinate(Driver.wallE.getyCoordinate() + Driver.wallE.getSpeed() * wallEcomponents[1]);
+	
+		// calculate wheelspeeds
+		double speedRightWheel = Driver.wallE.getSpeed();
+		double speedLeftWheel = Driver.wallE.getSpeed();
+		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
+		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
+		
+		Driver.LOGGER.fine(Arrays.toString(wheelspeeds));
+		return wheelspeeds;
+	}
+	
+	/**
 	 * Description: Moves the robot 'forward' while rotating anti-clockwise.
 	 * Returns a double[] array of the wheel speeds in the form 
 	 * {speedLeftWheel, speedRightWheel}.
@@ -244,101 +339,4 @@ public class Movement {
 		Driver.LOGGER.fine(Arrays.toString(wheelspeeds));
 		return wheelspeeds;
 	}
-	
-	/**
-	 * Description: Turns the robot to the left
-	 * 
-	 */
-	public static double[] moveLeft() {
-		Driver.LOGGER.info("moveLeft");
-		Driver.LOGGER.log(CustomLevel.INSTRUCTION, "moveLeft");
-		//cancel movement if battery is empty
-		if(Driver.wallE.getBatteryLeft()<=0){
-
-			return null;
-		}
-		
-		Driver.wallE.setRotate(Driver.wallE.getRotate() - Math.abs(Driver.wallE.getAngularVelocity()));
-		
-		// get angularVelocity and convert to radians
-		double angularVelocity = (Driver.wallE.getAngularVelocity() * 2 * Math.PI) / 360.0;
-		// get current speed 
-		double currentSpeed = Driver.wallE.getSpeed();
-	
-		double speedRightWheel = (2 * currentSpeed +
-				angularVelocity * Driver.wallE.getAxleLength())
-				/ (2 * Driver.wallE.getWheelRadius());
-		double speedLeftWheel = (2 * currentSpeed -
-				angularVelocity * Driver.wallE.getAxleLength())
-				/ (2 * Driver.wallE.getWheelRadius());
-		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
-		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
-		
-		Driver.LOGGER.fine(Arrays.toString(wheelspeeds));
-		return wheelspeeds;
-	
-	}
-
-	/**
-	 * Description: Turns the robot to the right
-	 * 
-	 */
-	public static double[] moveRight() {
-		Driver.LOGGER.info("moveRight");
-		Driver.LOGGER.log(CustomLevel.INSTRUCTION, "moveRight");
-
-		//cancel movement if battery is empty
-		if(Driver.wallE.getBatteryLeft()<=0){
-
-			return null;
-		}
-		
-		Driver.wallE.setRotate(Driver.wallE.getRotate() + Math.abs(Driver.wallE.getAngularVelocity()));
-		
-		// get angularVelocity and convert to radians
-		double angularVelocity = (Driver.wallE.getAngularVelocity() * 2 * Math.PI) / 360.0;
-		// get current speed 
-		double currentSpeed = Driver.wallE.getSpeed();
-			
-		double speedLeftWheel = (2 * currentSpeed +
-				angularVelocity * Driver.wallE.getAxleLength())
-				/ (2 * Driver.wallE.getWheelRadius());
-		double speedRightWheel = (2 * currentSpeed -
-				angularVelocity * Driver.wallE.getAxleLength())
-				/ (2 * Driver.wallE.getWheelRadius());
-		double[] wheelspeeds = {speedLeftWheel, speedRightWheel};
-		Driver.wallE.setWheelspeeds(speedLeftWheel, speedRightWheel);
-		
-		Driver.LOGGER.fine(Arrays.toString(wheelspeeds));
-		return wheelspeeds;
-	
-	}
-
-	/**
-	 * Description: causes the robot to decelerate
-	 * 
-	 * @param wallEcomponents:
-	 *            a double array containing the orientation of a
-	 *            robot(rectangle) in the form {xOrientation, yOrientation}
-	 */
-	public static void decelerate(double[] wallEcomponents) {
-		Driver.LOGGER.info("decelerate");
-		Driver.LOGGER.log(CustomLevel.INSTRUCTION, "decelerate");
-		
-		// Decelerate
-		double speed = Driver.wallE.getSpeed() - Driver.wallE.getAcceleration();
-		speed = (speed < 0) ? 0 : speed;
-		Driver.wallE.setSpeed(speed);
-		
-		// Check whether down or up
-		if (Driver.wallE.getLastUporDown().equals("UP")) {
-			Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() - Driver.wallE.getSpeed() * wallEcomponents[0]);
-			Driver.wallE.setyCoordinate(Driver.wallE.getyCoordinate() + Driver.wallE.getSpeed() * wallEcomponents[1]);
-		} else if (Driver.wallE.getLastUporDown().equals("DOWN")) {
-			Driver.wallE.setxCoordinate(Driver.wallE.getxCoordinate() + Driver.wallE.getSpeed() * wallEcomponents[0]);
-			Driver.wallE.setyCoordinate(Driver.wallE.getyCoordinate() - Driver.wallE.getSpeed() * wallEcomponents[1]);
-		}
-
-	}
-
 }

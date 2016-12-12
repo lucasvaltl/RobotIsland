@@ -5,7 +5,7 @@ import java.util.logging.LogRecord;
 import java.util.logging.SimpleFormatter;
 
 /**
- * Description: Custom Formatter used to log robot current Key Presses to a file.
+ * Description: Custom Formatter used to log robot instructions to a file.
  * 
  * @author Geraint and Lucas
  *
@@ -15,7 +15,7 @@ public class CustomFormatter extends SimpleFormatter {
 	// Level instruction = Level.parse("INSTRUCTION");
 	
 	/** Description:  Removes the logger time stamp
-	 * 
+	 * @param: A log record.
 	 */
 	public String format(LogRecord record){
 		  if(record.getLevel() == CustomLevel.INSTRUCTION){

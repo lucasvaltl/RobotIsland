@@ -1,11 +1,3 @@
-/**
- * Description: This XML reader is able to read through an XML file and return the attributes related to a specific id.
- * ArrayList of strings. 
- * 
- * @author Geraint Ballinger and Lucas Valtl
- * @version 1.0
- */
-
 package readers;
 
 import java.io.File;
@@ -19,19 +11,24 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+/**
+ * Description: This XML reader reads through an XML file and return the attributes related to a specific id.
+ * 
+ * @return: An ArrayList of strings. 
+ * @author Geraint and Lucas
+ */
 public final class XMLReader {
 
 	/**
 	 * Reads through an XML file and returns the attributes related to a specific ID. 
 	 * 
-	 * @param s: String containing the type of robot you want to load from the xml file. This needs to correspond with an ID from the xml file.
-	 * @param f: location of the xml file used
-	 * @return: returns an ArrayList of attributes corresponding with the id specified in String s.
+	 * @param s: String containing the type of robot you want to load from the XML file. This needs to correspond with an ID from the XML file.
+	 * @param f: The location of the XML file being used
+	 * @return: An ArrayList of attributes corresponding with the id specified in s.
 	 */
-	
 	public ArrayList<String> read(String s, String f){
 	    try {
-//get file and create file
+	    	//get file and create file
 			File XmlFile = new File(f);
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -41,9 +38,7 @@ public final class XMLReader {
 			doc.getDocumentElement().normalize();
 
 			NodeList nList = doc.getElementsByTagName("robot");
-
 			outside: for (int temp = 0; temp < nList.getLength(); temp++) {
-
 				Node nNode = nList.item(temp);
 
 				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
@@ -70,10 +65,5 @@ public final class XMLReader {
 			e.printStackTrace();
 			return null; 
 		}
-	    
-	   
 	}
-	
-	
-	
 }

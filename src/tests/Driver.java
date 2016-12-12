@@ -51,13 +51,15 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
+/**
+ * Description: The main class of the robot simulator application, this class
+ * optionally reads robot information from XML, before creating a robot and
+ * map instance and rendering them, responding to various action events.
+ * 
+ * @author: Geraint and Lucas
+ */
 public class Driver extends Application {
-	/**
-	 * TODO The main class of the robot simulator application, this class
-	 * optionally reads robot information from XML, before creating a robot and
-	 * map instance and rendering them, responding to various action events.
-	 */
-
+	
 	// Load audio
 	public static final AudioClip soundtrack = new AudioClip(new File("src/wav/chibininja.wav").toURI().toString());
 	public static final AudioClip collisionSound = new AudioClip(new File("src/wav/collision.wav").toURI().toString());
@@ -70,15 +72,16 @@ public class Driver extends Application {
 	
 	public static final int SCREENWIDTH = 800;
 	public static final int SCREENHEIGHT = 800;
+	
 	// raycasting variables
 	public static final int THREEDEEPLANEWIDTH = 320;
 	public static final int THREEDEEPLANEHEIGHT = 200;
 	public static final int[] THREEDEEPLANECENTRE = { THREEDEEPLANEWIDTH / 2, THREEDEEPLANEHEIGHT / 2 };
 	public static final double fieldOfViewAngle = Math.PI / 3; // in radians
-	public static final double DISTANCETOTHREEDEEPLANE = (THREEDEEPLANEWIDTH / 2) * Math.tan(fieldOfViewAngle / 2); // 160
-																													// /
-																													// tan(30degrees)
+	public static final double DISTANCETOTHREEDEEPLANE = (THREEDEEPLANEWIDTH / 2) * Math.tan(fieldOfViewAngle / 2);
 	public static final double angleBetweenRays = Driver.fieldOfViewAngle / (THREEDEEPLANEWIDTH * 1.0);
+	
+	// JavaFX variables
 	public StackPane stack;
 	public static long startnanotime;
 	public static boolean decelerate = false;
@@ -125,9 +128,15 @@ public class Driver extends Application {
 	private static CustomHandler severeHandler;
 	private static CustomHandler instructionHandler;
 
+	/**
+	 * Description: Sets up the logger, creates a map instance, and launches
+	 * JavaFX.
+	 *  
+	 * @param args: No command line arguments are expected.
+	 */
 	public static void main(String[] args) {
 
-		// setup logger
+		// setup logger with custom handler, custom level, and custom formatter
 		try {
 			fineHandler = new CustomHandler ("src/logs/fine.txt", Level.FINE);
 			finerHandler = new CustomHandler ("src/logs/finer.txt", Level.FINER);
@@ -180,14 +189,15 @@ public class Driver extends Application {
 				{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 } };
 
 		map = new Map(grid); // create map
-		
 		launch(args); // launch javaFX
 	}
 
+	/**
+	 * Description: Start method called when JavaFX is launched. 
+	 * Draws the robot, map, devmode pane, and splashscreen.
+	 */
 	public void start(Stage primaryStage) throws Exception {
 		
-		
-		/** Start method for JavaFX. Draws the robot and maps. **/
 		primaryStage.setTitle("Robot Island");
 
 		Canvas canvas = new Canvas(SCREENWIDTH, SCREENHEIGHT);
@@ -207,13 +217,14 @@ public class Driver extends Application {
 		// pane used for game itself
 		root = new Group();
 
+		// Render map
 		gc.setFill(Color.BLACK);
 		gc.setStroke(Color.BLUE);
 		gc.setLineWidth(5);
 		map.render2DMap(gc, true);
 		root.getChildren().add(canvas);
 		
-		//pane for displaying lap times
+		// Pane for displaying lap times
 		lapTimes = new TilePane();
 		timeLabel = new Label("Current Lap: ");
 		timeLabel.setStyle("-fx-font-size: 20;");
@@ -237,6 +248,7 @@ public class Driver extends Application {
 		lapTimes.setLayoutX(500);
 		lapTimes.setLayoutY(38);
 		
+		// Create 3d effect
 		PerspectiveTransform pt = new PerspectiveTransform();
 		pt.setUlx(35.0);
 		 pt.setUly(0.0);
@@ -250,9 +262,7 @@ public class Driver extends Application {
 		lapTimes.setCache(true);
 		
 		root.getChildren().add(lapTimes);
-		
-	
-
+			
 		// creates a "fast" robot from an xml file
 		robotType = "fast";
 		wallE = new Robot(robotType);
@@ -305,7 +315,7 @@ public class Driver extends Application {
 							// found
 							nfr = new NewerFileReader();
 							nfr.scanFile(movementFile);
-							wallE.setInputComandsReadingInProgress(true);
+							wallE.setInputCommandsReadingInProgress(true);
 						} catch (InvalidFormatException ex) {
 							Driver.LOGGER.severe("WARNING: Invalid command in text file "+ e.toString());
 							alert.setTitle("Invalid Format Error");
@@ -366,7 +376,7 @@ public class Driver extends Application {
 		primaryStage.show();
 		
 		
-		// start animation loop
+		// start JavaFX animation loop
 		startnanotime = System.nanoTime();
 		GameTimer timer = new GameTimer();
 		timer.start();

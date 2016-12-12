@@ -144,8 +144,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	/**
 	 * Description: Creates the robot's parameters from an XML file.
 	 * 
-	 * @param s:
-	 *            The ID of the robot you want to load
+	 * @param s: The ID of the robot you want to load
 	 */
 	public Robot(String s) {
 
@@ -169,398 +168,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		this.wheelRadius = Double.valueOf(input.get(11));
 		this.setHeight(this.wheelRadius);
 		this.loadHighScore();
-	}
-
-	/**
-	 * Description: Returns the robot's x coordinate.
-	 * 
-	 * @return: The robot's current x position.
-	 */
-	public double getxCoordinate() {
-		return this.xCoordinate;
-	}
-
-	/**
-	 * Description: Returns the robot's y coordinate
-	 * 
-	 * @return: The robot's current y position
-	 */
-	public double getyCoordinate() {
-		return this.yCoordinate;
-	}
-
-	/**
-	 * Description: Returns the robot's speed.
-	 * 
-	 * @return: The robot's current speed.
-	 */
-	public double getSpeed() {
-		return this.speed;
-	}
-
-	/**
-	 * Description: Returns the robot's max speed.
-	 * 
-	 * @return: The robot's max speed.
-	 */
-	public double getMaxSpeed() {
-		return this.maxSpeed;
-	}
-
-	/**
-	 * Description: Return's the robot's acceleration
-	 * 
-	 * @return: The robot's acceleration.
-	 */
-	public double getAcceleration() {
-		return this.acceleration;
-	}
-
-	/**
-	 * Description: Returns the robot's angular velocity in degrees per second.
-	 * 
-	 * @return: The robot's angular velocity in degrees per second.
-	 */
-	public double getAngularVelocity() {
-		return this.angularVelocity;
-	}
-
-	/**
-	 * Description: Returns the robot's distance travelled.
-	 * 
-	 * @return: The robot's distance travelled.
-	 */
-	public double getOdometer() {
-		return this.odometer;
-	}
-
-	/**
-	 * Description: Returns a double representing the amount of battery left.
-	 * 
-	 * @return: A double representing the amount of battery left.
-	 */
-	public double getBatteryLeft() {
-		return this.batteryLeft;
-	}
-
-	/**
-	 * Description: Returns a double representing the amount of battery
-	 * capacity.
-	 * 
-	 * @return: A double representing the amount of battery capacity.
-	 */
-	public double getBatteryCapacity() {
-		return this.batteryCapacity;
-	}
-
-	/**
-	 * Description: Returns the robot's axle length.
-	 * 
-	 * @return: A double representing the robot's axle length.
-	 */
-	public double getAxleLength() {
-		return this.axleLength;
-	}
-
-	/**
-	 * Description: Returns the robot's wheel radius.
-	 * 
-	 * @return: A double representing the robot's wheel radius.
-	 */
-	public double getWheelRadius() {
-		return this.wheelRadius;
-	}
-
-	/**
-	 * Description: Method that returns the robot's current key presses.
-	 * 
-	 * @return A string array of length 2, representing the current key presses.
-	 */
-	public String[] getCurrentKeyPresses() {
-		return this.currentKeyPresses;
-	}
-
-	/**
-	 * Description: Method that returns the robot's last up or down command
-	 * property.
-	 * 
-	 * @return: The last up or down command assigned to the lastUporDown field.
-	 */
-	public String getLastUporDown() {
-		return this.lastUporDown;
-	}
-
-	/**
-	 * Description: Method that returns the robot's last left or right command
-	 * property.
-	 * 
-	 * @return: The last up or down command assigned to the lastUporDown field.
-	 */
-	public String getLastMovement() {
-		return this.lastMovement;
-	}
-
-	/**
-	 * Description: Method that returns a boolean to represent the robot's
-	 * deceleration status
-	 * 
-	 * @return: A boolean that represents the robot's deceleration status.
-	 */
-	public boolean getDecelerate() {
-		return this.decelerate;
-	}
-
-	/**
-	 * Description: Method that returns a boolean which will be true when robot
-	 * commands are being read from a file.
-	 * 
-	 * @return: A boolean that will be true when robot commands are being read
-	 *          from a file.
-	 */
-	public boolean getInputCommandsReadingInProgress() {
-		return this.inputCommandsReadingInProgress;
-	}
-
-	public double[] getWheelspeeds() {
-		return this.wheelspeeds;
-	}
-
-	public boolean getCollisionDetected() {
-		return this.collisionDetected;
-	}
-
-	public double getDistanceTravelled() {
-		return this.distancetravelled;
-	}
-
-	/**
-	 * Description: Sets the robot's x position to a given value and calls the
-	 * parent .setX() method.
-	 * 
-	 * @param xCoordinate:
-	 *            The x position to be moved to.
-	 */
-	public void setxCoordinate(double xCoordinate) {
-		this.xCoordinate = xCoordinate;
-		super.setX(this.xCoordinate);
-	}
-
-	/**
-	 * Description: Sets the robot's y position to a given value and calls the
-	 * parent .setY() method.
-	 * 
-	 * @param yCoordinate:
-	 *            The y position to be moved to.
-	 */
-	public void setyCoordinate(double yCoordinate) {
-		this.yCoordinate = yCoordinate;
-		super.setY(this.yCoordinate);
-	}
-
-	/**
-	 * Description: Sets the robot's speed and limits it to be less than or
-	 * equal the robot's maximum speed.
-	 * 
-	 * @param speed:
-	 *            The speed the robot will set to, providing that it is less
-	 *            than or equal to the maximum speed.
-	 */
-	public void setSpeed(double speed) {
-		this.speed = (speed > this.maxSpeed) ? this.maxSpeed : speed;
-	}
-
-	/**
-	 * Description: Sets the robot's maximum speed.
-	 * 
-	 * @param maxSpeed:
-	 *            The speed to set as the robot's maximum speed.
-	 */
-	public void setMaxSpeed(double maxSpeed) {
-		this.maxSpeed = maxSpeed;
-	}
-
-	/**
-	 * Description: Set's the robot's acceleration.
-	 * 
-	 * @param acceleration:
-	 *            The acceleration to set as the robot's acceleration.
-	 */
-	public void setAcceleration(double acceleration) {
-		this.acceleration = acceleration;
-	}
-
-	/**
-	 * Description: Set's the robot's angular velocity (in degrees per second).
-	 * 
-	 * @param angularVelocity:
-	 *            The value in degrees per second to set the robot's angular
-	 *            velocity.
-	 */
-	public void setAngularVelocity(double angularVelocity) {
-		this.angularVelocity = angularVelocity;
-	}
-
-	/**
-	 * Description: Sets the robot's odometer to a given distance.
-	 * 
-	 * @param distance:
-	 *            The distance the robot has travelled so far.
-	 */
-	public void setOdometer(double distance) {
-		this.odometer = distance;
-	}
-
-	/**
-	 * Description: Sets the robot's battery level to a given value.
-	 * 
-	 * @param batteryLeft:
-	 *            The amount of battery left.
-	 */
-	public void setBatteryLeft(double batteryLeft) {
-		this.batteryLeft = batteryLeft;
-	}
-
-	/**
-	 * Description: Sets the axle length to a given value and calls the
-	 * Rectangle.setWidth() method (Currently assumes wheels as having no width)
-	 * 
-	 * @param axleLength:
-	 *            The robot's axle length.
-	 */
-	public void setAxleLength(double axleLength) {
-		this.axleLength = axleLength;
-		super.prefWidth(this.axleLength);
-	}
-
-	/**
-	 * Description: Sets the radius of the robot's wheels to a given value and
-	 * calls the Rectangle.setHeight() method
-	 * 
-	 * @param radius:
-	 *            The radius of the robot's wheels.
-	 */
-	public void setWheelRadius(double radius) {
-		this.wheelRadius = radius;
-		super.prefHeight(this.wheelRadius);
-	}
-
-	/**
-	 * Description: Method that sets a particular index in the CurrentKeyPresses
-	 * string array to a given value.
-	 * 
-	 * @param index:
-	 *            The index of the value to change (must be either 0 or 1.
-	 * @param value:
-	 *            The value to change to.
-	 */
-	public void setCurrentKeyPresses(int index, String value) {
-		if ((index == 0 || index == 1) && (Objects.equals(value, "UP") || Objects.equals(value, "DOWN"))) {
-			this.currentKeyPresses[index] = value;
-		} else if ((index == 0 || index == 1) && Objects.equals(value, null)) {
-			this.currentKeyPresses[index] = null;
-		}
-	}
-
-	/**
-	 * Description: Method used to set the robot's last up or down property.
-	 * 
-	 * @param value:
-	 *            The string to be set (must be "UP", "DOWN", or "null")
-	 */
-	public void setLastUporDown(String value) {
-		if (Objects.equals(value, "UP") || Objects.equals(value, "DOWN")) {
-			this.lastUporDown = value;
-		} else if (Objects.equals(value, "null")) {
-			this.lastUporDown = null;
-		}
-	}
-
-	/**
-	 * Description: Method used to set the robot's last up or down property.
-	 * 
-	 * @param value:
-	 *            The string to be set (must be "LEFT", "RIGHT", or "null")
-	 */
-	public void setLastMovement(String move) {
-		this.lastMovement = move;
-	}
-
-	/**
-	 * Description: Method used to flag the robot's deceleration status.
-	 * 
-	 * @param value:
-	 *            The boolean value to be set.
-	 */
-	public void setDecelerate(boolean value) {
-		this.decelerate = value;
-	}
-
-	/**
-	 * Description: Set the robots wheel speeds
-	 * 
-	 * 
-	 * @param left: Left wheel speed
-	 * @param right: Right wheel speed
-	 */
-	public void setWheelspeeds(double left, double right) {
-		this.wheelspeeds[0] = left;
-		this.wheelspeeds[1] = right;
-	}
-
-	
-	/**
-	 * Description: Set the if the robot detected a collision
-	 * 
-	 * @param b: true or false
-	 */
-	public void setCollisionDetected(boolean b) {
-		this.collisionDetected = b;
-	}
-
-	/**
-	 * Description: set if the robot is reading inputs from a file
-	 * 
-	 * @param value: true or false
-	 */
-	public void setInputComandsReadingInProgress(boolean value) {
-		this.inputCommandsReadingInProgress = value;
-	}
-
-	
-	/**
-	 * Description: get an image from the image array
-	 * 
-	 * @param i: row number
-	 * @param j: column number
-	 * @return
-	 */
-	public ImagePattern getAnimatedImage(int row, int column) {
-		return this.animimages[row][column];
-	}
-
-	
-	/**
-	 * Description: Create a array of arrays storing images later used
-	 * for animation.
-	 * 
-	 */
-	public void createAnimatedImages() {
-		Image[][] images = new Image[5][3];
-		animimages = new ImagePattern[5][3];
-		for (int i = 0; i < 5; i++) {
-			for (int j = 0; j < 3; j++) {
-				images[i][j] = new Image(new File("src/img/eve" + i + "" + j + ".png").toURI().toString(),
-						Driver.wallE.getWidth(), Driver.wallE.getWidth(), false, true);
-
-			}
-		}
-		for (int i = 0; i < 5; i++) {
-			for (int j = 0; j < 3; j++) {
-				ImagePattern thisimage = new ImagePattern(images[i][j]);
-				animimages[i][j] = thisimage;
-			}
-		}
-
 	}
 
 	/**
@@ -679,8 +286,186 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		// used to break out of method
 		return true;
 	}
+	
+	public void anotherSingleMoveViaFile(File file, double[] wallEcomponents) {
+		if (this.inputCommands == null) {
+			// No commands in file, load them up.
+			this.inputCommands = new ArrayList<String>();
+			this.inputCommandsReadingInProgress = true;
+			NewerFileReader nfr = null;
+			try {
+				nfr = new NewerFileReader();
+				this.inputCommands = nfr.scanFile(file);
 
-	/*
+			} catch (InvalidFormatException e) {
+				// Driver.labelinfo.setText("WARNING: Invalid command in text
+				// file");
+				Driver.LOGGER.severe("WARNING: Invalid command in text file " + e.toString());
+				this.inputCommandsReadingInProgress = false;
+				return;
+			} catch (FileNotFoundException e) {
+				// Driver.labelinfo.setText("WARNING: File not found");
+				Driver.LOGGER.severe("WARNING: File not found " + e.toString());
+				this.inputCommandsReadingInProgress = false;
+				return;
+			}
+			return;
+		}
+
+		if (this.inputCommandsReadingInProgress == true) {
+			if (this.inputCommands.get(this.inputCommandsIndex).equals("moveUpLeft")) {
+
+				if (this.getDecelerate() == true) {
+					Movement.decelerate(wallEcomponents);
+				} else {
+					Movement.moveUpLeft(wallEcomponents);
+				}
+				this.setLastMovement("moveUpLeft");
+
+			} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveUpRight")) {
+
+				if (this.getDecelerate() == true) {
+					Movement.decelerate(wallEcomponents);
+				} else {
+					Movement.moveUpRight(wallEcomponents);
+				}
+				this.setLastMovement("moveUpRight");
+
+			} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveDownLeft")) {
+				if (this.getDecelerate() == true) {
+					Movement.decelerate(wallEcomponents);
+				} else {
+					Movement.moveDownLeft(wallEcomponents);
+				}
+				this.setLastMovement("moveDownLeft");
+
+			} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveDownRight")) {
+				if (this.getDecelerate() == true) {
+					Movement.decelerate(wallEcomponents);
+				} else {
+					Movement.moveDownRight(wallEcomponents);
+				}
+				this.setLastMovement("moveDownRight");
+
+			} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveUp")) {
+				if (this.getDecelerate() == true) {
+					// Robot must decelerate after previous motion in the
+					// opposite
+					// direction
+					Movement.decelerate(wallEcomponents);
+				} else {
+					// accelerate
+					Movement.moveUp(wallEcomponents);
+					this.setLastMovement("moveUp");
+				}
+
+			} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveDown")) {
+
+				if (this.getDecelerate() == true) {
+					// Robot must decelerate after previous motion in the
+					// opposite
+					// direction
+					Movement.decelerate(wallEcomponents);
+				} else {
+					// accelerate
+					Movement.moveDown(wallEcomponents);
+					this.setLastMovement("moveDown");
+				}
+
+			} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveLeft")) {
+				Movement.moveLeft();
+				this.setLastMovement("moveLeft");
+				// allows robot to turn left during deceleration
+				if (this.getDecelerate() == true) {
+					Movement.decelerate(wallEcomponents);
+				}
+
+			} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveRight")) {
+				Movement.moveRight();
+				this.setLastMovement("moveRight");
+				// allows robot to turn right during deceleration
+				if (this.getDecelerate() == true) {
+					Movement.decelerate(wallEcomponents);
+				}
+
+			} else if (this.inputCommands.get(this.inputCommandsIndex).equals("decelerate")) {
+				Movement.decelerate(wallEcomponents);
+
+			}
+
+			// change decelerate flag to false if speed is 0
+			if (this.getSpeed() <= 0) {
+				this.setDecelerate(false);
+				// Driver.lastUporDown = "";
+			}
+		}
+
+		// get the inputCommands arrayList size
+		if (this.inputCommandsIndex >= this.inputCommands.size() - 1) {
+			// Cause deceleration
+			this.inputCommandsReadingInProgress = false;
+			this.inputCommandsIndex = 0;
+			this.currentKeyPresses[0] = null;
+			this.currentKeyPresses[1] = null;
+		} else {
+			this.inputCommandsIndex++;
+
+		}
+	}
+	
+	/**
+	 * Description: checks if the robot is in the refueling area. If it is there
+	 * the robot is charged.
+	 * 
+	 */
+	public void checkForCharging() {
+		if (CollisionDetection.detectLocation(this, Map.chargingstation)) {
+			this.increaseCharge(5);
+			this.recharging = true;
+			// reset time since collision to overwrite collisions happening in
+			// the charging station
+			this.setCollisionDetected(false);
+			this.timeSinceCollision = 0;
+			if (Driver.toggledevmode) {
+				if (Driver.textinfo.getText().equals("Battery less than 10%!!!")) {
+					Driver.textinfo.setText("Recharging!");
+				}
+			}
+
+		} else if (this.recharging == true) {
+			this.recharging = false;
+		}
+	}
+
+	/**
+	 * Description: Checks if the robot passes the finish line. DIsabled if
+	 * player is trying to cheat by not doing a full lap.
+	 */
+	public void checkForFinishLine() {
+		if (CollisionDetection.detectLocation(this, Map.finishLine)) {
+			// check if player is cheating
+			if (notCheating) {
+				this.timeLap();
+				if (Driver.toggledevmode) {
+					Driver.textinfo.setText("Crossed Finishline");
+				}
+				this.notCheating = false;
+				return;
+			}
+		}
+	}
+
+	/**
+	 * Checks if robot actually did a lap around the track to avoid cheating.
+	 * 
+	 */
+	public void checkIfCheckIfCheating() {
+		if (CollisionDetection.detectLocation(this, Map.antiCheatLine)) {
+			this.notCheating = true;
+		}
+	}
+	
+	/**
 	 * Description: Consume battery when moving. If battery is low (less than
 	 * 10%) the robots speed will decrease significantly. If the battery is
 	 * empty, the robot will fail to move.
@@ -742,16 +527,329 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			this.gameOver();
 			this.reset(Driver.robotType);
 		}
-
 	}
 	
 	/**
-	 * Description: Resets lap and rsets robot to initial state.
+	 * Description: Create a array of arrays storing images later used
+	 * for animation.
+	 * 
+	 */
+	public void createAnimatedImages() {
+		Image[][] images = new Image[5][3];
+		animimages = new ImagePattern[5][3];
+		for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 3; j++) {
+				images[i][j] = new Image(new File("src/img/eve" + i + "" + j + ".png").toURI().toString(),
+						Driver.wallE.getWidth(), Driver.wallE.getWidth(), false, true);
+
+			}
+		}
+		for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 3; j++) {
+				ImagePattern thisimage = new ImagePattern(images[i][j]);
+				animimages[i][j] = thisimage;
+			}
+		}
+	}
+	
+	/**
+	 * Description: Method used to decrease robot charge by a given value at the
+	 * end of every move.
+	 * 
+	 * @param decrementValue:
+	 *            The value to decrement the robot's battery by.
+	 */
+	public void decreaseCharge(double decrementValue) {
+		this.batteryLeft -= decrementValue;
+	}
+
+	/**
+	 * Description: Method used to decrease robot charge at the end of every
+	 * move by a default value of 1, when no charge is given.
+	 */
+	public void decreaseCharge() {
+		this.batteryLeft -= 1;
+	}
+	
+	/**
+	 * Description: Detects if the robot is about to collide with a boundry and
+	 * reacts accordingly
+	 * 
+	 * @param robot
+	 *            : robot you want to check for collisions
+	 * @param wallEcomponents:
+	 *            robots orientation components derived from its orientation
+	 * 
+	 * @author Geraint and Lucas
+	 */
+	public void detectCollision(Robot robot, double[] wallEcomponents) {
+		if (CollisionDetection.collisionDetection(robot)) {
+			robot.setCollisionDetected(true);
+			if (robot.getLastMovement().equals("moveDown")) {
+				while (CollisionDetection.collisionDetection(robot)) {
+					Movement.moveUp(wallEcomponents);
+				}
+				robot.setSpeed(0);
+			} else if (robot.getLastMovement().equals("moveUp")) {
+				while (CollisionDetection.collisionDetection(robot)) {
+					Movement.moveDown(wallEcomponents);
+				}
+				robot.setSpeed(0);
+			} else if (robot.getLastMovement().equals("moveLeft")) {
+				while (CollisionDetection.collisionDetection(robot)) {
+					Movement.moveRight();
+				}
+				robot.setSpeed(0);
+			} else if (robot.getLastMovement().equals("moveRight")) {
+				while (CollisionDetection.collisionDetection(robot)) {
+					Movement.moveLeft();
+				}
+				robot.setSpeed(0);
+			} else if (robot.getLastMovement().equals("moveUpLeft")) {
+				while (CollisionDetection.collisionDetection(robot)) {
+					Movement.moveDownRight(wallEcomponents);
+				}
+				robot.setSpeed(0);
+			} else if (robot.getLastMovement().equals("moveUpRight")) {
+				while (CollisionDetection.collisionDetection(robot)) {
+					Movement.moveDownLeft(wallEcomponents);
+				}
+				robot.setSpeed(0);
+			} else if (robot.getLastMovement().equals("moveDownLeft")) {
+				while (CollisionDetection.collisionDetection(robot)) {
+					Movement.moveUpRight(wallEcomponents);
+				}
+				robot.setSpeed(0);
+			} else if (robot.getLastMovement().equals("moveDownRight")) {
+				while (CollisionDetection.collisionDetection(robot)) {
+					Movement.moveUpLeft(wallEcomponents);
+				}
+				robot.setSpeed(0);
+			}
+
+		}
+	}
+	
+	/**
+	 * Description: Calculate and Display current lap time in label
+	 */
+	public void displayLapTime() {
+		if (this.startTime != 0) {
+			this.currentLapTime = (System.currentTimeMillis() - this.startTime) / 1000.0;
+
+			Driver.time.setText(df.format(this.currentLapTime) + " s");
+		}
+	}
+	
+	/**
+	 * Description: Resets lap and resets robot to initial state.
 	 * 
 	 */
 	public void gameOver(){
 		Driver.gameOverScreen.setVisible(true);
 
+	}
+	
+	/**
+	 * Description: Return's the robot's acceleration
+	 * 
+	 * @return: The robot's acceleration.
+	 */
+	public double getAcceleration() {
+		return this.acceleration;
+	}
+
+	/**
+	 * Description: Returns the robot's angular velocity in degrees per second.
+	 * 
+	 * @return: The robot's angular velocity in degrees per second.
+	 */
+	public double getAngularVelocity() {
+		return this.angularVelocity;
+	}
+	
+	/**
+	 * Description: get an image from the image array
+	 * 
+	 * @param i: row number
+	 * @param j: column number
+	 * @return
+	 */
+	public ImagePattern getAnimatedImage(int row, int column) {
+		return this.animimages[row][column];
+	}
+	
+	/**
+	 * Description: Returns the robot's axle length.
+	 * 
+	 * @return: A double representing the robot's axle length.
+	 */
+	public double getAxleLength() {
+		return this.axleLength;
+	}
+	
+	/**
+	 * Description: Returns a double representing the amount of battery
+	 * capacity.
+	 * 
+	 * @return: A double representing the amount of battery capacity.
+	 */
+	public double getBatteryCapacity() {
+		return this.batteryCapacity;
+	}
+	
+	/**
+	 * Description: Returns a double representing the amount of battery left.
+	 * 
+	 * @return: A double representing the amount of battery left.
+	 */
+	public double getBatteryLeft() {
+		return this.batteryLeft;
+	}
+	
+	public boolean getCollisionDetected() {
+		return this.collisionDetected;
+	}
+	
+	/**
+	 * Description: Method that returns the robot's current key presses.
+	 * 
+	 * @return A string array of length 2, representing the current key presses.
+	 */
+	public String[] getCurrentKeyPresses() {
+		return this.currentKeyPresses;
+	}
+	
+	/**
+	 * Description: Method that returns a boolean to represent the robot's
+	 * deceleration status
+	 * 
+	 * @return: A boolean that represents the robot's deceleration status.
+	 */
+	public boolean getDecelerate() {
+		return this.decelerate;
+	}
+	
+	public double getDistanceTravelled() {
+		return this.distancetravelled;
+	}
+	
+	/**
+	 * Description: Method that returns a boolean which will be true when robot
+	 * commands are being read from a file.
+	 * 
+	 * @return: A boolean that will be true when robot commands are being read
+	 *          from a file.
+	 */
+	public boolean getInputCommandsReadingInProgress() {
+		return this.inputCommandsReadingInProgress;
+	}
+	
+	/**
+	 * Description: Method that returns the robot's last left or right command
+	 * property.
+	 * 
+	 * @return: The last up or down command assigned to the lastUporDown field.
+	 */
+	public String getLastMovement() {
+		return this.lastMovement;
+	}
+	
+	/**
+	 * Description: Method that returns the robot's last up or down command
+	 * property.
+	 * 
+	 * @return: The last up or down command assigned to the lastUporDown field.
+	 */
+	public String getLastUporDown() {
+		return this.lastUporDown;
+	}
+	
+	/**
+	 * Description: Returns the robot's max speed.
+	 * 
+	 * @return: The robot's max speed.
+	 */
+	public double getMaxSpeed() {
+		return this.maxSpeed;
+	}
+	
+	/**
+	 * Description: Returns the robot's distance travelled.
+	 * 
+	 * @return: The robot's distance travelled.
+	 */
+	public double getOdometer() {
+		return this.odometer;
+	}
+	
+	/**
+	 * Description: Returns the robot's speed.
+	 * 
+	 * @return: The robot's current speed.
+	 */
+	public double getSpeed() {
+		return this.speed;
+	}
+
+	/**
+	 * Description: Returns the robot's wheel radius.
+	 * 
+	 * @return: A double representing the robot's wheel radius.
+	 */
+	public double getWheelRadius() {
+		return this.wheelRadius;
+	}
+
+	public double[] getWheelspeeds() {
+		return this.wheelspeeds;
+	}
+
+	/**
+	 * Description: Returns the robot's x coordinate.
+	 * 
+	 * @return: The robot's current x position.
+	 */
+	public double getxCoordinate() {
+		return this.xCoordinate;
+	}
+
+	/**
+	 * Description: Returns the robot's y coordinate
+	 * 
+	 * @return: The robot's current y position
+	 */
+	public double getyCoordinate() {
+		return this.yCoordinate;
+	}
+	
+	/**
+	 * 
+	 * Description: Recharges the robot by a set value
+	 * 
+	 * @param decrementValue:
+	 *            amount by which the robot is charged
+	 */
+	public void increaseCharge(double decrementValue) {
+
+		if (this.getBatteryLeft() < this.getBatteryCapacity()) {
+			this.batteryLeft += decrementValue;
+		}
+		// avoids overcharging
+		else if (this.getBatteryLeft() > this.getBatteryCapacity()) {
+			this.batteryLeft = this.getBatteryCapacity();
+			if (Driver.toggledevmode) {
+				Driver.textinfo.setText("Recharged!");
+
+				if (Driver.batteryLowSound.isPlaying() == true) {
+					Driver.batteryLowSound.stop();
+				}
+				if (Driver.batteryFullSound.isPlaying() == false) {
+					Driver.batteryFullSound.play();
+				}
+			}
+		}
+		this.setMaxSpeed(this.globalMaxSpeed);
 	}
 	
 	/**
@@ -786,107 +884,212 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		this.notCheating = true;
 		this.lapInProgress = false;
 	}
-
+	
 	/**
-	 * Description: Method used to decrease robot charge by a given value at the
-	 * end of every move.
-	 * 
-	 * @param decrementValue:
-	 *            The value to decrement the robot's battery by.
+	 * Description: Save high score to file
 	 */
-	public void decreaseCharge(double decrementValue) {
-		this.batteryLeft -= decrementValue;
+	private void saveHighScore() {
+		BufferedWriter bw = null;
+		try {
+			bw = new BufferedWriter(new FileWriter(new File("highscore.txt"), false));																				// false
+			bw.write("" + highscore);
+			bw.flush();
+			bw.close();
+		} catch (IOException e) {
+			Driver.LOGGER.severe("error while saving highscore to file");
+		}
+	}
+	
+	/**
+	 * Description: Sets the axle length to a given value and calls the
+	 * Rectangle.setWidth() method (Currently assumes wheels as having no width)
+	 * 
+	 * @param axleLength:
+	 *            The robot's axle length.
+	 */
+	public void setAxleLength(double axleLength) {
+		this.axleLength = axleLength;
+		super.prefWidth(this.axleLength);
+	}
+	
+	/**
+	 * Description: Set's the robot's acceleration.
+	 * 
+	 * @param acceleration:
+	 *            The acceleration to set as the robot's acceleration.
+	 */
+	public void setAcceleration(double acceleration) {
+		this.acceleration = acceleration;
 	}
 
 	/**
-	 * Description: Method used to decrease robot charge at the end of every
-	 * move by a default value of 1, when no charge is given.
+	 * Description: Set's the robot's angular velocity (in degrees per second).
+	 * 
+	 * @param angularVelocity:
+	 *            The value in degrees per second to set the robot's angular
+	 *            velocity.
 	 */
-	public void decreaseCharge() {
-		this.batteryLeft -= 1;
+	public void setAngularVelocity(double angularVelocity) {
+		this.angularVelocity = angularVelocity;
+	}
+	
+	/**
+	 * Description: Sets the robot's battery level to a given value.
+	 * 
+	 * @param batteryLeft:
+	 *            The amount of battery left.
+	 */
+	public void setBatteryLeft(double batteryLeft) {
+		this.batteryLeft = batteryLeft;
+	}
+	
+	/**
+	 * Description: Set the if the robot detected a collision
+	 * 
+	 * @param b: true or false
+	 */
+	public void setCollisionDetected(boolean b) {
+		this.collisionDetected = b;
+	}
+	
+	/**
+	 * Description: Method that sets a particular index in the CurrentKeyPresses
+	 * string array to a given value.
+	 * 
+	 * @param index:
+	 *            The index of the value to change (must be either 0 or 1.
+	 * @param value:
+	 *            The value to change to.
+	 */
+	public void setCurrentKeyPresses(int index, String value) {
+		if ((index == 0 || index == 1) && (Objects.equals(value, "UP") || Objects.equals(value, "DOWN"))) {
+			this.currentKeyPresses[index] = value;
+		} else if ((index == 0 || index == 1) && Objects.equals(value, null)) {
+			this.currentKeyPresses[index] = null;
+		}
+	}
+	
+	/**
+	 * Description: Method used to flag the robot's deceleration status.
+	 * 
+	 * @param value:
+	 *            The boolean value to be set.
+	 */
+	public void setDecelerate(boolean value) {
+		this.decelerate = value;
+	}
+	
+	/**
+	 * Description: set if the robot is reading inputs from a file
+	 * 
+	 * @param value: true or false
+	 */
+	public void setInputCommandsReadingInProgress(boolean value) {
+		this.inputCommandsReadingInProgress = value;
+	}
+	
+	/**
+	 * Description: Method used to set the robot's last up or down property.
+	 * 
+	 * @param value:
+	 *            The string to be set (must be "UP", "DOWN", or "null")
+	 */
+	public void setLastUporDown(String value) {
+		if (Objects.equals(value, "UP") || Objects.equals(value, "DOWN")) {
+			this.lastUporDown = value;
+		} else if (Objects.equals(value, "null")) {
+			this.lastUporDown = null;
+		}
 	}
 
 	/**
+	 * Description: Method used to set the robot's last up or down property.
 	 * 
-	 * Description: Recharges the robot by a set value
-	 * 
-	 * @param decrementValue:
-	 *            amount by which the robot is charged
+	 * @param value:
+	 *            The string to be set (must be "LEFT", "RIGHT", or "null")
 	 */
-	public void increaseCharge(double decrementValue) {
-
-		if (this.getBatteryLeft() < this.getBatteryCapacity()) {
-			this.batteryLeft += decrementValue;
-		}
-		// avoids overcharging
-		else if (this.getBatteryLeft() > this.getBatteryCapacity()) {
-			this.batteryLeft = this.getBatteryCapacity();
-			if (Driver.toggledevmode) {
-				Driver.textinfo.setText("Recharged!");
-
-				if (Driver.batteryLowSound.isPlaying() == true) {
-					Driver.batteryLowSound.stop();
-				}
-				if (Driver.batteryFullSound.isPlaying() == false) {
-					Driver.batteryFullSound.play();
-				}
-			}
-		}
-		this.setMaxSpeed(this.globalMaxSpeed);
-
+	public void setLastMovement(String move) {
+		this.lastMovement = move;
+	}
+	
+	/**
+	 * Description: Sets the robot's maximum speed.
+	 * 
+	 * @param maxSpeed:
+	 *            The speed to set as the robot's maximum speed.
+	 */
+	public void setMaxSpeed(double maxSpeed) {
+		this.maxSpeed = maxSpeed;
 	}
 
 	/**
-	 * Description: checks if the robot is in the refueling area. If it is there
-	 * the robot is charged.
+	 * Description: Sets the robot's odometer to a given distance.
 	 * 
+	 * @param distance:
+	 *            The distance the robot has travelled so far.
 	 */
-	public void checkForCharging() {
-		if (CollisionDetection.detectLocation(this, Map.chargingstation)) {
-			this.increaseCharge(5);
-			this.recharging = true;
-			// reset time since collision to overwrite collisions happening in
-			// the charging station
-			this.setCollisionDetected(false);
-			this.timeSinceCollision = 0;
-			if (Driver.toggledevmode) {
-				if (Driver.textinfo.getText().equals("Battery less than 10%!!!")) {
-					Driver.textinfo.setText("Recharging!");
-				}
-			}
-
-		} else if (this.recharging == true) {
-			this.recharging = false;
-		}
+	public void setOdometer(double distance) {
+		this.odometer = distance;
+	}
+	
+	/**
+	 * Description: Sets the robot's speed and limits it to be less than or
+	 * equal the robot's maximum speed.
+	 * 
+	 * @param speed:
+	 *            The speed the robot will set to, providing that it is less
+	 *            than or equal to the maximum speed.
+	 */
+	public void setSpeed(double speed) {
+		this.speed = (speed > this.maxSpeed) ? this.maxSpeed : speed;
 	}
 
 	/**
-	 * Description: Checks if the robot passes the finish line. DIsabled if
-	 * player is trying to cheat by not doing a full lap.
+	 * Description: Sets the radius of the robot's wheels to a given value and
+	 * calls the Rectangle.setHeight() method
+	 * 
+	 * @param radius:
+	 *            The radius of the robot's wheels.
 	 */
-	public void checkForFinishLine() {
-		if (CollisionDetection.detectLocation(this, Map.finishLine)) {
-			// check if player is cheating
-			if (notCheating) {
-				this.timeLap();
-				if (Driver.toggledevmode) {
-					Driver.textinfo.setText("Crossed Finishline");
-				}
-				this.notCheating = false;
-				return;
-			}
-		}
-
+	public void setWheelRadius(double radius) {
+		this.wheelRadius = radius;
+		super.prefHeight(this.wheelRadius);
 	}
 
 	/**
-	 * Checks if robot actually did a lap around the track to avoid cheating.
+	 * Description: Set the robots wheel speeds
 	 * 
+	 * 
+	 * @param left: Left wheel speed
+	 * @param right: Right wheel speed
 	 */
-	public void checkIfCheckIfCheating() {
-		if (CollisionDetection.detectLocation(this, Map.antiCheatLine)) {
-			this.notCheating = true;
-		}
+	public void setWheelspeeds(double left, double right) {
+		this.wheelspeeds[0] = left;
+		this.wheelspeeds[1] = right;
+	}
+	
+	/**
+	 * Description: Sets the robot's x position to a given value and calls the
+	 * parent .setX() method.
+	 * 
+	 * @param xCoordinate:
+	 *            The x position to be moved to.
+	 */
+	public void setxCoordinate(double xCoordinate) {
+		this.xCoordinate = xCoordinate;
+		super.setX(this.xCoordinate);
+	}
+
+	/**
+	 * Description: Sets the robot's y position to a given value and calls the
+	 * parent .setY() method.
+	 * 
+	 * @param yCoordinate:
+	 *            The y position to be moved to.
+	 */
+	public void setyCoordinate(double yCoordinate) {
+		this.yCoordinate = yCoordinate;
+		super.setY(this.yCoordinate);
 	}
 
 	/**
@@ -921,33 +1124,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		Driver.gameInProgress = true;
 		Driver.splashscreen.setVisible(false);
 		Driver.gameOverScreen.setVisible(false);
-	}
-
-	/**
-	 * Description: Calculate and Display current lap time in label
-	 */
-	public void displayLapTime() {
-		if (this.startTime != 0) {
-			this.currentLapTime = (System.currentTimeMillis() - this.startTime) / 1000.0;
-
-			Driver.time.setText(df.format(this.currentLapTime) + " s");
-		}
-
-	}
-
-	/**
-	 * Description: Save high score to file
-	 */
-	private void saveHighScore() {
-		BufferedWriter bw = null;
-		try {
-			bw = new BufferedWriter(new FileWriter(new File("highscore.txt"), false));																				// false
-			bw.write("" + highscore);
-			bw.flush();
-			bw.close();
-		} catch (IOException e) {
-			Driver.LOGGER.severe("error while saving highscore to file");
-		}
 	}
 
 	/**
@@ -1194,65 +1370,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	}
 
 	/**
-	 * Description: Detects if the robot is about to collide with a boundry and
-	 * reacts accordingly
-	 * 
-	 * @param robot
-	 *            : robot you want to check for collisions
-	 * @param wallEcomponents:
-	 *            robots orientation components derived from its orientation
-	 * 
-	 * @author Geraint and Lucas
-	 */
-	public void detectCollision(Robot robot, double[] wallEcomponents) {
-		if (CollisionDetection.collisionDetection(robot)) {
-			robot.setCollisionDetected(true);
-			if (robot.getLastMovement().equals("moveDown")) {
-				while (CollisionDetection.collisionDetection(robot)) {
-					Movement.moveUp(wallEcomponents);
-				}
-				robot.setSpeed(0);
-			} else if (robot.getLastMovement().equals("moveUp")) {
-				while (CollisionDetection.collisionDetection(robot)) {
-					Movement.moveDown(wallEcomponents);
-				}
-				robot.setSpeed(0);
-			} else if (robot.getLastMovement().equals("moveLeft")) {
-				while (CollisionDetection.collisionDetection(robot)) {
-					Movement.moveRight();
-				}
-				robot.setSpeed(0);
-			} else if (robot.getLastMovement().equals("moveRight")) {
-				while (CollisionDetection.collisionDetection(robot)) {
-					Movement.moveLeft();
-				}
-				robot.setSpeed(0);
-			} else if (robot.getLastMovement().equals("moveUpLeft")) {
-				while (CollisionDetection.collisionDetection(robot)) {
-					Movement.moveDownRight(wallEcomponents);
-				}
-				robot.setSpeed(0);
-			} else if (robot.getLastMovement().equals("moveUpRight")) {
-				while (CollisionDetection.collisionDetection(robot)) {
-					Movement.moveDownLeft(wallEcomponents);
-				}
-				robot.setSpeed(0);
-			} else if (robot.getLastMovement().equals("moveDownLeft")) {
-				while (CollisionDetection.collisionDetection(robot)) {
-					Movement.moveUpRight(wallEcomponents);
-				}
-				robot.setSpeed(0);
-			} else if (robot.getLastMovement().equals("moveDownRight")) {
-				while (CollisionDetection.collisionDetection(robot)) {
-					Movement.moveUpLeft(wallEcomponents);
-				}
-				robot.setSpeed(0);
-			}
-
-		}
-	}
-
-	/**
 	 * Description: Method that reads moves from an input file and executes them
 	 * in order.
 	 * 
@@ -1390,132 +1507,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			this.currentKeyPresses[1] = null;
 		} else {
 			this.inputCommandsIndex++;
-		}
-	}
-
-	public void anotherSingleMoveViaFile(File file, double[] wallEcomponents) {
-		if (this.inputCommands == null) {
-			// No commands in file, load them up.
-			this.inputCommands = new ArrayList<String>();
-			this.inputCommandsReadingInProgress = true;
-			NewerFileReader nfr = null;
-			try {
-				nfr = new NewerFileReader();
-				this.inputCommands = nfr.scanFile(file);
-
-			} catch (InvalidFormatException e) {
-				// Driver.labelinfo.setText("WARNING: Invalid command in text
-				// file");
-				Driver.LOGGER.severe("WARNING: Invalid command in text file " + e.toString());
-				this.inputCommandsReadingInProgress = false;
-				return;
-			} catch (FileNotFoundException e) {
-				// Driver.labelinfo.setText("WARNING: File not found");
-				Driver.LOGGER.severe("WARNING: File not found " + e.toString());
-				this.inputCommandsReadingInProgress = false;
-				return;
-			}
-			return;
-		}
-
-		if (this.inputCommandsReadingInProgress == true) {
-			if (this.inputCommands.get(this.inputCommandsIndex).equals("moveUpLeft")) {
-
-				if (this.getDecelerate() == true) {
-					Movement.decelerate(wallEcomponents);
-				} else {
-					Movement.moveUpLeft(wallEcomponents);
-				}
-				this.setLastMovement("moveUpLeft");
-
-			} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveUpRight")) {
-
-				if (this.getDecelerate() == true) {
-					Movement.decelerate(wallEcomponents);
-				} else {
-					Movement.moveUpRight(wallEcomponents);
-				}
-				this.setLastMovement("moveUpRight");
-
-			} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveDownLeft")) {
-				if (this.getDecelerate() == true) {
-					Movement.decelerate(wallEcomponents);
-				} else {
-					Movement.moveDownLeft(wallEcomponents);
-				}
-				this.setLastMovement("moveDownLeft");
-
-			} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveDownRight")) {
-				if (this.getDecelerate() == true) {
-					Movement.decelerate(wallEcomponents);
-				} else {
-					Movement.moveDownRight(wallEcomponents);
-				}
-				this.setLastMovement("moveDownRight");
-
-			} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveUp")) {
-				if (this.getDecelerate() == true) {
-					// Robot must decelerate after previous motion in the
-					// opposite
-					// direction
-					Movement.decelerate(wallEcomponents);
-				} else {
-					// accelerate
-					Movement.moveUp(wallEcomponents);
-					this.setLastMovement("moveUp");
-				}
-
-			} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveDown")) {
-
-				if (this.getDecelerate() == true) {
-					// Robot must decelerate after previous motion in the
-					// opposite
-					// direction
-					Movement.decelerate(wallEcomponents);
-				} else {
-					// accelerate
-					Movement.moveDown(wallEcomponents);
-					this.setLastMovement("moveDown");
-				}
-
-			} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveLeft")) {
-				Movement.moveLeft();
-				this.setLastMovement("moveLeft");
-				// allows robot to turn left during deceleration
-				if (this.getDecelerate() == true) {
-					Movement.decelerate(wallEcomponents);
-				}
-
-			} else if (this.inputCommands.get(this.inputCommandsIndex).equals("moveRight")) {
-				Movement.moveRight();
-				this.setLastMovement("moveRight");
-				// allows robot to turn right during deceleration
-				if (this.getDecelerate() == true) {
-					Movement.decelerate(wallEcomponents);
-				}
-
-			} else if (this.inputCommands.get(this.inputCommandsIndex).equals("decelerate")) {
-				Movement.decelerate(wallEcomponents);
-
-			}
-
-			// change decelerate flag to false if speed is 0
-			if (this.getSpeed() <= 0) {
-				this.setDecelerate(false);
-				// Driver.lastUporDown = "";
-			}
-		}
-
-		// get the inputCommands arrayList size
-		if (this.inputCommandsIndex >= this.inputCommands.size() - 1) {
-			// Cause deceleration
-			this.inputCommandsReadingInProgress = false;
-			this.inputCommandsIndex = 0;
-			this.currentKeyPresses[0] = null;
-			this.currentKeyPresses[1] = null;
-		} else {
-			this.inputCommandsIndex++;
-
 		}
 	}
 

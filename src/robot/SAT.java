@@ -11,9 +11,43 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import tests.Driver;
 
-public class SAT {
+/**
+ * Description: Abstract class holding static methods used to implement SAT collision detection.
+ * @author Geraint and Lucas
+ *
+ */
+public abstract class SAT {
 
+	/** Definition: Wrapper function that returns 
+	 *  the cosine of a given angle.
+	 * 
+	 * @param angle: An angle in degrees.
+	 * @return: The cosine of an angle.
+	 */
+	private static double cos(double angle){
+		return Math.cos(Math.toRadians(angle));
+	}
 	
+	/** Definition: Resolves a given angle into two perpendicular axes.
+	 * 
+	 * @param angle: An angle in degrees.
+	 * @return: A List<Point2D> object containing the two perpendicular axes.
+	 */
+	public static List<Point2D> getAxes(double angle){
+		return Arrays.asList(
+				// 2nd rectangle axis is perpendicular (hence add 90 degrees)
+				new Point2D(cos(angle), sin(angle)),
+				new Point2D(cos(angle+90), sin(angle+90))
+				);
+				
+	}
+	
+	/**
+	 * Description: Method used to determine whether two entities are colliding.
+	 * @param rob: The first entity to check against.
+	 * @param rec: The second entity to check against.
+	 * @return: True when the entities intersect.
+	 */
 	public static boolean isColliding(Entity rob, Entity rec){
 		
 		double robMin = 0;
@@ -53,30 +87,6 @@ public class SAT {
 		}
 		
 		return true;
-	}
-	
-	/** Definition: Resolves a given angle into two perpendicular axes.
-	 * 
-	 * @param angle: An angle in degrees.
-	 * @return: A List<Point2D> object containing the two perpendicular axes.
-	 */
-	public static List<Point2D> getAxes(double angle){
-		return Arrays.asList(
-				// 2nd rectangle axis is perpendicular (hence add 90 degrees)
-				new Point2D(cos(angle), sin(angle)),
-				new Point2D(cos(angle+90), sin(angle+90))
-				);
-				
-	}
-	
-	/** Definition: Wrapper function that returns 
-	 *  the cosine of a given angle.
-	 * 
-	 * @param angle: An angle in degrees.
-	 * @return: The cosine of an angle.
-	 */
-	private static double cos(double angle){
-		return Math.cos(Math.toRadians(angle));
 	}
 	
 	/** Definition: Wrapper function that returns 

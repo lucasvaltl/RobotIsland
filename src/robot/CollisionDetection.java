@@ -15,62 +15,28 @@ import map.Map;
 import tests.Driver;
 
 /**
- * Description: Class that stores all of the collision methods for the robot.
+ * Description: Class that holds all of the collision methods for the robot.
  * 
  * @author Geraint and Lucas
- *
  */
-
 public class CollisionDetection {
 
-	/**
-	 * Description: this function detects if a rectangle (here a robot) is colliding
-	 * with another rectangle stored in an ArrayList of rectangles
-	 * 
-	 * 
-	 * @param robot: inpuat the robot you want to test collisions against
-	 * @param blocks: enter an ArrayList containing the rectangles that the robot
-	 * could collide with
-	 * @return: returns true if a collision was detected
-	 */
-
-//	public static boolean collisionDetection(Robot robot, ArrayList<Entity> blocks) {
-////		Bounds objA = robot.localToScene(robot.getBoundsInLocal());
-//		/**
-//		 * Returns the adjacent blocks surrounding the robot.
-//		 * @return: an array list with the adjacent blocks in the form [row, col];
-//		 */
-//		
-//		
-//		
-//		for (Entity staticblock : blocks) {
-//			//regular bounding box based collision detection for broad phase detection
-//			if(robot.getBoundsInParent().intersects(staticblock.getBoundsInParent())){
-//				//prorprietary seperating axis theorem based collision detection for narrow phase detection
-//			if (staticblock.isColliding(robot)) {
-//				
-//				Image pattern = new Image(new File("src/eveCollision.png").toURI().toString(), 32, 48, false, true);
-//				ImagePattern skin = new ImagePattern(pattern);
-//				Driver.wallE.setFill(skin);
-//				GameTimer.setCollisionDetected(true);
-//				return true; // collision
-//			}
-//		}}
-//		return false; 
-//	}
 	
-	public static boolean collisionDetection(Robot robot) {
-//		Bounds objA = robot.localToScene(robot.getBoundsInLocal());
-		
-		
+	/**
+	 * 
+	 * Description: This function detects if a rectangle (here, a robot) is colliding.
+	 * 
+	 * @param robot: The robot to test collisions against.
+	 * @return: True if a collision was detected
+	 */
+	public static boolean collisionDetection(Robot robot) {		
 		//get nearest nearest blocks depending on robots current position (for optimisation)
 		ArrayList<Entity> nearestblocks = getAdjacentBlocks(robot);
-		
 		
 		for (Entity staticblock : nearestblocks) {
 			//regular bounding box based collision detection for broad phase detection
 			if(robot.getBoundsInParent().intersects(staticblock.getBoundsInParent())){
-				//prorprietary seperating axis theorem based collision detection for narrow phase detection
+				//proprietary seperating axis theorem based collision detection for narrow phase detection
 			if (staticblock.isColliding(robot)) {
 				
 				// Play soundFX
@@ -88,13 +54,18 @@ public class CollisionDetection {
 		return false; 
 	}
 	
+	/**
+	 * Description: This function detects if the robot is colliding with any block within an 
+	 * array list of blocks.
+	 * @param robot: The robot to detect collisions against.
+	 * @param blocks: An array list of entity objects.
+	 * @return: True when a collision is detected.
+	 */
 	public static boolean detectLocation(Robot robot, ArrayList<Entity> blocks) {
-	
-
 		for (Entity block : blocks) {
 			//regular bounding box based collision detection for broad phase detection
 			if(robot.getBoundsInParent().intersects(block.getBoundsInParent())){
-				//prorprietary seperating axis theorem based collision detection for narrow phase detection
+				//proprietary separating axis theorem based collision detection for narrow phase detection
 			if (block.isColliding(robot)) {
 				
 				return true; // collision
@@ -104,7 +75,11 @@ public class CollisionDetection {
 	}
 	
 	
-	
+	/**
+	 * Description: This method returns an array list of adjacent entities from a given robot
+	 * @param robot: The robot object.
+	 * @return: An array list of entities representing the adjacent blocks surrounding the robot.
+	 */
 	public static ArrayList<Entity> getAdjacentBlocks(Robot robot) {
 		// rounded down current position in rows and columns
 		

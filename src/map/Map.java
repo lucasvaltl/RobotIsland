@@ -9,9 +9,12 @@ import javafx.scene.shape.Rectangle;
 import robot.Entity;
 import tests.Driver;
 
+/**
+ * Description: Class used to represents the game map.
+ * @author Geraint and Lucas
+ *
+ */
 public class Map {
-	/** Class that represents the map **/
-	
 	
 	private int colSize;
 	private int rowSize;
@@ -24,63 +27,97 @@ public class Map {
 	int YBLOCKSIZE;
 	int XBLOCKSIZE;
 	
+	/**
+	 * Description: Initialise a new map object from a given grid.
+	 * @param grid: A nested int array.
+	 */
 	public Map (int[][] grid) {
-		/** Class constructor **/
 		this.grid = grid;
 		this.rowSize = grid.length;
 		this.colSize = grid[0].length;
 	}
 	
+	/** Description: Returns the height of each map block.
+	 * 
+	 * @return: The height of a map block in pixels.
+	 */
+	public int getBlockHeight() {
+		return Driver.SCREENHEIGHT / this.getRowSize();
+	}
+	
+	/**
+	 * Description: Returns an entity object given an index.
+	 * @param i: An index.
+	 * @return: An entity object used to wrap game images.
+	 */
+	public static Entity getBlocks(int i){
+		return blocks.get(i);
+	}
+	
+	/**
+	 * Description: Returns the storage index of a given entity object.
+	 * @param i: The entity's column index.
+	 * @param j: The entity's row index.
+	 * @return: An index.
+	 */
+	public static int getBlockPosition(int i, int j){
+		return blocksToGrid[i][j];
+	}
+	
+	/** Description: Returns the width of each map block.
+	 * 
+	 * @return: The width of a map block in pixels.
+	 */
+	public int getBlockWidth() {
+		return Driver.SCREENWIDTH / this.getColSize();
+	}
+	
+	/**
+	 * Description: Return the grid column size
+	 * @return: The number of columns in the map.
+	 */
 	public int getColSize() {
-		/** Return the grid column size **/
 		return this.colSize;
 	}
 	
-	public int getRowSize() {
-		/** Return the grid row size **/
-		return this.rowSize;
-	}
-	
+	/**
+	 * Description: Returns the grid.
+	 * @return: A nested int array.
+	 */
 	public int[][] getGrid() {
-		/** Returns the grid array **/
 		return this.grid;
 	}
 	
-	public void setGrid(int[][] grid) {
-		/** Method to reset the grid array **/
-		this.grid = grid;
-		// reset the rowSize and colSize
-		this.rowSize = grid.length;
-		this.colSize = grid[0].length;
-	}
-	
-	
-	public int[] getGridRow(int index) {
-		/** Returns a row from the grid given an index **/
-		return this.grid[index];
-	}
-	
+	/**
+	 * Description: Returns a column from the grid given an index.
+	 * @param colIndex: A column index
+	 * @return: A column from the map
+	 */
 	public int[] getGridCol(int colIndex) {
-		/** Returns a column from the grid at a given index **/
 		int[] colArray = new int[this.rowSize];
 		for (int i = 0; i < this.rowSize; i++) {
 			// iterate through a col and assign to array.
 			colArray[i] = grid[i][colIndex];
 		}
 		return colArray;
-		
 	}
 	
-	public static Entity getBlocks(int i){
-		return blocks.get(i);
+	/**
+	 * Description: Returns a row from the grid given an index 
+	 * @param index: A row index.
+	 * @return: A row from the map.
+	 */
+	public int[] getGridRow(int index) {
+		return this.grid[index];
 	}
 	
-	public static int getBlockPosition(int i, int j){
-		return blocksToGrid[i][j];
+	/**
+	 * Description: Returns the grid row size.
+	 * @return: The number of rows in the map
+	 */
+	public int getRowSize() {
+		return this.rowSize;
 	}
-	
-	
-	
 	
 	/**
 	 * Renders a 2D version of the map and adds it to an ArrayList of blocks
@@ -90,23 +127,6 @@ public class Map {
 	 * @param gc: insert graphics context
 	 * @param screenEqualsMap: indicates whether the screen (window size) is equal to the map size
 	 */
-	
-	/** Description: Returns the height of each map block.
-	 * 
-	 * @return: The height of a map block in pixels.
-	 */
-	public int getBlockHeight() {
-		return Driver.SCREENHEIGHT / this.getRowSize();
-	}
-		
-	/** Description: Returns the width of each map block.
-	 * 
-	 * @return: The width of a map block in pixels.
-	 */
-	public int getBlockWidth() {
-		return Driver.SCREENWIDTH / this.getColSize();
-	}
-	
 	public void render2DMap(GraphicsContext gc, boolean screenEqualsMap) {
 		if (screenEqualsMap == true) {
 			// divide screen dimensions by map dimensions to derive block sizes
@@ -165,5 +185,15 @@ public class Map {
 		}
 		Driver.root.getChildren().addAll(antiCheatLine);
 	}
+	
+	/**
+	 * Description: Resets the grid to a given new grid.
+	 * @param grid: The grid to change to.
+	 */
+	public void setGrid(int[][] grid) {
+		this.grid = grid;
+		// reset the rowSize and colSize
+		this.rowSize = grid.length;
+		this.colSize = grid[0].length;
+	}
 }
-

@@ -19,7 +19,7 @@ import robot.CollisionDetection;
 import robot.Movement;
 import tests.Driver;
 
-/** Description: Class that implements a JavaFX animation timer 
+/** Description: A custom implementation of a JavaFX animation timer 
  * 
  * @author Geraint and Lucas
  *
@@ -30,10 +30,6 @@ public class GameTimer extends AnimationTimer {
 	private static boolean collisionDetected;
 	int i = 0;
 	int j = 0;
-	
-	public static void setCollisionDetected(boolean b){
-		collisionDetected = b;
-	}
 	
 	/**
 	 *  
@@ -64,5 +60,13 @@ public class GameTimer extends AnimationTimer {
 			Driver.wallE.reset(Driver.robotType);
 		}
 		
+	}
+	
+	/** Description: Sets the collisionDetected to a given value. 
+	 * 
+	 * @param b: A boolean value.
+	 */
+	public static void setCollisionDetected(boolean b) {
+		collisionDetected = b;
 	}
 }
