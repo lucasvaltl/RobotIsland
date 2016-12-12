@@ -1,0 +1,2 @@
+Dec 12, 2016 7:24:21 PM tests.Driver$1 handle
+SEVERE: WARNING: Invalid command in text file javafx.event.ActionEvent[source=Button@11def8d4[styleClass=button]'Execute Movements from File']
