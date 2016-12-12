@@ -62,28 +62,7 @@ import java.util.logging.SimpleFormatter;
  */
 public class Driver extends Application {
 	
-	// Load audio
-	public static AudioClip soundtrack;
-	public static AudioClip collisionSound;
-	public static AudioClip rechargeSound;
-	public static AudioClip batteryDeadSound;
-	public static AudioClip batteryLowSound;
-	public static AudioClip highscoreSound;
-	public static AudioClip batteryFullSound;
-	public static AudioClip finishLine;
-	
-	
-	
-		static URL url = Driver.class.getResource("/resources/chibininja.wav");
-		static URL url2 = Driver.class.getResource("/resources/collision.wav");
-		static URL url3 = Driver.class.getResource("/resources/recharge.wav");
-		static URL url4 = Driver.class.getResource("/resources/batterydead.wav");
-		static URL url5 = Driver.class.getResource("/resources/batterylow.wav");
-		static URL url6 = Driver.class.getResource("/resources/highscore.wav");
-		static URL url7 = Driver.class.getResource("/resources/fullrecharge.wav");
 
-		
-		
 	
 	public static final int SCREENWIDTH = 800;
 	public static final int SCREENHEIGHT = 800;
@@ -142,6 +121,23 @@ public class Driver extends Application {
 	private static CustomHandler warningHandler;
 	private static CustomHandler severeHandler;
 	private static CustomHandler instructionHandler;
+	
+	public static AudioClip soundtrack;
+	public static AudioClip collisionSound;
+	public static AudioClip rechargeSound;
+	public static AudioClip batteryDeadSound;
+	public static AudioClip batteryLowSound;
+	public static AudioClip highscoreSound;
+	public static AudioClip batteryFullSound;
+	public static AudioClip finishLine;
+
+	static URL url = Driver.class.getResource("/resources/chibininja.wav");
+	static URL url2 = Driver.class.getResource("/resources/collision.wav");
+	static URL url3 = Driver.class.getResource("/resources/recharge.wav");
+	static URL url4 = Driver.class.getResource("/resources/batterydead.wav");
+	static URL url5 = Driver.class.getResource("/resources/batterylow.wav");
+	static URL url6 = Driver.class.getResource("/resources/highscore.wav");
+	static URL url7 = Driver.class.getResource("/resources/fullrecharge.wav");
 
 	/**
 	 * Description: Sets up the logger, creates a map instance, and launches
@@ -150,32 +146,6 @@ public class Driver extends Application {
 	 * @param args: No command line arguments are expected.
 	 */
 	public static void main(String[] args) {
-		URI uri;
-		URI uri2;
-		URI uri3;
-		URI uri4;
-		URI uri5;
-		URI uri6;
-		URI uri7;
-
-		try {
-			uri = url.toURI();
-			uri2 = url2.toURI();
-			uri3 = url3.toURI();
-			uri4 = url4.toURI();
-			uri5 = url5.toURI();
-			uri6 = url6.toURI();
-			uri7 = url7.toURI();
-			soundtrack = new AudioClip(uri.toString());
-			collisionSound = new AudioClip(uri2.toString());
-			batteryDeadSound = new AudioClip(uri3.toString());
-			batteryLowSound = new AudioClip(uri4.toString());
-			highscoreSound = new AudioClip(uri5.toString());
-			batteryFullSound = new AudioClip(uri6.toString());
-			finishLine = new AudioClip(uri7.toString());
-			} catch (Exception e){
-				e.printStackTrace();
-			}
 		
 		
 		
@@ -241,7 +211,32 @@ public class Driver extends Application {
 	 */
 	public void start(Stage primaryStage) throws Exception {
 		
-		
+		URI uri;
+		URI uri2;
+		URI uri3;
+		URI uri4;
+		URI uri5;
+		URI uri6;
+		URI uri7;
+	
+		try {
+			uri = url.toURI();
+			uri2 = url2.toURI();
+			uri3 = url3.toURI();
+			uri4 = url4.toURI();
+			uri5 = url5.toURI();
+			uri6 = url6.toURI();
+			uri7 = url7.toURI();
+			soundtrack = new AudioClip(uri.toString());
+			collisionSound = new AudioClip(uri2.toString());
+			batteryDeadSound = new AudioClip(uri3.toString());
+			batteryLowSound = new AudioClip(uri4.toString());
+			highscoreSound = new AudioClip(uri5.toString());
+			batteryFullSound = new AudioClip(uri6.toString());
+			finishLine = new AudioClip(uri7.toString());
+			} catch (Exception e){
+				e.printStackTrace();
+			}
 		
 		
 		primaryStage.setTitle("Robot Island");
