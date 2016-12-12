@@ -113,7 +113,7 @@ public class Driver extends Application {
 	public static Label highscore;
 	public static boolean toggledevmode;
 	public static File movementFile;
-	public static Alert alert = new Alert(AlertType.WARNING);
+	public static Alert alert;
 	public static boolean alerttriggered;
 	public static boolean gameInProgress = false;
 	public static String robotType;
@@ -318,6 +318,7 @@ public class Driver extends Application {
 							wallE.setInputCommandsReadingInProgress(true);
 						} catch (InvalidFormatException ex) {
 							Driver.LOGGER.severe("WARNING: Invalid command in text file "+ e.toString());
+							alert = new Alert(AlertType.WARNING);
 							alert.setTitle("Invalid Format Error");
 							alert.setHeaderText("Invalid format found in movement file!");
 							alert.setContentText(
