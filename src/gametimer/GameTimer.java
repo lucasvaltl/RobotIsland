@@ -1,3 +1,4 @@
+/** A custom implementation of a JavaFX animation timer **/
 package gametimer;
 
 import java.io.File;

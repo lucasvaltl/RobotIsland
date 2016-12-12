@@ -1,3 +1,4 @@
+/** Holds custom logger levels, logger formatter, and logger handler **/
 package loggers;
 
 import java.util.logging.Level;
