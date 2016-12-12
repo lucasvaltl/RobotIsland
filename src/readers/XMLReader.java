@@ -14,7 +14,6 @@ import org.w3c.dom.NodeList;
 /**
  * Description: This XML reader reads through an XML file and return the attributes related to a specific id.
  * 
- * @return: An ArrayList of strings. 
  * @author Geraint and Lucas
  */
 public final class XMLReader {

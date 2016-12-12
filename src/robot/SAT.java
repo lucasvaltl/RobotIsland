@@ -31,7 +31,7 @@ public abstract class SAT {
 	/** Definition: Resolves a given angle into two perpendicular axes.
 	 * 
 	 * @param angle: An angle in degrees.
-	 * @return: A List<Point2D> object containing the two perpendicular axes.
+	 * @return: A List of Point2D objects containing the two perpendicular axes.
 	 */
 	public static List<Point2D> getAxes(double angle){
 		return Arrays.asList(

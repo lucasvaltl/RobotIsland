@@ -15,7 +15,7 @@ public class CustomFormatter extends SimpleFormatter {
 	// Level instruction = Level.parse("INSTRUCTION");
 	
 	/** Description:  Removes the logger time stamp
-	 * @param: A log record.
+	 * @param record: A log record.
 	 */
 	public String format(LogRecord record){
 		  if(record.getLevel() == CustomLevel.INSTRUCTION){

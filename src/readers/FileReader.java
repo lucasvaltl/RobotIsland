@@ -22,8 +22,8 @@ public class FileReader {
  * 
  * @param uri: The location of the file
  * @return: An ArrayList of Strings with validated movement instructions
- * @throws InvalidFormatException
- * @throws FileNotFoundException
+ * @throws InvalidFormatException: Thrown when the form is in an invalid format.
+ * @throws FileNotFoundException: Thrown when the file is not found.
  */
 	public ArrayList<String> scanFile(String uri) throws InvalidFormatException, FileNotFoundException {
 

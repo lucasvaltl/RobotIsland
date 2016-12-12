@@ -46,6 +46,7 @@ public class Movement {
 	 * @param wallEcomponents:
 	 *            a double array containing the orientation of a
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
+	 * @return: A double array representing the robot's wheel speeds.
 	 */
 	public static double[] moveDown(double[] wallEcomponents) {
 		Driver.LOGGER.info("moveDown");
@@ -78,6 +79,7 @@ public class Movement {
 	 * @param wallEcomponents:
 	 * 			  a double array containing the orientation of a
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
+	 * @return: A double array representing the robot's wheel speeds
 	 */
 	public static double[] moveDownLeft(double[] wallEcomponents) {
 		Driver.LOGGER.info("moveDownLeft");
@@ -120,6 +122,7 @@ public class Movement {
 	 * @param wallEcomponents:
 	 * 			  a double array containing the orientation of a
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
+	 * @return: A double array representing the robot's wheel speeds
 	 */
 	public static double[] moveDownRight(double[] wallEcomponents) {
 		Driver.LOGGER.info("moveDownRight");
@@ -157,8 +160,8 @@ public class Movement {
 	}
 	
 	/**
-	 * Description: Turns the robot to the left
-	 * 
+	 * Description: Rotate the robot anti-clockwise
+	 * @return: A double array representing the robot's wheel speeds.
 	 */
 	public static double[] moveLeft() {
 		Driver.LOGGER.info("moveLeft");
@@ -191,8 +194,8 @@ public class Movement {
 	}
 
 	/**
-	 * Description: Turns the robot to the right
-	 * 
+	 * Description: Rotates the robot clockwise.
+	 * @return: A double array representing the robot's wheel speeds
 	 */
 	public static double[] moveRight() {
 		Driver.LOGGER.info("moveRight");
@@ -232,6 +235,7 @@ public class Movement {
 	 * @param wallEcomponents:
 	 *            a double array containing the orientation of a
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
+	 * @return: A double array representing the robot's wheel speeds.
 	 */
 	public static double[] moveUp(double[] wallEcomponents) {
         Driver.LOGGER.info("moveUp");
@@ -264,6 +268,7 @@ public class Movement {
 	 * @param wallEcomponents:
 	 * 			  a double array containing the orientation of a
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
+	 * @return: A double array representing the robot's wheel speeds
 	 */
 	public static double[] moveUpLeft(double[] wallEcomponents) {
 		Driver.LOGGER.info("moveUpLeft");
@@ -306,6 +311,7 @@ public class Movement {
 	 * @param wallEcomponents:
 	 * 			  a double array containing the orientation of a
 	 *            robot(rectangle) in the form {xOrientation, yOrientation}
+	 * @return: A double array representing the robot's wheel speeds.
 	 */
 	public static double[] moveUpRight(double[] wallEcomponents) {
 		Driver.LOGGER.info("moveUpRight");

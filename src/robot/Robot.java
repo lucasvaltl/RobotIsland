@@ -92,30 +92,18 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	/**
 	 * Description: Verbose robot class constructor
 	 * 
-	 * @param name:
-	 *            The robot's ID.
-	 * @param xCoordinate:
-	 *            The robot's initial x position.
-	 * @param yCoordinate:
-	 *            The robot's initial y position.
-	 * @param speed:
-	 *            The robot's initial speed.
-	 * @param maxSpeed:
-	 *            The robot's max speed.
-	 * @param acceleration:
-	 *            The robot's acceleration.
-	 * @param angularVelocity:
-	 *            The robot's angular velocity.
-	 * @param odometer:
-	 *            The robot's initial distance travelled.
-	 * @param batteryLeft:
-	 *            The robot's initial battery level.
-	 * @param batteryCapacity:
-	 *            The robot's battery capacity.
-	 * @param axleLength:
-	 *            The robot's axle length.
-	 * @param wheelRadius:
-	 *            The robot's wheel radius.
+	 * @param name: The robot's ID.
+	 * @param xCoordinate: The robot's initial x position.
+	 * @param yCoordinate: The robot's initial y position.
+	 * @param speed: The robot's initial speed.
+	 * @param maxSpeed: The robot's max speed.
+	 * @param acceleration: The robot's acceleration.
+	 * @param angularVelocity: The robot's angular velocity.
+	 * @param odometer: The robot's initial distance travelled.
+	 * @param batteryLeft: The robot's initial battery level.
+	 * @param batteryCapacity: The robot's battery capacity.
+	 * @param axleLength: The robot's axle length.
+	 * @param wheelRadius: The robot's wheel radius.
 	 */
 	public Robot(String name, double xCoordinate, double yCoordinate, double speed, double maxSpeed,
 			double acceleration, double angularVelocity, double odometer, double batteryLeft, double batteryCapacity,
@@ -171,11 +159,9 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	}
 
 	/**
-	 * Description: Animate the robot to reflect it's behavior. Direction/speed
-	 * will change the position of its eyes, where as a collision will change
-	 * the
-	 * 
-	 * @return
+	 * Description: Animate the robot to reflect it's behaviour.
+	 * @param wallEcomponents: The robot's x and x components.
+	 * @return: A boolean value used to break out of the method.
 	 */
 	public boolean animate(double[] wallEcomponents) {
 		
@@ -287,6 +273,11 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		return true;
 	}
 	
+	/**
+	 * Description: Reads a single move from a given file.
+	 * @param file: A file to read from.
+	 * @param wallEcomponents: The robot's position vectors.
+	 */
 	public void anotherSingleMoveViaFile(File file, double[] wallEcomponents) {
 		if (this.inputCommands == null) {
 			// No commands in file, load them up.
@@ -414,9 +405,8 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	}
 	
 	/**
-	 * Description: checks if the robot is in the refueling area. If it is there
+	 * Description: Checks if the robot is in the refueling area. If it is there
 	 * the robot is charged.
-	 * 
 	 */
 	public void checkForCharging() {
 		if (CollisionDetection.detectLocation(this, Map.chargingstation)) {
@@ -456,8 +446,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	}
 
 	/**
-	 * Checks if robot actually did a lap around the track to avoid cheating.
-	 * 
+	 * Description: Checks if robot actually did a lap around the track to avoid cheating.
 	 */
 	public void checkIfCheckIfCheating() {
 		if (CollisionDetection.detectLocation(this, Map.antiCheatLine)) {
@@ -532,7 +521,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	/**
 	 * Description: Create a array of arrays storing images later used
 	 * for animation.
-	 * 
 	 */
 	public void createAnimatedImages() {
 		Image[][] images = new Image[5][3];
@@ -556,8 +544,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 * Description: Method used to decrease robot charge by a given value at the
 	 * end of every move.
 	 * 
-	 * @param decrementValue:
-	 *            The value to decrement the robot's battery by.
+	 * @param decrementValue: The value to decrement the robot's battery by.
 	 */
 	public void decreaseCharge(double decrementValue) {
 		this.batteryLeft -= decrementValue;
@@ -572,13 +559,11 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	}
 	
 	/**
-	 * Description: Detects if the robot is about to collide with a boundry and
+	 * Description: Detects if the robot is about to collide with a boundary and
 	 * reacts accordingly
 	 * 
-	 * @param robot
-	 *            : robot you want to check for collisions
-	 * @param wallEcomponents:
-	 *            robots orientation components derived from its orientation
+	 * @param robot: robot you want to check for collisions
+	 * @param wallEcomponents: robots orientation components derived from its orientation
 	 * 
 	 * @author Geraint and Lucas
 	 */
@@ -626,12 +611,11 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 				}
 				robot.setSpeed(0);
 			}
-
 		}
 	}
 	
 	/**
-	 * Description: Calculate and Display current lap time in label
+	 * Description: Calculate and display the current lap time in the display label
 	 */
 	public void displayLapTime() {
 		if (this.startTime != 0) {
@@ -642,17 +626,14 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	}
 	
 	/**
-	 * Description: Resets lap and resets robot to initial state.
-	 * 
+	 * Description: Resets the lap and resets the robot to an initial state.
 	 */
 	public void gameOver(){
 		Driver.gameOverScreen.setVisible(true);
-
 	}
 	
 	/**
 	 * Description: Return's the robot's acceleration
-	 * 
 	 * @return: The robot's acceleration.
 	 */
 	public double getAcceleration() {
@@ -661,7 +642,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 
 	/**
 	 * Description: Returns the robot's angular velocity in degrees per second.
-	 * 
 	 * @return: The robot's angular velocity in degrees per second.
 	 */
 	public double getAngularVelocity() {
@@ -669,11 +649,10 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	}
 	
 	/**
-	 * Description: get an image from the image array
-	 * 
-	 * @param i: row number
-	 * @param j: column number
-	 * @return
+	 * Description: Get an image from the image array
+	 * @param row: Row number
+	 * @param column: Column number
+	 * @return: An ImagePattern object to display.
 	 */
 	public ImagePattern getAnimatedImage(int row, int column) {
 		return this.animimages[row][column];
@@ -681,7 +660,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	
 	/**
 	 * Description: Returns the robot's axle length.
-	 * 
 	 * @return: A double representing the robot's axle length.
 	 */
 	public double getAxleLength() {
@@ -691,7 +669,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	/**
 	 * Description: Returns a double representing the amount of battery
 	 * capacity.
-	 * 
 	 * @return: A double representing the amount of battery capacity.
 	 */
 	public double getBatteryCapacity() {
@@ -700,20 +677,22 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	
 	/**
 	 * Description: Returns a double representing the amount of battery left.
-	 * 
 	 * @return: A double representing the amount of battery left.
 	 */
 	public double getBatteryLeft() {
 		return this.batteryLeft;
 	}
 	
+	/**
+	 * Description: Check if a collision has been detected. 
+	 * @return: A boolean value - true when a collision has been detected.
+	 */
 	public boolean getCollisionDetected() {
 		return this.collisionDetected;
 	}
 	
 	/**
 	 * Description: Method that returns the robot's current key presses.
-	 * 
 	 * @return A string array of length 2, representing the current key presses.
 	 */
 	public String[] getCurrentKeyPresses() {
@@ -723,13 +702,16 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	/**
 	 * Description: Method that returns a boolean to represent the robot's
 	 * deceleration status
-	 * 
 	 * @return: A boolean that represents the robot's deceleration status.
 	 */
 	public boolean getDecelerate() {
 		return this.decelerate;
 	}
 	
+	/**
+	 * Description: A method to get the amount of distance travelled.
+	 * @return: The robot's distance travelled.
+	 */
 	public double getDistanceTravelled() {
 		return this.distancetravelled;
 	}
@@ -737,9 +719,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	/**
 	 * Description: Method that returns a boolean which will be true when robot
 	 * commands are being read from a file.
-	 * 
-	 * @return: A boolean that will be true when robot commands are being read
-	 *          from a file.
+	 * @return: A boolean that will be true when robot commands are being read from a file.
 	 */
 	public boolean getInputCommandsReadingInProgress() {
 		return this.inputCommandsReadingInProgress;
@@ -748,7 +728,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	/**
 	 * Description: Method that returns the robot's last left or right command
 	 * property.
-	 * 
 	 * @return: The last up or down command assigned to the lastUporDown field.
 	 */
 	public String getLastMovement() {
@@ -758,7 +737,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	/**
 	 * Description: Method that returns the robot's last up or down command
 	 * property.
-	 * 
 	 * @return: The last up or down command assigned to the lastUporDown field.
 	 */
 	public String getLastUporDown() {
@@ -766,9 +744,8 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	}
 	
 	/**
-	 * Description: Returns the robot's max speed.
-	 * 
-	 * @return: The robot's max speed.
+	 * Description: Returns the robot's maximum speed.
+	 * @return: The robot's maximum speed.
 	 */
 	public double getMaxSpeed() {
 		return this.maxSpeed;
@@ -776,16 +753,15 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	
 	/**
 	 * Description: Returns the robot's distance travelled.
-	 * 
 	 * @return: The robot's distance travelled.
+	 * @version 0.1
 	 */
 	public double getOdometer() {
 		return this.odometer;
 	}
 	
 	/**
-	 * Description: Returns the robot's speed.
-	 * 
+	 * Description: Returns the robot's speed. * 
 	 * @return: The robot's current speed.
 	 */
 	public double getSpeed() {
@@ -794,20 +770,21 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 
 	/**
 	 * Description: Returns the robot's wheel radius.
-	 * 
 	 * @return: A double representing the robot's wheel radius.
 	 */
 	public double getWheelRadius() {
 		return this.wheelRadius;
 	}
 
+	/**
+	 * @return: A double array of the robot's relative wheel speeds.
+	 */
 	public double[] getWheelspeeds() {
 		return this.wheelspeeds;
 	}
 
 	/**
 	 * Description: Returns the robot's x coordinate.
-	 * 
 	 * @return: The robot's current x position.
 	 */
 	public double getxCoordinate() {
@@ -816,7 +793,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 
 	/**
 	 * Description: Returns the robot's y coordinate
-	 * 
 	 * @return: The robot's current y position
 	 */
 	public double getyCoordinate() {
@@ -824,18 +800,15 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	}
 	
 	/**
-	 * 
 	 * Description: Recharges the robot by a set value
-	 * 
-	 * @param decrementValue:
-	 *            amount by which the robot is charged
+	 * @param decrementValue: Amount by which the robot is charged
 	 */
 	public void increaseCharge(double decrementValue) {
 
 		if (this.getBatteryLeft() < this.getBatteryCapacity()) {
 			this.batteryLeft += decrementValue;
 		}
-		// avoids overcharging
+		// avoids over-charging
 		else if (this.getBatteryLeft() > this.getBatteryCapacity()) {
 			this.batteryLeft = this.getBatteryCapacity();
 			if (Driver.toggledevmode) {
@@ -853,10 +826,10 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	}
 	
 	/**
-	 * Description: Resets the robot ot its initial position using an 
-	 * xml file to load the different specifications of the robot.
+	 * Description: Resets the robot to its initial position using an 
+	 * XML file to load the different specifications of the robot.
 	 * 
-	 * @param robottype: type of robot you want to load (type found in xml)
+	 * @param robottype: type of robot you want to load (type found in XML)
 	 */
 	public void reset(String robottype) {
 		//reload robot from xml
@@ -903,9 +876,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	/**
 	 * Description: Sets the axle length to a given value and calls the
 	 * Rectangle.setWidth() method (Currently assumes wheels as having no width)
-	 * 
-	 * @param axleLength:
-	 *            The robot's axle length.
+	 * @param axleLength: The robot's axle length.
 	 */
 	public void setAxleLength(double axleLength) {
 		this.axleLength = axleLength;
@@ -914,9 +885,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	
 	/**
 	 * Description: Set's the robot's acceleration.
-	 * 
-	 * @param acceleration:
-	 *            The acceleration to set as the robot's acceleration.
+	 * @param acceleration: The acceleration to set as the robot's acceleration.
 	 */
 	public void setAcceleration(double acceleration) {
 		this.acceleration = acceleration;
@@ -924,10 +893,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 
 	/**
 	 * Description: Set's the robot's angular velocity (in degrees per second).
-	 * 
-	 * @param angularVelocity:
-	 *            The value in degrees per second to set the robot's angular
-	 *            velocity.
+	 * @param angularVelocity: The value in degrees per second to set the robot's angular velocity.
 	 */
 	public void setAngularVelocity(double angularVelocity) {
 		this.angularVelocity = angularVelocity;
@@ -935,9 +901,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	
 	/**
 	 * Description: Sets the robot's battery level to a given value.
-	 * 
-	 * @param batteryLeft:
-	 *            The amount of battery left.
+	 * @param batteryLeft: The amount of battery left.
 	 */
 	public void setBatteryLeft(double batteryLeft) {
 		this.batteryLeft = batteryLeft;
@@ -945,7 +909,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	
 	/**
 	 * Description: Set the if the robot detected a collision
-	 * 
 	 * @param b: true or false
 	 */
 	public void setCollisionDetected(boolean b) {
@@ -955,11 +918,8 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	/**
 	 * Description: Method that sets a particular index in the CurrentKeyPresses
 	 * string array to a given value.
-	 * 
-	 * @param index:
-	 *            The index of the value to change (must be either 0 or 1.
-	 * @param value:
-	 *            The value to change to.
+	 * @param index: The index of the value to change (must be either 0 or 1.
+	 * @param value: The value to change to.
 	 */
 	public void setCurrentKeyPresses(int index, String value) {
 		if ((index == 0 || index == 1) && (Objects.equals(value, "UP") || Objects.equals(value, "DOWN"))) {
@@ -971,9 +931,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	
 	/**
 	 * Description: Method used to flag the robot's deceleration status.
-	 * 
-	 * @param value:
-	 *            The boolean value to be set.
+	 * @param value: The boolean value to be set.
 	 */
 	public void setDecelerate(boolean value) {
 		this.decelerate = value;
@@ -981,7 +939,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	
 	/**
 	 * Description: set if the robot is reading inputs from a file
-	 * 
 	 * @param value: true or false
 	 */
 	public void setInputCommandsReadingInProgress(boolean value) {
@@ -990,9 +947,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	
 	/**
 	 * Description: Method used to set the robot's last up or down property.
-	 * 
-	 * @param value:
-	 *            The string to be set (must be "UP", "DOWN", or "null")
+	 * @param value: The string to be set (must be "UP", "DOWN", or "null")
 	 */
 	public void setLastUporDown(String value) {
 		if (Objects.equals(value, "UP") || Objects.equals(value, "DOWN")) {
@@ -1004,9 +959,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 
 	/**
 	 * Description: Method used to set the robot's last up or down property.
-	 * 
-	 * @param value:
-	 *            The string to be set (must be "LEFT", "RIGHT", or "null")
+	 * @param move: The string to be set (must be "LEFT", "RIGHT", or "null")
 	 */
 	public void setLastMovement(String move) {
 		this.lastMovement = move;
@@ -1014,9 +967,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	
 	/**
 	 * Description: Sets the robot's maximum speed.
-	 * 
-	 * @param maxSpeed:
-	 *            The speed to set as the robot's maximum speed.
+	 * @param maxSpeed: The speed to set as the robot's maximum speed.
 	 */
 	public void setMaxSpeed(double maxSpeed) {
 		this.maxSpeed = maxSpeed;
@@ -1024,9 +975,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 
 	/**
 	 * Description: Sets the robot's odometer to a given distance.
-	 * 
-	 * @param distance:
-	 *            The distance the robot has travelled so far.
+	 * @param distance: The distance the robot has travelled so far.
 	 */
 	public void setOdometer(double distance) {
 		this.odometer = distance;
@@ -1035,10 +984,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	/**
 	 * Description: Sets the robot's speed and limits it to be less than or
 	 * equal the robot's maximum speed.
-	 * 
-	 * @param speed:
-	 *            The speed the robot will set to, providing that it is less
-	 *            than or equal to the maximum speed.
+	 * @param speed: The speed the robot will set to, providing that it is less than or equal to the maximum speed.
 	 */
 	public void setSpeed(double speed) {
 		this.speed = (speed > this.maxSpeed) ? this.maxSpeed : speed;
@@ -1048,8 +994,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 * Description: Sets the radius of the robot's wheels to a given value and
 	 * calls the Rectangle.setHeight() method
 	 * 
-	 * @param radius:
-	 *            The radius of the robot's wheels.
+	 * @param radius: The radius of the robot's wheels.
 	 */
 	public void setWheelRadius(double radius) {
 		this.wheelRadius = radius;
@@ -1058,8 +1003,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 
 	/**
 	 * Description: Set the robots wheel speeds
-	 * 
-	 * 
 	 * @param left: Left wheel speed
 	 * @param right: Right wheel speed
 	 */
@@ -1071,9 +1014,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	/**
 	 * Description: Sets the robot's x position to a given value and calls the
 	 * parent .setX() method.
-	 * 
-	 * @param xCoordinate:
-	 *            The x position to be moved to.
+	 * @param xCoordinate: The x position to be moved to.
 	 */
 	public void setxCoordinate(double xCoordinate) {
 		this.xCoordinate = xCoordinate;
@@ -1083,9 +1024,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	/**
 	 * Description: Sets the robot's y position to a given value and calls the
 	 * parent .setY() method.
-	 * 
-	 * @param yCoordinate:
-	 *            The y position to be moved to.
+	 * @param yCoordinate: The y position to be moved to.
 	 */
 	public void setyCoordinate(double yCoordinate) {
 		this.yCoordinate = yCoordinate;
@@ -1095,7 +1034,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	/**
 	 * Description: Time the current lap. Checks if new lap time is the new high
 	 * score
-	 * 
 	 */
 	public void timeLap() {
 		
@@ -1128,9 +1066,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 
 	/**
 	 * Description: Load high score from file
-	 * 
 	 */
-
 	private void loadHighScore() {
 
 		String line = "";
@@ -1154,18 +1090,15 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	}
 
 	/**
-	 * Description: update the robots distance travelled
-	 * 
+	 * Description: Update the robots distance travelled
 	 */
 	private void updateDistance() {
 		this.distancetravelled += this.speed;
 	}
 
 	/**
-	 * Updates the Developer panel if developer mode is turned on
-	 * 
+	 * Description: Updates the Developer panel if developer mode is turned on
 	 */
-
 	public void updateDevPanel() {
 
 		Point2D centercoordinates = this.center();
@@ -1188,7 +1121,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			currentrotation += 180;
 		}
 		Driver.textangle.setText(numberFormat.format(currentrotation));
-
 	}
 
 	/**
@@ -1275,12 +1207,10 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	}
 
 	/**
-	 * Descripion: Moves the robot depending on keypresses. It calls the static
+	 * Description: Moves the robot depending on keypresses. It calls the static
 	 * methods in the movement class to translate and transform the robot, and
 	 * calculate the relative velocities of the left and right wheels.
-	 * 
-	 * @param wallEcomponents
-	 *            orientation components derived from the robots orientation
+	 * @param wallEcomponents: orientation components derived from the robots orientation
 	 */
 	public void move(double[] wallEcomponents) {
 
@@ -1372,12 +1302,10 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	/**
 	 * Description: Method that reads moves from an input file and executes them
 	 * in order.
-	 * 
-	 * @param path:
-	 *            The path of the file to read.
+	 * @param path: The path of the file to read.
 	 */
 	public void moveViaFile(String path) {
-		// TODO Get the orientation using the getRotate() method.
+		// Get the orientation using the getRotate() method.
 		double orientation = this.getRotate();
 		orientation = (orientation < 0) ? orientation + 360.0 : orientation;
 		orientation = (orientation > 360) ? orientation % 360.0 : orientation;
@@ -1428,12 +1356,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	/**
 	 * Description: Method that reads moves from an input file and executes them
 	 * in order.
-	 * 
-	 * @param path:
-	 *            The path of the file to read.
-	 * @param index:
-	 *            The current index to add to currentKeyPresses (must be between
-	 *            0 (inclusive) and the length of the ArrayList (exclusive).
+	 * @param path: The path of the file to read.
 	 */
 	public void singleMoveViaFile(String path) {
 		if (this.inputCommands == null) {

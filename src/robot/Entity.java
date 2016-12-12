@@ -150,6 +150,7 @@ public class Entity extends Rectangle{
 	 * Description: Method that returns the orientation of the robot in radians 
      * using the getRotate() method.
 	 * 
+	 * @param e2: An entity object.
 	 * @return: The current orientation of the robot in radians relative to y axis, clockwise.
 	 */
 	public boolean isColliding(Entity e2){

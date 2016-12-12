@@ -8,15 +8,14 @@ import java.util.logging.LogRecord;
 /**
  * Description: A custom logger handler used to enable logging to multiple files.
  * @author Geraint and Lucas
- *
  */
 public class CustomHandler extends FileHandler
 {
 	/**
 	 * Description: A custom handler for a given logger level.
 	 * @param level: A logger level.
-	 * @throws IOException
-	 * @throws SecurityException
+	 * @throws IOException: Signals that an I/O exception of some sort has occurred.
+	 * @throws SecurityException: Thrown by the security manager to indicate a security violation.
 	 */
     public CustomHandler(final Level level) throws IOException, SecurityException
     {
@@ -28,8 +27,8 @@ public class CustomHandler extends FileHandler
      * Description: A custom handler for a given logger level and output file.
      * @param s: The name of the output file
      * @param level: A logger level.
-     * @throws IOException
-     * @throws SecurityException
+     * @throws IOException: Signals that an I/O exception of some sort has occurred
+     * @throws SecurityException: Thrown by the security manager to indicate a security violation.
      */
     public CustomHandler(final String s, final Level level) throws IOException, SecurityException
     {
@@ -38,13 +37,12 @@ public class CustomHandler extends FileHandler
     }
 
     /**
-     * Description: A custom handler for a given logger level and output file, with optional 
-     * append
+     * Description: A custom handler for a given logger level and output file, with optional append
      * @param s: The name of the output file.
      * @param b: Optionally append to the output file.
      * @param level: A logger level.
-     * @throws IOException
-     * @throws SecurityException
+     * @throws IOException: Signals that an I/O exception of some sort has occurred
+     * @throws SecurityException: Thrown by the security manager to indicate a security violation.
      */
     public CustomHandler(final String s, final boolean b, final Level level) throws IOException, SecurityException
     {
@@ -61,8 +59,8 @@ public class CustomHandler extends FileHandler
      * @param i: The maximum number of bytes to write to any one file
      * @param i1: The number of files to use.
      * @param level: A logger level.
-     * @throws IOException
-     * @throws SecurityException
+     * @throws IOException: Signals that an I/O exception of some sort has occurred.
+     * @throws SecurityException: Thrown by the security manager to indicate a security violation.
      */
     public CustomHandler(final String s, final int i, final int i1, final Level level) throws IOException, SecurityException
     {
@@ -81,8 +79,8 @@ public class CustomHandler extends FileHandler
      * @param i1: THe number of files to use
      * @param b: Optional append.
      * @param level: A logger level.
-     * @throws IOException
-     * @throws SecurityException
+     * @throws IOException: Signals that an I/O exception of some sort has occurred.
+     * @throws SecurityException: Thrown by the security manager to indicate a security violation.
      */
     public CustomHandler(final String s, final int i, final int i1, final boolean b, final Level level) throws IOException, SecurityException
     {
