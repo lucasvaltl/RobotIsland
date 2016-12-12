@@ -61,14 +61,18 @@ import java.util.logging.SimpleFormatter;
 public class Driver extends Application {
 	
 	// Load audio
-	public static final AudioClip soundtrack = new AudioClip(new File("src/wav/chibininja.wav").toURI().toString());
-	public static final AudioClip collisionSound = new AudioClip(new File("src/wav/collision.wav").toURI().toString());
-	public static final AudioClip rechargeSound = new AudioClip(new File("src/wav/recharge.wav").toURI().toString());
-	public static final AudioClip batteryDeadSound = new AudioClip(new File("src/wav/batterydead.wav").toURI().toString());
-	public static final AudioClip batteryLowSound = new AudioClip(new File("src/wav/batterylow.wav").toURI().toString());
-	public static final AudioClip highscoreSound = new AudioClip(new File("src/wav/highscore.wav").toURI().toString());
-	public static final AudioClip batteryFullSound = new AudioClip(new File("src/wav/fullrecharge.wav").toURI().toString());
-	public static final AudioClip finishLine = new AudioClip(new File("src/wav/finishline.wav").toURI().toString());
+//	public static final AudioClip soundtrack = new AudioClip(new File("src/wav/chibininja.wav").toURI().toString());
+	
+	public static AudioClip soundtrack;
+	public static AudioClip collisionSound;
+	public static AudioClip rechargeSound;
+	public static AudioClip batteryDeadSound;
+	public static AudioClip batteryLowSound;
+	public static AudioClip highscoreSound;
+	public static AudioClip batteryFullSound;
+	public static AudioClip finishLine;
+	
+	
 	
 	public static final int SCREENWIDTH = 800;
 	public static final int SCREENHEIGHT = 800;
@@ -128,6 +132,8 @@ public class Driver extends Application {
 	private static CustomHandler severeHandler;
 	private static CustomHandler instructionHandler;
 
+	
+	
 	/**
 	 * Description: Sets up the logger, creates a map instance, and launches
 	 * JavaFX.
@@ -135,16 +141,17 @@ public class Driver extends Application {
 	 * @param args: No command line arguments are expected.
 	 */
 	public static void main(String[] args) {
-
+		
+		
 		// setup logger with custom handler, custom level, and custom formatter
 		try {
-			fineHandler = new CustomHandler ("src/logs/fine.txt", Level.FINE);
-			finerHandler = new CustomHandler ("src/logs/finer.txt", Level.FINER);
-			finestHandler = new CustomHandler ("src/logs/finest.txt", Level.FINEST);
-			infoHandler = new CustomHandler("src/logs/info.txt", Level.INFO);
-			warningHandler = new CustomHandler("src/logs/warning.txt", Level.WARNING);
-			severeHandler = new CustomHandler("src/logs/severe.txt", Level.SEVERE);
-			instructionHandler = new CustomHandler("src/robotinstructions.txt", CustomLevel.INSTRUCTION);
+			fineHandler = new CustomHandler ("fine.txt", Level.FINE);
+			finerHandler = new CustomHandler ("finer.txt", Level.FINER);
+			finestHandler = new CustomHandler ("finest.txt", Level.FINEST);
+			infoHandler = new CustomHandler("info.txt", Level.INFO);
+			warningHandler = new CustomHandler("warning.txt", Level.WARNING);
+			severeHandler = new CustomHandler("severe.txt", Level.SEVERE);
+			instructionHandler = new CustomHandler("robotinstructions.txt", CustomLevel.INSTRUCTION);
 			
 			LOGGER.setUseParentHandlers(false);
 			LOGGER.addHandler(instructionHandler);
@@ -198,6 +205,15 @@ public class Driver extends Application {
 	 */
 	public void start(Stage primaryStage) throws Exception {
 		
+		soundtrack = new AudioClip(Driver.class.getResource("/rscrs/wav/chibininja.wav").toString());
+		collisionSound = new AudioClip(Driver.class.getResource("/wav/collision.wav").toString());
+		rechargeSound = new AudioClip(Driver.class.getResource("/wav/recharge.wav").toString());
+		batteryDeadSound = new AudioClip(Driver.class.getResource("/wav/batterydead.wav").toString());
+		batteryLowSound = new AudioClip(Driver.class.getResource("/wav/batterylow.wav").toString());
+		highscoreSound = new AudioClip(Driver.class.getResource("/wav/batterylow.wav").toString());
+		batteryFullSound = new AudioClip(Driver.class.getResource("/wav/fullrecharge.wav").toString());
+		finishLine = new AudioClip(Driver.class.getResource("/wav/finishline.wav").toString());
+		
 		primaryStage.setTitle("Robot Island");
 
 		Canvas canvas = new Canvas(SCREENWIDTH, SCREENHEIGHT);
@@ -207,7 +223,7 @@ public class Driver extends Application {
 
 		// pane used for background
 		Group background = new Group();
-		Image looks = new Image(new File("src/img/background.png").toURI().toString(), SCREENWIDTH, SCREENHEIGHT, false,
+		Image looks = new Image("/img/background.png", SCREENWIDTH, SCREENHEIGHT, false,
 				true);
 		ImageView pattern = new ImageView(looks);
 
@@ -350,7 +366,7 @@ public class Driver extends Application {
 		//create splash screen
 		if (Driver.gameInProgress == false) {
 			splashscreen = new StackPane();
-			Image splashImage = new Image(new File("src/img/splash.png").toURI().toString());
+			Image splashImage = new Image("/img/splash.png");
 			ImageView splashView = new ImageView(splashImage);
 			splashView.setFitHeight(SCREENHEIGHT);
 			splashView.setFitWidth(SCREENWIDTH);
@@ -362,7 +378,7 @@ public class Driver extends Application {
 		
 		//create gameover screen
 		gameOverScreen = new StackPane();
-		Image gameOverImage = new Image(new File("src/img/gameover.png").toURI().toString());
+		Image gameOverImage = new Image("img/gameover.png");
 		ImageView gameOverView = new ImageView(gameOverImage);
 		gameOverView.setFitHeight(SCREENHEIGHT);
 		gameOverView.setFitWidth(SCREENWIDTH);
