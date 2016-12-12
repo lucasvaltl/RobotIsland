@@ -85,32 +85,9 @@ public class Driver extends Application {
 	public static Map map;
 	public static Robot wallE;
 	public static Group root;
-	public static TilePane lapTimes;
-	public static TilePane devmode;
 	public static StackPane splashscreen;
 	public static StackPane gameOverScreen;
-	public static Label labelx;
-	public static Label textx;
-	public static Label labely;
-	public static Label texty;
-	public static Label labelcharge;
-	public static Label textcharge;
-	public static Label labeldistance;
-	public static Label textdistance;
-	public static Label labelangle;
-	public static Label textangle;
-	public static Label labelinfo;
-	public static Label textinfo;
-	public static Button getfile;
-	public static Label time;
-	public static Label timeLabel;
-	public static Label lastLapTimeLabel;
-	public static Label lastLapTime;
-	public static Label highscoreLabel;
-	public static Label highscore;
-	public static boolean toggledevmode;
-	public static File movementFile;
-	public static Alert alert = new Alert(AlertType.WARNING);
+	
 	public static boolean alerttriggered;
 	public static boolean gameInProgress = false;
 	public static String robotType;
@@ -213,43 +190,9 @@ public class Driver extends Application {
 		map.render2DMap(gc, true);
 		root.getChildren().add(canvas);
 		
-		//pane for displaying lap times
-		lapTimes = new TilePane();
-		timeLabel = new Label("Current Lap: ");
-		timeLabel.setStyle("-fx-font-size: 20;");
-		time = new Label("0 s");
-		time.setStyle("-fx-font-size: 20;");
-		HBox hb7 = new HBox(timeLabel, time);
-		lastLapTimeLabel = new Label("Last Lap: ");
-		lastLapTimeLabel.setStyle("-fx-font-size: 15;");
-		lastLapTime = new Label("0 s");	
-		lastLapTime.setStyle("-fx-font-size: 15;");
-		HBox hb8 = new HBox(lastLapTimeLabel, lastLapTime);
-		highscoreLabel = new Label("Highscore: ");
-		highscoreLabel.setStyle("-fx-font-size: 15;");
-		highscore = new Label("0 s");
-		highscore.setStyle("-fx-font-size: 15;");
-		HBox hb9 = new HBox(highscoreLabel, highscore);
-		lapTimes.getChildren().addAll(hb7, hb8, hb9);
-		lapTimes.setMaxHeight(100);
-		lapTimes.setMaxWidth(70);
-		lapTimes.setStyle("-fx-font-family: \"Monaco\";");
-		lapTimes.setLayoutX(500);
-		lapTimes.setLayoutY(38);
 		
-		PerspectiveTransform pt = new PerspectiveTransform();
-		pt.setUlx(35.0);
-		 pt.setUly(0.0);
-		 pt.setUrx(215.0);
-		 pt.setUry(0.0);
-		 pt.setLrx(180.0);
-		 pt.setLry(70.0);
-		 pt.setLlx(0.0);
-		 pt.setLly(70.0);
-		lapTimes.setEffect(pt);
-		lapTimes.setCache(true);
 		
-		root.getChildren().add(lapTimes);
+	
 		
 	
 
@@ -264,77 +207,8 @@ public class Driver extends Application {
 		root.getChildren().add(wallE);
 		stack.getChildren().add(root);
 		
-		//toggle to enable dev mode
-		toggledevmode = true;
-		//pane used for devmode
-		if(toggledevmode){
-		devmode = new TilePane();
-		labelx = new Label("X Position: ");
-		textx = new Label("0");
-		HBox hb1 = new HBox(labelx, textx);
-		labely = new Label("Y Position: ");
-		texty = new Label("0");
-		HBox hb2 = new HBox(labely, texty);
-		labelcharge = new Label("Charge Level: ");
-		textcharge = new Label("100%");
-		HBox hb3 = new HBox(labelcharge, textcharge);
-		labeldistance = new Label("Distance: ");
-		textdistance = new Label("0");
-		HBox hb4 = new HBox(labeldistance, textdistance);
-		labelangle = new Label("Angle: ");
-		textangle = new Label("0");
-		HBox hb5 = new HBox(labelangle, textangle);
-		labelinfo = new Label("Info: ");
-		textinfo = new Label();
-		HBox hb6 = new HBox(labelinfo, textinfo);
-		getfile = new Button("Execute Movements from File");
 		
-			getfile.setOnAction(new EventHandler<ActionEvent>() {
-				@Override
-				public void handle(final ActionEvent e) {
-					// create filechooser
-					final FileChooser fileChooser = new FileChooser();
-					// only allow text files
-					fileChooser.getExtensionFilters().add(new ExtensionFilter("Text Files", "*.txt"));
-					movementFile = fileChooser.showOpenDialog(primaryStage);
 
-					if (movementFile != null) {
-						NewerFileReader nfr = null;
-						try {
-							// validate file, alert if invalid format or not
-							// found
-							nfr = new NewerFileReader();
-							nfr.scanFile(movementFile);
-							wallE.setInputComandsReadingInProgress(true);
-						} catch (InvalidFormatException ex) {
-							Driver.LOGGER.severe("WARNING: Invalid command in text file "+ e.toString());
-							alert.setTitle("Invalid Format Error");
-							alert.setHeaderText("Invalid format found in movement file!");
-							alert.setContentText(
-									"This app only accepts the following movements, each on a single line: moveUp, moveDown, moveLeft, moveRight as well as "
-											+ "moveUpLeft, moveUpRight, moveDownLeft, and moveDownRight.");
-							alert.showAndWait();
-						} catch (FileNotFoundException ex) {
-							Driver.LOGGER.severe("WARNING: File not found "+ e.toString());
-							alert.setTitle("File Not Found");
-							alert.setHeaderText("Unfortunately the file could not be found");
-							alert.setContentText(
-									"Please mke sure the file is stil where you it was when you selected it");
-							alert.showAndWait();
-						}
-					}
-
-				}
-			});
-		devmode.getChildren().addAll(hb1, hb2, hb3, hb4, hb5, hb6, getfile);
-		devmode.setMaxSize(150,200);
-		devmode.setStyle("-fx-background-color: BBBBBB; -fx-font-family: \"Monaco\";");
-		
-		root.getChildren().add(devmode);
-		
-		devmode.setLayoutX(400);
-		devmode.setLayoutY(580);
-		}
 		
 		//create splash screen
 		if (Driver.gameInProgress == false) {

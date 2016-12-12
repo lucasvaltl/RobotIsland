@@ -699,14 +699,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			if ((this.getBatteryLeft() > 0) && (this.getBatteryLeft() < (this.getBatteryCapacity() / 10))) {
 				this.decreaseCharge(0.25);
 				this.setMaxSpeed(1);
-				if (Driver.toggledevmode) {
-					Driver.textinfo.setText("Battery less than 10%!!!");
-
-					if (Driver.batteryLowSound.isPlaying() == false) {
-						Driver.batteryLowSound.play(0.4);
-					}
-
-				}
+				
 			}
 		} // decrease charge if robot is turning around its own axis
 			// (wheelspeeds unequal) but not moving forward
@@ -719,13 +712,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			if ((this.getBatteryLeft() > 0) && (this.getBatteryLeft() < (this.getBatteryCapacity() / 10))) {
 				this.decreaseCharge(0.0625);
 				this.setMaxSpeed(1);
-				if (Driver.toggledevmode) {
-					Driver.textinfo.setText("Battery less than 10%!!!");
-
-					if (Driver.batteryLowSound.isPlaying() == false) {
-						Driver.batteryLowSound.play();
-					}
-				}
+				
 			}
 		}
 		// if battery empty restrict movement
@@ -821,16 +808,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		// avoids overcharging
 		else if (this.getBatteryLeft() > this.getBatteryCapacity()) {
 			this.batteryLeft = this.getBatteryCapacity();
-			if (Driver.toggledevmode) {
-				Driver.textinfo.setText("Recharged!");
-
-				if (Driver.batteryLowSound.isPlaying() == true) {
-					Driver.batteryLowSound.stop();
-				}
-				if (Driver.batteryFullSound.isPlaying() == false) {
-					Driver.batteryFullSound.play();
-				}
-			}
+			
 		}
 		this.setMaxSpeed(this.globalMaxSpeed);
 
@@ -849,11 +827,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			// the charging station
 			this.setCollisionDetected(false);
 			this.timeSinceCollision = 0;
-			if (Driver.toggledevmode) {
-				if (Driver.textinfo.getText().equals("Battery less than 10%!!!")) {
-					Driver.textinfo.setText("Recharging!");
-				}
-			}
+			
 
 		} else if (this.recharging == true) {
 			this.recharging = false;
@@ -869,9 +843,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			// check if player is cheating
 			if (notCheating) {
 				this.timeLap();
-				if (Driver.toggledevmode) {
-					Driver.textinfo.setText("Crossed Finishline");
-				}
+				
 				this.notCheating = false;
 				return;
 			}
@@ -899,10 +871,10 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		this.stopTime = System.currentTimeMillis();
 		this.lastLapTime = (this.stopTime - this.startTime) / 1000.0;
 		if(lapInProgress){
-		Driver.lastLapTime.setText(df.format(lastLapTime) + " s");
+		
 		if (lastLapTime < this.highscore) {
 			this.highscore = this.lastLapTime;
-			Driver.highscore.setText(df.format(this.highscore) + " s");
+			
 			saveHighScore();
 			newHighScore = true;
 		
@@ -930,7 +902,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		if (this.startTime != 0) {
 			this.currentLapTime = (System.currentTimeMillis() - this.startTime) / 1000.0;
 
-			Driver.time.setText(df.format(this.currentLapTime) + " s");
+			
 		}
 
 	}
@@ -973,7 +945,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 
 		if (line != "") {
 			highscore = Double.parseDouble(line);
-			Driver.highscore.setText(df.format(this.highscore) + " s");
+			
 		}
 	}
 
@@ -990,30 +962,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 * 
 	 */
 
-	public void updateDevPanel() {
-
-		Point2D centercoordinates = this.center();
-		DecimalFormat numberFormat = new DecimalFormat("#.0");
-		Driver.textx.setText(numberFormat.format(centercoordinates.getX()));
-		Driver.texty.setText(numberFormat.format(centercoordinates.getY()));
-		Driver.textcharge.setText(numberFormat.format(this.getBatteryLeft() / this.getBatteryCapacity() * 100) + "%");
-		Driver.textdistance.setText(numberFormat.format(this.getDistanceTravelled()));
-		// calculate orientation of robots front based on the default
-		// getRotate() method;
-		double currentrotation;
-		if (this.getRotate() > 0) {
-			currentrotation = this.getRotate() % 360;
-		} else {
-			currentrotation = this.getRotate() % 360 + 360;
-		}
-		if (currentrotation > 180) {
-			currentrotation -= 180;
-		} else {
-			currentrotation += 180;
-		}
-		Driver.textangle.setText(numberFormat.format(currentrotation));
-
-	}
+	
 
 	/**
 	 * Description: Event handler for robot key events. Adds strings to
@@ -1536,21 +1485,15 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		detectCollision(this, wallEcomponents);
 
 		// read commands from file
-		if (Driver.wallE.getInputCommandsReadingInProgress() == true) {
-
-			// Request a new move
-			Driver.wallE.anotherSingleMoveViaFile(Driver.movementFile, wallEcomponents);
-		} else {
+		
 			this.move(wallEcomponents);
-		}
 		this.animate(wallEcomponents);
 		this.consumeBattery(this.getWheelspeeds());
 		this.checkForCharging();
 		this.checkIfCheckIfCheating();
 		this.checkForFinishLine();
 		this.displayLapTime();
-		if (Driver.toggledevmode)
-			this.updateDevPanel();
+		
 		this.updateDistance();
 	}
 
