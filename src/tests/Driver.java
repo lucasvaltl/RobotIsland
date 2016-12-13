@@ -4,6 +4,7 @@ import map.Map;
 import readers.InvalidFormatException;
 import readers.NewFileReader;
 import readers.NewerFileReader;
+import robot.DummyRobot;
 import robot.Robot;
 
 import java.io.File;
@@ -72,7 +73,7 @@ public class Driver extends Application {
 	public static final double fieldOfViewAngle = Math.PI / 3; // in radians
 	public static final double DISTANCETOTHREEDEEPLANE = (THREEDEEPLANEWIDTH / 2) * Math.tan(fieldOfViewAngle / 2); // 160
 																													// /
-																													// tan(30degrees)
+	public static DummyRobot dummy;																					// tan(30degrees)
 	public static final double angleBetweenRays = Driver.fieldOfViewAngle / (THREEDEEPLANEWIDTH * 1.0);
 	public StackPane stack;
 	public static long startnanotime;
@@ -253,7 +254,7 @@ public class Driver extends Application {
 						// found
 						nfr = new NewerFileReader();
 						nfr.scanFile(movementFile);
-						wallE.setInputCommandsReadingInProgress(true);
+						Driver.wallE.setInputCommandsReadingInProgress(true);
 					} catch (InvalidFormatException ex) {
 						Driver.LOGGER.severe("WARNING: Invalid command in text file "+ e.toString());
 						alert.setTitle("Invalid Format Error");
@@ -281,12 +282,18 @@ public class Driver extends Application {
 	
 				if (timeTrialFile != null) {
 					NewFileReader nfr = null;
+					dummy = new DummyRobot("fast");
+					dummy.createAnimatedImages();
+					dummy.setFill(dummy.getAnimatedImage(1, 1));
+					root.getChildren().add(dummy);
+					
 					try {
 						// validate file, alert if invalid format or not
 						// found
 						nfr = new NewFileReader();
 						nfr.scanFile(timeTrialFile);
-						wallE.setTimeTrialInputInProgress(true);
+						System.out.println(dummy.toString());
+						dummy.setTimeTrialInputInProgress(true);
 					} catch (InvalidFormatException ex) {
 						Driver.LOGGER.severe("WARNING: Invalid command in text file "+ e.toString());
 						alert.setTitle("Invalid Format Error");

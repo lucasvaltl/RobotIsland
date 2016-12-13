@@ -517,7 +517,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 3; j++) {
 				images[i][j] = new Image(new File("src/img/eve" + i + "" + j + ".png").toURI().toString(),
-						Driver.wallE.getWidth(), Driver.wallE.getWidth(), false, true);
+						this.getWidth(), this.getWidth(), false, true);
 
 			}
 		}
@@ -1106,7 +1106,10 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 *            0 (inclusive) and the length of the ArrayList (exclusive).
 	 */
 	public void timeTrialSingleMoveViaFile(File file) {
+		System.out.println("BOOM");
+		
 		if (this.timeTrialInputCommands == null) {
+			
 			// No commands in file, load them up.
 			this.timeTrialInputCommands = new ArrayList<String>();
 			this.timeTrialInputInProgress= true;
@@ -1299,12 +1302,12 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		detectCollision(this, wallEcomponents);
 		
 		// read commands from file
-		if (Driver.wallE.getInputCommandsReadingInProgress() == true) {
+		if (this.getInputCommandsReadingInProgress() == true) {
 			// Request a new move
-			Driver.wallE.anotherSingleMoveViaFile(Driver.movementFile, wallEcomponents);
+			this.anotherSingleMoveViaFile(Driver.movementFile, wallEcomponents);
 			
-		} else if (Driver.wallE.getTimeTrialInputInProgress() == true) {
-			Driver.wallE.timeTrialSingleMoveViaFile(Driver.timeTrialFile);
+		} else if (this.getTimeTrialInputInProgress() == true) {
+			this.timeTrialSingleMoveViaFile(Driver.timeTrialFile);
 		}
 		else {
 			this.move(wallEcomponents);}

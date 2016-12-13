@@ -56,7 +56,10 @@ public class GameTimer extends AnimationTimer {
 		
 		double t = (now - Driver.startnanotime) / 1000000000.0;	
 		
-		Driver.wallE.update();;
+		Driver.wallE.update();
+		if (Driver.dummy != null) {
+			Driver.dummy.update();
+		}
 
 	}
 }
