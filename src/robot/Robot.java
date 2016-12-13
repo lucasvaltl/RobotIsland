@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.net.URL;
 import java.nio.charset.Charset;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -137,7 +138,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	public Robot(String s) {
 
 		XMLReader xmlr = new XMLReader();
-		ArrayList<String> input = xmlr.read(s, "src/robots.xml");
+		ArrayList<String> input = xmlr.read(s, "/xml/robots.xml");
 		this.name = input.get(0);
 		this.xCoordinate = Double.valueOf(input.get(1));
 		this.setX(this.xCoordinate);
@@ -527,7 +528,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		animimages = new ImagePattern[5][3];
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 3; j++) {
-				images[i][j] = new Image(new File("src/img/eve" + i + "" + j + ".png").toURI().toString(),
+				images[i][j] = new Image(Driver.class.getResource("/img/eve" + i + "" + j + ".png").toString(),
 						Driver.wallE.getWidth(), Driver.wallE.getWidth(), false, true);
 
 			}
@@ -834,7 +835,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	public void reset(String robottype) {
 		//reload robot from xml
 		XMLReader xmlr = new XMLReader();
-		ArrayList<String> input = xmlr.read(robottype, "src/robots.xml");
+		ArrayList<String> input = xmlr.read(robottype, "/xml/robots.xml");
 		this.name = input.get(0);
 		this.xCoordinate = Double.valueOf(input.get(1));
 		this.setX(this.xCoordinate);
@@ -864,7 +865,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	private void saveHighScore() {
 		BufferedWriter bw = null;
 		try {
-			bw = new BufferedWriter(new FileWriter(new File("highscore.txt"), false));																				// false
+			bw = new BufferedWriter(new FileWriter(new File("res/highscore.txt"), false));																				// false
 			bw.write("" + highscore);
 			bw.flush();
 			bw.close();
@@ -1071,7 +1072,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 
 		String line = "";
 		try {
-			InputStream fis = new FileInputStream("highscore.txt");
+			InputStream fis = new FileInputStream("res/highscore.txt");
 			InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
 			BufferedReader br = new BufferedReader(isr);
 			// BufferedReader br = new BufferedReader(new FileReader(new

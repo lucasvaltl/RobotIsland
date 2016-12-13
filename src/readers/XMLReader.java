@@ -1,6 +1,9 @@
 package readers;
 
 import java.io.File;
+import java.io.InputStream;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.ArrayList;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -25,13 +28,13 @@ public final class XMLReader {
 	 * @param f: The location of the XML file being used
 	 * @return: An ArrayList of attributes corresponding with the id specified in s.
 	 */
-	public ArrayList<String> read(String s, String f){
+	public ArrayList<String> read(String s, String path){
 	    try {
-	    	//get file and create file
-			File XmlFile = new File(f);
+	    	//get xml file
+	    	InputStream inputStream = XMLReader.class.getResourceAsStream(path);
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-			Document doc = dBuilder.parse(XmlFile);
+			Document doc = dBuilder.parse(inputStream);
 			ArrayList<String> output = new ArrayList<String>();
 
 			doc.getDocumentElement().normalize();
