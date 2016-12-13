@@ -1,13 +1,16 @@
 package tests;
 
+
 import map.Map;
 import readers.InvalidFormatException;
 import readers.NewerFileReader;
 import robot.Robot;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.net.URLClassLoader;
 
 import gametimer.GameTimer;
 import javafx.application.*;
@@ -36,6 +39,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.TilePane;
 import javafx.scene.media.AudioClip;
+import javafx.scene.media.Media;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.text.Font;
@@ -51,6 +55,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
+import javax.sound.sampled.AudioInputStream;
+
 /**
  * Description: The main class of the robot simulator application, this class
  * optionally reads robot information from XML, before creating a robot and
@@ -59,16 +65,15 @@ import java.util.logging.SimpleFormatter;
  * @author: Geraint and Lucas
  */
 public class Driver extends Application {
-	
-	// Load audio
-	public static final AudioClip soundtrack = new AudioClip(new File("src/wav/chibininja.wav").toURI().toString());
-	public static final AudioClip collisionSound = new AudioClip(new File("src/wav/collision.wav").toURI().toString());
-	public static final AudioClip rechargeSound = new AudioClip(new File("src/wav/recharge.wav").toURI().toString());
-	public static final AudioClip batteryDeadSound = new AudioClip(new File("src/wav/batterydead.wav").toURI().toString());
-	public static final AudioClip batteryLowSound = new AudioClip(new File("src/wav/batterylow.wav").toURI().toString());
-	public static final AudioClip highscoreSound = new AudioClip(new File("src/wav/highscore.wav").toURI().toString());
-	public static final AudioClip batteryFullSound = new AudioClip(new File("src/wav/fullrecharge.wav").toURI().toString());
-	public static final AudioClip finishLine = new AudioClip(new File("src/wav/finishline.wav").toURI().toString());
+			
+	public static AudioClip soundtrack;
+	public static AudioClip collisionSound;
+	public static AudioClip rechargeSound;
+	public static AudioClip batteryDeadSound;
+	public static AudioClip batteryLowSound;
+	public static AudioClip highscoreSound;
+	public static AudioClip batteryFullSound;
+	public static AudioClip finishLine;
 	
 	public static final int SCREENWIDTH = 800;
 	public static final int SCREENHEIGHT = 800;
@@ -138,13 +143,18 @@ public class Driver extends Application {
 
 		// setup logger with custom handler, custom level, and custom formatter
 		try {
-			fineHandler = new CustomHandler ("src/logs/fine.txt", Level.FINE);
-			finerHandler = new CustomHandler ("src/logs/finer.txt", Level.FINER);
-			finestHandler = new CustomHandler ("src/logs/finest.txt", Level.FINEST);
-			infoHandler = new CustomHandler("src/logs/info.txt", Level.INFO);
-			warningHandler = new CustomHandler("src/logs/warning.txt", Level.WARNING);
-			severeHandler = new CustomHandler("src/logs/severe.txt", Level.SEVERE);
-			instructionHandler = new CustomHandler("src/robotinstructions.txt", CustomLevel.INSTRUCTION);
+			File res = new File("res");
+			File logs = new File("res/logs");
+			if (!res.exists()) res.mkdirs();
+			if (!logs.exists()) logs.mkdirs();
+			
+			fineHandler = new CustomHandler ("res/logs/fine.txt", Level.FINE);
+			finerHandler = new CustomHandler ("res/logs/finer.txt", Level.FINER);
+			finestHandler = new CustomHandler ("res/logs/finest.txt", Level.FINEST);
+			infoHandler = new CustomHandler("res/logs/info.txt", Level.INFO);
+			warningHandler = new CustomHandler("res/logs/warning.txt", Level.WARNING);
+			severeHandler = new CustomHandler("res/logs/severe.txt", Level.SEVERE);
+			instructionHandler = new CustomHandler("res/logs/robotinstructions.txt", CustomLevel.INSTRUCTION);
 			
 			LOGGER.setUseParentHandlers(false);
 			LOGGER.addHandler(instructionHandler);
@@ -189,7 +199,28 @@ public class Driver extends Application {
 				{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 } };
 
 		map = new Map(grid); // create map
+
+		// Load audio
+		URL soundtrackURL = ClassLoader.getSystemResource("wav/chibininja.wav");
+		URL collisionURL = ClassLoader.getSystemResource("wav/collision.wav");
+		URL rechargeURL= ClassLoader.getSystemResource("wav/recharge.wav");
+		URL batteryDeadURL = ClassLoader.getSystemResource("wav/batterydead.wav");
+		URL batteryLowURL = ClassLoader.getSystemResource("wav/batterylow.wav");
+		URL highscoreURL = ClassLoader.getSystemResource("wav/highscore.wav");
+		URL batteryFullURL = ClassLoader.getSystemResource("wav/fullrecharge.wav");
+		URL finishLineURL = ClassLoader.getSystemResource("wav/finishline.wav");
+		soundtrack = new AudioClip(soundtrackURL.toString());
+		collisionSound = new AudioClip(collisionURL.toString());
+		rechargeSound = new AudioClip(rechargeURL.toString());
+		batteryDeadSound = new AudioClip(batteryDeadURL.toString());
+		batteryLowSound = new AudioClip(batteryLowURL.toString());
+		highscoreSound = new AudioClip(highscoreURL.toString());
+		batteryFullSound = new AudioClip(batteryFullURL.toString());
+		finishLine = new AudioClip(finishLineURL.toString());
+		
 		launch(args); // launch javaFX
+		
+		
 	}
 
 	/**
@@ -207,7 +238,7 @@ public class Driver extends Application {
 
 		// pane used for background
 		Group background = new Group();
-		Image looks = new Image(new File("src/img/background.png").toURI().toString(), SCREENWIDTH, SCREENHEIGHT, false,
+		Image looks = new Image(Driver.class.getResource("/img/background.png").toString(), SCREENWIDTH, SCREENHEIGHT, false,
 				true);
 		ImageView pattern = new ImageView(looks);
 
@@ -350,7 +381,7 @@ public class Driver extends Application {
 		//create splash screen
 		if (Driver.gameInProgress == false) {
 			splashscreen = new StackPane();
-			Image splashImage = new Image(new File("src/img/splash.png").toURI().toString());
+			Image splashImage = new Image(Driver.class.getResource("/img/splash.png").toString());
 			ImageView splashView = new ImageView(splashImage);
 			splashView.setFitHeight(SCREENHEIGHT);
 			splashView.setFitWidth(SCREENWIDTH);
@@ -362,7 +393,7 @@ public class Driver extends Application {
 		
 		//create gameover screen
 		gameOverScreen = new StackPane();
-		Image gameOverImage = new Image(new File("src/img/gameover.png").toURI().toString());
+		Image gameOverImage = new Image(Driver.class.getResource("/img/gameover.png").toString());
 		ImageView gameOverView = new ImageView(gameOverImage);
 		gameOverView.setFitHeight(SCREENHEIGHT);
 		gameOverView.setFitWidth(SCREENWIDTH);
