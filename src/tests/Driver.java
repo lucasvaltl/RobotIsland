@@ -61,14 +61,14 @@ import java.util.logging.SimpleFormatter;
 public class Driver extends Application {
 	
 	// Load audio
-	public static final AudioClip soundtrack = new AudioClip(new File("rsc/wav/chibininja.wav").toURI().toString());
-	public static final AudioClip collisionSound = new AudioClip(new File("rsc/wav/collision.wav").toURI().toString());
-	public static final AudioClip rechargeSound = new AudioClip(new File("rsc/wav/recharge.wav").toURI().toString());
-	public static final AudioClip batteryDeadSound = new AudioClip(new File("rsc/wav/batterydead.wav").toURI().toString());
-	public static final AudioClip batteryLowSound = new AudioClip(new File("rsc/wav/batterylow.wav").toURI().toString());
-	public static final AudioClip highscoreSound = new AudioClip(new File("rsc/wav/highscore.wav").toURI().toString());
-	public static final AudioClip batteryFullSound = new AudioClip(new File("rsc/wav/fullrecharge.wav").toURI().toString());
-	public static final AudioClip finishLine = new AudioClip(new File("rsc/wav/finishline.wav").toURI().toString());
+	public static AudioClip soundtrack;
+	public static AudioClip collisionSound;
+	public static AudioClip rechargeSound;
+	public static AudioClip batteryDeadSound;
+	public static AudioClip batteryLowSound;
+	public static AudioClip highscoreSound;
+	public static AudioClip batteryFullSound;
+	public static AudioClip finishLine;
 	
 	public static final int SCREENWIDTH = 800;
 	public static final int SCREENHEIGHT = 800;
@@ -180,7 +180,8 @@ public class Driver extends Application {
 		}
 		
 		 
-		int[][] grid = { { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+		int[][] grid = { 
+				{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
 				{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1 }, 
 				{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1 },
 				{ 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 }, 
@@ -207,6 +208,16 @@ public class Driver extends Application {
 	 */
 	public void start(Stage primaryStage) throws Exception {
 		
+		soundtrack = new AudioClip(Driver.class.getResource("/wav/chibininja.wav").toString());
+		collisionSound = new AudioClip(Driver.class.getResource("/wav/collision.wav").toString());
+		rechargeSound = new AudioClip(Driver.class.getResource("/wav/recharge.wav").toString());
+		batteryDeadSound = new AudioClip(Driver.class.getResource("/wav/batterydead.wav").toString());
+		batteryDeadSound = new AudioClip(Driver.class.getResource("/wav/batterydead.wav").toString());
+		highscoreSound = new AudioClip(Driver.class.getResource("/wav/batterylow.wav").toString());
+		highscoreSound = new AudioClip(Driver.class.getResource("/wav/batterylow.wav").toString());
+		finishLine = new AudioClip(Driver.class.getResource("/wav/finishline.wav").toString());
+		
+		
 		primaryStage.setTitle("Robot Island");
 
 		Canvas canvas = new Canvas(SCREENWIDTH, SCREENHEIGHT);
@@ -216,7 +227,7 @@ public class Driver extends Application {
 
 		// pane used for background
 		Group background = new Group();
-		Image looks = new Image(new File("rsc/img/background.png").toURI().toString(), SCREENWIDTH, SCREENHEIGHT, false,
+		Image looks = new Image(Driver.class.getResource("/img/background.png").toString(), SCREENWIDTH, SCREENHEIGHT, false,
 				true);
 		ImageView pattern = new ImageView(looks);
 
@@ -359,7 +370,7 @@ public class Driver extends Application {
 		//create splash screen
 		if (Driver.gameInProgress == false) {
 			splashscreen = new StackPane();
-			Image splashImage = new Image(new File("rsc/img/splash.png").toURI().toString());
+			Image splashImage = new Image(Driver.class.getResource("/img/splash.png").toString());
 			ImageView splashView = new ImageView(splashImage);
 			splashView.setFitHeight(SCREENHEIGHT);
 			splashView.setFitWidth(SCREENWIDTH);
@@ -371,7 +382,8 @@ public class Driver extends Application {
 		
 		//create gameover screen
 		gameOverScreen = new StackPane();
-		Image gameOverImage = new Image(new File("rsc/img/gameover.png").toURI().toString());
+		
+		Image gameOverImage = new Image(Driver.class.getResource("/img/gameover.png").toString());
 		ImageView gameOverView = new ImageView(gameOverImage);
 		gameOverView.setFitHeight(SCREENHEIGHT);
 		gameOverView.setFitWidth(SCREENWIDTH);

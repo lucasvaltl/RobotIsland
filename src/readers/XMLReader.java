@@ -1,15 +1,24 @@
 package readers;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 
 /**
  * Description: This XML reader reads through an XML file and return the attributes related to a specific id.
@@ -26,7 +35,8 @@ public final class XMLReader {
 	 * @return: An ArrayList of attributes corresponding with the id specified in s.
 	 */
 	public ArrayList<String> read(String s, String f){
-	    try {
+	    try { 
+	    	
 	    	//get file and create file
 			File XmlFile = new File(f);
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -60,9 +70,19 @@ public final class XMLReader {
 				}
 			}
 			return output;
-		} catch (Exception e) {
+		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-			return null; 
+			
+		} catch (ParserConfigurationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SAXException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
+	    return null;
 	}
 }

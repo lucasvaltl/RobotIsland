@@ -1,212 +1,190 @@
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:38 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:25 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:39 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:40 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:40 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:40 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
-Dec 13, 2016 10:54:40 AM robot.Movement decelerate
-INFO: decelerate
-Dec 13, 2016 10:54:40 AM robot.Movement decelerate
-INFO: decelerate
-Dec 13, 2016 10:54:40 AM robot.Movement decelerate
-INFO: decelerate
-Dec 13, 2016 10:54:40 AM robot.Movement decelerate
-INFO: decelerate
-Dec 13, 2016 10:54:40 AM robot.Movement decelerate
-INFO: decelerate
-Dec 13, 2016 10:54:40 AM robot.Movement decelerate
-INFO: decelerate
-Dec 13, 2016 10:54:40 AM robot.Movement decelerate
-INFO: decelerate
-Dec 13, 2016 10:54:40 AM robot.Movement decelerate
-INFO: decelerate
-Dec 13, 2016 10:54:40 AM robot.Movement decelerate
-INFO: decelerate
-Dec 13, 2016 10:54:40 AM robot.Movement decelerate
-INFO: decelerate
-Dec 13, 2016 10:54:40 AM robot.Movement decelerate
-INFO: decelerate
-Dec 13, 2016 10:54:40 AM robot.Movement decelerate
+Dec 13, 2016 12:54:26 PM robot.Movement decelerate
 INFO: decelerate
