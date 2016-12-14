@@ -50,16 +50,13 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	private double batteryCapacity;
 	private double axleLength;
 	private double wheelRadius;
-	private String[] currentKeyPresses = new String[2];
+	protected String[] currentKeyPresses = new String[2];
 	private String lastUporDown = "";
 	private String lastMovement = "";
 	private boolean decelerate = false;
 	private ArrayList<String> inputCommands = null;
-	private ArrayList<String> timeTrialInputCommands = null;
 	private int inputCommandsIndex = 0;
-	private int timeTrialInputCommandsIndex = 0;
 	private boolean inputCommandsReadingInProgress = false;
-	private boolean timeTrialInputInProgress = false;
 	private double[] wheelspeeds = { 0, 0 };
 	private Image skin;
 	private ImagePattern[][] animimages;
@@ -310,10 +307,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	public double getDistanceTravelled() {
 		return this.distancetravelled;
 	}
-
-	public boolean getTimeTrialInputInProgress() {
-		return this.timeTrialInputInProgress;
-	}
 	
 	/**
 	 * Description: Sets the robot's x position to a given value and calls the
@@ -489,10 +482,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	public void setInputCommandsReadingInProgress(boolean value) {
 		this.inputCommandsReadingInProgress = value;
 	}
-	
-	public void setTimeTrialInputInProgress(boolean value) {
-		this.timeTrialInputInProgress = value;
-	}
 
 	/**
 	 * Description: Alerts the user of the robot's low battery status.
@@ -639,7 +628,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 * @author Geraint and Lucas
 	 */
 
-	private void consumeBattery(double[] ds) {
+	protected void consumeBattery(double[] ds) {
 
 		
 		if (this.getSpeed() > 0) {
@@ -768,7 +757,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 * Description: update the robots distance travelled
 	 * 
 	 */
-	private void updateDistance(){
+	protected void updateDistance(){
 		this.distancetravelled += this.speed;
 	}
 	
@@ -1099,68 +1088,9 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 * Description: Method that reads moves from an input file and executes them
 	 * in order.
 	 * 
-	 * @param path:
-	 *            The path of the file to read.
-	 * @param index:
-	 *            The current index to add to currentKeyPresses (must be between
-	 *            0 (inclusive) and the length of the ArrayList (exclusive).
+	 * @param path: The path of the file to read.
+	 * @param wallEcomponents: The robot's orientation relative to the x and y axes.
 	 */
-	public void timeTrialSingleMoveViaFile(File file) {
-		System.out.println("BOOM");
-		
-		if (this.timeTrialInputCommands == null) {
-			
-			// No commands in file, load them up.
-			this.timeTrialInputCommands = new ArrayList<String>();
-			this.timeTrialInputInProgress= true;
-			NewFileReader nfr = null;
-			try {
-				nfr = new NewFileReader();
-				this.timeTrialInputCommands = nfr.scanFile(file);
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			} catch (InvalidFormatException e) {
-				e.printStackTrace();
-			}
-			finally {
-				// do nothing
-			}
-		}
-		
-		if (this.timeTrialInputInProgress == true) {
-		
-			String robotInfo = (this.timeTrialInputCommands.get(this.timeTrialInputCommandsIndex).toString());
-			
-			// Split string by whitespace
-			String xPos = robotInfo.split("\\s+")[0];
-			xPos = xPos.substring(1, xPos.length() - 1);
-			String yPos = robotInfo.split("\\s+")[1];
-			yPos = yPos.substring(0, yPos.length() - 1);
-			String orientation = robotInfo.split("\\s+")[2];
-			orientation = orientation.substring(0, orientation.length() - 1);
-			String speed = robotInfo.split("\\s+")[3];
-			speed = speed.substring(0, speed.length() - 1);
-			String battery = robotInfo.split("\\s+")[4];
-			battery = battery.substring(0, battery.length() - 1);
-			
-			this.setxCoordinate(Double.parseDouble(xPos));
-			this.setyCoordinate(Double.parseDouble(yPos));
-			this.setRotate(Double.parseDouble(orientation));
-			this.setSpeed(Double.parseDouble(speed));
-			this.setBatteryLeft(Double.parseDouble(battery));
-		}
-
-		// get the inputCommands arrayList size
-		if (this.timeTrialInputCommandsIndex >= this.timeTrialInputCommands.size() - 1) {
-			// Cause deceleration
-			this.timeTrialInputInProgress = false;
-			this.currentKeyPresses[0] = null;
-			this.currentKeyPresses[1] = null;
-		} else {
-			this.timeTrialInputCommandsIndex++;
-		}	
-	}
-	
 	public void anotherSingleMoveViaFile(File file, double[] wallEcomponents) {
 		if (this.inputCommands == null) {
 			// No commands in file, load them up.
@@ -1306,10 +1236,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			// Request a new move
 			this.anotherSingleMoveViaFile(Driver.movementFile, wallEcomponents);
 			
-		} else if (this.getTimeTrialInputInProgress() == true) {
-			this.timeTrialSingleMoveViaFile(Driver.timeTrialFile);
-		}
-		else {
+		} else {
 			this.move(wallEcomponents);}
 			this.animate(wallEcomponents);
 			this.consumeBattery(this.getWheelspeeds());

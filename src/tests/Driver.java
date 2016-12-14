@@ -255,6 +255,9 @@ public class Driver extends Application {
 						nfr = new NewerFileReader();
 						nfr.scanFile(movementFile);
 						Driver.wallE.setInputCommandsReadingInProgress(true);
+						
+						wallE.requestFocus(); // sets the focus back to main robot
+						
 					} catch (InvalidFormatException ex) {
 						Driver.LOGGER.severe("WARNING: Invalid command in text file "+ e.toString());
 						alert.setTitle("Invalid Format Error");
@@ -294,6 +297,9 @@ public class Driver extends Application {
 						nfr.scanFile(timeTrialFile);
 						System.out.println(dummy.toString());
 						dummy.setTimeTrialInputInProgress(true);
+						
+						wallE.requestFocus(); // sets the focus back to main robot
+						
 					} catch (InvalidFormatException ex) {
 						Driver.LOGGER.severe("WARNING: Invalid command in text file "+ e.toString());
 						alert.setTitle("Invalid Format Error");
