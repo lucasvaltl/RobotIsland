@@ -22,6 +22,8 @@ import java.util.stream.Collectors;
 
 import javax.swing.JOptionPane;
 
+import encription.CryptoException;
+import encription.CryptoUtils;
 import javafx.event.EventHandler;
 import javafx.geometry.Point2D;
 import javafx.scene.control.Alert;
@@ -464,6 +466,10 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 */
 	private void consumeBattery(double[] ds) {
 
+		//update battery left label
+		DecimalFormat numberFormat = new DecimalFormat("#.0");
+		Driver.batteryLeft.setText(numberFormat.format(this.getBatteryLeft() / this.getBatteryCapacity() * 100) + "%");
+		
 		if (this.getSpeed() > 0) {
 			if (this.getBatteryLeft() >= (this.getBatteryCapacity() / 10)) {
 				// reduce battery relative to distance traveled
@@ -865,13 +871,20 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	private void saveHighScore() {
 		BufferedWriter bw = null;
 		try {
-			bw = new BufferedWriter(new FileWriter(new File("res/highscore.txt"), false));																				// false
+			String key = "tMWhcuxOJ5zU4uvx";
+			File file = new File("res/highscore.txt");
+			bw = new BufferedWriter(new FileWriter(file, false));																				// false
 			bw.write("" + highscore);
 			bw.flush();
 			bw.close();
+	            CryptoUtils.encrypt(key, file, file);
+	        
 		} catch (IOException e) {
 			Driver.LOGGER.severe("error while saving highscore to file");
-		}
+		}catch (CryptoException ex) {
+            System.out.println(ex.getMessage());
+            ex.printStackTrace();
+        }
 	}
 	
 	/**
@@ -1072,6 +1085,9 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 
 		String line = "";
 		try {
+			String key = "tMWhcuxOJ5zU4uvx";
+			File file = new File("res/highscore.txt");
+			CryptoUtils.decrypt(key, file, file);
 			InputStream fis = new FileInputStream("res/highscore.txt");
 			InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
 			BufferedReader br = new BufferedReader(isr);
@@ -1082,7 +1098,10 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		} catch (IOException e) {
 			line = "";
 			Driver.LOGGER.info("No highscore file found");
-		}
+		}catch (CryptoException ex) {
+			Driver.LOGGER.info("No highscore file found");
+			line = "";
+	    }
 
 		if (line != "") {
 			highscore = Double.parseDouble(line);
