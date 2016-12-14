@@ -1,9 +1,10 @@
 /.project
 /123.txt
 /all
+/encription/
 /gametimer/
+/highscore.txt
 /img/
-/loader/
 /loggers/
 /logs/
 /map/
@@ -14,8 +15,8 @@
 /robotinstructions
 /robotinstructions.txt
 /robotinstructions.txt.1
+/robots.xml
 /style.css
 /tests/
 /wav/
 /xml/
-/highscore.txt

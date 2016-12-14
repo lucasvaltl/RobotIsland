@@ -88,6 +88,7 @@ public class Driver extends Application {
 	
 	// JavaFX variables
 	public StackPane stack;
+	
 	public static long startnanotime;
 	public static boolean decelerate = false;
 	public static Map map;
@@ -116,6 +117,8 @@ public class Driver extends Application {
 	public static Label lastLapTime;
 	public static Label highscoreLabel;
 	public static Label highscore;
+	public static Label batteryLabel;
+	public static Label batteryLeft;
 	public static boolean toggledevmode;
 	public static File movementFile;
 	public static Alert alert;
@@ -141,7 +144,7 @@ public class Driver extends Application {
 	 */
 	public static void main(String[] args) {
 
-		// setup logger with custom handler, custom level, and custom formatter
+		// setup logger with custom handler, custom level, and custom formatter 
 		try {
 			File res = new File("res");
 			File logs = new File("res/logs");
@@ -263,16 +266,21 @@ public class Driver extends Application {
 		time.setStyle("-fx-font-size: 20;");
 		HBox hb7 = new HBox(timeLabel, time);
 		lastLapTimeLabel = new Label("Last Lap: ");
-		lastLapTimeLabel.setStyle("-fx-font-size: 15;");
+		lastLapTimeLabel.setStyle("-fx-font-size: 12;");
 		lastLapTime = new Label("0 s");	
-		lastLapTime.setStyle("-fx-font-size: 15;");
+		lastLapTime.setStyle("-fx-font-size: 12;");
 		HBox hb8 = new HBox(lastLapTimeLabel, lastLapTime);
 		highscoreLabel = new Label("Highscore: ");
-		highscoreLabel.setStyle("-fx-font-size: 15;");
+		highscoreLabel.setStyle("-fx-font-size: 12;");
 		highscore = new Label("0 s");
-		highscore.setStyle("-fx-font-size: 15;");
+		highscore.setStyle("-fx-font-size: 12;");
 		HBox hb9 = new HBox(highscoreLabel, highscore);
-		lapTimes.getChildren().addAll(hb7, hb8, hb9);
+		batteryLabel = new Label("Battery Left: ");
+		batteryLabel.setStyle("-fx-font-size: 12;");
+		batteryLeft = new Label("100 %");
+		batteryLeft.setStyle("-fx-font-size: 13;");
+		HBox hb10 = new HBox(batteryLabel, batteryLeft);
+		lapTimes.getChildren().addAll(hb7, hb8, hb9, hb10);
 		lapTimes.setMaxHeight(100);
 		lapTimes.setMaxWidth(70);
 		lapTimes.setStyle("-fx-font-family: \"Monaco\";");
