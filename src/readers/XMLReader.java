@@ -1,14 +1,9 @@
 package readers;
 
-import java.io.File;
 import java.io.InputStream;
-import java.net.URISyntaxException;
-import java.net.URL;
 import java.util.ArrayList;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -46,7 +41,6 @@ public final class XMLReader {
 				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 					Element eElement = (Element) nNode;
 					if (eElement.getAttribute("id").equals(s)) {
-						output.add(eElement.getElementsByTagName("name").item(0).getTextContent());
 						output.add(eElement.getElementsByTagName("xCoordinate").item(0).getTextContent());
 						output.add(eElement.getElementsByTagName("yCoordinate").item(0).getTextContent());
 						output.add(eElement.getElementsByTagName("speed").item(0).getTextContent());

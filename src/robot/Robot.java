@@ -9,32 +9,17 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.Reader;
-import java.net.URL;
 import java.nio.charset.Charset;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Objects;
-import java.util.Timer;
-import java.util.stream.Collectors;
-
-import javax.swing.JOptionPane;
-
 import encription.CryptoException;
 import encription.CryptoUtils;
 import javafx.event.EventHandler;
 import javafx.geometry.Point2D;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.ImagePattern;
-import javafx.scene.shape.Rectangle;
-import javafx.scene.transform.Rotate;
 import map.Map;
 import readers.NewFileReader;
 import readers.NewerFileReader;
@@ -52,7 +37,6 @@ import tests.Driver;
  */
 public class Robot extends Entity implements EventHandler<KeyEvent> {
 
-	private String name;
 	private double xCoordinate;
 	private double yCoordinate;
 	private double speed;
@@ -73,7 +57,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	private int inputCommandsIndex = 0;
 	private boolean inputCommandsReadingInProgress = false;
 	private double[] wheelspeeds = { 0, 0 };
-	private Image skin;
 	private ImagePattern[][] animimages;
 	private int timeSinceCollision = 0;
 	private boolean collisionDetected;
@@ -89,7 +72,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	private boolean notCheating = true;
 	private boolean newHighScore;
 	private int timeSinceHighScore;
-	private int highScoreAnimation;
 	private int highScoreToggle = 1;
 
 	/**
@@ -112,7 +94,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			double acceleration, double angularVelocity, double odometer, double batteryLeft, double batteryCapacity,
 			double axleLength, double wheelRadius) {
 		/** Robot class constructor **/
-		this.name = name;
 		this.xCoordinate = xCoordinate;
 		super.setX(this.xCoordinate);
 		this.yCoordinate = yCoordinate;
@@ -141,22 +122,21 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 
 		XMLReader xmlr = new XMLReader();
 		ArrayList<String> input = xmlr.read(s, "/xml/robots.xml");
-		this.name = input.get(0);
-		this.xCoordinate = Double.valueOf(input.get(1));
+		this.xCoordinate = Double.valueOf(input.get(0));
 		this.setX(this.xCoordinate);
-		this.yCoordinate = Double.valueOf(input.get(2));
+		this.yCoordinate = Double.valueOf(input.get(1));
 		this.setY(this.yCoordinate);
-		this.speed = Double.valueOf(input.get(3));
-		this.maxSpeed = Double.valueOf(input.get(4));
-		this.globalMaxSpeed = Double.valueOf(input.get(4));
-		this.acceleration = Double.valueOf(input.get(5));
-		this.angularVelocity = Double.valueOf(input.get(6));
-		this.odometer = Double.valueOf(input.get(7));
-		this.batteryLeft = Double.valueOf(input.get(8));
-		this.batteryCapacity = Double.valueOf(input.get(9));
-		this.axleLength = Double.valueOf(input.get(10));
+		this.speed = Double.valueOf(input.get(2));
+		this.maxSpeed = Double.valueOf(input.get(3));
+		this.globalMaxSpeed = Double.valueOf(input.get(3));
+		this.acceleration = Double.valueOf(input.get(4));
+		this.angularVelocity = Double.valueOf(input.get(5));
+		this.odometer = Double.valueOf(input.get(6));
+		this.batteryLeft = Double.valueOf(input.get(7));
+		this.batteryCapacity = Double.valueOf(input.get(8));
+		this.axleLength = Double.valueOf(input.get(9));
 		this.setWidth(this.axleLength);
-		this.wheelRadius = Double.valueOf(input.get(11));
+		this.wheelRadius = Double.valueOf(input.get(10));
 		this.setHeight(this.wheelRadius);
 		this.loadHighScore();
 	}
@@ -399,6 +379,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			// Cause deceleration
 			this.inputCommandsReadingInProgress = false;
 			this.inputCommandsIndex = 0;
+			this.inputCommands = null;
 			this.currentKeyPresses[0] = null;
 			this.currentKeyPresses[1] = null;
 		} else {
@@ -462,13 +443,11 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 * 10%) the robots speed will decrease significantly. If the battery is
 	 * empty, the robot will fail to move.
 	 * 
-	 * @author Geraint and Lucas
 	 */
 	private void consumeBattery(double[] ds) {
 
 		//update battery left label
-		DecimalFormat numberFormat = new DecimalFormat("#.0");
-		Driver.batteryLeft.setText(numberFormat.format(this.getBatteryLeft() / this.getBatteryCapacity() * 100) + "%");
+		Driver.batteryLeft.setText(df.format(this.getBatteryLeft() / this.getBatteryCapacity() * 100) + "%");
 		
 		if (this.getSpeed() > 0) {
 			if (this.getBatteryLeft() >= (this.getBatteryCapacity() / 10)) {
@@ -572,7 +551,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 * @param robot: robot you want to check for collisions
 	 * @param wallEcomponents: robots orientation components derived from its orientation
 	 * 
-	 * @author Geraint and Lucas
 	 */
 	public void detectCollision(Robot robot, double[] wallEcomponents) {
 		if (CollisionDetection.collisionDetection(robot)) {
@@ -842,21 +820,20 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		//reload robot from xml
 		XMLReader xmlr = new XMLReader();
 		ArrayList<String> input = xmlr.read(robottype, "/xml/robots.xml");
-		this.name = input.get(0);
-		this.xCoordinate = Double.valueOf(input.get(1));
+		this.xCoordinate = Double.valueOf(input.get(0));
 		this.setX(this.xCoordinate);
-		this.yCoordinate = Double.valueOf(input.get(2));
+		this.yCoordinate = Double.valueOf(input.get(1));
 		this.setY(this.yCoordinate);
-		this.speed = Double.valueOf(input.get(3));
-		this.maxSpeed = Double.valueOf(input.get(4));
-		this.acceleration = Double.valueOf(input.get(5));
-		this.angularVelocity = Double.valueOf(input.get(6));
-		this.odometer = Double.valueOf(input.get(7));
-		this.batteryLeft = Double.valueOf(input.get(8));
-		this.batteryCapacity = Double.valueOf(input.get(9));
-		this.axleLength = Double.valueOf(input.get(10));
+		this.speed = Double.valueOf(input.get(2));
+		this.maxSpeed = Double.valueOf(input.get(3));
+		this.acceleration = Double.valueOf(input.get(4));
+		this.angularVelocity = Double.valueOf(input.get(5));
+		this.odometer = Double.valueOf(input.get(6));
+		this.batteryLeft = Double.valueOf(input.get(7));
+		this.batteryCapacity = Double.valueOf(input.get(8));
+		this.axleLength = Double.valueOf(input.get(9));
 		this.setWidth(this.axleLength);
-		this.wheelRadius = Double.valueOf(input.get(11));
+		this.wheelRadius = Double.valueOf(input.get(10));
 		this.setHeight(this.wheelRadius);
 		this.setRotate(0);
 		//reset lap 
@@ -1221,6 +1198,9 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			case RIGHT: //
 				this.currentKeyPresses[1] = null;
 				break;
+			default:
+				//do nothing, as any other key event is irrelevant
+				break;
 			}
 			event.consume();
 		}
@@ -1457,7 +1437,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 * Description: Perform all the actions needed to update the robot in each
 	 * game cycle.
 	 * 
-	 * @author: Geraint and Lucas
 	 */
 	public void update() {
 

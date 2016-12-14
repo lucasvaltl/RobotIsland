@@ -60,6 +60,11 @@ public class Entity extends Rectangle{
 	
 	/**
 	 * Description: Change the entity's x coordinate.
+	 * 
+	 * Source: Based on Almas Baimagambetov’s 
+	 * tutorial “GameDev: Collision Detection - SAT” found on 
+	 * https://www.youtube.com/watch?v=Sv42pfgiAI4.
+	 * 
 	 * @param r: The value to add onto the entity's current x coordinate.
 	 */
 	public void changeX(double r) {
@@ -68,6 +73,11 @@ public class Entity extends Rectangle{
 	
 	/**
 	 * Description: Returns the corner points of the entity.
+	 * 
+	 * Source: Based on Almas Baimagambetov’s 
+	 * tutorial “GameDev: Collision Detection - SAT” found on 
+	 * https://www.youtube.com/watch?v=Sv42pfgiAI4.
+	 * 
 	 * @return: A list of Point2Ds representing the entity's corner points.
 	 */
 	public List<Point2D> corners(){
@@ -82,6 +92,10 @@ public class Entity extends Rectangle{
 	
 	/**
 	 * Description: Create a normalised list of the entity's corner vectors from the centre.
+	 * 
+	 * Source: Based on Almas Baimagambetov’s 
+	 * tutorial “GameDev: Collision Detection - SAT” found on 
+	 * https://www.youtube.com/watch?v=Sv42pfgiAI4.
 	 * @return: A List of Point2D objects representing the normalised entity corners.
 	 */
 	public List<Point2D> cornerVectors(){
@@ -108,6 +122,10 @@ public class Entity extends Rectangle{
 	
 	/**
 	 * Description: Renders the entity object. 
+	 * 
+	 * Source: Based on Almas Baimagambetov’s 
+	 * tutorial “GameDev: Collision Detection - SAT” found on 
+	 * https://www.youtube.com/watch?v=Sv42pfgiAI4.
 	 * @param g: The graphics context associated with a javaFX scene.
 	 */
 	public void draw(GraphicsContext g){

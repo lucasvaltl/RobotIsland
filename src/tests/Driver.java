@@ -8,9 +8,7 @@ import robot.Robot;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.URL;
-import java.net.URLClassLoader;
 
 import gametimer.GameTimer;
 import javafx.application.*;
@@ -25,24 +23,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.effect.PerspectiveTransform;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.BackgroundImage;
-import javafx.scene.layout.BackgroundPosition;
-import javafx.scene.layout.BackgroundRepeat;
-import javafx.scene.layout.BackgroundSize;
-import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.TilePane;
 import javafx.scene.media.AudioClip;
-import javafx.scene.media.Media;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.ImagePattern;
-import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
@@ -50,19 +37,15 @@ import loggers.CustomFormatter;
 import loggers.CustomHandler;
 import loggers.CustomLevel;
 
-import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
-
-import javax.sound.sampled.AudioInputStream;
 
 /**
  * Description: The main class of the robot simulator application, this class
  * optionally reads robot information from XML, before creating a robot and
  * map instance and rendering them, responding to various action events.
  * 
- * @author: Geraint and Lucas
+ * @author Geraint and Lucas 
  */
 public class Driver extends Application {
 			
@@ -126,7 +109,7 @@ public class Driver extends Application {
 	public static boolean gameInProgress = false;
 	public static String robotType;
 	
-	// custom logging stuff - outputs to different files based on level
+	// custom logging handlers - outputs to different files based on level
 	public static Logger LOGGER = Logger.getLogger(Driver.class.getName());
 	private static CustomHandler fineHandler;
 	private static CustomHandler finerHandler;
@@ -184,7 +167,8 @@ public class Driver extends Application {
 		}
 		
 		 
-		int[][] grid = { { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+		int[][] grid = { 
+				{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
 				{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1 }, 
 				{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1 },
 				{ 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 }, 
@@ -302,7 +286,7 @@ public class Driver extends Application {
 		
 		root.getChildren().add(lapTimes);
 			
-		// creates a "fast" robot from an xml file
+		// creates a "fast" robot from the xml file
 		robotType = "fast";
 		wallE = new Robot(robotType);
 		wallE.createAnimatedImages();
@@ -341,12 +325,12 @@ public class Driver extends Application {
 			getfile.setOnAction(new EventHandler<ActionEvent>() {
 				@Override
 				public void handle(final ActionEvent e) {
+					
 					// create filechooser
 					final FileChooser fileChooser = new FileChooser();
 					// only allow text files
 					fileChooser.getExtensionFilters().add(new ExtensionFilter("Text Files", "*.txt"));
-					movementFile = fileChooser.showOpenDialog(primaryStage);
-
+					movementFile = fileChooser.showOpenDialog(primaryStage);					
 					if (movementFile != null) {
 						NewerFileReader nfr = null;
 						try {

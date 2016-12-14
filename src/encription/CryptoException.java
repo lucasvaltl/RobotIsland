@@ -2,7 +2,12 @@ package encription;
 
 public class CryptoException extends Exception {
 	 
-    public CryptoException() {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public CryptoException() {
     }
  
     public CryptoException(String message, Throwable throwable) {
