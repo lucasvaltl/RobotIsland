@@ -2,10 +2,8 @@ package map;
 
 import java.util.ArrayList;
 
-import javafx.geometry.Point2D;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 import robot.Entity;
 import tests.Driver;
 

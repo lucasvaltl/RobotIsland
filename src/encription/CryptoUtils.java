@@ -15,7 +15,7 @@ import javax.crypto.spec.SecretKeySpec;
  
 /**
  * A utility class that encrypts or decrypts a file.
- * Take from a tutorial provided on 
+ * Basd on a tutorial provided on 
  * http://www.codejava.net/coding/file-encryption-and-decryption-simple-example
  * 
  * @author www.codejava.net

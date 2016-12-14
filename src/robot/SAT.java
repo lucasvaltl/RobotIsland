@@ -6,13 +6,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import javafx.geometry.Point2D;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
-import javafx.scene.shape.Rectangle;
-import tests.Driver;
-
 /**
- * Description: Abstract class holding static methods used to implement SAT collision detection.
+ * Description: Abstract class holding static methods used to 
+ * implement SAT collision detection. Based on Almas Baimagambetov’s 
+ * tutorial “GameDev: Collision Detection - SAT” found on 
+ * https://www.youtube.com/watch?v=Sv42pfgiAI4.
+ *
  * @author Geraint and Lucas
  *
  */
