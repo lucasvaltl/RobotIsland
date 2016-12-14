@@ -1,8 +1,0 @@
-Dec 14, 2016 7:50:20 PM tests.Driver$1 handle
-SEVERE: WARNING: Invalid command in text file javafx.event.ActionEvent[source=Button@76ef5730[styleClass=button]'Execute Movements from File']
-Dec 14, 2016 7:51:17 PM tests.Driver$1 handle
-SEVERE: WARNING: Invalid command in text file javafx.event.ActionEvent[source=Button@76ef5730[styleClass=button]'Execute Movements from File']
-Dec 14, 2016 7:51:59 PM tests.Driver$1 handle
-SEVERE: WARNING: Invalid command in text file javafx.event.ActionEvent[source=Button@76ef5730[styleClass=button]'Execute Movements from File']
-Dec 14, 2016 7:52:38 PM tests.Driver$1 handle
-SEVERE: WARNING: Invalid command in text file javafx.event.ActionEvent[source=Button@76ef5730[styleClass=button]'Execute Movements from File']
