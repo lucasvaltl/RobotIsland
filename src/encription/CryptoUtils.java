@@ -15,6 +15,9 @@ import javax.crypto.spec.SecretKeySpec;
  
 /**
  * A utility class that encrypts or decrypts a file.
+ * Take from a tutorial provided on 
+ * http://www.codejava.net/coding/file-encryption-and-decryption-simple-example
+ * 
  * @author www.codejava.net
  *
  */
@@ -22,16 +25,42 @@ public class CryptoUtils {
     private static final String ALGORITHM = "AES";
     private static final String TRANSFORMATION = "AES";
  
+    /**
+     * Description: Encrypts a file
+     * 
+     * @param key: Encryption key, must be 16 bits
+     * @param inputFile: File you want to encrypt
+     * @param outputFile: output file
+     * @throws CryptoException
+     */
+    
     public static void encrypt(String key, File inputFile, File outputFile)
             throws CryptoException {
         doCrypto(Cipher.ENCRYPT_MODE, key, inputFile, outputFile);
     }
  
+    /**
+     * Description: Decrypts a file
+     * 
+     * @param key: Encryption key, must be 16 bits
+     * @param inputFile: File you want to decryipt
+     * @param outputFile: output file
+     * @throws CryptoException
+     */
     public static void decrypt(String key, File inputFile, File outputFile)
             throws CryptoException {
         doCrypto(Cipher.DECRYPT_MODE, key, inputFile, outputFile);
     }
  
+   /**
+    * Description: method that actually performs en/decryption
+    * 
+    * @param cipherMode
+    * @param key: Encryption key, must be 16 bits
+    * @param inputFile: File you want to decryipt
+    * @param outputFile: output file
+    * @throws CryptoException
+    */
     private static void doCrypto(int cipherMode, String key, File inputFile,
             File outputFile) throws CryptoException {
         try {

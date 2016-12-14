@@ -1,0 +1,2 @@
+Dec 14, 2016 12:33:33 AM gametimer.GameTimer handle
+SEVERE: Collision detection malfunctioned, Robot made it out of the racetrack
