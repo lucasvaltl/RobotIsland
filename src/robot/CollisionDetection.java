@@ -1,16 +1,7 @@
 package robot;
 
-import java.io.File;
-import java.util.ArrayList;
 
-import gametimer.GameTimer;
-import javafx.geometry.Bounds;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.media.AudioClip;
-import javafx.scene.paint.Color;
-import javafx.scene.paint.ImagePattern;
-import javafx.scene.shape.Rectangle;
+import java.util.ArrayList;
 import map.Map;
 import tests.Driver;
 

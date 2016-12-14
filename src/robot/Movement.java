@@ -9,7 +9,6 @@ import tests.Driver;
  * Description: Class that stores all of the movement methods for the robot.
  * 
  * @author Geraint and Lucas
- *
  */
 public class Movement {
 
