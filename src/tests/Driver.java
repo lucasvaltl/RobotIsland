@@ -3,7 +3,9 @@ package tests;
 
 import map.Map;
 import readers.InvalidFormatException;
+import readers.NewFileReader;
 import readers.NewerFileReader;
+import robot.DummyRobot;
 import robot.Robot;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -84,6 +86,8 @@ public class Driver extends Application {
 	public static final int[] THREEDEEPLANECENTRE = { THREEDEEPLANEWIDTH / 2, THREEDEEPLANEHEIGHT / 2 };
 	public static final double fieldOfViewAngle = Math.PI / 3; // in radians
 	public static final double DISTANCETOTHREEDEEPLANE = (THREEDEEPLANEWIDTH / 2) * Math.tan(fieldOfViewAngle / 2);
+
+	public static DummyRobot dummy;
 	public static final double angleBetweenRays = Driver.fieldOfViewAngle / (THREEDEEPLANEWIDTH * 1.0);
 	
 	// JavaFX variables
@@ -110,7 +114,9 @@ public class Driver extends Application {
 	public static Label textangle;
 	public static Label labelinfo;
 	public static Label textinfo;
-	public static Button getfile;
+
+	public static Button getmovementfile;
+	public static Button gettimetrialfile;
 	public static Label time;
 	public static Label timeLabel;
 	public static Label lastLapTimeLabel;
@@ -121,6 +127,7 @@ public class Driver extends Application {
 	public static Label batteryLeft;
 	public static boolean toggledevmode;
 	public static File movementFile;
+	public static File timeTrialFile;
 	public static Alert alert;
 	public static boolean alerttriggered;
 	public static boolean gameInProgress = false;
@@ -336,47 +343,90 @@ public class Driver extends Application {
 		labelinfo = new Label("Info: ");
 		textinfo = new Label();
 		HBox hb6 = new HBox(labelinfo, textinfo);
-		getfile = new Button("Execute Movements from File");
+		getmovementfile = new Button("Execute Movements from File");
+		gettimetrialfile = new Button("Time trial");
 		
-			getfile.setOnAction(new EventHandler<ActionEvent>() {
-				@Override
-				public void handle(final ActionEvent e) {
-					// create filechooser
-					final FileChooser fileChooser = new FileChooser();
-					// only allow text files
-					fileChooser.getExtensionFilters().add(new ExtensionFilter("Text Files", "*.txt"));
-					movementFile = fileChooser.showOpenDialog(primaryStage);
+		getmovementfile.setOnAction(new EventHandler<ActionEvent>() {
+			public void handle(final ActionEvent e) {
+				// create filechooser
+				final FileChooser fileChooser = new FileChooser();
+				// only allow text files
+				fileChooser.getExtensionFilters().add(new ExtensionFilter("Text Files", "*.txt"));
+				movementFile = fileChooser.showOpenDialog(primaryStage);
 
-					if (movementFile != null) {
-						NewerFileReader nfr = null;
-						try {
-							// validate file, alert if invalid format or not
-							// found
-							nfr = new NewerFileReader();
-							nfr.scanFile(movementFile);
-							wallE.setInputCommandsReadingInProgress(true);
-						} catch (InvalidFormatException ex) {
-							Driver.LOGGER.severe("WARNING: Invalid command in text file "+ e.toString());
-							alert = new Alert(AlertType.WARNING);
-							alert.setTitle("Invalid Format Error");
-							alert.setHeaderText("Invalid format found in movement file!");
-							alert.setContentText(
-									"This app only accepts the following movements, each on a single line: moveUp, moveDown, moveLeft, moveRight as well as "
+				if (movementFile != null) {
+					NewerFileReader nfr = null;
+					try {
+						// validate file, alert if invalid format or not
+						// found
+						nfr = new NewerFileReader();
+						nfr.scanFile(movementFile);
+						wallE.setInputCommandsReadingInProgress(true);
+							
+						wallE.requestFocus(); // sets the focus back to main robot
+							
+					} catch (InvalidFormatException ex) {
+						Driver.LOGGER.severe("WARNING: Invalid command in text file "+ e.toString());
+						alert = new Alert(AlertType.WARNING);
+						alert.setTitle("Invalid Format Error");
+						alert.setHeaderText("Invalid format found in movement file!");
+						alert.setContentText("This app only accepts the following movements, each on a single line: moveUp, moveDown, moveLeft, moveRight as well as "
 											+ "moveUpLeft, moveUpRight, moveDownLeft, and moveDownRight.");
-							alert.showAndWait();
-						} catch (FileNotFoundException ex) {
-							Driver.LOGGER.severe("WARNING: File not found "+ e.toString());
-							alert.setTitle("File Not Found");
-							alert.setHeaderText("Unfortunately the file could not be found");
-							alert.setContentText(
-									"Please mke sure the file is stil where you it was when you selected it");
-							alert.showAndWait();
-						}
+						alert.showAndWait();
+					} catch (FileNotFoundException ex) {
+						Driver.LOGGER.severe("WARNING: File not found "+ e.toString());
+						alert.setTitle("File Not Found");
+						alert.setHeaderText("Unfortunately the file could not be found");
+						alert.setContentText("Please mke sure the file is stil where you it was when you selected it");
+						alert.showAndWait();
 					}
-
 				}
-			});
-		devmode.getChildren().addAll(hb1, hb2, hb3, hb4, hb5, hb6, getfile);
+			}
+		});
+		gettimetrialfile.setOnAction(new EventHandler<ActionEvent>() {
+			public void handle(final ActionEvent e) {
+				// create filechooser
+				final FileChooser fileChooser = new FileChooser();
+				// only allow text files
+				fileChooser.getExtensionFilters().add(new ExtensionFilter("Text Files", "*.txt"));
+				timeTrialFile = fileChooser.showOpenDialog(primaryStage);
+	
+				if (timeTrialFile != null) {
+					NewFileReader nfr = null;
+					dummy = new DummyRobot("fast");
+					dummy.createAnimatedImages();
+					dummy.setFill(dummy.getAnimatedImage(1, 1));
+					root.getChildren().add(dummy);
+					
+					try {
+						// validate file, alert if invalid format or not
+						// found
+						nfr = new NewFileReader();
+						nfr.scanFile(timeTrialFile);
+						System.out.println(dummy.toString());
+						dummy.setTimeTrialInputInProgress(true);
+						
+						wallE.requestFocus(); // sets the focus back to main robot
+						
+					} catch (InvalidFormatException ex) {
+						Driver.LOGGER.severe("WARNING: Invalid command in text file "+ e.toString());
+						alert.setTitle("Invalid Format Error");
+						alert.setHeaderText("Invalid format found in movement file!");
+						alert.setContentText("Each line of the time trial file should"
+								+ " be of the form [x position, y position, robot orientation, "
+								+ "robot speed, robot battery left]");
+						alert.showAndWait();
+					} catch (FileNotFoundException ex) {
+						Driver.LOGGER.severe("WARNING: File not found "+ e.toString());
+						alert.setTitle("File Not Found");
+						alert.setHeaderText("Unfortunately the file could not be found");
+						alert.setContentText("Please mke sure the file is still where it was when you selected it");
+						alert.showAndWait();
+					}
+				}
+			}
+		});
+		devmode.getChildren().addAll(hb1, hb2, hb3, hb4, hb5, hb6, getmovementfile, gettimetrialfile);
 		devmode.setMaxSize(150,200);
 		devmode.setStyle("-fx-background-color: BBBBBB; -fx-font-family: \"Monaco\";");
 		
@@ -411,17 +461,13 @@ public class Driver extends Application {
 		gameOverScreen.setLayoutY(0);
 		gameOverScreen.setVisible(false);
 		
-		
 		primaryStage.setScene(new Scene(stack));
 		primaryStage.show();
-		
 		
 		// start JavaFX animation loop
 		startnanotime = System.nanoTime();
 		GameTimer timer = new GameTimer();
-		timer.start();
-
-		
+		timer.start();		
 
 	}
 

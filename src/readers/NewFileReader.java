@@ -25,14 +25,15 @@ public class NewFileReader {
  * @throws InvalidFormatException
  * @throws FileNotFoundException
  */
-	public ArrayList<String> scanFile(String uri) throws InvalidFormatException, FileNotFoundException {
+	public ArrayList<String> scanFile(File file) throws InvalidFormatException, FileNotFoundException {
 
 	
 			ArrayList<String> input = new ArrayList<String>();
-			Scanner scanner = new Scanner(new File(uri));
+			Scanner scanner = new Scanner(file);
 			while (scanner.hasNext()) {
 				input.add(scanner.nextLine());
 			}
+			/*
 			for (int i = 0; i < input.size(); i++) {
 				switch (input.get(i)) {
 				case "[UP, LEFT]":
@@ -59,6 +60,7 @@ public class NewFileReader {
 				}
 
 			}
+			*/
 			scanner.close();
 			return input;
 		
