@@ -36,18 +36,20 @@ public class GameTimer extends AnimationTimer {
 		double[] wallEInfo = {Driver.wallE.getxCoordinate(), Driver.wallE.getyCoordinate(), 
 				Driver.wallE.getRotate(), Driver.wallE.getSpeed(), Driver.wallE.getBatteryLeft()};
 		Driver.LOGGER.log(CustomLevel.INSTRUCTION, Arrays.toString(wallEInfo));	
+		if (Driver.wallE.getLapInProgress() == true && wallEInfo != null)
+				Driver.wallE.setLapTimeTrialMoves(Arrays.toString(wallEInfo));
 		
 		/*
-		 * catch index out of bounds exeption that can occur when 
+		 * catch index out of bounds exception that can occur when 
 		 * the collision detection malfunctions 
 		 * (usually never happens, but this is just a safety net)
 		*/
-		try{
+		try {
 		Driver.wallE.update();
-		if (Driver.dummy != null) {
-			Driver.dummy.update();
-		}
-		}catch (IndexOutOfBoundsException e){
+			if (Driver.dummy != null) {
+				Driver.dummy.update();
+			}
+		} catch (IndexOutOfBoundsException e){
 			Driver.LOGGER.severe("Collision detection malfunctioned, "
 					+ "Robot made it out of the racetrack");
 			Driver.wallE.reset(Driver.robotType);
