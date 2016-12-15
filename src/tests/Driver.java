@@ -8,8 +8,10 @@ import readers.NewerFileReader;
 import robot.DummyRobot;
 import robot.Robot;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 
 import gametimer.GameTimer;
@@ -110,11 +112,13 @@ public class Driver extends Application {
 	public static Label batteryLeft;
 	public static boolean toggledevmode;
 	public static File movementFile;
-	public static File timeTrialFile;
+	public static InputStream timeTrialInputStream;
 	public static Alert alert;
 	public static boolean alerttriggered;
 	public static boolean gameInProgress = false;
 	public static String robotType;
+	
+	public static boolean timeTrialMode = false;
 	
 	// custom logging handlers - outputs to different files based on level
 	public static Logger LOGGER = Logger.getLogger(Driver.class.getName());
@@ -328,7 +332,7 @@ public class Driver extends Application {
 		textinfo = new Label();
 		HBox hb6 = new HBox(labelinfo, textinfo);
 		getmovementfile = new Button("Execute Movements from File");
-		gettimetrialfile = new Button("Time trial");
+		gettimetrialfile = new Button("Time trial OFF");
 		
 		getmovementfile.setOnAction(new EventHandler<ActionEvent>() {
 			public void handle(final ActionEvent e) {
@@ -369,44 +373,15 @@ public class Driver extends Application {
 		});
 		gettimetrialfile.setOnAction(new EventHandler<ActionEvent>() {
 			public void handle(final ActionEvent e) {
-				// create filechooser
-				final FileChooser fileChooser = new FileChooser();
-				// only allow text files
-				fileChooser.getExtensionFilters().add(new ExtensionFilter("Text Files", "*.txt"));
-				timeTrialFile = fileChooser.showOpenDialog(primaryStage);
-	
-				if (timeTrialFile != null) {
-					NewFileReader nfr = null;
-					dummy = new DummyRobot("fast");
-					dummy.createAnimatedImages();
-					dummy.setFill(dummy.getAnimatedImage(1, 1));
-					root.getChildren().add(dummy);
-					
-					try {
-						// validate file, alert if invalid format or not
-						// found
-						nfr = new NewFileReader();
-						nfr.scanFile(timeTrialFile);
-						System.out.println(dummy.toString());
-						dummy.setTimeTrialInputInProgress(true);
-						
-						wallE.requestFocus(); // sets the focus back to main robot
-						
-					} catch (InvalidFormatException ex) {
-						Driver.LOGGER.severe("WARNING: Invalid command in text file "+ e.toString());
-						alert.setTitle("Invalid Format Error");
-						alert.setHeaderText("Invalid format found in movement file!");
-						alert.setContentText("Each line of the time trial file should"
-								+ " be of the form [x position, y position, robot orientation, "
-								+ "robot speed, robot battery left]");
-						alert.showAndWait();
-					} catch (FileNotFoundException ex) {
-						Driver.LOGGER.severe("WARNING: File not found "+ e.toString());
-						alert.setTitle("File Not Found");
-						alert.setHeaderText("Unfortunately the file could not be found");
-						alert.setContentText("Please mke sure the file is still where it was when you selected it");
-						alert.showAndWait();
-					}
+				File highScoreLapFile= new File("res/highscorelap.txt");
+				if (timeTrialMode && highScoreLapFile.exists()) {
+					gettimetrialfile.setText("Time Trial OFF");
+					timeTrialMode = false;
+				} else if (highScoreLapFile.exists() && !timeTrialMode) {
+					gettimetrialfile.setText("Time Trial ON");
+					timeTrialMode = true;
+				} else if (!highScoreLapFile.exists()) {
+					Driver.textinfo.setText("ERROR - No highscore yet");
 				}
 			}
 		});

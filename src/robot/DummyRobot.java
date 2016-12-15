@@ -1,7 +1,12 @@
 package robot;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 
 import javafx.scene.input.KeyEvent;
@@ -45,6 +50,10 @@ public class DummyRobot extends Robot {
 		this.timeTrialInputInProgress = value;
 	}
 	
+	/**
+	 * @deprecated
+	 * @param file
+	 */
 	public void timeTrialSingleMoveViaFile(File file) {
 		System.out.println("BOOM");
 		
@@ -97,6 +106,70 @@ public class DummyRobot extends Robot {
 			this.currentKeyPresses[0] = null;
 			this.currentKeyPresses[1] = null;
 			Driver.dummy.setVisible(false);
+			Driver.dummy.timeTrialInputCommands = null;
+			Driver.dummy = null; // TODO Experimental
+		} else {
+			this.timeTrialInputCommandsIndex++;
+		}
+	}
+	
+	public void timeTrialSingleMoveViaFile(InputStream inputStream) throws IOException {
+		if (this.timeTrialInputCommands == null) {
+			
+			// No commands in file, load them up.
+			this.timeTrialInputCommands = new ArrayList<String>();
+			this.timeTrialInputInProgress= true;
+			
+			InputStreamReader isr = new InputStreamReader(inputStream, Charset.forName("UTF-8"));
+			BufferedReader br = null;
+			
+			try {
+				br = new BufferedReader(isr);
+				String line;
+				while ((line = br.readLine()) != null) {
+					this.timeTrialInputCommands.add(line);	
+				}
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			finally {
+				br.close();
+			}
+		}
+		
+		if (this.timeTrialInputInProgress == true) {
+		
+			String robotInfo = (this.timeTrialInputCommands.get(this.timeTrialInputCommandsIndex).toString());
+			
+			// Split string by whitespace
+			String xPos = robotInfo.split("\\s+")[0];
+			xPos = xPos.substring(1, xPos.length() - 1);
+			String yPos = robotInfo.split("\\s+")[1];
+			yPos = yPos.substring(0, yPos.length() - 1);
+			String orientation = robotInfo.split("\\s+")[2];
+			orientation = orientation.substring(0, orientation.length() - 1);
+			String speed = robotInfo.split("\\s+")[3];
+			speed = speed.substring(0, speed.length() - 1);
+			String battery = robotInfo.split("\\s+")[4];
+			battery = battery.substring(0, battery.length() - 1);
+			
+			this.setxCoordinate(Double.parseDouble(xPos));
+			this.setyCoordinate(Double.parseDouble(yPos));
+			this.setRotate(Double.parseDouble(orientation));
+			this.setSpeed(Double.parseDouble(speed));
+			this.setBatteryLeft(Double.parseDouble(battery));
+		}
+
+		// get the inputCommands arrayList size
+		if (this.timeTrialInputCommandsIndex >= this.timeTrialInputCommands.size() - 1) {
+			// Cause deceleration
+			this.timeTrialInputInProgress = false;
+			this.currentKeyPresses[0] = null;
+			this.currentKeyPresses[1] = null;
+			Driver.dummy.setVisible(false);
+			Driver.dummy.timeTrialInputCommands = null;
 			Driver.dummy = null; // TODO Experimental
 		} else {
 			this.timeTrialInputCommandsIndex++;
@@ -118,7 +191,11 @@ public class DummyRobot extends Robot {
 		
 		// read commands from file
 		if (this.getTimeTrialInputInProgress() == true) {
-			this.timeTrialSingleMoveViaFile(Driver.timeTrialFile);
+			try {
+				this.timeTrialSingleMoveViaFile(Driver.timeTrialInputStream);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		} else {
 			this.move(wallEcomponents);
 		}
