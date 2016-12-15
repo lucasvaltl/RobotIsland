@@ -3,12 +3,10 @@ package tests;
 
 import map.Map;
 import readers.InvalidFormatException;
-import readers.NewFileReader;
 import readers.NewerFileReader;
 import robot.DummyRobot;
 import robot.Robot;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -299,7 +297,7 @@ public class Driver extends Application {
 			
 		// creates a "fast" robot from the xml file
 		robotType = "fast";
-		wallE = new Robot(robotType);
+		wallE = new Robot(robotType, true);
 		wallE.createAnimatedImages();
 		wallE.setFill(wallE.getAnimatedImage(1, 1));
 		wallE.setFocusTraversable(true);
@@ -392,7 +390,7 @@ public class Driver extends Application {
 		root.getChildren().add(devmode);
 		
 		devmode.setLayoutX(400);
-		devmode.setLayoutY(580);
+		devmode.setLayoutY(560);
 		}
 		
 		//create splash screen

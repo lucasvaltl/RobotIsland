@@ -25,13 +25,12 @@ public class DummyRobot extends Robot {
 	private boolean timeTrialInputInProgress = false;
 	private ArrayList<String> timeTrialInputCommands = null;
 	
-	
 	/**
 	 * Description: Calls the robot class constructor
 	 * @param s: The name of the robot instance
 	 */
-	public DummyRobot(String s) {
-		super(s);
+	public DummyRobot(String s, boolean highscore) {
+		super(s, highscore);
 		this.setOpacity(0.5);
 	}
 
@@ -196,16 +195,7 @@ public class DummyRobot extends Robot {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-		} else {
-			this.move(wallEcomponents);
 		}
 		this.animate(wallEcomponents);
-		this.consumeBattery(this.getWheelspeeds());
-		this.checkForCharging();
-			
-		if(Driver.toggledevmode)
-			this.updateDevPanel();
-			
-		this.updateDistance();
 	}
 }

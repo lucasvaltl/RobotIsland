@@ -21,7 +21,6 @@ import javafx.scene.image.Image;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.ImagePattern;
 import map.Map;
-import readers.NewFileReader;
 import readers.NewerFileReader;
 import readers.FileReader;
 import readers.InvalidFormatException;
@@ -118,8 +117,9 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 * Description: Creates the robot's parameters from an XML file.
 	 * 
 	 * @param s: The ID of the robot you want to load
+	 * @param hs: Boolean value defining if you want to load the highscore (true is true)
 	 */
-	public Robot(String s) {
+	public Robot(String s, boolean loadhighscore) {
 
 		XMLReader xmlr = new XMLReader();
 		ArrayList<String> input = xmlr.read(s, "/xml/robots.xml");
@@ -139,8 +139,13 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		this.setWidth(this.axleLength);
 		this.wheelRadius = Double.valueOf(input.get(10));
 		this.setHeight(this.wheelRadius);
+		if(loadhighscore){
 		this.loadHighScore();
+		}
+		
 	}
+	
+	
 
 	/**
 	 * Description: Animate the robot to reflect it's behaviour.
@@ -615,6 +620,10 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 * Description: Resets the lap and resets the robot to an initial state.
 	 */
 	public void gameOver(){
+		//delete the dummy if there is one
+		if(Driver.dummy != null){
+		Driver.dummy.setVisible(false);
+		}
 		Driver.gameOverScreen.setVisible(true);
 	}
 	
@@ -885,7 +894,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			bw.flush();
 			bw.close();
 		} catch (IOException e) {
-			Driver.LOGGER.severe("error while saving highscore to file");
+			Driver.LOGGER.severe("error while saving highscorelap to file");
 		}
 	}
 	
@@ -1063,6 +1072,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		
 		this.stopTime = System.currentTimeMillis();
 		this.lastLapTime = (this.stopTime - this.startTime) / 1000.0;
+		//create new dummy at start of lap when in time trial mode
 		if(lapInProgress){
 			
 			if (Driver.timeTrialMode) {
@@ -1073,12 +1083,15 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 				}
 				
 				if (Driver.timeTrialInputStream != null) {
-					NewFileReader nfr = null;
-					Driver.dummy = new DummyRobot("fast");
+					//delete old dummy if there is one
+					if(Driver.dummy != null)
+					Driver.dummy.setVisible(false);
+					//create new dummy without loading the highscore
+					Driver.dummy = new DummyRobot("fast",false);
 					Driver.dummy.createAnimatedImages();
 					Driver.dummy.setFill(Driver.dummy.getAnimatedImage(1, 1));
+					Driver.dummy.setVisible(true);
 					Driver.root.getChildren().add(Driver.dummy);
-					
 					Driver.dummy.setTimeTrialInputInProgress(true);
 					Driver.wallE.requestFocus(); // sets the focus back to main robot
 				}
@@ -1125,16 +1138,17 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			InputStream fis = new FileInputStream("res/highscore.txt");
 			InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
 			BufferedReader br = new BufferedReader(isr);
-			// BufferedReader br = new BufferedReader(new FileReader(new
-			// File("highscore.txt")));
 			line = br.readLine();
 			br.close();
+			//encrypt the file again
+			CryptoUtils.encrypt(key, file, file);
 		} catch (IOException e) {
 			line = "";
 			Driver.LOGGER.info("No highscore file found");
 		}catch (CryptoException ex) {
 			Driver.LOGGER.info("No highscore file found");
 			line = "";
+			System.out.println("EXCEPTION IN LOADING HIGHSCORE");
 	    }
 
 		if (line != "") {

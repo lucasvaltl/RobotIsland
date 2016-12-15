@@ -1,0 +1,3580 @@
+Dec 15, 2016 2:48:48 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:48 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:48 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:48 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:48 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:48 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:48 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:48 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:49 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:49 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:49 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:49 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:49 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:49 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:49 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:49 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:49 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:49 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:49 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:49 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:49 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:50 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:51 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:52 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:48:53 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:53 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:53 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:53 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:53 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:53 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:53 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:53 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:53 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:53 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:53 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:53 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:53 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:53 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:53 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:53 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:53 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:54 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:55 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:55 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:55 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:55 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:55 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:55 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:55 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:55 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:55 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:55 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:55 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:55 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:55 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:56 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:56 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:57 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:57 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:57 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:57 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:57 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:57 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:57 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:57 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:57 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:57 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:57 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:57 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:57 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:57 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:57 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:57 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:57 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:57 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:57 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:57 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:57 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:57 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:57 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:57 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:57 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:57 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:57 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:58 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:58 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:58 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:58 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:58 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:58 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:58 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:58 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:58 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:58 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:58 PM robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 15, 2016 2:48:58 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:59 PM robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:48:59 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:59 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:59 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:59 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:59 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:59 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:59 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:59 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:59 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:59 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:59 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:59 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:59 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:59 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:59 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:59 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:59 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:59 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:59 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:48:59 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:59 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:48:59 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:00 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:01 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:01 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:01 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:01 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:01 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:01 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:01 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:01 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:01 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:01 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:01 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:01 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:02 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:02 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:02 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:02 PM robot.Movement moveDownLeft
+INFO: moveDownLeft
+Dec 15, 2016 2:49:02 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:02 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:02 PM robot.Movement moveDownLeft
+INFO: moveDownLeft
+Dec 15, 2016 2:49:02 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:02 PM robot.Movement moveDownLeft
+INFO: moveDownLeft
+Dec 15, 2016 2:49:02 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:02 PM robot.Movement moveDownLeft
+INFO: moveDownLeft
+Dec 15, 2016 2:49:02 PM robot.Movement moveRight
+INFO: moveRight
+Dec 15, 2016 2:49:02 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:02 PM robot.Movement moveLeft
+INFO: moveLeft
+Dec 15, 2016 2:49:02 PM robot.Movement moveRight
+INFO: moveRight
+Dec 15, 2016 2:49:02 PM robot.Movement moveLeft
+INFO: moveLeft
+Dec 15, 2016 2:49:02 PM robot.Movement moveRight
+INFO: moveRight
+Dec 15, 2016 2:49:02 PM robot.Movement moveLeft
+INFO: moveLeft
+Dec 15, 2016 2:49:02 PM robot.Movement moveRight
+INFO: moveRight
+Dec 15, 2016 2:49:02 PM robot.Movement moveLeft
+INFO: moveLeft
+Dec 15, 2016 2:49:02 PM robot.Movement moveRight
+INFO: moveRight
+Dec 15, 2016 2:49:02 PM robot.Movement moveLeft
+INFO: moveLeft
+Dec 15, 2016 2:49:02 PM robot.Movement moveRight
+INFO: moveRight
+Dec 15, 2016 2:49:02 PM robot.Movement moveLeft
+INFO: moveLeft
+Dec 15, 2016 2:49:02 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:02 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:02 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:02 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:02 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:02 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:02 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:02 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:02 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:02 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:02 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:02 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:02 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:02 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:02 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:02 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:02 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:02 PM robot.Movement moveRight
+INFO: moveRight
+Dec 15, 2016 2:49:02 PM robot.Movement moveRight
+INFO: moveRight
+Dec 15, 2016 2:49:02 PM robot.Movement moveRight
+INFO: moveRight
+Dec 15, 2016 2:49:02 PM robot.Movement moveRight
+INFO: moveRight
+Dec 15, 2016 2:49:02 PM robot.Movement moveRight
+INFO: moveRight
+Dec 15, 2016 2:49:02 PM robot.Movement moveRight
+INFO: moveRight
+Dec 15, 2016 2:49:02 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:02 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:02 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:03 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:03 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:04 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:04 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:04 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:04 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:04 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:04 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:04 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:04 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:04 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:04 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:04 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:04 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:04 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:04 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:04 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:04 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:04 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:04 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:04 PM robot.Movement moveLeft
+INFO: moveLeft
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement moveLeft
+INFO: moveLeft
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement moveRight
+INFO: moveRight
+Dec 15, 2016 2:49:04 PM robot.Movement moveRight
+INFO: moveRight
+Dec 15, 2016 2:49:04 PM robot.Movement moveRight
+INFO: moveRight
+Dec 15, 2016 2:49:04 PM robot.Movement moveRight
+INFO: moveRight
+Dec 15, 2016 2:49:04 PM robot.Movement moveRight
+INFO: moveRight
+Dec 15, 2016 2:49:04 PM robot.Movement moveRight
+INFO: moveRight
+Dec 15, 2016 2:49:04 PM robot.Movement moveRight
+INFO: moveRight
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:04 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:05 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:06 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:06 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:06 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:06 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:06 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:06 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:06 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:06 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:06 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:06 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:06 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:06 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:06 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:06 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:06 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:06 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:06 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:06 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:06 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:06 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:06 PM robot.Movement moveDownLeft
+INFO: moveDownLeft
+Dec 15, 2016 2:49:06 PM robot.Movement moveDownLeft
+INFO: moveDownLeft
+Dec 15, 2016 2:49:06 PM robot.Movement moveDownLeft
+INFO: moveDownLeft
+Dec 15, 2016 2:49:07 PM robot.Movement moveDownLeft
+INFO: moveDownLeft
+Dec 15, 2016 2:49:07 PM robot.Movement moveDownLeft
+INFO: moveDownLeft
+Dec 15, 2016 2:49:07 PM robot.Movement moveDownLeft
+INFO: moveDownLeft
+Dec 15, 2016 2:49:07 PM robot.Movement moveDownLeft
+INFO: moveDownLeft
+Dec 15, 2016 2:49:07 PM robot.Movement moveDownLeft
+INFO: moveDownLeft
+Dec 15, 2016 2:49:07 PM robot.Movement moveDownLeft
+INFO: moveDownLeft
+Dec 15, 2016 2:49:07 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:07 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:07 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:07 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:07 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:07 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:07 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:07 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:07 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:07 PM robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 15, 2016 2:49:07 PM robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 15, 2016 2:49:07 PM robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 15, 2016 2:49:07 PM robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 15, 2016 2:49:07 PM robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 15, 2016 2:49:07 PM robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 15, 2016 2:49:07 PM robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 15, 2016 2:49:07 PM robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 15, 2016 2:49:07 PM robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 15, 2016 2:49:07 PM robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 15, 2016 2:49:07 PM robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 15, 2016 2:49:07 PM robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 15, 2016 2:49:07 PM robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 15, 2016 2:49:07 PM robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 15, 2016 2:49:07 PM robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 15, 2016 2:49:07 PM robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 15, 2016 2:49:07 PM robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 15, 2016 2:49:07 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:07 PM robot.Movement moveDown
+INFO: moveDown
+Dec 15, 2016 2:49:07 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:07 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:07 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:07 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:07 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:07 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:07 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:07 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:07 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:07 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:07 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:07 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:07 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:07 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:07 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:07 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:07 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:07 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:07 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:07 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:07 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:07 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:07 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:07 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:07 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:07 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:08 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:08 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:08 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:08 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:08 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:08 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:09 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:09 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:09 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:09 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:09 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:09 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:09 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:09 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:09 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:09 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:09 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:09 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:09 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:09 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:09 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:09 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:09 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:09 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:09 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:09 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:10 PM robot.Movement moveDownLeft
+INFO: moveDownLeft
+Dec 15, 2016 2:49:10 PM robot.Movement moveDownLeft
+INFO: moveDownLeft
+Dec 15, 2016 2:49:10 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:10 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:10 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:10 PM robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 15, 2016 2:49:10 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:10 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:10 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:10 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:10 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:10 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:10 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:10 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:10 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:10 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:10 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:10 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:10 PM robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 15, 2016 2:49:10 PM robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 15, 2016 2:49:10 PM robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 15, 2016 2:49:10 PM robot.Movement moveUp
+INFO: moveUp
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:10 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:11 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:12 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:13 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:14 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:15 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:16 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:17 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:18 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:19 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:19 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:19 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:19 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:19 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:19 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:19 PM robot.Movement decelerate
+INFO: decelerate
+Dec 15, 2016 2:49:19 PM robot.Movement decelerate
+INFO: decelerate
