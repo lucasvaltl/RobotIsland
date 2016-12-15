@@ -386,9 +386,7 @@ public class Driver extends Application {
 		devmode.getChildren().addAll(hb1, hb2, hb3, hb4, hb5, hb6, getmovementfile, gettimetrialfile);
 		devmode.setMaxSize(150,200);
 		devmode.setStyle("-fx-background-color: BBBBBB; -fx-font-family: \"Monaco\";");
-		
 		root.getChildren().add(devmode);
-		
 		devmode.setLayoutX(400);
 		devmode.setLayoutY(560);
 		}
