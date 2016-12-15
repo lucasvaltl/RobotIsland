@@ -33,7 +33,67 @@ public class DummyRobot extends Robot {
 		super(s, highscore);
 		this.setOpacity(0.5);
 	}
+	
+	/**
+	 * Description: Detects if the robot is about to collide with a boundary and
+	 * reacts accordingly
+	 * 
+	 * @param robot: robot you want to check for collisions
+	 * @param wallEcomponents: robots orientation components derived from its orientation
+	 * 
+	 */
+	public void detectCollision(DummyRobot dummy, double[] wallEcomponents) {
+		if (CollisionDetection.collisionDetection(dummy)) {
+			dummy.setCollisionDetected(true);
+			if (dummy.getLastMovement().equals("moveDown")) {
+				while (CollisionDetection.collisionDetection(dummy)) {
+					Movement.moveUp(wallEcomponents);
+				}
+				dummy.setSpeed(0);
+			} else if (dummy.getLastMovement().equals("moveUp")) {
+				while (CollisionDetection.collisionDetection(dummy)) {
+					Movement.moveDown(wallEcomponents);
+				}
+				dummy.setSpeed(0);
+			} else if (dummy.getLastMovement().equals("moveLeft")) {
+				while (CollisionDetection.collisionDetection(dummy)) {
+					Movement.moveRight();
+				}
+				dummy.setSpeed(0);
+			} else if (dummy.getLastMovement().equals("moveRight")) {
+				while (CollisionDetection.collisionDetection(dummy)) {
+					Movement.moveLeft();
+				}
+				dummy.setSpeed(0);
+			} else if (dummy.getLastMovement().equals("moveUpLeft")) {
+				while (CollisionDetection.collisionDetection(dummy)) {
+					Movement.moveDownRight(wallEcomponents);
+				}
+				dummy.setSpeed(0);
+			} else if (dummy.getLastMovement().equals("moveUpRight")) {
+				while (CollisionDetection.collisionDetection(dummy)) {
+					Movement.moveDownLeft(wallEcomponents);
+				}
+				dummy.setSpeed(0);
+			} else if (dummy.getLastMovement().equals("moveDownLeft")) {
+				while (CollisionDetection.collisionDetection(dummy)) {
+					Movement.moveUpRight(wallEcomponents);
+				}
+				dummy.setSpeed(0);
+			} else if (dummy.getLastMovement().equals("moveDownRight")) {
+				while (CollisionDetection.collisionDetection(dummy)) {
+					Movement.moveUpLeft(wallEcomponents);
+				}
+				dummy.setSpeed(0);
+			}
+		}
+	}
 
+	/**
+	 * Description: Get the boolean indicating if a time trial is in progress
+	 * 
+	 * @return: returns the status of the time trial in progress
+	 */
 	public boolean getTimeTrialInputInProgress() {
 		return this.timeTrialInputInProgress;
 	}

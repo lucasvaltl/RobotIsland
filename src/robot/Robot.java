@@ -144,8 +144,6 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		}
 		
 	}
-	
-	
 
 	/**
 	 * Description: Animate the robot to reflect it's behaviour.

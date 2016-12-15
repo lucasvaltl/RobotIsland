@@ -417,6 +417,7 @@ public class Driver extends Application {
 		gameOverScreen.setVisible(false);
 		
 		primaryStage.setScene(new Scene(stack));
+		primaryStage.setResizable(false);
 		primaryStage.show();
 		
 		// start JavaFX animation loop
