@@ -1,11 +1,11 @@
 /** A custom implementation of a JavaFX animation timer **/
-package uc.ac.ucl.robotisland.src.gametimer;
+package uk.ac.ucl.robotisland.src.gametimer;
 
 
 import java.util.Arrays;
 
 import javafx.animation.AnimationTimer;
-import uc.ac.ucl.robotisland.src.loggers.CustomLevel;
+import uk.ac.ucl.robotisland.src.loggers.CustomLevel;
 import uk.ac.ucl.robotisland.src.tests.Driver;
 
 /** Description: A custom implementation of a JavaFX animation timer 

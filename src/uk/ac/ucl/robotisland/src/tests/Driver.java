@@ -1,11 +1,11 @@
 package uk.ac.ucl.robotisland.src.tests;
 
 
-import uc.ac.ucl.robotisland.src.gametimer.GameTimer;
-import uc.ac.ucl.robotisland.src.loggers.CustomFormatter;
-import uc.ac.ucl.robotisland.src.loggers.CustomHandler;
-import uc.ac.ucl.robotisland.src.loggers.CustomLevel;
-import uc.ac.ucl.robotisland.src.map.Map;
+import uk.ac.ucl.robotisland.src.gametimer.GameTimer;
+import uk.ac.ucl.robotisland.src.loggers.CustomFormatter;
+import uk.ac.ucl.robotisland.src.loggers.CustomHandler;
+import uk.ac.ucl.robotisland.src.loggers.CustomLevel;
+import uk.ac.ucl.robotisland.src.map.Map;
 import uk.ac.ucl.robotisland.src.readers.InvalidFormatException;
 import uk.ac.ucl.robotisland.src.readers.NewerFileReader;
 import uk.ac.ucl.robotisland.src.robot.DummyRobot;
@@ -198,14 +198,14 @@ public class Driver extends Application {
 		map = new Map(grid); // create map
 
 		// Load audio
-		URL soundtrackURL = ClassLoader.getSystemResource("wav/chibininja.wav");
-		URL collisionURL = ClassLoader.getSystemResource("wav/collision.wav");
-		URL rechargeURL= ClassLoader.getSystemResource("wav/recharge.wav");
-		URL batteryDeadURL = ClassLoader.getSystemResource("wav/batterydead.wav");
-		URL batteryLowURL = ClassLoader.getSystemResource("wav/batterylow.wav");
-		URL highscoreURL = ClassLoader.getSystemResource("wav/highscore.wav");
-		URL batteryFullURL = ClassLoader.getSystemResource("wav/fullrecharge.wav");
-		URL finishLineURL = ClassLoader.getSystemResource("wav/finishline.wav");
+		URL soundtrackURL = ClassLoader.getSystemResource("uk/ac/ucl/robotisland/src/wav/chibininja.wav");
+		URL collisionURL = ClassLoader.getSystemResource("uk/ac/ucl/robotisland/src/wav/collision.wav");
+		URL rechargeURL= ClassLoader.getSystemResource("uk/ac/ucl/robotisland/src/wav/recharge.wav");
+		URL batteryDeadURL = ClassLoader.getSystemResource("uk/ac/ucl/robotisland/src/wav/batterydead.wav");
+		URL batteryLowURL = ClassLoader.getSystemResource("uk/ac/ucl/robotisland/src/wav/batterylow.wav");
+		URL highscoreURL = ClassLoader.getSystemResource("uk/ac/ucl/robotisland/src/wav/highscore.wav");
+		URL batteryFullURL = ClassLoader.getSystemResource("uk/ac/ucl/robotisland/src/wav/fullrecharge.wav");
+		URL finishLineURL = ClassLoader.getSystemResource("uk/ac/ucl/robotisland/src/wav/finishline.wav");
 		soundtrack = new AudioClip(soundtrackURL.toString());
 		collisionSound = new AudioClip(collisionURL.toString());
 		rechargeSound = new AudioClip(rechargeURL.toString());
@@ -235,7 +235,7 @@ public class Driver extends Application {
 
 		// pane used for background
 		Group background = new Group();
-		Image looks = new Image(Driver.class.getResource("/img/background.png").toString(), SCREENWIDTH, SCREENHEIGHT, false,
+		Image looks = new Image(Driver.class.getResource("uk/ac/ucl/robotisland/src/img/background.png").toString(), SCREENWIDTH, SCREENHEIGHT, false,
 				true);
 		ImageView pattern = new ImageView(looks);
 

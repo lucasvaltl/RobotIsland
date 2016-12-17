@@ -1,5 +1,5 @@
 /** Holds custom logger levels, logger formatter, and logger handler **/
-package uc.ac.ucl.robotisland.src.loggers;
+package uk.ac.ucl.robotisland.src.loggers;
 
 import java.util.logging.LogRecord;
 import java.util.logging.SimpleFormatter;

@@ -2,7 +2,7 @@ package uk.ac.ucl.robotisland.src.robot;
 
 import java.util.Arrays;
 
-import uc.ac.ucl.robotisland.src.loggers.CustomLevel;
+import uk.ac.ucl.robotisland.src.loggers.CustomLevel;
 import uk.ac.ucl.robotisland.src.tests.Driver;
 
 /**

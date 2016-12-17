@@ -2,7 +2,7 @@ package uk.ac.ucl.robotisland.src.robot;
 
 import java.util.ArrayList;
 
-import uc.ac.ucl.robotisland.src.map.Map;
+import uk.ac.ucl.robotisland.src.map.Map;
 import uk.ac.ucl.robotisland.src.tests.Driver;
 
 /**

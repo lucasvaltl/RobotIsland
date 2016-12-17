@@ -1,4 +1,4 @@
-package uc.ac.ucl.robotisland.src.map;
+package uk.ac.ucl.robotisland.src.map;
 
 import java.util.ArrayList;
 
