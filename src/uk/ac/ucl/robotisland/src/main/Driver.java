@@ -316,32 +316,47 @@ public class Driver extends Application {
 		root.getChildren().add(wallE);
 		stack.getChildren().add(root);
 		
+		//add new pane to accomodate buttons and labels
+		devmode = new TilePane();
+		gettimetrialfile = new Button("Time trial OFF");
+//		gettimetrialfile.setStyle("fx-row-valignment: top; -fx-background-radius: 8;-fx-background-color: linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%), #9d4024, #d86e3a,radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c);  -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75), 2,0,0,0 ); -fx-font-weight: bold; -fx-background-insets: 0 ,-3 -3 5 3, -3 -3 6 3, -3 -3 7 3;");
+//		devmode.setStyle("-fx-font-family: \"Monaco\";");
+		devmode.getStylesheets().add(Driver.class.getResource("/uk/ac/ucl/robotisland/src/css/style.css").toString());
+		devmode.setMaxSize(50,40);
+		devmode.setLayoutX(420);
+		devmode.setLayoutY(580);
+		
 		//toggle to enable dev mode
 		toggledevmode = true;
 		//pane used for devmode
 		if(toggledevmode){
-		devmode = new TilePane();
 		labelx = new Label("X Position: ");
 		textx = new Label("0");
 		HBox hb1 = new HBox(labelx, textx);
+		hb1.setMaxHeight(5);
 		labely = new Label("Y Position: ");
 		texty = new Label("0");
 		HBox hb2 = new HBox(labely, texty);
+		hb2.setMaxHeight(5);
 		labelcharge = new Label("Charge Level: ");
+		labelcharge.setMaxHeight(5);
 		textcharge = new Label("100%");
+		textcharge.setMaxHeight(5);
 		HBox hb3 = new HBox(labelcharge, textcharge);
+		hb3.setMaxHeight(5);
 		labeldistance = new Label("Distance: ");
 		textdistance = new Label("0");
 		HBox hb4 = new HBox(labeldistance, textdistance);
+		hb4.setMaxHeight(5);
 		labelangle = new Label("Angle: ");
 		textangle = new Label("0");
 		HBox hb5 = new HBox(labelangle, textangle);
+		hb5.setMaxHeight(5);
 		labelinfo = new Label("Info: ");
 		textinfo = new Label();
 		HBox hb6 = new HBox(labelinfo, textinfo);
+		hb6.setMaxHeight(5);
 		getmovementfile = new Button("Execute Movements from File");
-		gettimetrialfile = new Button("Time trial OFF");
-		
 		getmovementfile.setOnAction(new EventHandler<ActionEvent>() {
 			public void handle(final ActionEvent e) {
 				// create filechooser
@@ -379,6 +394,17 @@ public class Driver extends Application {
 				}
 			}
 		});
+		devmode.getChildren().addAll(hb1, hb2, hb3, hb4, hb5, hb6, getmovementfile);
+		//change layout to accommodate additional buttons and labels when devmode is toggled
+		devmode.setStyle("-fx-background-color: BBBBBB; ");
+		devmode.setVgap(18);
+		devmode.setPrefTileHeight(12);
+		devmode.setMaxSize(150,160);
+		devmode.setLayoutX(400);
+		devmode.setLayoutY(552);
+		}
+		//add time trial mode irrespective if devmode is toggled
+		
 		gettimetrialfile.setOnAction(new EventHandler<ActionEvent>() {
 			public void handle(final ActionEvent e) {
 				File highScoreLapFile= new File("uk/ac/ucl/robotisland/res/highscorelap.txt");
@@ -393,13 +419,9 @@ public class Driver extends Application {
 				}
 			}
 		});
-		devmode.getChildren().addAll(hb1, hb2, hb3, hb4, hb5, hb6, getmovementfile, gettimetrialfile);
-		devmode.setMaxSize(150,200);
-		devmode.setStyle("-fx-background-color: BBBBBB; -fx-font-family: \"Monaco\";");
+
+		devmode.getChildren().add(gettimetrialfile);
 		root.getChildren().add(devmode);
-		devmode.setLayoutX(400);
-		devmode.setLayoutY(560);
-		}
 		
 		//create splash screen
 		if (Driver.gameInProgress == false) {

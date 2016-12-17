@@ -1,696 +1,328 @@
-Dec 17, 2016 1:51:27 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:27 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:27 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:27 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:27 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:27 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:27 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:27 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:27 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:27 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:27 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:27 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:28 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
 INFO: moveUp
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
 INFO: moveUp
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+Dec 17, 2016 7:13:06 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
 INFO: moveUp
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
 INFO: moveUp
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
 INFO: moveUp
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
 INFO: moveUp
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
 INFO: moveUp
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
 INFO: moveUp
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
 INFO: moveUp
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
 INFO: moveUp
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
 INFO: moveUp
-Dec 17, 2016 1:51:29 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
 INFO: moveUp
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
 INFO: moveUp
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
 INFO: moveUp
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
 INFO: moveUp
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
 INFO: moveUp
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:07 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:33 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:34 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:34 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:34 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:34 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 17, 2016 1:51:34 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 17, 2016 7:13:08 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
