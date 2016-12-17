@@ -3,7 +3,7 @@ package uk.ac.ucl.robotisland.src.robot;
 import java.util.Arrays;
 
 import uk.ac.ucl.robotisland.src.loggers.CustomLevel;
-import uk.ac.ucl.robotisland.src.tests.Driver;
+import uk.ac.ucl.robotisland.src.main.Driver;
 
 /**
  * Description: Class that stores all of the movement methods for the robot.

@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
+import uk.ac.ucl.robotisland.src.main.Driver;
 import uk.ac.ucl.robotisland.src.robot.Entity;
-import uk.ac.ucl.robotisland.src.tests.Driver;
 
 /**
  * Description: Class used to represents the game map.

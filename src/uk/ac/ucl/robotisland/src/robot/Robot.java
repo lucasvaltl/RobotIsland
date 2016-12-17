@@ -21,12 +21,12 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.ImagePattern;
 import uk.ac.ucl.robotisland.src.encryption.CryptoException;
 import uk.ac.ucl.robotisland.src.encryption.CryptoUtils;
+import uk.ac.ucl.robotisland.src.main.Driver;
 import uk.ac.ucl.robotisland.src.map.Map;
 import uk.ac.ucl.robotisland.src.readers.FileReader;
 import uk.ac.ucl.robotisland.src.readers.InvalidFormatException;
 import uk.ac.ucl.robotisland.src.readers.NewerFileReader;
 import uk.ac.ucl.robotisland.src.readers.XMLReader;
-import uk.ac.ucl.robotisland.src.tests.Driver;
 
 /**
  * Description: Class that represents the robot - its movement and perspective.

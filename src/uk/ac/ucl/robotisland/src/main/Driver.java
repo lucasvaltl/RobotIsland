@@ -1,4 +1,4 @@
-package uk.ac.ucl.robotisland.src.tests;
+package uk.ac.ucl.robotisland.src.main;
 
 
 import uk.ac.ucl.robotisland.src.gametimer.GameTimer;
@@ -381,7 +381,7 @@ public class Driver extends Application {
 		});
 		gettimetrialfile.setOnAction(new EventHandler<ActionEvent>() {
 			public void handle(final ActionEvent e) {
-				File highScoreLapFile= new File("res/highscorelap.txt");
+				File highScoreLapFile= new File("uk/ac/ucl/robotisland/res/highscorelap.txt");
 				if (timeTrialMode && highScoreLapFile.exists()) {
 					gettimetrialfile.setText("Time Trial OFF");
 					timeTrialMode = false;

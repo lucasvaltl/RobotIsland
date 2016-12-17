@@ -2,8 +2,8 @@ package uk.ac.ucl.robotisland.src.robot;
 
 import java.util.ArrayList;
 
+import uk.ac.ucl.robotisland.src.main.Driver;
 import uk.ac.ucl.robotisland.src.map.Map;
-import uk.ac.ucl.robotisland.src.tests.Driver;
 
 /**
  * Description: Class that holds all of the collision methods for the robot.

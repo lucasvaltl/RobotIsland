@@ -10,9 +10,9 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 
 import javafx.scene.input.KeyEvent;
+import uk.ac.ucl.robotisland.src.main.Driver;
 import uk.ac.ucl.robotisland.src.readers.InvalidFormatException;
 import uk.ac.ucl.robotisland.src.readers.NewFileReader;
-import uk.ac.ucl.robotisland.src.tests.Driver;
 
 /**
  * Description: Dummy robot class used for replays.
