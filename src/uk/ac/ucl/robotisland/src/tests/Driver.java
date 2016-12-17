@@ -144,13 +144,13 @@ public class Driver extends Application {
 			if (!res.exists()) res.mkdirs();
 			if (!logs.exists()) logs.mkdirs();
 			
-			fineHandler = new CustomHandler ("res/logs/fine.txt", Level.FINE);
-			finerHandler = new CustomHandler ("res/logs/finer.txt", Level.FINER);
-			finestHandler = new CustomHandler ("res/logs/finest.txt", Level.FINEST);
-			infoHandler = new CustomHandler("res/logs/info.txt", Level.INFO);
-			warningHandler = new CustomHandler("res/logs/warning.txt", Level.WARNING);
-			severeHandler = new CustomHandler("res/logs/severe.txt", Level.SEVERE);
-			instructionHandler = new CustomHandler("res/logs/robotinstructions.txt", CustomLevel.INSTRUCTION);
+			fineHandler = new CustomHandler ("uk/ac/ucl/robotisland/res/logs/fine.txt", Level.FINE);
+			finerHandler = new CustomHandler ("uk/ac/ucl/robotisland/res/logs/finer.txt", Level.FINER);
+			finestHandler = new CustomHandler ("uk/ac/ucl/robotisland/res/logs/finest.txt", Level.FINEST);
+			infoHandler = new CustomHandler("uk/ac/ucl/robotisland/res/logs/info.txt", Level.INFO);
+			warningHandler = new CustomHandler("uk/ac/ucl/robotisland/res/logs/warning.txt", Level.WARNING);
+			severeHandler = new CustomHandler("uk/ac/ucl/robotisland/res/logs/severe.txt", Level.SEVERE);
+			instructionHandler = new CustomHandler("uk/ac/ucl/robotisland/res/logs/robotinstructions.txt", CustomLevel.INSTRUCTION);
 			
 			LOGGER.setUseParentHandlers(false);
 			LOGGER.addHandler(instructionHandler);
@@ -235,7 +235,8 @@ public class Driver extends Application {
 
 		// pane used for background
 		Group background = new Group();
-		Image looks = new Image(Driver.class.getResource("uk/ac/ucl/robotisland/src/img/background.png").toString(), SCREENWIDTH, SCREENHEIGHT, false,
+		
+		Image looks = new Image(Driver.class.getResource("/uk/ac/ucl/robotisland/src/img/background.png").toString(), SCREENWIDTH, SCREENHEIGHT, false,
 				true);
 		ImageView pattern = new ImageView(looks);
 
@@ -395,7 +396,7 @@ public class Driver extends Application {
 		//create splash screen
 		if (Driver.gameInProgress == false) {
 			splashscreen = new StackPane();
-			Image splashImage = new Image(Driver.class.getResource("/img/splash.png").toString());
+			Image splashImage = new Image(Driver.class.getResource("/uk/ac/ucl/robotisland/src/img/splash.png").toString());
 			ImageView splashView = new ImageView(splashImage);
 			splashView.setFitHeight(SCREENHEIGHT);
 			splashView.setFitWidth(SCREENWIDTH);
@@ -407,7 +408,7 @@ public class Driver extends Application {
 		
 		//create gameover screen
 		gameOverScreen = new StackPane();
-		Image gameOverImage = new Image(Driver.class.getResource("/img/gameover.png").toString());
+		Image gameOverImage = new Image(Driver.class.getResource("/uk/ac/ucl/robotisland/src/img/gameover.png").toString());
 		ImageView gameOverView = new ImageView(gameOverImage);
 		gameOverView.setFitHeight(SCREENHEIGHT);
 		gameOverView.setFitWidth(SCREENWIDTH);

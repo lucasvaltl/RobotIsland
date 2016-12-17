@@ -123,7 +123,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	public Robot(String s, boolean loadhighscore) {
 
 		XMLReader xmlr = new XMLReader();
-		ArrayList<String> input = xmlr.read(s, "/xml/robots.xml");
+		ArrayList<String> input = xmlr.read(s, "/uk/ac/ucl/robotisland/src/xml/robots.xml");
 		this.xCoordinate = Double.valueOf(input.get(0));
 		this.setX(this.xCoordinate);
 		this.yCoordinate = Double.valueOf(input.get(1));
@@ -518,7 +518,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		animimages = new ImagePattern[5][3];
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 3; j++) {
-				images[i][j] = new Image(Driver.class.getResource("/img/eve" + i + "" + j + ".png").toString(),
+				images[i][j] = new Image(Driver.class.getResource("/uk/ac/ucl/robotisland/src/img/eve" + i + "" + j + ".png").toString(),
 						Driver.wallE.getWidth(), Driver.wallE.getWidth(), false, true);
 
 			}
