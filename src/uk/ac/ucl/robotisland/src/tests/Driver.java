@@ -139,8 +139,16 @@ public class Driver extends Application {
 
 		// setup logger with custom handler, custom level, and custom formatter 
 		try {
-			File res = new File("res");
-			File logs = new File("res/logs");
+			File uk = new File("uk");
+			File ac = new File("uk/ac");
+			File ucl = new File("uk/ac/ucl");
+			File robotisland = new File("uk/ac/ucl/robotisland");
+			File res = new File("uk/ac/ucl/robotisland/res");
+			File logs = new File("uk/ac/ucl/robotisland/res/logs");
+			if (!uk.exists()) uk.mkdirs();
+			if (!ac.exists()) ac.mkdirs();
+			if (!ucl.exists()) ucl.mkdirs();
+			if (!robotisland.exists()) robotisland.mkdirs();
 			if (!res.exists()) res.mkdirs();
 			if (!logs.exists()) logs.mkdirs();
 			

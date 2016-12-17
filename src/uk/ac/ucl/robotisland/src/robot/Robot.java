@@ -866,7 +866,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		BufferedWriter bw = null;
 		try {
 			String key = "tMWhcuxOJ5zU4uvx";
-			File file = new File("res/highscore.txt");
+			File file = new File("uk/ac/ucl/robotisland/res/highscore.txt");
 			bw = new BufferedWriter(new FileWriter(file, false));																				// false
 			bw.write("" + highscore);
 			bw.flush();
@@ -887,7 +887,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	private void saveLapMoves() {
 		BufferedWriter bw = null;
 		try {
-			File file = new File("res/highscorelap.txt");
+			File file = new File("uk/ac/ucl/robotisland/res/highscorelap.txt");
 			bw = new BufferedWriter(new FileWriter(file, false));
 			bw.write(this.lapTimeTrialMoves);
 			bw.flush();
@@ -1076,7 +1076,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			
 			if (Driver.timeTrialMode) {
 				try {
-					Driver.timeTrialInputStream = new FileInputStream("res/highscorelap.txt");
+					Driver.timeTrialInputStream = new FileInputStream("uk/ac/ucl/robotisland/res/highscorelap.txt");
 				} catch (FileNotFoundException e1) {
 					e1.printStackTrace();
 				}
@@ -1132,9 +1132,9 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 		String line = "";
 		try {
 			String key = "tMWhcuxOJ5zU4uvx";
-			File file = new File("res/highscore.txt");
+			File file = new File("uk/ac/ucl/robotisland/res/highscore.txt");
 			CryptoUtils.decrypt(key, file, file);
-			InputStream fis = new FileInputStream("res/highscore.txt");
+			InputStream fis = new FileInputStream("uk/ac/ucl/robotisland/res/highscore.txt");
 			InputStreamReader isr = new InputStreamReader(fis, Charset.forName("UTF-8"));
 			BufferedReader br = new BufferedReader(isr);
 			line = br.readLine();
