@@ -64,15 +64,7 @@ public class Driver extends Application {
 	public static final int SCREENWIDTH = 800;
 	public static final int SCREENHEIGHT = 800;
 	
-	// raycasting variables
-	public static final int THREEDEEPLANEWIDTH = 320;
-	public static final int THREEDEEPLANEHEIGHT = 200;
-	public static final int[] THREEDEEPLANECENTRE = { THREEDEEPLANEWIDTH / 2, THREEDEEPLANEHEIGHT / 2 };
-	public static final double fieldOfViewAngle = Math.PI / 3; // in radians
-	public static final double DISTANCETOTHREEDEEPLANE = (THREEDEEPLANEWIDTH / 2) * Math.tan(fieldOfViewAngle / 2);
-
 	public static DummyRobot dummy;
-	public static final double angleBetweenRays = Driver.fieldOfViewAngle / (THREEDEEPLANEWIDTH * 1.0);
 	
 	// JavaFX variables
 	public StackPane stack;
