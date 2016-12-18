@@ -836,7 +836,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	public void reset(String robottype) {
 		//reload robot from xml
 		XMLReader xmlr = new XMLReader();
-		ArrayList<String> input = xmlr.read(robottype, "/xml/robots.xml");
+		ArrayList<String> input = xmlr.read(robottype, "/uk/ac/ucl/robotisland/src/xml/robots.xml");
 		this.xCoordinate = Double.valueOf(input.get(0));
 		this.setX(this.xCoordinate);
 		this.yCoordinate = Double.valueOf(input.get(1));

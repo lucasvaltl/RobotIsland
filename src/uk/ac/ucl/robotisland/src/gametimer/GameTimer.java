@@ -25,9 +25,10 @@ public class GameTimer extends AnimationTimer {
 	 */
 	public void handle(long now) {
 
-		if (Driver.soundtrack.isPlaying() == false) {
-			Driver.soundtrack.play(0.1);
-		}
+		// Uncomment if mp3s are supported by IDE
+//		if (Driver.soundtrack.isPlaying() == false) {
+//			Driver.soundtrack.play(0.1);
+//		}
 				
 		// Log current key presses to file
 		//Driver.LOGGER.log(CustomLevel.INSTRUCTION, Arrays.toString(Driver.wallE.getCurrentKeyPresses()));
