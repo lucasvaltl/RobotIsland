@@ -198,7 +198,9 @@ public class Driver extends Application {
 		map = new Map(grid); // create map
 
 		// Load audio
-		URL soundtrackURL = ClassLoader.getSystemResource("uk/ac/ucl/robotisland/src/wav/chibininja.mp3");
+		
+		// uncomment if mp3 is supported by IDE
+//		URL soundtrackURL = ClassLoader.getSystemResource("uk/ac/ucl/robotisland/src/wav/chibininja.mp3");
 		URL collisionURL = ClassLoader.getSystemResource("uk/ac/ucl/robotisland/src/wav/collision.wav");
 		URL rechargeURL= ClassLoader.getSystemResource("uk/ac/ucl/robotisland/src/wav/recharge.wav");
 		URL batteryDeadURL = ClassLoader.getSystemResource("uk/ac/ucl/robotisland/src/wav/batterydead.wav");
@@ -206,7 +208,7 @@ public class Driver extends Application {
 		URL highscoreURL = ClassLoader.getSystemResource("uk/ac/ucl/robotisland/src/wav/highscore.wav");
 		URL batteryFullURL = ClassLoader.getSystemResource("uk/ac/ucl/robotisland/src/wav/fullrecharge.wav");
 		URL finishLineURL = ClassLoader.getSystemResource("uk/ac/ucl/robotisland/src/wav/finishline.wav");
-		soundtrack = new AudioClip(soundtrackURL.toString());
+//		soundtrack = new AudioClip(soundtrackURL.toString()); // uncomment if mp3 is supported by IDE
 		collisionSound = new AudioClip(collisionURL.toString());
 		rechargeSound = new AudioClip(rechargeURL.toString());
 		batteryDeadSound = new AudioClip(batteryDeadURL.toString());
