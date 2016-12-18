@@ -198,7 +198,7 @@ public class Driver extends Application {
 		map = new Map(grid); // create map
 
 		// Load audio
-		URL soundtrackURL = ClassLoader.getSystemResource("uk/ac/ucl/robotisland/src/wav/chibininja.wav");
+		URL soundtrackURL = ClassLoader.getSystemResource("uk/ac/ucl/robotisland/src/wav/chibininja.mp3");
 		URL collisionURL = ClassLoader.getSystemResource("uk/ac/ucl/robotisland/src/wav/collision.wav");
 		URL rechargeURL= ClassLoader.getSystemResource("uk/ac/ucl/robotisland/src/wav/recharge.wav");
 		URL batteryDeadURL = ClassLoader.getSystemResource("uk/ac/ucl/robotisland/src/wav/batterydead.wav");
