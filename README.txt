@@ -44,7 +44,7 @@ GAME INSTRUCTIONS
 The main goal of the game is to move a differential drive robot anti-clockwise along a racetrack and achieve the fastest time possible without running out of battery.  
 The robot is controlled using the up, down, left, and right arrow keys, which accelerate and rotate the robot accordingly.  
 Every movement will cause the robot to lose battery, which may be recharged at the recharging station at the top of the map to prolong gameplay.
-After recording a new lap, it is possible to get a ‘ghost’ of the highscore by switching time trial mode on.  
+After recording a new lap, it is possible to get a ‘ghost’ of the high score by switching time trial mode on.  
 This will cause a new robot to spawn every new lap and provide visual feedback on the speed of the current lap attempt.
 If you are running the game from source, you can change the robot type by changing line 309 in uk.ac.ucl.robotisland.main from:
 
