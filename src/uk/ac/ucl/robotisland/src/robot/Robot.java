@@ -399,7 +399,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	 */
 	public void checkForCharging() {
 		if (CollisionDetection.detectLocation(this, Map.chargingstation)) {
-			this.increaseCharge(5);
+			this.increaseCharge(15);
 			this.recharging = true;
 			// reset time since collision to overwrite collisions happening in
 			// the charging station
@@ -466,12 +466,10 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 				this.setMaxSpeed(1);
 				if (Driver.toggledevmode) {
 					Driver.textinfo.setText("Battery less than 10%!!!");
-
-					if (Driver.batteryLowSound.isPlaying() == false) {
-						Driver.batteryLowSound.play(0.4);
-					}
-
 				}
+					if (Driver.batteryLowSound.isPlaying() == false) {
+						Driver.batteryLowSound.play(0.2);
+					}		
 			}
 		} // decrease charge if robot is turning around its own axis
 			// (wheelspeeds unequal) but not moving forward
@@ -815,14 +813,14 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			this.batteryLeft = this.getBatteryCapacity();
 			if (Driver.toggledevmode) {
 				Driver.textinfo.setText("Recharged!");
-
+			}
 				if (Driver.batteryLowSound.isPlaying() == true) {
 					Driver.batteryLowSound.stop();
 				}
 				if (Driver.batteryFullSound.isPlaying() == false) {
 					Driver.batteryFullSound.play();
 				}
-			}
+			
 		}
 		this.setMaxSpeed(this.globalMaxSpeed);
 	}
@@ -836,7 +834,7 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 	public void reset(String robottype) {
 		//reload robot from xml
 		XMLReader xmlr = new XMLReader();
-		ArrayList<String> input = xmlr.read(robottype, "/xml/robots.xml");
+		ArrayList<String> input = xmlr.read(robottype, "/uk/ac/ucl/robotisland/src/xml/robots.xml");
 		this.xCoordinate = Double.valueOf(input.get(0));
 		this.setX(this.xCoordinate);
 		this.yCoordinate = Double.valueOf(input.get(1));
@@ -1106,6 +1104,8 @@ public class Robot extends Entity implements EventHandler<KeyEvent> {
 			
 			// save lap moves
 			saveLapMoves();
+			//empty lap time trial moves
+			this.lapTimeTrialMoves = "";
 			// play highscore soundFX
 			if (Driver.highscoreSound.isPlaying() == false) {
 				Driver.highscoreSound.play();

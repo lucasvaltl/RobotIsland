@@ -222,7 +222,6 @@ public class Driver extends Application {
 		highscoreSound = new AudioClip(highscoreURL.toString());
 		batteryFullSound = new AudioClip(batteryFullURL.toString());
 		finishLine = new AudioClip(finishLineURL.toString());
-		
 		launch(args); // launch javaFX
 		
 		
@@ -327,7 +326,7 @@ public class Driver extends Application {
 		devmode.setLayoutY(580);
 		
 		//toggle to enable dev mode
-		toggledevmode = true;
+		toggledevmode = false;
 		//pane used for devmode
 		if(toggledevmode){
 		labelx = new Label("X Position: ");

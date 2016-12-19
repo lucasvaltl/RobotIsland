@@ -8,8 +8,8 @@
     <acceleration> 0.05 </acceleration>
     <angularVelocity> 3 </angularVelocity>
     <odometer> 0</odometer>
-    <batteryLeft>1200</batteryLeft>
-    <batteryCapacity>1200</batteryCapacity>
+    <batteryLeft>2400</batteryLeft>
+    <batteryCapacity>2400</batteryCapacity>
     <axleLength>32</axleLength>
     <wheelRadius>48</wheelRadius>
   </robot>
@@ -21,8 +21,8 @@
     <acceleration> 0.1 </acceleration>
     <angularVelocity> 3 </angularVelocity>
     <odometer> 0</odometer>
-    <batteryLeft>1200</batteryLeft>
-    <batteryCapacity>1200</batteryCapacity>
+    <batteryLeft>2400</batteryLeft>
+    <batteryCapacity>2400</batteryCapacity>
     <axleLength>32</axleLength>
     <wheelRadius>48</wheelRadius>
   </robot>
