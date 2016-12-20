@@ -8,4 +8,5 @@ Hard but flexible installation/doc/
 *.html
 
 #ignore any log files
-*.log
+*.txt
+*.txt.*
