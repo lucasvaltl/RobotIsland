@@ -3,29 +3,29 @@ Robot Island v.1.0 README
 
 A game created by Geraint Ballinger and Lucas Valtl.
 
-#TABLE OF CONTENTS
+##TABLE OF CONTENTS
 ##########################
-*Basic Info
-*Requirements
-*Getting Started
-*Game Instructions
-*Copyright
+* Basic Info
+* Requirements
+* Getting Started
+* Game Instructions
+* Copyright
 
-#Basic Info
+##Basic Info
 ##########################
 Robot Island is a game where you use your arrow keys to move a robot around a racetrack and achieve the fastest time possible without running out of battery. 
 It was initially created to fulfill the coursework requirements of the Introductory Programming course we are both taking as part of our Msc in Computer Science at UCL. 
 However, it evolved into a fully working racing game, and we hope you have just as much fun playing it as we had creating it. Any contributions to this project are more than welcome.  
 The project is under MIT license, see the license.txt file for details.
 
-#Requirements
+##Requirements
 ##########################
 
 To run the Robot Island game, you must have the Java SE Runtime Environment 8 (version 8u111) installed. You can find this here.
 
 For best performance, it is recommended to have more than 2GB of ram.
 
-#Getting Started
+##Getting Started
 ###########################
 
 There are two ways to play the game:
@@ -37,7 +37,7 @@ Running this class will enable you to play the game. This is a more complex way,
 In addition, you can turn on dev mode, giving you more infos on the robot. Have some fun, maybe you’ll even contribute to this repository?
 
 
-#Game Instructions
+##Game Instructions
 ###########################
 
 The main goal of the game is to move a differential drive robot anti-clockwise along a racetrack and achieve the fastest time possible without running out of battery.  
@@ -53,13 +53,13 @@ to:
 	robotType = “slow”;
 
 
-#Copyright
+##Copyright
 ###########################
 
 All of material below was used as is, no changes were made.
 
-Soundtrack: Chibi ninja by Eric Skiff (http://ericskiff.com/music/) is licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
+Soundtrack: Chibi ninja by [Eric Skiff](http://ericskiff.com/music/) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
-Other sound effects:  Shut_Down1, Space_Alert3, Emerge4, Emerge9, Sweep1, Power_Up3  by Morten (http://www.downloadfreesound.com/author/morten/) are licensed under CC BY 1.0 (https://creativecommons.org/licenses/by/1.0/). 
+Other sound effects:  Shut_Down1, Space_Alert3, Emerge4, Emerge9, Sweep1, Power_Up3  by [Morten](http://www.downloadfreesound.com/author/morten/) are licensed under [CC BY 1.0](https://creativecommons.org/licenses/by/1.0/). 
 
-Font used in Game Logo: “pixelated” (http://fontstruct.com/fontstructions/show/426637) by “Greenma201” is licensed under CC BY SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/).
+Font used in Game Logo: [“pixelated”](http://fontstruct.com/fontstructions/show/426637) by “Greenma201” is licensed under [CC BY SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/).
