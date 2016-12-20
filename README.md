@@ -18,7 +18,7 @@ The project is under MIT license, see the license.txt file for details.
 
 ##Requirements
 
-To run the Robot Island game, you must have the Java SE Runtime Environment 8 (version 8u111) installed. You can find this here.
+To run the Robot Island game, you must have the [Java SE Runtime Environment 8](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) (version 8u111) or the Java Development Kit 8 installed. You can find this here.
 
 For best performance, it is recommended to have more than 2GB of ram.
 
