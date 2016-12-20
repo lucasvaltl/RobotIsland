@@ -31,9 +31,9 @@ GETTING STARTED
 
 There are two ways to play the game:
 
-#The easy way: Just move the RobotIsland.jar file to your preferred location, double click it and have fun.
+#The easy way: Just move the RobotIsland.jar (in the “easy installation” folder) file to your preferred location, double click it and have fun.
 
-#The hard way: Import the entire folder into your IDE of choice (Eclipse definitely works, we can’t guarantee for anything else). The main class can be found in the main folder and is called driver.java. 
+#The hard way: Import the entire folder (the “hared but flexible installation” folder) into your IDE of choice (Eclipse definitely works, we can’t guarantee for anything else). The main class can be found in the main folder and is called driver.java. 
 Running this class will enable you to play the game. This is a more complex way, but you will be able to change the code and tweak your robot to your liking. 
 In addition, you can turn on dev mode, giving you more infos on the robot. Have some fun, maybe you’ll even contribute to this repository?
 
