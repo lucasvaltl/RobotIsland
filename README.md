@@ -1,10 +1,9 @@
-Robot Island v.1.0 README
-==================================================================
+#Robot Island v.1.0 README
 
 A game created by Geraint Ballinger and Lucas Valtl.
 
 ##TABLE OF CONTENTS
-##########################
+
 * Basic Info
 * Requirements
 * Getting Started
@@ -12,21 +11,18 @@ A game created by Geraint Ballinger and Lucas Valtl.
 * Copyright
 
 ##Basic Info
-##########################
 Robot Island is a game where you use your arrow keys to move a robot around a racetrack and achieve the fastest time possible without running out of battery. 
 It was initially created to fulfill the coursework requirements of the Introductory Programming course we are both taking as part of our Msc in Computer Science at UCL. 
 However, it evolved into a fully working racing game, and we hope you have just as much fun playing it as we had creating it. Any contributions to this project are more than welcome.  
 The project is under MIT license, see the license.txt file for details.
 
 ##Requirements
-##########################
 
 To run the Robot Island game, you must have the Java SE Runtime Environment 8 (version 8u111) installed. You can find this here.
 
 For best performance, it is recommended to have more than 2GB of ram.
 
 ##Getting Started
-###########################
 
 There are two ways to play the game:
 
@@ -38,7 +34,6 @@ In addition, you can turn on dev mode, giving you more infos on the robot. Have 
 
 
 ##Game Instructions
-###########################
 
 The main goal of the game is to move a differential drive robot anti-clockwise along a racetrack and achieve the fastest time possible without running out of battery.  
 The robot is controlled using the up, down, left, and right arrow keys, which accelerate and rotate the robot accordingly.  
@@ -54,7 +49,6 @@ to:
 
 
 ##Copyright
-###########################
 
 All of material below was used as is, no changes were made.
 
