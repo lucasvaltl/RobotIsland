@@ -1,212 +1,1416 @@
-Dec 19, 2016 8:31:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:57 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:57 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:57 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:57 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:57 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:57 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:57 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:57 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:57 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:57 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:57 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:57 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:57 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:57 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:57 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:57 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:30 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:57 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:57 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:57 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:57 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:57 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:57 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:57 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:57 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:57 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:57 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:31 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
-INFO: decelerate
-Dec 19, 2016 8:31:32 PM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:24:58 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:24:59 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:00 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:01 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:02 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:03 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveDownRight
+INFO: moveDownRight
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpLeft
+INFO: moveUpLeft
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:04 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveDownLeft
+INFO: moveDownLeft
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveDownLeft
+INFO: moveDownLeft
+Dec 20, 2016 11:25:05 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveDownLeft
+INFO: moveDownLeft
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveDownLeft
+INFO: moveDownLeft
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUpRight
+INFO: moveUpRight
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:06 AM uk.ac.ucl.robotisland.src.robot.Movement moveUp
+INFO: moveUp
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement moveLeft
+INFO: moveLeft
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:07 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:08 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:09 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:09 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:09 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:09 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:09 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:09 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:09 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:09 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:09 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:09 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
+INFO: decelerate
+Dec 20, 2016 11:25:09 AM uk.ac.ucl.robotisland.src.robot.Movement decelerate
 INFO: decelerate
