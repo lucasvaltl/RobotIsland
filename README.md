@@ -24,7 +24,7 @@ For best performance, it is recommended to have more than 2GB of ram.
 
 ##Getting Started
 
-There are two ways to play the game:
+Clone/Download the repository if you have not done so already. Hit that green button to do so. There are two ways to play the game:
 
 The easy way: Just move the RobotIsland.jar (in the “easy installation” folder) file to your preferred location, double click it and have fun.
 
