@@ -59,8 +59,10 @@ For a more complete specification, please inspect the requirementsList.pdf in th
 COPYRIGHT
 ###########################
 
-Soundtrack: Chibi ninja by Eric Skiff is licensed under CC BY 4.0.
+All of material below was used as is, no changes were made.
 
-Other sound effects:  Shut_Down1, Space_Alert3, Emerge4, Emerge9, Sweep1, Power_Up3  by Morten are licensed under CC BY 1.0. 
+Soundtrack: Chibi ninja by Eric Skiff (http://ericskiff.com/music/) is licensed under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/).
 
-Font used in Game Logo: “pixelated” by “Greenma201” is licensed under CC BY SA 3.0.
+Other sound effects:  Shut_Down1, Space_Alert3, Emerge4, Emerge9, Sweep1, Power_Up3  by Morten (http://www.downloadfreesound.com/author/morten/) are licensed under CC BY 1.0 (https://creativecommons.org/licenses/by/1.0/). 
+
+Font used in Game Logo: “pixelated” (http://fontstruct.com/fontstructions/show/426637) by “Greenma201” is licensed under CC BY SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/).
