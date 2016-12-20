@@ -1,2 +1,11 @@
-Hard but flexible installation/res/uk/ac/ucl/robotisland/res/logs/*
+#ignore logs
+Hard but flexible installation/res/uk/ac/ucl/robotisland/res/logs/
+
+#ignore documentation
 Hard but flexible installation/doc/
+
+#ignore any html files
+*.html
+
+#ignore any log files
+*.log
