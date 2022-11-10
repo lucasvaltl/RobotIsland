@@ -10,7 +10,7 @@ A game created by Geraint Ballinger and Lucas Valtl.
 * Game Instructions
 * Copyright
 
-##Basic Info
+##Basic Info 
 Robot Island is a game where you use your arrow keys to move a robot around a racetrack and achieve the fastest time possible without running out of battery. 
 It was initially created to fulfill the coursework requirements of the Introductory Programming course we are both taking as part of our Msc in Computer Science at UCL. 
 However, it evolved into a fully working racing game, and we hope you have just as much fun playing it as we had creating it. Any contributions to this project are more than welcome.  
