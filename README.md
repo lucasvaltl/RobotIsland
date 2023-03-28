@@ -16,7 +16,7 @@ It was initially created to fulfill the coursework requirements of the Introduct
 However, it evolved into a fully working racing game, and we hope you have just as much fun playing it as we had creating it. Any contributions to this project are more than welcome.  
 The project is under MIT license, see the license.txt file for details.
 
-##Requirements
+##Requirements 
 
 To run the Robot Island game, you must have the [Java SE Runtime Environment 8](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) (version 8u111) or the Java Development Kit 8 installed.
 
